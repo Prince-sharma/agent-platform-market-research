@@ -517,59 +517,186 @@ window.rowKey = function(e, name){
   if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openDrawer(name); }
 };
 
+// ---------- generic table filter + sort system ----------
+const tableSort = {};
+function getTcf(tableId, col){
+  const el = document.querySelector('#'+tableId+' .col-filter[data-col="'+col+'"]');
+  return el ? el.value.toLowerCase() : '';
+}
+function syncTcf(tableId){
+  document.querySelectorAll('#'+tableId+' .col-filter').forEach(el=>{
+    el.classList[el.value ? 'add' : 'remove']('active');
+  });
+}
+function clearTcf(tableId){
+  document.querySelectorAll('#'+tableId+' .col-filter').forEach(el=>el.value='');
+  syncTcf(tableId);
+  if(tableSort[tableId]){ tableSort[tableId].key = tableSort[tableId].def || 'n'; tableSort[tableId].dir = 1; }
+}
+function updateTsh(tableId){
+  const s = tableSort[tableId]; if(!s) return;
+  document.querySelectorAll('#'+tableId+' thead tr:first-child th').forEach(th=>{
+    const on = th.dataset.k === s.key;
+    th.classList.remove('sort-asc','sort-desc');
+    if(on) th.classList.add(s.dir>0 ? 'sort-asc' : 'sort-desc');
+    setAria(th, 'aria-sort', on ? (s.dir>0?'ascending':'descending') : 'none');
+  });
+}
+function setupTable(tableId, defaultSort, renderFn){
+  tableSort[tableId] = { key: defaultSort || 'n', dir: 1, def: defaultSort || 'n' };
+  const table = document.getElementById(tableId);
+  if(!table) return;
+  table.querySelectorAll('.col-filter').forEach(el=>{
+    el.addEventListener('input', ()=>{ syncTcf(tableId); renderFn(); });
+  });
+  table.addEventListener('click', e=>{
+    const th = e.target.closest('th'); if(!th || !th.dataset.k) return;
+    const s = tableSort[tableId];
+    if(s.key === th.dataset.k) s.dir = -s.dir; else { s.key = th.dataset.k; s.dir = 1; }
+    renderFn();
+  });
+}
+function genericSort(rows, tableId, valFn){
+  const s = tableSort[tableId]; if(!s) return;
+  rows.sort((a,b)=>{
+    let x = valFn(s.key, a) || '', y = valFn(s.key, b) || '';
+    if(typeof x === 'number' && typeof y === 'number') return (x-y)*s.dir;
+    const c = String(x).localeCompare(String(y));
+    return (c * s.dir) || (a.n||'').localeCompare(b.n||'');
+  });
+}
+
 // ---------- yc ----------
+let cohortData = [];
 function renderYc(sync){
   const b = $('#yc-batch').value;
-  const rows = DATA.filter(c=>c.b.length && (!b||c.b.includes(b))).sort((a,b2)=>a.n.localeCompare(b2.n));
+  const cfN = getTcf('yctable','n'), cfB = getTcf('yctable','b'), cfL = getTcf('yctable','l'),
+        cfO = getTcf('yctable','o'), cfT = getTcf('yctable','t');
+  let rows = DATA.filter(c=>c.b.length && (!b||c.b.includes(b)) &&
+    (!cfN || c.n.toLowerCase().includes(cfN)) &&
+    (!cfB || c.b.join(',').toLowerCase().includes(cfB)) &&
+    (!cfL || c.l===cfL.toUpperCase()) &&
+    (!cfO || c.o.toLowerCase().includes(cfO)) &&
+    (!cfT || c.t.toLowerCase().includes(cfT)));
+  genericSort(rows, 'yctable', (k,c)=>{
+    if(k==='b') return c.b.join(', ');
+    if(k==='t') return c.t;
+    return c[k];
+  });
   const cap = 2000, shown = Math.min(rows.length, cap);
   $('#ycount').textContent = rows.length + ' YC companies' + (b?' in '+b:'') + (rows.length > cap ? ' (showing the first ' + cap + ')' : '');
   $('#ycbody').innerHTML = rows.slice(0,cap).map(c=>'<tr'+rowAttr(c.n)+'><td><b>'+esc(c.n)+'</b></td><td>'+c.b.join(', ')+'</td><td>'+pill(c.l)+'</td><td style="color:var(--mut)">'+esc(c.o)+'</td><td>'+esc(c.t)+'</td></tr>').join('');
+  updateTsh('yctable');
+  syncTcf('yctable');
   if(sync !== false) replaceHash();
 }
+function renderCohort(){
+  const cfB = getTcf('ctable','batch'), cfL = getTcf('ctable','layers'),
+        cfS = getTcf('ctable','status'), cfV = getTcf('ctable','verts');
+  let rows = cohortData.filter(r =>
+    (!cfB || r.batch.toLowerCase().includes(cfB)) &&
+    (!cfL || r.layers.toLowerCase().includes(cfL)) &&
+    (!cfS || r.status.toLowerCase().includes(cfS)) &&
+    (!cfV || r.verts.toLowerCase().includes(cfV)));
+  genericSort(rows, 'ctable', (k,r)=> r[k]);
+  $('#cohortbody').innerHTML = rows.map(r=>'<tr><td><b>'+r.batch+'</b></td><td>'+r.count+'</td><td style="font-size:12.5px">'+esc(r.layers)+'</td><td style="font-size:12.5px">'+esc(r.status)+'</td><td>'+r.lh+'</td><td style="font-size:12.5px;color:var(--mut)">'+esc(r.verts)+'</td></tr>').join('');
+  updateTsh('ctable');
+  syncTcf('ctable');
+}
+window.clearYcFilters = function(){
+  $('#yc-batch').value = '';
+  clearTcf('yctable');
+  clearTcf('ctable');
+  renderYc();
+  renderCohort();
+};
 (function(){
   const bm = {};
   DATA.forEach(c=>c.b.forEach(b=>bm[b]=(bm[b]||0)+1));
   colChart($('#ch-batch'), BATCHES.map(b=>[b,b,bm[b]||0]), {onClick:k=>{ $('#yc-batch').value=k; renderYc(); }});
   const cb = COHORT.batches || {};
-  $('#cohortbody').innerHTML = BATCHES.filter(b=>cb[b]).map(b=>{
+  cohortData = BATCHES.filter(b=>cb[b]).map(b=>{
     const s = cb[b];
     const layers = Object.entries(s.layers||{}).sort((a,b2)=>b2[1]-a[1]).map(([k,v])=>k+' '+v).join(', ') || '-';
     const status = Object.entries(s.status||{}).sort((a,b2)=>b2[1]-a[1]).map(([k,v])=>k+' '+v).join(', ') || '-';
     const verts = (s.top_verticals||[]).slice(0,3).map(v=>v[0]+' '+v[1]).join(', ') || '-';
-    return '<tr><td><b>'+b+'</b></td><td>'+s.count+'</td><td style="font-size:12.5px">'+esc(layers)+'</td><td style="font-size:12.5px">'+esc(status)+'</td><td>'+(s.long_horizon||0)+'</td><td style="font-size:12.5px;color:var(--mut)">'+esc(verts)+'</td></tr>';
-  }).join('');
+    return { batch:b, count:s.count, layers, status, lh:(s.long_horizon||0), verts };
+  });
+  renderCohort();
   $('#yc-batch').innerHTML = '<option value="">All batches</option>' + BATCHES.map(b=>'<option>'+b+'</option>').join('');
+  const ycBf = $('#yctable .col-filter[data-col="b"]');
+  if(ycBf) ycBf.innerHTML = '<option value="">All</option>' + BATCHES.map(b=>'<option>'+b+'</option>').join('');
   $('#yc-batch').addEventListener('change', renderYc);
+  setupTable('yctable', 'n', renderYc);
+  setupTable('ctable', 'batch', renderCohort);
   renderYc(false);
 })();
 
 // ---------- vc ----------
-(function(){
-  function renderVc(){
-    const q = $('#vq').value.toLowerCase();
-    const rows = DATA.filter(c=>c.f.length && (!q || (c.n+' '+c.f.join(' ')).toLowerCase().includes(q)))
-      .sort((a,b)=> b.f.length-a.f.length || a.n.localeCompare(b.n));
-    const cap = 600, shown = Math.min(rows.length, cap);
-    $('#vcount').textContent = rows.length + ' companies with a backer signal' + (rows.length > cap ? ' (showing the first ' + cap + ')' : '');
-    $('#vcbody').innerHTML = rows.slice(0,cap).map(c=>'<tr'+rowAttr(c.n)+'><td><b>'+esc(c.n)+'</b></td><td>'+esc(c.f.join(', '))+'</td><td>'+pill(c.l)+'</td><td style="color:var(--mut)">'+esc(c.o)+'</td></tr>').join('');
+function renderVc(){
+  const q = $('#vq').value.toLowerCase();
+  const cfN = getTcf('vctable','n'), cfF = getTcf('vctable','f'),
+        cfL = getTcf('vctable','l'), cfO = getTcf('vctable','o');
+  let rows = DATA.filter(c=>c.f.length && (!q || (c.n+' '+c.f.join(' ')).toLowerCase().includes(q)) &&
+    (!cfN || c.n.toLowerCase().includes(cfN)) &&
+    (!cfF || c.f.join(' ').toLowerCase().includes(cfF)) &&
+    (!cfL || c.l===cfL.toUpperCase()) &&
+    (!cfO || c.o.toLowerCase().includes(cfO)));
+  const s = tableSort['vctable'];
+  if(s){
+    rows.sort((a,b)=>{
+      let x, y;
+      if(s.key==='f'){ x=a.f.length; y=b.f.length; }
+      else { x=a[s.key]||''; y=b[s.key]||''; }
+      if(typeof x === 'number' && typeof y === 'number') return (x-y)*s.dir;
+      const c = String(x).localeCompare(String(y));
+      return (c * s.dir) || a.n.localeCompare(b.n);
+    });
   }
+  const cap = 600, shown = Math.min(rows.length, cap);
+  $('#vcount').textContent = rows.length + ' companies with a backer signal' + (rows.length > cap ? ' (showing the first ' + cap + ')' : '');
+  $('#vcbody').innerHTML = rows.slice(0,cap).map(c=>'<tr'+rowAttr(c.n)+'><td><b>'+esc(c.n)+'</b></td><td>'+esc(c.f.join(', '))+'</td><td>'+pill(c.l)+'</td><td style="color:var(--mut)">'+esc(c.o)+'</td></tr>').join('');
+  updateTsh('vctable');
+  syncTcf('vctable');
+}
+window.clearVcFilters = function(){
+  $('#vq').value = '';
+  clearTcf('vctable');
+  renderVc();
+};
+(function(){
   $('#vq').addEventListener('input', renderVc);
+  setupTable('vctable', 'f', renderVc);
   renderVc();
 })();
 
 // ---------- verticals ----------
 function renderV(sync){
   const v = $('#v-vert').value;
-  const rows = v ? DATA.filter(c=>c.v===v).sort((a,b)=>a.n.localeCompare(b.n)) : [];
+  const cfN = getTcf('vtable','n'), cfL = getTcf('vtable','l'),
+        cfSt = getTcf('vtable','st'), cfO = getTcf('vtable','o');
+  let rows = v ? DATA.filter(c=>c.v===v &&
+    (!cfN || c.n.toLowerCase().includes(cfN)) &&
+    (!cfL || c.l===cfL.toUpperCase()) &&
+    (!cfSt || c.st===cfSt) &&
+    (!cfO || c.o.toLowerCase().includes(cfO))) : [];
+  genericSort(rows, 'vtable', (k,c)=> c[k]);
   $('#vcount2').textContent = v ? rows.length + ' companies in ' + v : 'Pick a vertical to list its companies';
   $('#vbody').innerHTML = rows.map(c=>'<tr'+rowAttr(c.n)+'><td><b>'+esc(c.n)+'</b></td><td>'+pill(c.l)+'</td><td>'+pill(c.st)+'</td><td style="color:var(--mut)">'+esc(c.o)+'</td></tr>').join('');
+  updateTsh('vtable');
+  syncTcf('vtable');
   if(sync !== false) replaceHash();
 }
+window.clearVertFilters = function(){
+  clearTcf('vtable');
+  renderV();
+};
 (function(){
   const vm = tally(DATA.filter(c=>c.sc==='vertical'), c=>c.v);
   barChart($('#ch-vert2'), sortedEntries(vm).slice(0,30).map(([k,v])=>[k,k,v]), {onClick:k=>{ $('#v-vert').value=k; renderV(); }});
   $('#v-vert').innerHTML = '<option value="">Choose a vertical</option>' + sortedEntries(vm).map(([k])=>'<option>'+esc(k)+'</option>').join('');
   $('#v-vert').addEventListener('change', renderV);
+  setupTable('vtable', 'n', renderV);
   renderV(false);
 })();
 

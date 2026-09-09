@@ -169,26 +169,92 @@
     <p class="count" style="margin-top:8px">The agentic share of YC batches roughly quadrupled from 2021-22 (~9%) to 2025 (~39%). F23 never ran; the first Fall batch was F24. Click a batch bar to list its companies below.</p></div>
     <div class="panel"><h2>Per-batch cohort stats</h2>
       <p class="count">Layer mix, status mix, and long-horizon counts per batch, from the scripted cohort analysis. Statuses mature with age: early batches show the deaths and acquisitions; the newest batches are almost all active.</p>
-      <div class="tscroll"><table><thead><tr><th>Batch</th><th>Companies</th><th>Layer mix</th><th>Status</th><th>Long-horizon</th><th>Top verticals</th></tr></thead><tbody id="cohortbody"></tbody></table></div>
+      <div class="tscroll"><table id="ctable">
+        <thead>
+          <tr>
+            <th data-k="batch" scope="col" title="Click to sort">Batch</th>
+            <th data-k="count" scope="col" title="Click to sort">Companies</th>
+            <th data-k="layers" scope="col" title="Click to sort">Layer mix</th>
+            <th data-k="status" scope="col" title="Click to sort">Status</th>
+            <th data-k="lh" scope="col" title="Click to sort">Long-horizon</th>
+            <th data-k="verts" scope="col" title="Click to sort">Top verticals</th>
+          </tr>
+          <tr class="filter-row">
+            <th><input type="search" class="col-filter" data-col="batch" placeholder="Filter..." aria-label="Filter by batch"></th>
+            <th></th>
+            <th><input type="search" class="col-filter" data-col="layers" placeholder="Filter..." aria-label="Filter by layer mix"></th>
+            <th><input type="search" class="col-filter" data-col="status" placeholder="Filter..." aria-label="Filter by status"></th>
+            <th></th>
+            <th><input type="search" class="col-filter" data-col="verts" placeholder="Filter..." aria-label="Filter by verticals"></th>
+          </tr>
+        </thead><tbody id="cohortbody"></tbody>
+      </table></div>
     </div>
-    <div class="controls"><select id="yc-batch" aria-label="Filter by YC batch"><option value="">All batches</option></select></div>
+    <div class="controls"><select id="yc-batch" aria-label="Filter by YC batch"><option value="">All batches</option></select> <button class="btn-clear" id="yc-clear" onclick="clearYcFilters()" title="Reset all filters">Clear filters</button></div>
     <p class="count" id="ycount" aria-live="polite"></p>
-    <div class="tscroll"><table><thead><tr><th>Company</th><th>Batch</th><th>Layer</th><th>One-liner</th><th>Traction</th></tr></thead><tbody id="ycbody"></tbody></table></div>
+    <div class="tscroll"><table id="yctable">
+      <thead>
+        <tr>
+          <th data-k="n" aria-sort="ascending" scope="col" title="Click to sort">Company</th>
+          <th data-k="b" scope="col" title="Click to sort">Batch</th>
+          <th data-k="l" scope="col" title="Click to sort">Layer</th>
+          <th data-k="o" scope="col" title="Click to sort">One-liner</th>
+          <th data-k="t" scope="col" title="Click to sort">Traction</th>
+        </tr>
+        <tr class="filter-row">
+          <th><input type="search" class="col-filter" data-col="n" placeholder="Filter name..." aria-label="Filter by company name"></th>
+          <th><select class="col-filter" data-col="b" aria-label="Filter by batch"><option value="">All</option></select></th>
+          <th><select class="col-filter" data-col="l" aria-label="Filter by layer"><option value="">All</option><option>L1</option><option>L2</option><option>L3</option><option>L4</option><option>L5</option><option>X</option></select></th>
+          <th><input type="search" class="col-filter" data-col="o" placeholder="Filter text..." aria-label="Filter by one-liner"></th>
+          <th><input type="search" class="col-filter" data-col="t" placeholder="Filter text..." aria-label="Filter by traction"></th>
+        </tr>
+      </thead><tbody id="ycbody"></tbody>
+    </table></div>
   </section>
 
   <section id="t-vc" role="tabpanel" aria-labelledby="tab-vc">
     <p class="count">Companies surfaced by the six VC portfolio sweeps, with the backer signal extracted from sweep attribution. Coverage is asymmetric: only some firms publish crawlable portfolios, so absence here is not absence of backing.</p>
-    <div class="controls"><input type="search" id="vq" placeholder="Search company or backer..." aria-label="Search VC-backed companies"></div>
+    <div class="controls"><input type="search" id="vq" placeholder="Search company or backer..." aria-label="Search VC-backed companies"> <button class="btn-clear" id="vc-clear" onclick="clearVcFilters()" title="Reset all filters">Clear filters</button></div>
     <p class="count" id="vcount" aria-live="polite"></p>
-    <div class="tscroll"><table><thead><tr><th>Company</th><th>Backer signal</th><th>Layer</th><th>One-liner</th></tr></thead><tbody id="vcbody"></tbody></table></div>
+    <div class="tscroll"><table id="vctable">
+      <thead>
+        <tr>
+          <th data-k="n" aria-sort="ascending" scope="col" title="Click to sort">Company</th>
+          <th data-k="f" scope="col" title="Click to sort">Backer signal</th>
+          <th data-k="l" scope="col" title="Click to sort">Layer</th>
+          <th data-k="o" scope="col" title="Click to sort">One-liner</th>
+        </tr>
+        <tr class="filter-row">
+          <th><input type="search" class="col-filter" data-col="n" placeholder="Filter name..." aria-label="Filter by company name"></th>
+          <th><input type="search" class="col-filter" data-col="f" placeholder="Filter backer..." aria-label="Filter by backer signal"></th>
+          <th><select class="col-filter" data-col="l" aria-label="Filter by layer"><option value="">All</option><option>L1</option><option>L2</option><option>L3</option><option>L4</option><option>L5</option><option>X</option></select></th>
+          <th><input type="search" class="col-filter" data-col="o" placeholder="Filter text..." aria-label="Filter by one-liner"></th>
+        </tr>
+      </thead><tbody id="vcbody"></tbody>
+    </table></div>
   </section>
 
   <section id="t-verticals" role="tabpanel" aria-labelledby="tab-verticals">
     <div class="panel"><h2>Companies per vertical</h2><div id="ch-vert2"></div>
       <p class="count" style="margin-top:8px">Click a vertical bar to list its companies below.</p></div>
-    <div class="controls"><select id="v-vert" aria-label="Choose a vertical"><option value="">Choose a vertical</option></select></div>
+    <div class="controls"><select id="v-vert" aria-label="Choose a vertical"><option value="">Choose a vertical</option></select> <button class="btn-clear" id="vert-clear" onclick="clearVertFilters()" title="Reset all filters">Clear filters</button></div>
     <p class="count" id="vcount2" aria-live="polite"></p>
-    <div class="tscroll"><table><thead><tr><th>Company</th><th>Layer</th><th>Status</th><th>One-liner</th></tr></thead><tbody id="vbody"></tbody></table></div>
+    <div class="tscroll"><table id="vtable">
+      <thead>
+        <tr>
+          <th data-k="n" aria-sort="ascending" scope="col" title="Click to sort">Company</th>
+          <th data-k="l" scope="col" title="Click to sort">Layer</th>
+          <th data-k="st" scope="col" title="Click to sort">Status</th>
+          <th data-k="o" scope="col" title="Click to sort">One-liner</th>
+        </tr>
+        <tr class="filter-row">
+          <th><input type="search" class="col-filter" data-col="n" placeholder="Filter name..." aria-label="Filter by company name"></th>
+          <th><select class="col-filter" data-col="l" aria-label="Filter by layer"><option value="">All</option><option>L1</option><option>L2</option><option>L3</option><option>L4</option><option>L5</option><option>X</option></select></th>
+          <th><select class="col-filter" data-col="st" aria-label="Filter by status"><option value="">All</option><option>active</option><option>acquired</option><option>pivoted</option><option>dead</option><option>unknown</option></select></th>
+          <th><input type="search" class="col-filter" data-col="o" placeholder="Filter text..." aria-label="Filter by one-liner"></th>
+        </tr>
+      </thead><tbody id="vbody"></tbody>
+    </table></div>
   </section>
 
   <section id="t-about" role="tabpanel" aria-labelledby="tab-about">
