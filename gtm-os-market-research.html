@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM Operating System — Market Research (Sep 2026)</title>
+<style>
+  :root{
+    --bg:#f1f5f9; --surface:#ffffff; --border:#e2e8f0; --text:#0f172a; --muted:#64748b;
+    --primary:#4f46e5; --primary-soft:#eef2ff; --high:#dc2626; --med:#d97706; --low:#059669;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; font-size:15px}
+  a{color:var(--primary); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header.hero{background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 60%,#312e81 100%); color:#fff; padding:44px 24px 36px}
+  .hero-inner{max-width:1180px; margin:0 auto}
+  .hero-kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#a5b4fc; font-weight:600; margin-bottom:10px}
+  h1{font-size:clamp(24px,3.4vw,36px); font-weight:800; letter-spacing:-.02em; line-height:1.15}
+  .hero-sub{margin-top:12px; max-width:860px; color:#cbd5e1; font-size:15.5px}
+  .hero-sub strong{color:#fff}
+  .stats{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px}
+  .stat{background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:12px; padding:12px 18px; min-width:150px}
+  .stat b{display:block; font-size:22px; font-weight:800}
+  .stat span{font-size:12px; color:#c7d2fe; letter-spacing:.02em}
+
+  nav.tabs{position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid var(--border); display:flex; overflow-x:auto; -webkit-overflow-scrolling:touch}
+  nav.tabs button{flex:0 0 auto; background:none; border:none; border-bottom:3px solid transparent; padding:14px 18px; font-size:14px; font-weight:600; color:var(--muted); cursor:pointer; white-space:nowrap}
+  nav.tabs button:hover{color:var(--text)}
+  nav.tabs button.active{color:var(--primary); border-bottom-color:var(--primary)}
+
+  main{max-width:1180px; margin:0 auto; padding:30px 24px 70px}
+  section.tab{display:none}
+  section.tab.active{display:block; animation:fade .25s ease}
+  @keyframes fade{from{opacity:0; transform:translateY(4px)}to{opacity:1; transform:none}}
+
+  h2{font-size:22px; font-weight:800; letter-spacing:-.01em; margin-bottom:6px}
+  h3{font-size:16px; font-weight:700; margin-bottom:8px}
+  .lead{color:var(--muted); margin-bottom:22px; max-width:900px}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px; box-shadow:0 1px 2px rgba(15,23,42,.04)}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:16px}
+  .grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px}
+  .mt{margin-top:20px}
+  .small{font-size:12.5px; color:var(--muted)}
+  .note{background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:10px 14px; font-size:13px; color:#92400e; margin-top:14px}
+
+  .badge{display:inline-block; padding:2px 10px; border-radius:999px; font-size:11.5px; font-weight:700; letter-spacing:.02em}
+  .b-high{background:#fee2e2; color:#b91c1c}
+  .b-med{background:#fef3c7; color:#b45309}
+  .b-low{background:#d1fae5; color:#047857}
+  .b-info{background:var(--primary-soft); color:var(--primary)}
+  .b-dark{background:#e2e8f0; color:#334155}
+
+  .verdict-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-top:18px}
+  .verdict{border-radius:14px; padding:18px; border:1px solid var(--border); background:var(--surface)}
+  .verdict h3{display:flex; align-items:center; gap:8px}
+  .verdict ul{margin:10px 0 0 16px; font-size:13.5px; color:#334155}
+  .verdict li{margin-bottom:7px}
+  .v-good{border-top:4px solid var(--low)}
+  .v-warn{border-top:4px solid var(--med)}
+  .v-new{border-top:4px solid var(--primary)}
+
+  .finding{display:flex; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:16px 18px}
+  .finding .num{flex:0 0 34px; height:34px; border-radius:10px; background:var(--primary-soft); color:var(--primary); font-weight:800; display:flex; align-items:center; justify-content:center; font-size:15px}
+  .finding p{font-size:13.5px; color:#334155}
+  .finding b{color:var(--text)}
+
+  /* lifecycle map */
+  .map-scroll{overflow-x:auto; padding-bottom:6px}
+  .lifecycle-grid{display:grid; grid-template-columns:repeat(7,minmax(168px,1fr)); gap:12px; min-width:1180px}
+  .stage-col{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:12px; display:flex; flex-direction:column; gap:8px}
+  .stage-head{border-bottom:1px dashed var(--border); padding-bottom:8px}
+  .stage-head .s-name{font-weight:700; font-size:13.5px}
+  .stage-head .s-count{font-size:11.5px; color:var(--muted)}
+  .density{display:inline-block; margin-top:5px; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:999px}
+  .chips{display:flex; flex-direction:column; gap:6px}
+  .company-chip{display:flex; align-items:center; gap:8px; padding:6px 9px; border-radius:9px; background:#f8fafc; border:1px solid var(--border); cursor:pointer; font-size:12.5px; text-align:left; width:100%; font-family:inherit; color:var(--text)}
+  .company-chip:hover{border-color:var(--primary); background:var(--primary-soft)}
+  .dot{width:9px; height:9px; border-radius:50%; flex:0 0 9px}
+  .layer-bar{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin-top:12px}
+  .layer-bar .lb-title{font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:10px}
+  .layer-chips{display:flex; flex-wrap:wrap; gap:7px}
+  .layer-chips .company-chip{width:auto}
+
+  /* explorer */
+  .controls{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px}
+  .controls input,.controls select{padding:9px 12px; border:1px solid var(--border); border-radius:10px; font-size:13.5px; background:#fff; font-family:inherit; color:var(--text)}
+  .controls input{flex:1 1 240px}
+  .cat-legend{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px}
+  .cat-pill{display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; padding:4px 11px; border-radius:999px; border:1px solid var(--border); background:#fff; cursor:pointer; color:#334155}
+  .cat-pill.active{border-color:var(--primary); color:var(--primary); background:var(--primary-soft)}
+  table.explorer{width:100%; border-collapse:collapse; background:var(--surface); border:1px solid var(--border); border-radius:14px; overflow:hidden}
+  table.explorer th{background:#f8fafc; text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); padding:10px 12px; border-bottom:1px solid var(--border)}
+  table.explorer td{padding:11px 12px; border-bottom:1px solid #f1f5f9; font-size:13.5px; vertical-align:top}
+  table.explorer tr.row{cursor:pointer}
+  table.explorer tr.row:hover{background:#f8fafc}
+  tr.detail-row td{background:#fafbff; padding:16px 16px 18px; border-bottom:1px solid var(--border)}
+  .d-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  .d-grid .lbl{font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); margin-bottom:3px}
+  .d-grid p{font-size:13px}
+  @media(max-width:760px){.d-grid{grid-template-columns:1fr}}
+
+  /* matrix */
+  .matrix-wrap{position:relative; overflow-x:auto; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:10px}
+  .matrix-wrap svg{min-width:920px; width:100%; display:block}
+  .tooltip{position:absolute; pointer-events:none; background:#0f172a; color:#fff; font-size:12px; padding:7px 10px; border-radius:8px; opacity:0; transition:opacity .12s; max-width:240px; z-index:10}
+  .quad-label{font-size:11px; font-weight:700; fill:#94a3b8; letter-spacing:.08em; text-transform:uppercase}
+
+  /* whitespace */
+  .ws-card{background:var(--surface); border:1px solid var(--border); border-left:4px solid var(--low); border-radius:14px; padding:18px}
+  .ws-card h3{font-size:15px}
+  .ws-card p{font-size:13.5px; color:#334155; margin-top:6px}
+  .ws-card .ev{margin-top:10px; font-size:12.5px; color:var(--muted); background:#f8fafc; border-radius:8px; padding:8px 10px}
+  .timeline{margin-top:26px; border-left:2px solid #c7d2fe; padding-left:22px; display:flex; flex-direction:column; gap:14px}
+  .tl-item{position:relative}
+  .tl-item::before{content:""; position:absolute; left:-28px; top:5px; width:10px; height:10px; border-radius:50%; background:var(--primary); border:2px solid #fff}
+  .tl-date{font-size:11.5px; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:.05em}
+  .tl-item p{font-size:13.5px; color:#334155}
+
+  /* strategy */
+  .thesis{background:linear-gradient(135deg,#eef2ff,#e0e7ff); border:1px solid #c7d2fe; border-radius:14px; padding:22px; font-size:15.5px}
+  .thesis b{color:#3730a3}
+  .wedge-table{width:100%; border-collapse:collapse; background:var(--surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; font-size:13.5px}
+  .wedge-table th{background:#f8fafc; text-align:left; padding:10px 12px; font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted)}
+  .wedge-table td{padding:12px; border-top:1px solid #f1f5f9; vertical-align:top}
+  .roadmap{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:8px}
+  .phase{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:16px; position:relative}
+  .phase .ph{font-size:11px; font-weight:800; letter-spacing:.08em; color:var(--primary); text-transform:uppercase}
+  .phase h4{font-size:14.5px; margin:4px 0 8px}
+  .phase ul{margin-left:16px; font-size:12.5px; color:#334155}
+  .phase li{margin-bottom:4px}
+  .moat-list{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+  .moat{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:15px}
+  .moat h4{font-size:13.5px; margin-bottom:5px}
+  .moat p{font-size:12.5px; color:var(--muted)}
+
+  /* risks */
+  .risk{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:17px}
+  .risk-top{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:8px}
+  .risk h3{font-size:14.5px}
+  .sev{font-size:10.5px; font-weight:800; padding:3px 9px; border-radius:999px; text-transform:uppercase; letter-spacing:.05em}
+  .sev-h{background:#fee2e2; color:#b91c1c}
+  .sev-m{background:#fef3c7; color:#b45309}
+  .risk p{font-size:13px; color:#334155}
+  .risk .mit{margin-top:10px; font-size:12.5px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:8px 11px; color:#166534}
+
+  /* sources */
+  .src-group{margin-bottom:18px}
+  .src-group h3{font-size:13.5px; color:var(--primary)}
+  .src-group ul{margin:8px 0 0 16px; font-size:12.5px; color:#334155}
+  .src-group li{margin-bottom:4px; word-break:break-all}
+
+  /* modal */
+  .modal-overlay{position:fixed; inset:0; background:rgba(15,23,42,.55); display:none; align-items:flex-start; justify-content:center; z-index:100; padding:40px 16px; overflow-y:auto}
+  .modal-overlay.open{display:flex}
+  .modal-card{background:#fff; border-radius:16px; max-width:640px; width:100%; padding:26px; position:relative; box-shadow:0 20px 50px rgba(15,23,42,.25)}
+  .modal-close{position:absolute; top:14px; right:16px; background:none; border:none; font-size:22px; color:var(--muted); cursor:pointer; line-height:1}
+  .modal-card h3{font-size:19px; padding-right:30px}
+  .m-meta{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 14px}
+  .m-sec{margin-top:13px}
+  .m-sec .lbl{font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); margin-bottom:3px}
+  .m-sec p{font-size:13.5px; color:#334155}
+  .m-link{margin-top:16px; display:inline-block; font-weight:600; font-size:13.5px}
+
+  footer{border-top:1px solid var(--border); background:#fff; padding:22px 24px; text-align:center; font-size:12px; color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">Idea refinement · Market research · 8 September 2026</div>
+    <h1>The GTM Operating System — Competitive Landscape & Refined Strategy</h1>
+    <p class="hero-sub">An operating system for enterprise GTM teams covering everything <strong>after an opportunity becomes real</strong> — RFP, solutioning, proposal, SOW, delivery, customer success, expansion — built on a <strong>version-controlled shared knowledge base</strong> and long-horizon agents. This page maps <strong>85 companies across 9 categories</strong>, identifies the white space, and refines the wedge based on what the market research found.</p>
+    <div class="stats">
+      <div class="stat"><b>85</b><span>companies mapped</span></div>
+      <div class="stat"><b>9</b><span>categories</span></div>
+      <div class="stat"><b>$3.5B+</b><span>disclosed private funding</span></div>
+      <div class="stat"><b>25+</b><span>M&A events, 2024–26</span></div>
+      <div class="stat"><b>10</b><span>parallel research agents</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="overview" class="active">Overview</button>
+  <button data-tab="map">Market Map</button>
+  <button data-tab="explorer">Competitors</button>
+  <button data-tab="matrix">Positioning</button>
+  <button data-tab="whitespace">White Space</button>
+  <button data-tab="strategy">Refined Strategy</button>
+  <button data-tab="risks">Risks</button>
+  <button data-tab="sources">Sources</button>
+</nav>
+
+<main>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="tab active" id="overview">
+  <h2>Research verdict</h2>
+  <p class="lead">Ten parallel research agents scanned the market for companies solving the post-opportunity GTM problem. The core thesis holds — but the wedge needs to change.</p>
+
+  <div class="verdict-grid">
+    <div class="verdict v-good">
+      <h3><span class="badge b-low">Validated</span> What held up</h3>
+      <ul>
+        <li><b>Post-opportunity fragmentation is real.</b> Every category's own gap analysis says the same thing: RFP tools end at submission, CPQ at the quote, PSA at signature, CS at the handoff. No one connects the lifecycle.</li>
+        <li><b>The knowledge-base moat thesis holds.</b> No vendor owns a version-controlled artifact layer for GTM work. Glean indexes artifacts; Notion stores them; agent platforms execute tasks. Nobody manages them like code.</li>
+        <li><b>Top-of-funnel crowding is now quantified.</b> 20+ AI SDR startups funded in 2024; $420M+ disclosed funding vs ~$180–220M category ARR; 11x's implosion is the cautionary tale.</li>
+        <li><b>"Start narrow, expand" is how winners did it.</b> GovCon's lifecycle players (GovDash, Procurement Sciences) won exactly this way — vertically.</li>
+      </ul>
+    </div>
+    <div class="verdict v-warn">
+      <h3><span class="badge b-med">Challenged</span> What the notes got wrong</h3>
+      <ul>
+        <li><b>The RFP wedge is crowded, not open.</b> Responsive, Loopio, AutogenAI, Arphie, Rohirrim, Tribble, Quilt→Rox, DeepRFP, plus three well-funded GovCon players. Entering head-on means fighting incumbents with installed content libraries.</li>
+        <li><b>The "GTM OS" label is already claimed.</b> 20+ products use it, including Reevo ($80M from Khosla/Kleiner, Nov 2025), Apollo ("first AI-native all-in-one GTM platform"), Clari, and Gong ("Revenue AI OS"). The label alone differentiates nothing.</li>
+        <li><b>"Agents embedded in Slack/CRM" is table stakes.</b> Agentforce ships in Slack; Gong, ChurnZero, and Outreach all have agent suites. It's a requirement, not a differentiator.</li>
+      </ul>
+    </div>
+    <div class="verdict v-new">
+      <h3><span class="badge b-info">Refined</span> What to change</h3>
+      <ul>
+        <li><b>Enter through solutioning</b> — the uncontested, most knowledge-intensive stage. No GTM vendor generates solution designs from requirements.</li>
+        <li><b>Make the version-controlled knowledge base the product</b>, not a feature. RFP response becomes a byproduct of the KB, so you compete from strength rather than head-on.</li>
+        <li><b>Vertical-first ICP:</b> enterprise AI / infra companies with solutioning-heavy sales. Design partners from the Indian enterprise-AI ecosystem (AI vendors selling into BFSI — RFP-driven procurement, complex solutioning, delivery-heavy).</li>
+        <li><b>Partner for delivery execution</b> (Rocketlane/PSA integrations) before building it.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="mt">Key numbers</h2>
+  <div class="grid3 mt">
+    <div class="card"><h3>$800M</h3><p class="small">Salesforce AI ARR (Feb 2026), 29K Agentforce deals — the bundling threat is real, but its post-opportunity depth is thin.</p></div>
+    <div class="card"><h3>$200M</h3><p class="small">Glean ARR (Dec 2025, up from $100M nine months earlier) — sales and CS drove much of it. The stealth threat.</p></div>
+    <div class="card"><h3>40%</h3><p class="small">Gartner: share of agentic AI projects that will be canceled by end-2027. Buyers want measured outcomes, not agent theater.</p></div>
+    <div class="card"><h3>88%</h3><p class="small">Forrester: B2B organizations adopting or planning AI agents. The buying wave is here.</p></div>
+    <div class="card"><h3>$420M+</h3><p class="small">Disclosed funding in agentic outbound vs ~$180–220M category ARR — the top-of-funnel shakeout pushing capital downstream.</p></div>
+    <div class="card"><h3>25+</h3><p class="small">Consolidation events 2024–26 (Moveworks $2.85B, Metronome ~$1B, Fin $3.6B, Clari+Salesloft, Seismic+Highspot...) — the window is open but compressing.</p></div>
+  </div>
+
+  <h2 class="mt">Seven findings</h2>
+  <div class="grid2 mt" style="gap:12px" id="findings">
+    <div class="finding"><div class="num">1</div><p><b>The post-opportunity lifecycle is owned by no one.</b> 85 mapped companies cluster into point tools per stage. The connective tissue — one system carrying context from RFP to expansion — does not exist anywhere.</p></div>
+    <div class="finding"><div class="num">2</div><p><b>The "GitHub for GTM" layer is unclaimed.</b> Knowledge tools index artifacts, docs tools store them, agent tools execute tasks. No vendor manages GTM artifacts as versioned objects with lineage, approvals, and outcome feedback.</p></div>
+    <div class="finding"><div class="num">3</div><p><b>Solutioning is the empty pillar.</b> No GTM vendor generates solution designs, architectures, or implementation plans from customer requirements — that pattern exists only in software-engineering dev tools. Demo platforms automate proof, not design.</p></div>
+    <div class="finding"><div class="num">4</div><p><b>Vertical "GTM OS" plays validate the thesis.</b> GovCon (GovDash $42M, Procurement Sciences $40M+, Vultron $22M — all claiming lifecycle "OS"), industrial (Atira, Accel), CRE (Henry AI). All raised 2024–26 on lifecycle unification — confined to verticals. The commercial horizontal is open.</p></div>
+    <div class="finding"><div class="num">5</div><p><b>Top-of-funnel is saturated and shaking out.</b> 11x — the category creator — falsely claimed customers, lost its CEO, and admitted AI SDRs "don't work in the current form." The notes' instinct to avoid ToFu is correct and now quantified.</p></div>
+    <div class="finding"><div class="num">6</div><p><b>Incumbents are absorbing point tools fast.</b> ServiceNow–Moveworks ($2.85B), Stripe–Metronome (~$1B), Salesforce–Fin ($3.6B), Clari–Salesloft, Seismic–Highspot, DealHub–Subskribe. Standalone point tools are being compressed from both sides.</p></div>
+    <div class="finding"><div class="num">7</div><p><b>The real threats are Salesforce and Glean.</b> Salesforce: closest single absorber ($41.5B revenue, Slack surface, quoting agents) — but no RFP/solutioning/SOW products and no artifact knowledge layer. Glean: $7.2B valuation, already marketing RFP/proposal workflows to professional-services teams — but search-native, not artifact-native.</p></div>
+  </div>
+</section>
+
+<!-- ============ MARKET MAP ============ -->
+<section class="tab" id="map">
+  <h2>Lifecycle market map</h2>
+  <p class="lead">Every company mapped to the stage(s) of the post-opportunity lifecycle it actually serves. Click any chip for detail. The pattern to notice: <b>RFP and proposal are crowded, SOW and expansion are sparse, and solutioning has demo tools but no design engine.</b></p>
+  <div class="map-scroll">
+    <div class="lifecycle-grid" id="lifecycle-grid"></div>
+    <div id="layers"></div>
+  </div>
+  <div class="note">Density labels reflect the research synthesis (Sep 2026): "crowded" = multiple funded direct competitors; "open" = no funded direct player found; "sparse" = only template-level or unfunded tools.</div>
+</section>
+
+<!-- ============ EXPLORER ============ -->
+<section class="tab" id="explorer">
+  <h2>Competitor explorer</h2>
+  <p class="lead">All 85 companies. Search, filter by category or overlap, and click any row to expand the full profile. Overlap = how directly the company competes with the GTM OS thesis (High / Medium / Low).</p>
+  <div class="cat-legend" id="cat-legend"></div>
+  <div class="controls">
+    <input type="text" id="q" placeholder="Search company, description, gap...">
+    <select id="f-cat"><option value="">All categories</option></select>
+    <select id="f-ov">
+      <option value="">All overlap levels</option>
+      <option value="3">High overlap</option>
+      <option value="2">Medium overlap</option>
+      <option value="1">Low overlap</option>
+    </select>
+    <select id="f-sort">
+      <option value="cat">Sort: category</option>
+      <option value="name">Sort: name</option>
+      <option value="ov">Sort: overlap (high first)</option>
+    </select>
+  </div>
+  <div style="overflow-x:auto">
+    <table class="explorer" id="explorer-table">
+      <thead><tr><th style="width:22%">Company</th><th style="width:13%">Category</th><th style="width:24%">Stage & funding</th><th style="width:9%">Overlap</th><th>What they do</th></tr></thead>
+      <tbody id="explorer-body"></tbody>
+    </table>
+  </div>
+  <p class="small mt" id="explorer-count"></p>
+</section>
+
+<!-- ============ MATRIX ============ -->
+<section class="tab" id="matrix">
+  <h2>Positioning matrix</h2>
+  <p class="lead">Key players plotted by <b>lifecycle coverage</b> (how much of RFP → expansion they serve) against <b>knowledge & artifact depth</b> (versioned org knowledge, learning loops, artifact management). The top-right quadrant — broad lifecycle coverage with deep knowledge management — is empty. That is the opportunity.</p>
+  <div class="matrix-wrap" id="matrix-wrap">
+    <svg id="matrix-svg" viewBox="0 0 920 560" role="img" aria-label="Positioning matrix"></svg>
+    <div class="tooltip" id="matrix-tip"></div>
+  </div>
+  <div class="note">Positions are analytical judgments derived from the underlying research (Sep 2026), not vendor-published coordinates. Bubble size indicates scale (funding / revenue / valuation).</div>
+</section>
+
+<!-- ============ WHITE SPACE ============ -->
+<section class="tab" id="whitespace">
+  <h2>White space: five gaps nobody owns</h2>
+  <p class="lead">Each gap below was verified across all ten research tracks — every adjacent player was checked and found not to cover it.</p>
+  <div class="grid2 mt">
+    <div class="ws-card">
+      <h3>1. The solutioning engine</h3>
+      <p>Requirements → solution design → architecture → implementation plan. No GTM vendor does this. Demo platforms (Reprise, TestBox, Consensus) automate <i>proof</i>, not <i>design</i>. The only "AI system design from requirements" tools found are software-engineering dev tools.</p>
+      <div class="ev">Evidence: presales research found zero vendors generating solution designs; the PreSales Collective ecosystem still talks demos and copilots.</div>
+    </div>
+    <div class="ws-card">
+      <h3>2. The version-controlled GTM knowledge base ("GitHub for GTM")</h3>
+      <p>Glean indexes artifacts; Notion/Docs store them; Dust/Relevance execute tasks. Nobody manages GTM artifacts as first-class versioned objects with lineage, approvals, and outcome feedback. Guru's verification and Tribble's governed KB are closest — both single-stage.</p>
+      <div class="ev">Evidence: knowledge-infra research — "knowledge tools index artifacts, docs tools store them, agent tools execute tasks; the GitHub-for-GTM layer remains unclaimed."</div>
+    </div>
+    <div class="ws-card">
+      <h3>3. Cross-lifecycle continuity</h3>
+      <p>CS platforms start at the sales handoff; PSA tools start at signature; RFP tools end at submission. The connective context — what was promised, what was designed, what was delivered, what happened — lives nowhere.</p>
+      <div class="ev">Evidence: CS research — "every platform in this category starts at the sales handoff; none ingests pre-sale work products as a shared knowledge layer."</div>
+    </div>
+    <div class="ws-card">
+      <h3>4. The horizontal commercial lifecycle OS</h3>
+      <p>Vertical versions exist and are winning: GovCon (GovDash, Procurement Sciences, Vultron), industrial (Atira), CRE (Henry AI). All raised 2024–26 on exactly this lifecycle-unification story. The commercial-enterprise horizontal version is open.</p>
+      <div class="ev">Evidence: GovCon players raised $22M–$30M rounds each in 2025–26 claiming "operating system" positioning — partial validation, confined to government buyers.</div>
+    </div>
+    <div class="ws-card">
+      <h3>5. Pricing & win/loss memory</h3>
+      <p>No CPQ vendor maintains a versioned knowledge base of past pricing decisions tied to win/loss outcomes. Vendr (acquired by Vertice) has buy-side benchmarks; Atira has vertical deal memory; nobody has it for commercial enterprise GTM.</p>
+      <div class="ev">Evidence: CPQ research — "no mainstream CPQ vendor maintains a version-controlled knowledge base of past pricing decisions tied to win/loss outcomes."</div>
+    </div>
+    <div class="ws-card" style="border-left-color:var(--primary)">
+      <h3>Why now</h3>
+      <p>Agentic infrastructure matured (MCP everywhere: Gong, Outreach, PandaDoc, Gainsight all shipped MCP servers 2025–26) · the consolidation wave is absorbing point tools, opening a platform window · Gartner's 40%-cancellation warning means buyers now demand measured outcomes · Forrester: 88% of B2B orgs adopting or planning AI agents · the top-of-funnel shakeout is pushing talent and capital downstream.</p>
+      <div class="ev">a16z (2026): "from system of record to system of intelligence" — the thesis direction is where the market is heading.</div>
+    </div>
+  </div>
+
+  <h2 class="mt">Timeline: how the landscape moved, 2024–2026</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-date">Sep 2024</div><p>Glean raises $260M Series E at $4.6B; 11x raises $50M Series B led by a16z (its high-water mark before the implosion).</p></div>
+    <div class="tl-item"><div class="tl-date">Nov 2024</div><p>Arphie seeds with $2.9M from General Catalyst; 11x's AI SDR "Alice" claims enterprise customers it doesn't have (reported Mar 2025).</p></div>
+    <div class="tl-item"><div class="tl-date">Dec 2024</div><p>ServiceNow announces $2.85B Moveworks acquisition — its largest ever; HubSpot ships Breeze agents.</p></div>
+    <div class="tl-item"><div class="tl-date">Jul 2025</div><p>Salesforce launches Agentforce for Revenue (quoting agents in CRM + Slack); Vultron raises $22M as the "agentic OS for federal growth."</p></div>
+    <div class="tl-item"><div class="tl-date">Aug 2025</div><p>Clay closes $100M Series C at $3.1B; Clari and Salesloft announce their merger; Gainsight launches Atlas AI agents.</p></div>
+    <div class="tl-item"><div class="tl-date">Oct–Nov 2025</div><p>Salesforce ships Agentforce 360; Microsoft launches Agent 365; Procurement Sciences raises $30M Series B; Reevo debuts with $80M from Khosla and Kleiner as "the Revenue Operating System."</p></div>
+    <div class="tl-item"><div class="tl-date">Dec 2025</div><p>Clari–Salesloft merger completed; ServiceNow closes Moveworks; Glean crosses $200M ARR (sales/CS-driven).</p></div>
+    <div class="tl-item"><div class="tl-date">Jan 2026</div><p>GovDash raises $30M Series B; DealHub raises $100M and digests Subskribe; Stripe completes ~$1B Metronome acquisition.</p></div>
+    <div class="tl-item"><div class="tl-date">Mar 2026</div><p>Rocketlane raises $60M Series C (Insight) with its "Nitro" agentic delivery platform; TestBox raises $12M claiming the "GTM Infrastructure" category.</p></div>
+    <div class="tl-item"><div class="tl-date">May–Jun 2026</div><p>Gainsight pivots to "AI-native services" (Retention-as-a-Service); Salesforce agrees to buy Intercom's Fin for $3.6B; Vertice acquires Vendr.</p></div>
+    <div class="tl-item"><div class="tl-date">Jul 2026</div><p>Aligned closes $60M Series B for its AI Deal Workspace; Henry AI raises $16.5M for CRE deal desk.</p></div>
+    <div class="tl-item"><div class="tl-date">Aug–Sep 2026</div><p>Seismic–Highspot merger completed (enablement consolidates); Atira raises $17.5M from Accel — the industrial vertical's version of this exact thesis.</p></div>
+  </div>
+</section>
+
+<!-- ============ STRATEGY ============ -->
+<section class="tab" id="strategy">
+  <h2>Refined strategy</h2>
+  <div class="thesis mt">
+    Build the <b>system of record and intelligence for post-opportunity enterprise GTM work</b>: a version-controlled knowledge base of how this company sells, solutions, prices, and delivers — with long-horizon agents that work it — <b>starting at the solutioning stage</b>, where competition is thinnest and knowledge intensity is highest.
+  </div>
+
+  <h2 class="mt">Wedge refinement</h2>
+  <table class="wedge-table mt">
+    <tr><th style="width:20%"></th><th>Original (notes)</th><th>Research finding</th><th>Refined</th></tr>
+    <tr>
+      <td><b>Entry workflow</b></td>
+      <td>"RFP → Solutioning → Proposal" as the first workflow.</td>
+      <td>RFP is the most crowded stage: 15+ funded players; Responsive/Loopio own the installed base; AutogenAI/Arphie/Rohirrim own AI-native mindshare.</td>
+      <td><b>Solutioning first.</b> The solution-design workspace + knowledge base. RFP response and proposal generation become downstream consumers of the same KB — compete from strength, not head-on.</td>
+    </tr>
+    <tr>
+      <td><b>Differentiator</b></td>
+      <td>"Agents embedded in Slack/email/CRM."</td>
+      <td>Table stakes by 2026 — Agentforce ships in Slack; Gong, ChurnZero, Outreach all have agent suites.</td>
+      <td><b>The version-controlled knowledge base is the product.</b> Agents are the interface to it. Own artifact lineage: RFP → solution design → proposal → SOW → delivery learnings → expansion.</td>
+    </tr>
+    <tr>
+      <td><b>ICP</b></td>
+      <td>Enterprise sellers with complex cycles (AI, infra, SaaS, fintech, cybersecurity).</td>
+      <td>Confirmed — but needs to be narrow enough for design partners.</td>
+      <td><b>Enterprise AI / infra companies with solutioning-heavy sales</b> (pre-sales + delivery orgs, $100K–$10M+ deals, RFP-driven procurement). Design partners from the Indian enterprise-AI ecosystem — AI vendors selling into BFSI/telecom: exactly this workflow, dense and reachable.</td>
+    </tr>
+    <tr>
+      <td><b>Positioning</b></td>
+      <td>"The operating system for enterprise GTM teams."</td>
+      <td>The label is claimed by 20+ products (Reevo $80M, Apollo, Clari, Gong) — noise, not signal.</td>
+      <td><b>"The system of record for how your company sells and delivers"</b> — sell the artifact graph and the measured outcomes, not the OS metaphor.</td>
+    </tr>
+  </table>
+
+  <h2 class="mt">Product phases</h2>
+  <div class="roadmap mt">
+    <div class="phase">
+      <div class="ph">Phase 0 · 0–6 mo</div>
+      <h4>Knowledge foundation</h4>
+      <ul>
+        <li>Ingest proposals, RFPs, solution docs, pricing, delivery retros</li>
+        <li>Build the versioned knowledge base</li>
+        <li>Slack-native Q&A over company knowledge</li>
+        <li>3–5 design partners; measure time savings</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="ph">Phase 1 · 6–18 mo</div>
+      <h4>Solutioning workspace</h4>
+      <ul>
+        <li>Requirements → solution design → assumptions/dependencies → implementation plan → SOW draft</li>
+        <li>Gap detection and approval routing</li>
+        <li>Win/loss capture feeding the KB</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="ph">Phase 2 · 18–36 mo</div>
+      <h4>Lifecycle agents</h4>
+      <ul>
+        <li>RFP agent + proposal agent on the same KB</li>
+        <li>Pricing-memory agent (versioned decisions + outcomes)</li>
+        <li>Delivery handoff; delivery-learnings loop</li>
+        <li>Account expansion signals</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="ph">Phase 3 · 36+ mo</div>
+      <h4>The operating system</h4>
+      <ul>
+        <li>Open agent platform on the KB (MCP-native)</li>
+        <li>Cross-team views: rep / account / pod / company</li>
+        <li>Outcome-based pricing at scale</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="mt">Moat — validated by the research</h2>
+  <div class="moat-list mt">
+    <div class="moat"><h4>Accumulated org knowledge</h4><p>Compounds with every deal; the KB becomes the company's GTM memory. Hardest asset to recreate — confirmed by every category's gap analysis.</p></div>
+    <div class="moat"><h4>Evaluation datasets</h4><p>"What good looks like" for this company's proposals and designs — the quality bar general-purpose AI cannot replicate.</p></div>
+    <div class="moat"><h4>Workflow ownership</h4><p>System of record for post-opportunity work; switching means abandoning your GTM memory.</p></div>
+    <div class="moat"><h4>Cross-lifecycle context</h4><p>Pre-sale promises feeding delivery and CS — the connective tissue no point tool or incumbent suite has.</p></div>
+  </div>
+
+  <h2 class="mt">Pricing direction</h2>
+  <div class="card mt">
+    <p style="font-size:13.5px; color:#334155">The market is abandoning per-seat: Salesforce Flex Credits (~$0.10 per agent action), HubSpot $0.50 per resolved conversation, ChurnZero's credit marketplace, PandaDoc per-document, Guru's public critique that per-seat "breaks down for AI agents." Price on workflows and outcomes — per solution-design cycle, per proposal cycle, or a percentage of influenced pipeline — and instrument the metrics that prove it: <b>time from RFP to response, time to solution design, proposal win rate, opportunities per solutions engineer, % of work using standardized knowledge.</b></p>
+  </div>
+</section>
+
+<!-- ============ RISKS ============ -->
+<section class="tab" id="risks">
+  <h2>Risk register — updated by the research</h2>
+  <p class="lead">The notes' four original risks, re-scored against evidence, plus four new ones the research surfaced.</p>
+  <div class="grid2 mt">
+    <div class="risk">
+      <div class="risk-top"><h3>Salesforce bundling</h3><span class="sev sev-h">High</span></div>
+      <p>Agentforce + Slack + Revenue Cloud at $800M AI ARR and 29K deals; quoting agents already shipped; could bundle proposal/deal agents into seat deals.</p>
+      <div class="mit">Mitigation: vendor-neutral across CRM; own the artifact layer Salesforce lacks; integrate with Agentforce via MCP rather than fight it head-on.</div>
+    </div>
+    <div class="risk">
+      <div class="risk-top"><h3>Glean expansion into GTM workflows</h3><span class="sev sev-h">High</span></div>
+      <p>$200M ARR with sales/CS as a major driver; its professional-services solution already markets "RFP, client profile, prior proposals, and firm knowledge" — one roadmap cycle from this thesis.</p>
+      <div class="mit">Mitigation: artifact-native vs search-native — versioning, lineage, approvals, outcome feedback; GTM-specific schema and workflow depth Glean doesn't model.</div>
+    </div>
+    <div class="risk">
+      <div class="risk-top"><h3>RFP incumbents add agents</h3><span class="sev sev-m">Medium</span></div>
+      <p>Responsive, Loopio, AutogenAI all shipped agentic features 2025–26; they own the response installed base and could expand downstream.</p>
+      <div class="mit">Mitigation: enter via solutioning (upstream of their center of gravity); make RFP response a byproduct of a superior KB; their libraries are Q&A content, not versioned org knowledge.</div>
+    </div>
+    <div class="risk">
+      <div class="risk-top"><h3>Agent-washing fatigue</h3><span class="sev sev-m">Medium</span></div>
+      <p>Gartner: 40% of agentic AI projects canceled by 2027; only ~130 genuinely agentic vendors among thousands of claims. Buyers are burned.</p>
+      <div class="mit">Mitigation: sell measured outcomes (time-to-proposal, win rate, opportunities per SE), not agents; publish the eval harness.</div>
+    </div>
+    <div class="risk">
+      <div class="risk-top"><h3>Services-business trap</h3><span class="sev sev-m">Medium</span></div>
+      <p>Enterprise GTM processes are messy; Gainsight's May 2026 pivot to "AI-native services" shows how strong the pull is. (Original notes risk — confirmed.)</p>
+      <div class="mit">Mitigation: productized primitives; templates-as-code; cap services as a % of revenue; the KB structure forces productization.</div>
+    </div>
+    <div class="risk">
+      <div class="risk-top"><h3>General-purpose AI / internal DIY</h3><span class="sev sev-m">Medium</span></div>
+      <p>Dust, Ema, and StackAI-style platforms make internal agent-building easier; Claude/ChatGPT solve the individual 80%. (Original notes risk — intensified.)</p>
+      <div class="mit">Mitigation: the org-level system of record + evaluation datasets is what DIY cannot replicate; be the place the agents run, not the model.</div>
+    </div>
+    <div class="risk">
+      <div class="risk-top"><h3>Every company works differently</h3><span class="sev sev-m">Medium</span></div>
+      <p>Original notes risk — confirmed by the breadth of process variance across the case studies.</p>
+      <div class="mit">Mitigation: common infrastructure (knowledge, versioning, agents, permissions, evals, integrations); company-specific layer is processes and skills, configurable not bespoke.</div>
+    </div>
+    <div class="risk">
+      <div class="risk-top"><h3>Consolidation compresses the window</h3><span class="sev sev-m">Medium</span></div>
+      <p>Point tools are being absorbed fast (Moveworks, Subskribe, Quilt, Copy.ai, Highspot, Spiff, Fin). The platform window is open but narrowing; it also defines exit paths.</p>
+      <div class="mit">Mitigation: speed to workflow ownership; build the KB moat early — acquirers buy installed knowledge, not features.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="tab" id="sources">
+  <h2>Key sources</h2>
+  <p class="lead">Primary sources behind the load-bearing claims. Compiled by ten parallel research agents, September 2026. Figures as reported by cited sources; items flagged as unverified in the underlying research were excluded or marked.</p>
+  <div class="grid2 mt">
+    <div>
+      <div class="src-group"><h3>Analyst & market data</h3><ul>
+        <li>gartner.com — "Gartner Predicts Over 40% of Agentic AI Projects Will Be Canceled by End of 2027" (Jun 2025)</li>
+        <li>forrester.com — "The Future of B2B GTM Isn't Human Versus AI" (Mar 2026); "Seven AI Agent Archetypes That Will Reshape B2B GTM"</li>
+        <li>a16z.com — "Death of a Salesforce" (Jul 2024); "From System of Record to System of Intelligence" (May 2026)</li>
+        <li>grandviewresearch.com — CPQ, PSA, customer success platform market reports</li>
+        <li>360iresearch.com — RFP response management software market ($215M base, 2025)</li>
+        <li>gtmlens.com — AI SDR market map, Q2 2026 ($420M funding vs $180–220M ARR)</li>
+      </ul></div>
+      <div class="src-group"><h3>RFP & GovCon lifecycle</h3><ul>
+        <li>responsive.io / loopio.com — company and funding pages (K1 2018; Sumeru $200M, 2021)</li>
+        <li>venturebeat.com — AutogenAI $39.5M Series B (Salesforce Ventures, Spark)</li>
+        <li>siliconangle.com — GovDash $30M Series B (Jan 2026)</li>
+        <li>prnewswire.com — Procurement Sciences $30M Series B (Nov 2025); Vultron $22M (Jul 2025)</li>
+        <li>axios.com — Arphie $2.9M seed, General Catalyst (Nov 2024)</li>
+        <li>techcrunch.com — "Quilt is building AI assistants for solutions teams" (Mar 2024); Rox acquires Quilt (Sep 2025)</li>
+      </ul></div>
+      <div class="src-group"><h3>Deal desk, CPQ & delivery</h3><ul>
+        <li>prnewswire.com — DealHub $100M growth round (Riverwood, Jan 2026); Subskribe acquisition</li>
+        <li>globenewswire.com — Aligned $60M Series B (PeakSpan, Jul 2026)</li>
+        <li>fortune.com / accel.com — Atira $17.5M for industrial sales-engineering AI (Sep 2026)</li>
+        <li>prnewswire.com — Rocketlane $60M Series C (Insight Partners, Mar 2026)</li>
+        <li>businesswire.com — Kantata Expertise Engine (Oct 2025); Certinia AI agents (Aug 2025)</li>
+        <li>siliconangle.com — Provus agentic services quoting (Oct 2025)</li>
+        <li>stripe.com/newsroom — Stripe completes Metronome acquisition (Jan 2026)</li>
+      </ul></div>
+    </div>
+    <div>
+      <div class="src-group"><h3>Knowledge & agent infrastructure</h3><ul>
+        <li>techcrunch.com — Glean Series F at $7.2B valuation (Jun 2025)</li>
+        <li>fortune.com — Glean hits $200M ARR (Dec 2025)</li>
+        <li>glean.com — professional-services solution ("RFP, client profile, prior proposals, firm knowledge")</li>
+        <li>tech.eu — Dust $40M Series B (Abstract/Sequoia, May 2026)</li>
+        <li>techcrunch.com — Notion 3.0 agents + $500M ARR (Sep 2025); ServiceNow–Moveworks $2.85B (Mar 2025)</li>
+        <li>reuters.com — Grammarly–Superhuman; reuters.com — ServiceNow–Moveworks</li>
+      </ul></div>
+      <div class="src-group"><h3>Incumbents</h3><ul>
+        <li>salesforce.com — FY26 Q4 earnings ($41.5B revenue; $800M AI ARR; 29K Agentforce deals); Agentforce pricing page (Flex Credits)</li>
+        <li>microsoft.com — Agent 365 announcement (Nov 2025); Dynamics 365 sales agents docs</li>
+        <li>hubspot.com — Agentic Customer Platform (May 2026); Agent Hub (Jul 2026); outcome pricing</li>
+        <li>businesswire.com — Clari + Salesloft merger completed (Dec 2025)</li>
+        <li>gong.io — $300M+ ARR (Mar 2025); Mission Big Dipper / Revenue Harness (Jun 2026)</li>
+        <li>geekwire.com — Seismic–Highspot merger (Feb/Aug 2026)</li>
+        <li>techcrunch.com — Salesforce acquires Fin (Intercom) for $3.6B (Jun 2026)</li>
+      </ul></div>
+      <div class="src-group"><h3>Top-of-funnel (contrast set)</h3><ul>
+        <li>techcrunch.com — "a16z- and Benchmark-backed 11x has been claiming customers it doesn't have" (Mar 2025)</li>
+        <li>grow.thegtmarchitects.com — 11x CEO: AI SDRs "don't work in the current form" (2026)</li>
+        <li>reuters.com — Clay valued at $3.1B (Aug 2025)</li>
+        <li>apollo.io — "first AI-native all-in-one GTM platform" launch (Mar 2026)</li>
+        <li>cbinsights.com — Copy.ai acquired by Fullcast (Oct 2025)</li>
+      </ul></div>
+      <div class="src-group"><h3>Direct "OS" claims</h3><ul>
+        <li>bloomberg.com / kleinerperkins.com — Reevo $80M debut, "the Revenue Operating System" (Nov 2025)</li>
+        <li>clari.com — "run every revenue workflow" positioning</li>
+        <li>getcargo.ai — "Context" shared GTM knowledge base</li>
+        <li>testbox.com — "GTM Infrastructure" Series A (Mar 2026)</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Compiled 8 Sep 2026 from ten parallel research agents · 85 companies · figures as reported by cited sources · analytical judgments (matrix positions, density labels, overlap ratings) are the synthesis, not vendor claims.
+</footer>
+
+<!-- modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-card">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+var CATS = {
+  rfp:  {name:"RFP & Response AI", color:"#7c3aed"},
+  sol:  {name:"Presales & Solutioning", color:"#0891b2"},
+  cpq:  {name:"CPQ, Pricing & Deal Desk", color:"#d97706"},
+  psa:  {name:"SOW, PSA & Delivery", color:"#65a30d"},
+  cs:   {name:"Customer Success & Expansion", color:"#db2777"},
+  kb:   {name:"Knowledge & Agent Infra", color:"#4f46e5"},
+  inc:  {name:"Incumbent Platforms", color:"#334155"},
+  tofu: {name:"Top-of-Funnel AI", color:"#94a3b8"},
+  os:   {name:"Direct 'OS' Claims", color:"#dc2626"}
+};
+
+var STAGES = [
+  {id:"s_rfp", name:"RFP / Response", density:"Very crowded", dcolor:"#dc2626", dnote:"15+ funded players"},
+  {id:"s_sol", name:"Solutioning", density:"Open", dcolor:"#059669", dnote:"demo tools, no design engine"},
+  {id:"s_prop", name:"Proposal & Pricing", density:"Crowded", dcolor:"#d97706", dnote:"CPQ incumbents + agentic newcomers"},
+  {id:"s_sow", name:"SOW & Contracting", density:"Sparse", dcolor:"#059669", dnote:"template tools only"},
+  {id:"s_del", name:"Delivery", density:"Contested", dcolor:"#d97706", dnote:"PSA suites + Rocketlane moving up"},
+  {id:"s_cs", name:"Customer Success", density:"Mature", dcolor:"#64748b", dnote:"Gainsight-led, consolidating"},
+  {id:"s_exp", name:"Expansion", density:"Fragmented", dcolor:"#0891b2", dnote:"signals everywhere, no owner"}
+];
+
+var OV_LABEL = {3:"High", 2:"Medium", 1:"Low"};
+var OV_CLASS = {3:"b-high", 2:"b-med", 1:"b-low"};
+
+var COS = [
+{id:"responsive", n:"Responsive (ex-RFPIO)", cat:"rfp", sz:3, ov:3, st:"Scale-up · $25M from K1 (2018) · ~500 staff", stages:["s_rfp"],
+ d:"Category-leading 'strategic response management' suite: Answer Library, RFP/DDQ/security-questionnaire workflows, genAI drafting. Largest commercial installed base (Microsoft, Salesforce, Adobe among references).",
+ icp:"Mid-large enterprises, tech-heavy", ai:"AI Answer Library, automated import, genAI drafting",
+ gap:"Questionnaire-centric. Nothing post-sale; the library is Q&A content, not versioned org knowledge; no long-horizon agents.", url:"https://www.responsive.io"},
+{id:"loopio", n:"Loopio", cat:"rfp", sz:4, ov:3, st:"PE-backed · $200M from Sumeru (2021)", stages:["s_rfp"],
+ d:"Response management with a content library and staleness management; 2025 AI refresh (eight AI innovations, portal-based responses, Unleash connector).",
+ icp:"Mid-market to enterprise RFP teams", ai:"AI answer generation, magic import, AI search",
+ gap:"Bid-team tool. No solutioning, pricing, SOW, delivery, CS, or expansion; knowledge is a curated answer library.", url:"https://loopio.com"},
+{id:"autogenai", n:"AutogenAI", cat:"rfp", sz:3, ov:2, st:"Series B · ~$62M (Salesforce Ventures, Spark, 2023)", stages:["s_rfp"],
+ d:"LLM platform that ingests past bids and tenders to auto-draft compliant responses; launched AutogenAI Federal (Feb 2025); UK fast-growth list (2026).",
+ icp:"Enterprise bid teams: construction, defense, IT services", ai:"Learning content library from past bids, first-draft generation",
+ gap:"Bid writing only. No commercial pricing, solutioning, SOW, delivery, or CS.", url:"https://autogenai.com"},
+{id:"arphie", n:"Arphie", cat:"rfp", sz:1, ov:2, st:"Seed · $2.9M (General Catalyst, Nov 2024)", stages:["s_rfp"],
+ d:"AI-native, agent-driven RFP response with complex compliance-matrix handling and agentic drafting from a customer knowledge base.",
+ icp:"Mid-market/enterprise proposal teams", ai:"Agentic auto-drafting, compliance matrices",
+ gap:"Single-workflow product; early; no lifecycle breadth.", url:"https://www.arphie.ai"},
+{id:"rohirrim", n:"Rohirrim AI", cat:"rfp", sz:2, ov:2, st:"Series A · $15M (Insight, 2023) + Bessemer/IBM strategic", stages:["s_rfp"],
+ d:"'Domain-aware' genAI trained on enterprise documents for RFP/proposal responses; patents on the approach; increasingly government-flavored (retired generals advising, DoD marketplace listing).",
+ icp:"Large enterprises; defense-adjacent suppliers", ai:"Domain-trained drafting from enterprise knowledge",
+ gap:"Proposal-centric output; no delivery/CS; no long-horizon agents.", url:"https://rohirrim.ai"},
+{id:"quilt", n:"Quilt (acq. by Rox)", cat:"rfp", sz:1, ov:2, st:"Seed · $2.5M (Sequoia, 2024) · acquired Sep 2025", stages:["s_rfp","s_sol"],
+ d:"AI knowledge assistant for solutions/presales teams: live-syncs content from Drive/SharePoint/Gong, answers RFPs and security questionnaires inside Slack/Chrome with citations.",
+ icp:"Solutions engineers, presales, security teams", ai:"Live-synced knowledge retrieval, cited answer generation",
+ gap:"Conceptually the closest to 'agents embedded where GTM teams work' — but absorbed into Rox's sales-agent CRM; no lifecycle.", url:"https://quilt.app"},
+{id:"govdash", n:"GovDash", cat:"rfp", sz:3, ov:3, ovn:"vertical: GovCon", st:"Series B · $42M total ($30M, Jan 2026)", stages:["s_rfp","s_prop","s_sow","s_del"],
+ d:"Full government-contracting lifecycle: opportunity discovery, capture, RFP shredding, proposals, pricing workflows, contract management, post-award tracking — unified around an 'Opportunity record' with an autonomous agent. Claims $5B in customer awards.",
+ icp:"US government contractors", ai:"Compliance mapping, auto-drafting, agentic cross-module execution",
+ gap:"Government-only. The clearest lifecycle-unification thesis in market — but built on federal procurement mechanics, not commercial GTM.", url:"https://www.govdash.com"},
+{id:"vultron", n:"Vultron", cat:"rfp", sz:2, ov:2, ovn:"vertical: GovCon", st:"Series A · $22M+ (Greycroft, Jul 2025)", stages:["s_rfp"],
+ d:"'Agentic Operating System for federal growth': capture intelligence, proposal automation, and centralized 'organizational intelligence' for federal contractors.",
+ icp:"Federal contractors (defense, aerospace)", ai:"Agentic proposal workflows, knowledge centralization",
+ gap:"Federal only; pre-award focus; no delivery/CS/expansion.", url:"https://www.vultron.ai"},
+{id:"procsci", n:"Procurement Sciences", cat:"rfp", sz:3, ov:3, ovn:"vertical: GovCon", st:"Series B · $40M+ ($30M, Nov 2025)", stages:["s_rfp","s_prop","s_del"],
+ d:"'Awarded AI' — claims the AI-native operating system for GovCon across find-win-deliver: discovery, proposals, compliance, contract execution. 300+ orgs including four of the top 10 defense contractors.",
+ icp:"Government contractors, SMB to primes", ai:"Agentic AI across find-win-deliver",
+ gap:"Public-sector only; 'delivery' means contract compliance, not customer success.", url:"https://www.procurementsciences.com"},
+{id:"deeprfp", n:"DeepRFP", cat:"rfp", sz:1, ov:1, st:"Bootstrapped", stages:["s_rfp"],
+ d:"Lean AI toolkit for proposal professionals: RFP shredder, compliance matrices, first drafts, red-team review. Transparent pricing ($89–149/user/mo).",
+ icp:"Individual proposal professionals, SMB", ai:"Drafting grounded in user-provided uploads",
+ gap:"Point toolkit; a feature-level subset of the thesis.", url:"https://deeprfp.com"},
+{id:"qorusdocs", n:"QorusDocs", cat:"rfp", sz:2, ov:2, st:"Growth · $10M (2022) · acquired Shark Finesse (2025)", stages:["s_rfp","s_prop"],
+ d:"Microsoft 365-native proposal management with content libraries and AI suggestions; added value-engineering/ROI business cases via Shark Finesse.",
+ icp:"Microsoft-centric proposal teams", ai:"AI content suggestions inside Office",
+ gap:"Document-centric, proposal-only.", url:"https://www.qorusdocs.com"},
+{id:"expedience", n:"Expedience", cat:"rfp", sz:1, ov:1, st:"Private · Microsoft AI Cloud Partner (2026)", stages:["s_rfp","s_sow"],
+ d:"Word-native proposal and SOW automation: content library, template assembly, Copilot-powered drafting, SmartLinks for SOWs.",
+ icp:"Microsoft-centric enterprises, services", ai:"Copilot-powered drafting, SOW generation",
+ gap:"A Word add-in vendor; no platform ambitions visible.", url:"https://expediencesoftware.com"},
+{id:"tribble", n:"Tribble", cat:"rfp", sz:1, ov:2, st:"Seed · Salesforce Ventures-backed", stages:["s_rfp","s_kb"],
+ d:"Governed AI knowledge base for proposals, sales, and knowledge: automates RFPs, DDQs, security questionnaires with sourced answers and expert review; Clari integration for call context.",
+ icp:"Enterprise presales/enablement teams", ai:"RAG with governed answers + expert review loops",
+ gap:"Scope ends at buyer answers; no SOW/delivery/CS; no version-control model.", url:"https://tribble.ai"},
+{id:"steerlab", n:"Steerlab", cat:"rfp", sz:1, ov:1, st:"Pre-seed/Seed · €1.7M (2024)", stages:["s_rfp","s_sol"],
+ d:"Paris-based AI for presales teams: RFP and proposal automation.",
+ icp:"European presales teams", ai:"AI response automation",
+ gap:"Early, single-workflow.", url:"https://www.steerlab.ai"},
+{id:"reprise", n:"Reprise", cat:"sol", sz:3, ov:2, st:"~$82M total (Series B: Iconiq, 2021)", stages:["s_sol"],
+ d:"Enterprise demo automation leader; 2025–26 pivot to agentic demo creation and an MCP server turning AI assistants into 'enterprise demo engineers'.",
+ icp:"Enterprise software GTM teams", ai:"Agentic demo capture and building",
+ gap:"Demos only; no solution design, no lifecycle.", url:"https://www.reprise.com"},
+{id:"demostack", n:"Demostack", cat:"sol", sz:3, ov:1, st:"~$51.5M (Series B: Tiger Global, 2022)", stages:["s_sol"],
+ d:"Demo creation platform; no announced news since 2022 — consistent with category-consolidation commentary.",
+ icp:"SaaS sales/presales", ai:"None surfaced 2024–26",
+ gap:"No AI story; no knowledge or lifecycle layer.", url:"https://demostack.com"},
+{id:"testbox", n:"TestBox", cat:"sol", sz:2, ov:2, st:"Series A · $27M total ($12M, Mar 2026)", stages:["s_sol"],
+ d:"Formally defines 'GTM Infrastructure': live demos and sandboxes generated from a 'Product Graph' (schema, APIs, flows) with synthetic data; Sandbox Copilot as a '24/7 AI Sales Engineer'.",
+ icp:"B2B software GTM teams (Intuit, Gong, Apollo)", ai:"Product Graph, synthetic data, AI sales-engineer copilot",
+ gap:"Infrastructure for proof environments — models the product being sold, not the company's GTM knowledge.", url:"https://www.testbox.com"},
+{id:"consensus", n:"Consensus", cat:"sol", sz:4, ov:1, st:"Growth · $110M+ (Sumeru, 2023)", stages:["s_sol"],
+ d:"Intelligent demo automation shared with buying committees, with engagement analytics.",
+ icp:"SaaS presales organizations", ai:"Vendor-language 'intelligent' automation",
+ gap:"Demo sharing only.", url:"https://goconsensus.com"},
+{id:"storylane", n:"Storylane", cat:"sol", sz:1, ov:1, st:"Angel-funded (~$1M) · $10M ARR (2025)", stages:["s_sol"],
+ d:"Interactive demo platform expanding into conversational sales agents (RepX); grew $900K to $10M ARR in about four years.",
+ icp:"Marketing/sales, PLG SaaS", ai:"RepX conversational agents, Lily AI demos",
+ gap:"Demo creation + top-of-funnel qualification.", url:"https://storylane.io"},
+{id:"saleo", n:"Saleo", cat:"sol", sz:2, ov:1, st:"Series A · $13M (Emergence, 2023)", stages:["s_sol"],
+ d:"Live demo data platform: modifies the live product's data so demos are complete and personalized.",
+ icp:"Presales teams, AEs", ai:"AI modeling engine for live demo data",
+ gap:"Demo data only.", url:"https://saleo.io"},
+{id:"vivun", n:"Vivun", cat:"sol", sz:4, ov:2, st:"~$128M total (Series C: Salesforce Ventures, 2022)", stages:["s_sol","s_kb"],
+ d:"Presales workflow veteran pivoted to AI teammates built on a 'Sales Reasoning Model' — codifying what elite sellers know into structured knowledge inside AI agents (Hero, Ava).",
+ icp:"Sellers and presales organizations", ai:"Sales Reasoning Model, live-call assistance, CRM/MCP integrations",
+ gap:"Knowledge is seller reasoning, not reusable org artifacts; rep-centric, no lifecycle.", url:"https://vivun.com"},
+{id:"bounti", n:"Bounti", cat:"sol", sz:2, ov:1, st:"Seed · $16M (GV, Sep 2024)", stages:["s_sol","s_tofu"],
+ d:"'Full-stack, full-funnel agentic AI teammate platform' for sales/marketing/CS; the first shipped teammate automates prospecting research and personalization.",
+ icp:"Sales/marketing/CS teams", ai:"Prospecting teammate with human-in-the-loop services",
+ gap:"Shipped product is top-of-funnel prospecting.", url:"https://bounti.ai"},
+{id:"docket", n:"Docket", cat:"sol", sz:2, ov:1, st:"Series A · ~$15M (reported, Jul 2024)", stages:["s_sol"],
+ d:"AI sales engineers for presales teams.",
+ icp:"Enterprise sales engineering", ai:"AI SE assistants",
+ gap:"SE assistance; early.", url:"https://www.docket.io"},
+{id:"walnut", n:"Walnut", cat:"sol", sz:2, ov:1, st:"Established demo platform", stages:["s_sol"],
+ d:"Demo automation; launched 'AI Mode' for building demos (Dec 2025).",
+ icp:"B2B sales teams", ai:"AI Mode demo building",
+ gap:"Demos only.", url:"https://www.walnut.io"},
+{id:"conga", n:"Conga", cat:"cpq", sz:4, ov:2, st:"Thoma Bravo-owned (Apttus merger, $715M, 2020)", stages:["s_prop"],
+ d:"Quote-to-cash suite (CPQ, CLM, docs, pricing); 'AiMe' unified AI layer with quote agents and price optimization at point of sale (Mar 2026).",
+ icp:"Mid-large enterprise, Salesforce/Microsoft/SAP ecosystems", ai:"AiMe agents, AI price optimization",
+ gap:"PE-owned incumbent suite; no knowledge base or win/loss learning loop; no cross-lifecycle coordination.", url:"https://conga.com"},
+{id:"dealhub", n:"DealHub", cat:"cpq", sz:4, ov:3, st:"Growth · $100M (Riverwood, Jan 2026) · acquired Subskribe", stages:["s_prop"],
+ d:"Agentic 'quote-to-revenue' hub: CPQ + subscriptions + CLM + billing + deal rooms; inherited Subskribe's DealDesk AI (natural-language quoting in Slack, approvals, pricing-policy enforcement).",
+ icp:"Mid-market to enterprise RevOps, SaaS", ai:"Agentic quoting, context-aware insights, Slack-based approvals",
+ gap:"No memory of past pricing decisions/outcomes; no solutioning/SOW/delivery/CS.", url:"https://dealhub.io"},
+{id:"oraclecpq", n:"Oracle CPQ (Fusion)", cat:"cpq", sz:5, ov:2, st:"Public (Oracle)", stages:["s_prop"],
+ d:"Enterprise CPQ inside Fusion Cloud CX; 'NextGen CPQ' adds AI quote summaries, natural-language quote assistance, recommendations; Quote Advisor Agent on roadmap.",
+ icp:"Oracle-stack enterprises", ai:"GenAI quote summaries and assistance",
+ gap:"Oracle-stack only; CPQ-scoped.", url:"https://www.oracle.com"},
+{id:"pandadoc", n:"PandaDoc", cat:"cpq", sz:4, ov:2, st:"Strategic-backed (OMERS, M12, HubSpot)", stages:["s_prop"],
+ d:"Document/proposal generation + eSign moving upmarket; MCP server (Sep 2025) lets external agents run full agreement workflows; outcome-based pricing (per document sent).",
+ icp:"SMB to mid-market, moving enterprise", ai:"AI document assistant, MCP agent access",
+ gap:"Document-centric; no pricing intelligence or knowledge base.", url:"https://pandadoc.com"},
+{id:"docusign", n:"DocuSign IAM", cat:"cpq", sz:5, ov:2, st:"Public (NASDAQ: DOCU)", stages:["s_sow"],
+ d:"Intelligent Agreement Management: extracts, indexes, and reasons over the organization's agreement corpus (Iris engine); AI contract agents for search, review, risk, drafting.",
+ icp:"Enterprise legal/procurement/sales/ops", ai:"Iris model routing, contract agents",
+ gap:"Knowledge base covers contracts only — not pricing rationale, solutioning, or win/loss.", url:"https://www.docusign.com"},
+{id:"subskribe", n:"Subskribe (acq. by DealHub)", cat:"cpq", sz:2, ov:3, ovn:"now part of DealHub", st:"$18.4M (8VC, 2022) · acquired late 2025", stages:["s_prop"],
+ d:"Adaptive CPQ/deal desk: natural-language quote building, Slack-based quoting with auto-routing and approvals, AI enforcement of pricing policies.",
+ icp:"SaaS RevOps and deal desks", ai:"DealDesk AI",
+ gap:"Folded into DealHub; no persistent pricing-outcome memory.", url:"https://www.subskribe.com"},
+{id:"logik", n:"Logik.ai (acq. by ServiceNow)", cat:"cpq", sz:2, ov:2, st:"$25M Series B (Oct 2024) · acquired Apr 2025", stages:["s_prop"],
+ d:"Composable 'headless' CPQ and advanced product configuration augmenting Salesforce/Dynamics/ServiceNow.",
+ icp:"B2B manufacturers with complex configuration", ai:"AI-powered guided selling",
+ gap:"Configuration engine; now inside ServiceNow's CRM ambitions.", url:"https://logik.ai"},
+{id:"aligned", n:"Aligned", cat:"cpq", sz:4, ov:3, st:"Series B · $73.8M ($60M, Jul 2026, PeakSpan)", stages:["s_prop","s_kb"],
+ d:"AI Deal Workspace — 'system of action' for B2B sales: an 'AI Deal Brain' ingests deal context from CRM, email, calls (~95% of buyer-journey activity); Seller and Buyer agents; ARR tripled pre-raise.",
+ icp:"Mid-market/enterprise B2B sales (Deel, SimilarWeb)", ai:"Seller Agent, Buyer Agent, cross-source deal context",
+ gap:"Deal-context capture, not a versioned org knowledge base; no SOW/delivery/CS.", url:"https://alignedup.com"},
+{id:"atira", n:"Atira", cat:"cpq", sz:2, ov:3, ovn:"vertical: industrial", st:"$17.5M (Accel, Sep 2026)", stages:["s_sol","s_prop","s_kb"],
+ d:"AI orchestration layer for industrial sales engineering: screens inbound, configures solutions from modules, generates all sales/compliance docs — and builds a proprietary knowledge layer of which configurations and margins perform. Explicit 'single commercial OS' ambition.",
+ icp:"Industrial manufacturers (ABB E-Mobility, Chiron)", ai:"Deal knowledge base (configs, margins, outcomes), pricing intelligence",
+ gap:"Industrial/manufacturing vertical only — this thesis, proven in one vertical.", url:"https://atira.ai"},
+{id:"henry", n:"Henry AI", cat:"cpq", sz:2, ov:2, ovn:"vertical: CRE", st:"Series A · $16.5M (FirstMark, Jul 2026)", stages:["s_prop"],
+ d:"AI deal desk for commercial real estate: lease abstraction plus underwriting and deal-document workflows ('AI that knows your firm').",
+ icp:"CRE brokerages, landlords, investors", ai:"Firm-specific knowledge applied to deal docs",
+ gap:"Vertical silo (real estate).", url:"https://henry.ai"},
+{id:"provus", n:"Provus", cat:"cpq", sz:2, ov:2, st:"Series A · $12M (Norwest, 2022)", stages:["s_prop","s_sow"],
+ d:"Agentic AI services quoting: automates scope-to-priced-quote for services organizations; AI 'revenue and margin goal seek'; Salesforce AppExchange partner.",
+ icp:"Enterprise services orgs, SIs, SaaS PS teams", ai:"Agentic services quoting",
+ gap:"Quoting only; no delivery orchestration or knowledge base.", url:"https://provus.ai"},
+{id:"kantata", n:"Kantata", cat:"psa", sz:4, ov:2, st:"Accel-KKR (Mavenlink + Kimble merger, 2021)", stages:["s_del"],
+ d:"Largest pure-play PSA suite; 'Expertise Engine' (Oct 2025) turns firmwide knowledge — projects, deliverables, conversations, outcomes — into actionable intelligence.",
+ icp:"Mid-large professional services firms", ai:"Expertise Engine, Resourcing Agent",
+ gap:"No pre-sale footprint; no versioned GTM knowledge repo; PSA-scoped agents.", url:"https://www.kantata.com"},
+{id:"certinia", n:"Certinia", cat:"psa", sz:4, ov:2, st:"PE-owned · ~$1B (Haveli/GA, 2023; TA 2024)", stages:["s_del","s_cs"],
+ d:"Salesforce-native PSA + Customer Success + finance on one data model; first AI agents for staffing and CS (Aug 2025); first annual EBITDA profit, ~110% NRR.",
+ icp:"Salesforce-centric enterprises with services + CS", ai:"Staffing and CS agents",
+ gap:"Salesforce-locked; no knowledge layer; no SOW generation from solution designs.", url:"https://certinia.com"},
+{id:"suiteprojects", n:"NetSuite SuiteProjects Pro", cat:"psa", sz:5, ov:1, st:"Oracle product line (ex-OpenAir)", stages:["s_del"],
+ d:"ERP-attached PSA (projects, resources, financials); 2025 releases add AI-guided learning and visibility.",
+ icp:"NetSuite ERP customers", ai:"Incremental AI features",
+ gap:"Legacy ERP-attached; everything pre-signature missing.", url:"https://www.netsuite.com"},
+{id:"rocketlane", n:"Rocketlane", cat:"psa", sz:4, ov:3, st:"Series C · $105M total ($60M, Insight, Mar 2026)", stages:["s_del","s_cs"],
+ d:"Chennai-founded (ex-Freshworks) post-sales CRM/PSA: onboarding, projects, resources, client portals; 'Nitro' agentic execution platform for delivery teams; revenue more than doubled pre-Series C.",
+ icp:"SaaS PS teams, SIs, forward-deployed engineering", ai:"Nitro execution agents inside delivery workflows",
+ gap:"Starts at contract signature — no RFP, solution design, or pricing loop; project-scoped knowledge; no expansion motion.", url:"https://www.rocketlane.com"},
+{id:"guidecx", n:"GuideCX", cat:"psa", sz:2, ov:1, st:"~$35M+ (Series B: Meritech, 2022)", stages:["s_del"],
+ d:"Customer onboarding and implementation visibility with internal/customer/third-party guest access.",
+ icp:"Mid-market SaaS/services", ai:"Workflow automation only",
+ gap:"Single-phase tool; no AI depth.", url:"https://www.guidecx.com"},
+{id:"onboard", n:"Onboard.io", cat:"psa", sz:1, ov:1, st:"Majority acquired by Zelkova (2025)", stages:["s_del"],
+ d:"Client onboarding and project execution: customizable workflows, shared inboxes, client portals; new leadership declared an 'AI-first' strategy.",
+ icp:"SMB/mid-market B2B SaaS", ai:"Declared, unproven",
+ gap:"Narrow onboarding scope.", url:"https://onboard.io"},
+{id:"arrows", n:"Arrows", cat:"psa", sz:1, ov:1, st:"$5.3M + HubSpot strategic investment", stages:["s_del"],
+ d:"HubSpot-native customer onboarding plans synced into CRM; deliberately removed its standalone dashboard to become a HubSpot extension.",
+ icp:"HubSpot-centric SMB SaaS", ai:"Relies on HubSpot ecosystem AI",
+ gap:"CRM extension; single phase.", url:"https://arrows.to"},
+{id:"parallax", n:"Parallax", cat:"psa", sz:2, ov:1, st:"$24.5M (Series B: Baird, 2023)", stages:["s_del"],
+ d:"Predictive resource management and capacity forecasting for digital services organizations.",
+ icp:"Agencies, consultancies", ai:"Predictive analytics",
+ gap:"Resourcing only.", url:"https://www.getparallax.com"},
+{id:"cognisaas", n:"CogniSaaS", cat:"psa", sz:1, ov:1, st:"Seed (Arali Ventures, 2022) · Bengaluru", stages:["s_del"],
+ d:"Customer-centric onboarding and implementation platform with cross-functional collaboration and time-to-value tracking.",
+ icp:"Enterprise SaaS implementation teams", ai:"'Implementation intelligence' positioning",
+ gap:"Tiny scale; single lifecycle phase.", url:"https://cognisaas.com"},
+{id:"gainsight", n:"Gainsight", cat:"cs", sz:5, ov:3, st:"Vista Equity ($1.1B, 2020) · 'hundreds of millions' ARR", stages:["s_cs","s_exp"],
+ d:"Enterprise CS leader (CustomerOS): health, journeys, playbooks; Atlas AI agents (Staircase, Renewal, Adoption); May 2026 pivot to 'AI-native services' / Retention-as-a-Service under a new CEO.",
+ icp:"Enterprise B2B SaaS with CS orgs", ai:"Atlas agent stack, MCP-open platform",
+ gap:"Starts at the sales handoff — no pre-sale artifacts; agents act on CS telemetry, not cross-team work; the services pivot changes its lane.", url:"https://www.gainsight.com"},
+{id:"churnzero", n:"ChurnZero", cat:"cs", sz:2, ov:2, st:"~$34.5M disclosed (Series B: JMI, 2021)", stages:["s_cs"],
+ d:"Mid-market CS platform; agentic 'AI teammates' (Oct 2025) with a credit-based AI Marketplace; 80% of engineering on the AI roadmap.",
+ icp:"Mid-market B2B SaaS", ai:"Autonomous AI teammates, credit marketplace",
+ gap:"Agents operate only on ChurnZero's own data; no pre-sale or delivery coverage.", url:"https://churnzero.com"},
+{id:"totango", n:"Totango + Catalyst", cat:"cs", sz:4, ov:2, st:"Merged Feb 2024 (Great Hill) · $100M+ raised", stages:["s_cs","s_exp"],
+ d:"Post-merger 'customer-led growth' platform for CS and GTM teams; Unison churn intelligence built on acquired Parative AI.",
+ icp:"Enterprise/mid-market B2B SaaS", ai:"Predictive churn/revenue AI",
+ gap:"No pre-sale artifact continuity; analytics-first.", url:"https://www.totango.com"},
+{id:"vitally", n:"Vitally", cat:"cs", sz:3, ov:1, st:"$39M (a16z, Next47)", stages:["s_cs"],
+ d:"'Productivity-first' CS platform — docs, playbooks, health, workflows in one workspace; AI copilot (Jul 2025).",
+ icp:"Mid-market CS teams", ai:"AI copilot scoped to Vitally data",
+ gap:"Post-sale productivity tooling.", url:"https://www.vitally.io"},
+{id:"planhat", n:"Planhat", cat:"cs", sz:3, ov:2, st:"$50M (Sprints Capital, 2022)", stages:["s_cs"],
+ d:"European 'customer platform' combining CS workflows, health, engagement, revenue analytics; Gartner Leader (2025).",
+ icp:"Mid-market/enterprise SaaS, Europe", ai:"AI platform upgrade, Copilot",
+ gap:"Post-sale only; no pre-sale ingestion.", url:"https://www.planhat.com"},
+{id:"baseai", n:"Base.ai", cat:"cs", sz:2, ov:2, st:"$15M (2022) · acquired EverAfter (~$20M est., 2026)", stages:["s_exp"],
+ d:"Post-sale engagement platform — advocacy, references, customer hubs — positioned as an 'AI Engagement OS' for customer-led growth.",
+ icp:"Mid-market/enterprise B2B", ai:"AI agents for engagement/expansion",
+ gap:"Engagement layer, not workflow or knowledge OS.", url:"https://base.ai"},
+{id:"castapp", n:"Cast.app", cat:"cs", sz:1, ov:1, st:"Undisclosed", stages:["s_cs"],
+ d:"Digital customer success: autonomous 'AI CSM' agents running one-to-many adoption nudges, business reviews, renewal motions for long-tail accounts.",
+ icp:"SaaS with large long-tail bases", ai:"Autonomous digital CS agents",
+ gap:"Narrow agent surface; no cross-team coordination.", url:"https://www.cast.app"},
+{id:"chattermill", n:"Chattermill", cat:"cs", sz:3, ov:1, st:"$26M (Series B, 2022)", stages:["s_cs"],
+ d:"AI customer-feedback intelligence: unifies support tickets, reviews, surveys into themes and quantified CX insights; MCP server (2026).",
+ icp:"CX/product/CS teams", ai:"Agentic CXI architecture, MCP",
+ gap:"Analytics-only surface; no workflows.", url:"https://chattermill.com"},
+{id:"velaris", n:"Velaris", cat:"cs", sz:1, ov:1, st:"Seed · €4.7M (2022)", stages:["s_cs"],
+ d:"AI-native CS platform for SMB SaaS: health, workflows, automation.",
+ icp:"SMB SaaS", ai:"AI health scoring and automation",
+ gap:"SMB point solution.", url:"https://www.velaris.io"},
+{id:"glean", n:"Glean", cat:"kb", sz:5, ov:3, st:"Series F · $7.2B valuation (Jun 2025) · $200M ARR (Dec 2025)", stages:["s_kb","s_rfp","s_cs"],
+ d:"Enterprise 'Work AI': search + assistants + agents over 100+ apps. Sales and CS drove much of the ARR growth; its professional-services solution explicitly markets 'bring together the RFP, client profile, prior proposals, and firm knowledge.'",
+ icp:"Mid-large enterprises, all departments", ai:"RAG search, no-code agent platform, prebuilt agent library, MCP",
+ gap:"Search-native, not artifact-native: indexes artifacts but doesn't manage them (no versioning, lifecycle, approvals); horizontal helpers, not long-horizon deal owners.", url:"https://www.glean.com"},
+{id:"relevance", n:"Relevance AI", cat:"kb", sz:3, ov:3, st:"Series B · $37M ($24M, Bessemer, May 2025)", stages:["s_kb"],
+ d:"No-code 'AI workforce' platform, repositioned as 'AI Agents for GTM Leaders': prospecting, research, call coaching, deal review, QBR prep, churn risk, renewals.",
+ icp:"GTM teams at mid-market companies", ai:"Multi-agent teams, 100+ integrations",
+ gap:"Agent-workflow automation, not a knowledge or artifact system; heavy top-of-funnel emphasis.", url:"https://relevanceai.com"},
+{id:"writer", n:"Writer", cat:"kb", sz:5, ov:2, st:"Series C · $1.9B ($200M, Nov 2024)", stages:["s_kb"],
+ d:"Full-stack enterprise genAI: proprietary Palmyra models, Knowledge Graph over company data, Agent Builder for complex workflows (300+ enterprise customers).",
+ icp:"Large enterprises, content-heavy functions", ai:"Fine-tunable models, knowledge graph, agent builder",
+ gap:"Horizontal content-generation platform; no GTM artifact system or lifecycle.", url:"https://writer.com"},
+{id:"dust", n:"Dust", cat:"kb", sz:3, ov:2, st:"Series B · $60M+ ($40M, Abstract/Sequoia, May 2026)", stages:["s_kb"],
+ d:"'Multiplayer AI' — a shared collaboration surface where humans and agents work with the same projects, context, to-dos, artifacts; 3,000+ orgs, 300K+ agents deployed.",
+ icp:"Engineering-forward mid-market/enterprise, Europe", ai:"Agent fleets with shared artifacts, memory, governance",
+ gap:"Closest philosophical cousin to 'GitHub for GTM' — but horizontal and engineering-oriented; no GTM depth.", url:"https://dust.tt"},
+{id:"notion", n:"Notion", cat:"kb", sz:5, ov:2, st:"~$11B valuation · $500M+ ARR (2025)", stages:["s_kb"],
+ d:"Workspace that made AI agents the centerpiece (Notion 3.0, Sep 2025): agents create docs, build databases, and execute multi-step workflows across connected tools.",
+ icp:"SMB to enterprise; GTM teams use it for playbooks/deal rooms", ai:"Autonomous agents in Notion + across tools, MCP connectors",
+ gap:"Horizontal productivity tool; no GTM data model; version control limited to page history.", url:"https://www.notion.com"},
+{id:"guru", n:"Guru", cat:"kb", sz:3, ov:2, st:"~$70M (Series C: Accel, 2020)", stages:["s_kb"],
+ d:"Knowledge cards with owners, expiration, and verification workflows; positions as 'the governed knowledge layer for enterprise AI'; argues per-seat pricing breaks for agents.",
+ icp:"Support, sales, success teams", ai:"Grounded answers with citations, verification workflows",
+ gap:"Q&A/knowledge, not execution; no artifact management beyond card history.", url:"https://www.getguru.com"},
+{id:"seismic", n:"Seismic (+ Highspot)", cat:"kb", sz:5, ov:2, st:"$3B valuation (2021) · Highspot merger completed Aug 2026", stages:["s_kb"],
+ d:"Enterprise sales enablement (content, training, buyer engagement); Aura AI agents (Oct 2025); merged with Highspot under Permira to lead 'Go-to-Market Performance.'",
+ icp:"Enterprise sales/marketing enablement", ai:"Aura AI agents",
+ gap:"Enablement-centric — content/training, not deal-artifact execution.", url:"https://www.seismic.com"},
+{id:"ema", n:"Ema", cat:"kb", sz:3, ov:2, st:"$61M+ (Accel, Section 32) · reportedly raising more", stages:["s_kb"],
+ d:"Horizontal 'Universal AI Employee' platform: no-code configuration of agents across support, sales/marketing, legal; Generative Workflow Engine; outcome-based pricing.",
+ icp:"Large enterprises, many functions", ai:"No-code AI employees, 250+ integrations",
+ gap:"Horizontal by design; GTM is one of many use cases; no knowledge base or deal artifacts.", url:"https://www.ema.ai"},
+{id:"moveworks", n:"Moveworks (ServiceNow)", cat:"kb", sz:5, ov:1, st:"Acquired for $2.85B (closed Dec 2025)", stages:["s_kb"],
+ d:"Enterprise search + assistant resolving IT/HR/finance requests; now ServiceNow's agent layer — its largest acquisition ever.",
+ icp:"Large enterprises, employee support", ai:"Enterprise search, assistant, agent building",
+ gap:"Employee-support focus; proves platforms are buying 'agents + enterprise search' infrastructure.", url:"https://www.moveworks.com"},
+{id:"sana", n:"Sana", cat:"kb", sz:4, ov:2, st:"$130M+ ($55M round, NEA, 2024) · acquired CTRL", stages:["s_kb"],
+ d:"Knowledge management + AI assistants + agents; vision: synthesize all company knowledge into any format, reduce 20-step tasks to single actions.",
+ icp:"Enterprises, learning-centric use cases", ai:"RAG, agents with permissions (CTRL)",
+ gap:"Horizontal, learning-centric; no GTM workflows.", url:"https://sanalabs.com"},
+{id:"salesforce", n:"Salesforce", cat:"inc", sz:5, ov:3, st:"Public · $41.5B FY26 revenue · $800M AI ARR · 29K Agentforce deals", stages:["s_prop"],
+ d:"The closest single absorber of the GTM OS vision: Agentforce 360 (agents in Slack), Revenue Cloud quoting, Industry Clouds, Data Cloud. But post-opportunity depth is thin: no RFP-response, solutioning, or SOW-creation products.",
+ icp:"Enterprises of all sizes", ai:"Agentforce platform, natural-language quoting, Agent Script, Flex Credits ($500 per 100K actions)",
+ gap:"No version-controlled GTM artifact system; stack lock-in; agents are per-workflow, not long-horizon lifecycle owners.", url:"https://www.salesforce.com"},
+{id:"microsoft", n:"Microsoft", cat:"inc", sz:5, ov:3, st:"Public · $331.8B FY26 revenue", stages:[],
+ d:"M365 Copilot + Copilot Studio + Agent 365 'control plane for AI agents' (Nov 2025); Dynamics 365 sales agents run qualification to close. Word/Excel/Teams/SharePoint are where enterprise proposals and SOWs are actually written.",
+ icp:"Microsoft-stack enterprises", ai:"Sales Qualification/Opportunity/Close/Research agents, credit pricing",
+ gap:"No GTM-native data model; sales agents stop at close; nothing for RFP, solutioning, SOW, delivery.", url:"https://www.microsoft.com"},
+{id:"hubspot", n:"HubSpot", cat:"inc", sz:5, ov:2, st:"Public · $3.13B FY25 revenue", stages:[],
+ d:"Repositioned as an 'agentic customer platform' (May 2026) with Context/Action/Coordination layers; Agent Hub (Jul 2026); outcome-based pricing ($0.50 per resolved conversation); acquired Dashworks (knowledge search).",
+ icp:"Mid-market companies", ai:"Breeze to Agent Hub, agent builder, outcome pricing",
+ gap:"Mid-market ICP; thin enterprise post-opportunity depth; no RFP/solutioning/SOW/delivery.", url:"https://www.hubspot.com"},
+{id:"google", n:"Google (Gemini Enterprise)", cat:"inc", sz:5, ov:2, st:"Public (Alphabet)", stages:[],
+ d:"Horizontal AI platform: Gemini Enterprise ($30/seat), Agentspace, no-code agent Workbench, A2A protocol — but no CRM and no GTM workflow products; partners with Salesforce.",
+ icp:"Large organizations", ai:"Agentspace, Gemini agents, A2A",
+ gap:"Nothing post-opportunity; would need partners or acquisitions.", url:"https://cloud.google.com"},
+{id:"servicenow", n:"ServiceNow", cat:"inc", sz:5, ov:2, st:"Public · ~$13B revenue", stages:["s_del"],
+ d:"Enterprise workflow platform turned agent 'control tower': AI Agent Orchestrator/Studio, AI Control Tower, Moveworks ($2.85B), Logik.ai CPQ; owns the delivery/service workflow legs.",
+ icp:"Fortune 500 / Global 2000", ai:"Agent orchestration, governance, Moveworks assistant",
+ gap:"Nothing pre-signature — no sales, proposal, or pricing DNA.", url:"https://www.servicenow.com"},
+{id:"clari", n:"Clari + Salesloft", cat:"inc", sz:5, ov:3, st:"Merged Dec 2025 · ~$450M est. ARR · $2.6B valuation", stages:[],
+ d:"'Run every revenue workflow' including retention and growth: forecasting, pipeline, engagement, Revenue Context + agents; the most OS-like ambition among scaled independents.",
+ icp:"Enterprise revenue teams", ai:"Deal Inspection/Trend agents, Ask Clari, AI Knowledge Library",
+ gap:"Forecasting DNA, not artifact production; no CPQ/RFP/SOW/delivery; knowledge library is upload-and-ground.", url:"https://www.clari.com"},
+{id:"gong", n:"Gong", cat:"inc", sz:5, ov:2, st:"$300M+ ARR (2025) · $7.25B valuation (2021)", stages:[],
+ d:"Conversation intelligence self-branded a 'Revenue AI OS': 12+ agents, Agent Studio, Revenue Harness (Jun 2026); proprietary corpus of customer interactions.",
+ icp:"Revenue teams, 5,000+ customers", ai:"Deal Monitor/Reviewer/Predictor, Composer, MCP support",
+ gap:"Intelligence and coaching DNA, not artifact creation; no CPQ/proposal/RFP/SOW/delivery.", url:"https://www.gong.io"},
+{id:"outreach", n:"Outreach", cat:"inc", sz:5, ov:2, st:"~$300M est. ARR", stages:[],
+ d:"Repositioned as 'AI Revenue Workflow Platform' (Jun 2025) spanning prospecting to renewal; first revenue platform with a full MCP suite and agentic ecosystem marketplace (Jun 2026).",
+ icp:"Enterprise sales/marketing/RevOps", ai:"Research/Conversation/Deal/Reply/Expansion agents, MCP ecosystem",
+ gap:"Outbound execution DNA; no proposal/pricing/SOW/RFP/delivery.", url:"https://outreach.io"},
+{id:"zoominfo", n:"ZoomInfo", cat:"inc", sz:5, ov:1, st:"Public · ~$1B revenue", stages:[],
+ d:"B2B data intelligence layer; Copilot Workspace (Oct 2025) unifies book-of-business with agents for research, signals, outreach, CRM updates.",
+ icp:"Revenue teams, SMB to Fortune 500", ai:"Copilot agents over the data graph",
+ gap:"Data layer, not workflow or knowledge system; data being commoditized by CRM-native agents.", url:"https://www.zoominfo.com"},
+{id:"zoho", n:"Zoho", cat:"inc", sz:5, ov:2, st:"Private · 850K+ customers", stages:[],
+ d:"55+ app suite with in-house Zia LLM, Zia Agent Studio, agent marketplace, MCP server, 25+ prebuilt agents (incl. Deal Analyzer, Revenue Growth Specialist).",
+ icp:"SMB/mid-market, price-sensitive; strong in India", ai:"Zia agents + studio + marketplace",
+ gap:"Mid-market depth; agents are role assistants within the suite.", url:"https://www.zoho.com"},
+{id:"elevenx", n:"11x", cat:"tofu", sz:3, ov:1, st:"$74M (Series B: a16z, 2024) · ~$350M valuation", stages:[],
+ d:"AI SDR 'digital workers' (Alice, Julian) — the category's cautionary tale: TechCrunch reported falsely claimed customers (Mar 2025), CEO exit, and a 2026 admission that AI SDRs 'don't work in the current form.'",
+ icp:"Mid-market to enterprise sales teams", ai:"Autonomous multichannel outbound, AI voice",
+ gap:"Pipeline generation only; nothing after a meeting is booked.", url:"https://11x.ai"},
+{id:"artisan", n:"Artisan", cat:"tofu", sz:2, ov:1, st:"$32M (Series A: Glade Brook, Apr 2025)", stages:[],
+ d:"AI BDR 'Ava' automates outbound prospecting (~250 customers, $5M ARR); 'stop hiring humans' marketing; piloting success-based pricing.",
+ icp:"SMB/mid-market B2B sales", ai:"Agentic outbound with Anthropic partnership",
+ gap:"Outbound and meetings; nothing post-opportunity.", url:"https://www.artisan.co"},
+{id:"regie", n:"Regie.ai", cat:"tofu", sz:3, ov:1, st:"$50.8M (Series B: Scale, Feb 2025)", stages:[],
+ d:"RegieOne unifies phone/email/social prospecting with AI sequencing and human/AI touch routing.",
+ icp:"Mid-market/enterprise with human SDRs", ai:"AI sequencing, intent-signal routing",
+ gap:"Prospecting-only by design.", url:"https://regie.ai"},
+{id:"clay", n:"Clay", cat:"tofu", sz:5, ov:2, st:"$204M · $3.1B valuation (Series C: CapitalG, Aug 2025)", stages:[],
+ d:"GTM data + automation infrastructure (200+ enrichment providers, Claygent research agent); deliberately creating the 'GTM engineer' role; the most credible upstream wedge-expander.",
+ icp:"GTM/data teams, startups to enterprise (OpenAI, Anthropic, Canva)", ai:"Claygent (GPT-5), waterfall enrichment, marketplace",
+ gap:"Still upstream data/automation infrastructure — no proposal, pricing, SOW, delivery, or CS workflows.", url:"https://www.clay.com"},
+{id:"apollo", n:"Apollo.io", cat:"tofu", sz:5, ov:2, st:"$250M+ raised · $1.6B valuation · $150M ARR", stages:[],
+ d:"B2B database + engagement used by 500K+ companies; March 2026 launch of an AI Assistant claims 'the first AI-native all-in-one GTM platform' — coverage has called it a 'GTM Operating System.'",
+ icp:"SMB to enterprise sales/marketing/RevOps", ai:"Agentic prospect discovery, qualification, outreach, 'deal execution'",
+ gap:"Announced scope runs prospecting to deal execution only — no proposals, pricing, SOWs, delivery, or CS.", url:"https://www.apollo.io"},
+{id:"copyai", n:"Copy.ai (Fullcast)", cat:"tofu", sz:2, ov:2, st:"$19.8M raised · acquired by Fullcast (Oct 2025)", stages:[],
+ d:"Former 'world's first GTM AI Platform': multi-step work-agents for marketing/sales/ops with an 'Infobase' knowledge-injection layer; even marketed RFP-response workflows.",
+ icp:"Marketing/RevOps, mid-market to enterprise", ai:"Multi-step agentic workflows, brand voice, Infobase",
+ gap:"Outbound center of gravity; no post-sale lifecycle; independent trajectory ended in acquisition.", url:"https://www.copy.ai"},
+{id:"commonroom", n:"Common Room", cat:"tofu", sz:3, ov:1, st:"$52M (Series B: Greylock, 2021)", stages:[],
+ d:"Community + buyer-intent signals for account prioritization; 'agentic pipe gen' with RoomieAI agents (copilot/autopilot, Spark zero-prep prospecting).",
+ icp:"PLG/community-led B2B (Confluent, Figma, Notion)", ai:"RoomieAI agent suite",
+ gap:"Top-of-funnel signal and pipe-gen layer.", url:"https://www.commonroom.io"},
+{id:"aisdr", n:"AiSDR", cat:"tofu", sz:1, ov:1, st:"$3M seed (YC, 2023)", stages:[],
+ d:"Lean AI sales agent covering prospect-to-booked-meeting with HubSpot-centric workflows; from $250/month.",
+ icp:"SMBs, HubSpot users", ai:"AI outreach, qualification, booking",
+ gap:"Prospect-to-meeting only.", url:"https://aisdr.com"},
+{id:"reevo", n:"Reevo", cat:"os", sz:4, ov:2, ovn:"closest new 'OS' claimant", st:"$80M debut (Khosla + Kleiner Perkins, Nov 2025)", stages:[],
+ d:"'The Revenue Operating System' — a 'stackless' native CRM + AI foundation marketed as 'the only AI-native GTM platform spanning marketing, sales and customer success.'",
+ icp:"Revenue teams replacing fragmented stacks", ai:"Ask Reevo copilot, email composer, meeting prep, auto data capture",
+ gap:"Demonstrated features skew pre-sale engagement; no versioned knowledge base; no RFP/solutioning/SOW/delivery workflows visible.", url:"https://reevo.ai"},
+{id:"cargo", n:"Cargo", cat:"os", sz:1, ov:2, st:"Funding undisclosed", stages:["s_kb"],
+ d:"'Context' — a shared GTM knowledge base (ICP, personas, positioning, playbooks) that grounds every workflow and AI agent for reps, RevOps, and marketing.",
+ icp:"GTM engineers and teams", ai:"Agent grounding layer, runtime context",
+ gap:"Knowledge is early-funnel (ICP/personas), not post-sale deal artifacts; no version control.", url:"https://www.getcargo.ai"},
+{id:"supered", n:"Supered", cat:"os", sz:1, ov:1, st:"Funding undisclosed · Atlanta", stages:[],
+ d:"In-app guidance and process enforcement that turns a sales process into the standard reps follow inside HubSpot/Salesforce; 'Sales AI Copilot.'",
+ icp:"VPs of Sales, 15+ rep teams", ai:"CRM copilot, SOP actioning",
+ gap:"Enablement and adoption tooling.", url:"https://www.supered.io"},
+{id:"fullcast", n:"Fullcast", cat:"os", sz:3, ov:1, st:"$34M+ (Epic-led, 2024) · acquired Copy.ai", stages:[],
+ d:"RevOps 'plan-to-pay' platform: territories, targets, routing, forecasting, commissions; now owns Copy.ai's agent platform.",
+ icp:"Enterprise revenue teams", ai:"AI-validated forecasting + Copy.ai agents",
+ gap:"RevOps planning and comp mechanics.", url:"https://www.fullcast.io"}
+];
+
+var MATRIX = [
+ {n:"Responsive", x:1.8, y:5.2, c:"rfp", s:3, note:"RFP suite with a real content library"},
+ {n:"Loopio", x:2.1, y:5.7, c:"rfp", s:3, note:"Response management, content library"},
+ {n:"AutogenAI", x:1.5, y:4.2, c:"rfp", s:3, note:"Trains on past bids"},
+ {n:"Tribble", x:1.3, y:4.9, c:"rfp", s:2, note:"Governed KB for RFP answers"},
+ {n:"GovDash", x:5.2, y:5.4, c:"rfp", s:3, note:"Full GovCon lifecycle 'OS'"},
+ {n:"Procurement Sciences", x:4.8, y:4.4, c:"rfp", s:3, note:"GovCon find-win-deliver"},
+ {n:"Atira", x:4.2, y:6.4, c:"cpq", s:2, note:"Industrial vertical: deal KB + configs/margins"},
+ {n:"Rocketlane", x:3.2, y:3.8, c:"psa", s:4, note:"Post-sales PSA + agentic delivery"},
+ {n:"Gainsight", x:2.8, y:4.4, c:"cs", s:5, note:"CS leader; starts at handoff"},
+ {n:"DealHub", x:2.4, y:2.8, c:"cpq", s:4, note:"Agentic quote-to-revenue"},
+ {n:"Aligned", x:2.0, y:3.4, c:"cpq", s:4, note:"AI Deal Brain workspace"},
+ {n:"Glean", x:6.4, y:3.8, c:"kb", s:5, note:"Work AI over 100+ apps; $200M ARR"},
+ {n:"Salesforce", x:7.4, y:2.8, c:"inc", s:5, note:"Agentforce + Revenue Cloud + Slack"},
+ {n:"Microsoft", x:6.2, y:2.2, c:"inc", s:5, note:"Copilot + Agent 365 control plane"},
+ {n:"HubSpot", x:5.4, y:2.0, c:"inc", s:5, note:"Agentic customer platform"},
+ {n:"Clari + Salesloft", x:5.6, y:2.6, c:"inc", s:5, note:"'Run every revenue workflow'"},
+ {n:"Reevo", x:6.0, y:2.4, c:"os", s:4, note:"'Revenue Operating System' debut"},
+ {n:"Clay", x:2.8, y:1.8, c:"tofu", s:5, note:"GTM data + automation infra"},
+ {n:"Apollo.io", x:3.8, y:1.6, c:"tofu", s:5, note:"'All-in-one GTM platform' claim"},
+ {n:"Kantata", x:2.8, y:3.4, c:"psa", s:4, note:"PSA + Expertise Engine"},
+ {n:"Certinia", x:3.4, y:2.9, c:"psa", s:4, note:"Salesforce-native PSA+CS"},
+ {n:"Relevance AI", x:4.8, y:2.2, c:"kb", s:3, note:"GTM agent workforce"},
+ {n:"Dust", x:3.8, y:3.0, c:"kb", s:3, note:"Multiplayer AI, shared artifacts"},
+ {n:"Vivun", x:1.4, y:3.8, c:"sol", s:4, note:"Sales Reasoning Model"},
+ {n:"Gong", x:4.4, y:2.0, c:"inc", s:5, note:"'Revenue AI OS' branding"},
+ {n:"Writer", x:4.4, y:3.2, c:"kb", s:5, note:"Knowledge graph + agent builder"},
+ {n:"Ema", x:4.8, y:1.8, c:"kb", s:3, note:"Universal AI employees"},
+ {n:"TestBox", x:1.4, y:2.4, c:"sol", s:2, note:"'GTM Infrastructure' demos/sandboxes"}
+];
+
+/* ---------- helpers ---------- */
+function esc(s){return s;}
+function byId(id){return COS.filter(function(c){return c.id===id;})[0];}
+function catColor(c){return CATS[c].color;}
+function catName(c){return CATS[c].name;}
+
+/* ---------- tabs ---------- */
+var tabBtns = document.querySelectorAll("nav.tabs button");
+tabBtns.forEach(function(b){
+  b.addEventListener("click", function(){
+    tabBtns.forEach(function(x){x.classList.remove("active");});
+    b.classList.add("active");
+    document.querySelectorAll("section.tab").forEach(function(s){s.classList.remove("active");});
+    document.getElementById(b.getAttribute("data-tab")).classList.add("active");
+    window.scrollTo({top:0});
+  });
+});
+
+/* ---------- modal ---------- */
+var modal = document.getElementById("modal");
+var modalBody = document.getElementById("modal-body");
+function openDetail(id){
+  var c = byId(id); if(!c) return;
+  var ov = OV_LABEL[c.ov] + (c.ovn ? " (" + c.ovn + ")" : "");
+  modalBody.innerHTML =
+    '<h3>' + c.n + '</h3>' +
+    '<div class="m-meta">' +
+      '<span class="badge" style="background:' + catColor(c.cat) + '22; color:' + catColor(c.cat) + '">' + catName(c.cat) + '</span>' +
+      '<span class="badge ' + OV_CLASS[c.ov] + '">Overlap: ' + ov + '</span>' +
+    '</div>' +
+    '<div class="m-sec"><div class="lbl">Stage & funding</div><p>' + c.st + '</p></div>' +
+    '<div class="m-sec"><div class="lbl">What they do</div><p>' + c.d + '</p></div>' +
+    '<div class="m-sec"><div class="lbl">ICP</div><p>' + c.icp + '</p></div>' +
+    '<div class="m-sec"><div class="lbl">AI capabilities today</div><p>' + c.ai + '</p></div>' +
+    '<div class="m-sec"><div class="lbl">Gap vs the GTM OS thesis</div><p>' + c.gap + '</p></div>' +
+    '<a class="m-link" href="' + c.url + '" target="_blank" rel="noopener">' + c.url + ' ↗</a>';
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeModal(){ modal.classList.remove("open"); document.body.style.overflow = ""; }
+document.getElementById("modal-close").addEventListener("click", closeModal);
+modal.addEventListener("click", function(e){ if(e.target === modal) closeModal(); });
+document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeModal(); });
+
+/* ---------- lifecycle map ---------- */
+function chipHTML(c){
+  return '<button class="company-chip" data-id="' + c.id + '">' +
+    '<span class="dot" style="background:' + catColor(c.cat) + '"></span>' +
+    '<span>' + c.n + '</span></button>';
+}
+function renderMap(){
+  var grid = document.getElementById("lifecycle-grid");
+  var html = "";
+  STAGES.forEach(function(st){
+    var cos = COS.filter(function(c){return c.stages.indexOf(st.id) >= 0;});
+    html += '<div class="stage-col"><div class="stage-head">' +
+      '<div class="s-name">' + st.name + '</div>' +
+      '<div class="s-count">' + cos.length + ' companies</div>' +
+      '<span class="density" style="background:' + st.dcolor + '1a; color:' + st.dcolor + '">' + st.density + '</span>' +
+      '<div class="small" style="margin-top:4px">' + st.dnote + '</div></div>' +
+      '<div class="chips">' + cos.map(chipHTML).join("") + '</div></div>';
+  });
+  grid.innerHTML = html;
+
+  var layers = document.getElementById("layers");
+  var kbCos = COS.filter(function(c){return c.cat === "kb";});
+  var incCos = COS.filter(function(c){return c.cat === "inc";});
+  var osCos = COS.filter(function(c){return c.cat === "os";});
+  var tofuCos = COS.filter(function(c){return c.cat === "tofu";});
+  layers.innerHTML =
+    '<div class="layer-bar"><div class="lb-title">Cross-cutting: knowledge & agent layer</div>' +
+    '<div class="layer-chips">' + kbCos.map(chipHTML).join("") + '</div></div>' +
+    '<div class="layer-bar"><div class="lb-title">Cross-cutting: incumbent platforms</div>' +
+    '<div class="layer-chips">' + incCos.map(chipHTML).join("") + '</div></div>' +
+    '<div class="layer-bar"><div class="lb-title">Cross-cutting: direct "OS" claims</div>' +
+    '<div class="layer-chips">' + osCos.map(chipHTML).join("") + '</div></div>' +
+    '<div class="layer-bar"><div class="lb-title">Contrast set: top-of-funnel AI (deliberately out of scope — the crowded space this idea avoids)</div>' +
+    '<div class="layer-chips">' + tofuCos.map(chipHTML).join("") + '</div></div>';
+}
+
+/* ---------- explorer ---------- */
+var state = {q:"", cat:"", ov:"", sort:"cat", openId:null};
+var catFilter = "";
+
+function renderLegend(){
+  var el = document.getElementById("cat-legend");
+  var html = '<span class="cat-pill' + (catFilter==="" ? " active" : "") + '" data-cat="">All (' + COS.length + ')</span>';
+  Object.keys(CATS).forEach(function(k){
+    var n = COS.filter(function(c){return c.cat===k;}).length;
+    html += '<span class="cat-pill' + (catFilter===k ? " active" : "") + '" data-cat="' + k + '">' +
+      '<span class="dot" style="background:' + CATS[k].color + '"></span>' + CATS[k].name + ' (' + n + ')</span>';
+  });
+  el.innerHTML = html;
+  el.querySelectorAll(".cat-pill").forEach(function(p){
+    p.addEventListener("click", function(){
+      catFilter = p.getAttribute("data-cat");
+      state.cat = catFilter;
+      var sel = document.getElementById("f-cat"); sel.value = catFilter;
+      renderLegend(); renderTable();
+    });
+  });
+}
+
+function filtered(){
+  var q = state.q.toLowerCase();
+  var list = COS.filter(function(c){
+    if(state.cat && c.cat !== state.cat) return false;
+    if(state.ov && String(c.ov) !== state.ov) return false;
+    if(q){
+      var hay = (c.n + " " + c.d + " " + c.gap + " " + catName(c.cat) + " " + c.st).toLowerCase();
+      if(hay.indexOf(q) < 0) return false;
+    }
+    return true;
+  });
+  if(state.sort === "name") list.sort(function(a,b){return a.n.localeCompare(b.n);});
+  else if(state.sort === "ov") list.sort(function(a,b){return b.ov - a.ov || a.n.localeCompare(b.n);});
+  else list.sort(function(a,b){return a.cat.localeCompare(b.cat) || b.ov - a.ov;});
+  return list;
+}
+
+function renderTable(){
+  var body = document.getElementById("explorer-body");
+  var list = filtered();
+  var html = "";
+  list.forEach(function(c){
+    html += '<tr class="row" data-id="' + c.id + '">' +
+      '<td><b>' + c.n + '</b></td>' +
+      '<td><span class="badge" style="background:' + catColor(c.cat) + '1a; color:' + catColor(c.cat) + '">' + catName(c.cat) + '</span></td>' +
+      '<td class="small">' + c.st + '</td>' +
+      '<td><span class="badge ' + OV_CLASS[c.ov] + '">' + OV_LABEL[c.ov] + (c.ovn ? '<br><span style="font-weight:400">' + c.ovn + '</span>' : '') + '</span></td>' +
+      '<td class="small">' + c.d + '</td></tr>';
+    if(state.openId === c.id){
+      html += '<tr class="detail-row"><td colspan="5">' +
+        '<div class="d-grid">' +
+        '<div><div class="lbl">ICP</div><p>' + c.icp + '</p></div>' +
+        '<div><div class="lbl">AI capabilities today</div><p>' + c.ai + '</p></div>' +
+        '<div style="grid-column:1/-1"><div class="lbl">Gap vs the GTM OS thesis</div><p>' + c.gap + '</p></div>' +
+        '</div><a href="' + c.url + '" target="_blank" rel="noopener" style="font-size:12.5px; font-weight:600">' + c.url + ' ↗</a></td></tr>';
+    }
+  });
+  body.innerHTML = html;
+  document.getElementById("explorer-count").textContent = list.length + " of " + COS.length + " companies shown";
+  body.querySelectorAll("tr.row").forEach(function(r){
+    r.addEventListener("click", function(){
+      var id = r.getAttribute("data-id");
+      state.openId = (state.openId === id) ? null : id;
+      renderTable();
+    });
+  });
+}
+
+document.getElementById("q").addEventListener("input", function(e){ state.q = e.target.value; state.openId = null; renderTable(); });
+document.getElementById("f-cat").addEventListener("change", function(e){ state.cat = e.target.value; catFilter = e.target.value; renderLegend(); renderTable(); });
+document.getElementById("f-ov").addEventListener("change", function(e){ state.ov = e.target.value; state.openId = null; renderTable(); });
+document.getElementById("f-sort").addEventListener("change", function(e){ state.sort = e.target.value; renderTable(); });
+
+/* populate category select */
+(function(){
+  var sel = document.getElementById("f-cat");
+  Object.keys(CATS).forEach(function(k){
+    var o = document.createElement("option");
+    o.value = k; o.textContent = CATS[k].name.replace("&","&");
+    sel.appendChild(o);
+  });
+})();
+
+/* ---------- matrix ---------- */
+function renderMatrix(){
+  var svg = document.getElementById("matrix-svg");
+  var tip = document.getElementById("matrix-tip");
+  var W = 920, H = 560, padL = 64, padR = 24, padT = 30, padB = 56;
+  function px(x){ return padL + (x/10) * (W - padL - padR); }
+  function py(y){ return H - padB - (y/10) * (H - padT - padB); }
+  var s = "";
+  s += '<style> .mb{cursor:pointer} .mb:hover{opacity:.85} .mlbl{font-size:11px; font-weight:700; fill:#334155} .mtgt{fill:#4f46e5; font-weight:800; font-size:13px} </style>';
+  /* quadrant shading */
+  s += '<rect x="' + px(5) + '" y="' + py(10) + '" width="' + (px(10)-px(5)) + '" height="' + (py(5)-py(10)) + '" fill="#ecfdf5" opacity=".7"/>';
+  /* grid lines */
+  for(var i=0;i<=10;i+=2){
+    s += '<line x1="' + px(i) + '" y1="' + py(0) + '" x2="' + px(i) + '" y2="' + py(10) + '" stroke="#e2e8f0" stroke-width="1"/>';
+    s += '<line x1="' + px(0) + '" y1="' + py(i) + '" x2="' + px(10) + '" y2="' + py(i) + '" stroke="#e2e8f0" stroke-width="1"/>';
+  }
+  s += '<line x1="' + px(5) + '" y1="' + py(0) + '" x2="' + px(5) + '" y2="' + py(10) + '" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>';
+  s += '<line x1="' + px(0) + '" y1="' + py(5) + '" x2="' + px(10) + '" y2="' + py(5) + '" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>';
+  /* axes labels */
+  s += '<text x="' + (W/2) + '" y="' + (H-14) + '" text-anchor="middle" font-size="12.5" font-weight="700" fill="#475569">Lifecycle coverage (RFP → expansion)</text>';
+  s += '<text x="18" y="' + (H/2) + '" text-anchor="middle" font-size="12.5" font-weight="700" fill="#475569" transform="rotate(-90 18 ' + (H/2) + ')">Knowledge & artifact depth</text>';
+  /* quadrant labels */
+  s += '<text class="quad-label" x="' + (px(5)+14) + '" y="' + (py(10)+16) + '">White space — the GTM OS position</text>';
+  s += '<text class="quad-label" x="' + (px(0)+8) + '" y="' + (py(10)+16) + '">Knowledge specialists</text>';
+  s += '<text class="quad-label" x="' + (px(0)+8) + '" y="' + (py(0)-12) + '">Point tools</text>';
+  s += '<text class="quad-label" x="' + (px(5)+14) + '" y="' + (py(0)-12) + '">Broad suites, thin knowledge</text>';
+  /* target star */
+  var tx = px(8.8), ty = py(8.6);
+  s += '<path d="M ' + tx + ' ' + (ty-16) + ' L ' + (tx+4.2) + ' ' + (ty-4.8) + ' L ' + (tx+16) + ' ' + (ty-4.8) + ' L ' + (tx+7) + ' ' + (ty+2.6) + ' L ' + (tx+10) + ' ' + (ty+14) + ' L ' + tx + ' ' + (ty+6.8) + ' L ' + (tx-10) + ' ' + (ty+14) + ' L ' + (tx-7) + ' ' + (ty+2.6) + ' L ' + (tx-16) + ' ' + (ty-4.8) + ' L ' + (tx-4.2) + ' ' + (ty-4.8) + ' Z" fill="#4f46e5" opacity=".18"/>';
+  s += '<path d="M ' + tx + ' ' + (ty-11) + ' L ' + (tx+2.9) + ' ' + (ty-3.3) + ' L ' + (tx+11) + ' ' + (ty-3.3) + ' L ' + (tx+4.8) + ' ' + (ty+1.8) + ' L ' + (tx+6.9) + ' ' + (ty+9.6) + ' L ' + tx + ' ' + (ty+4.7) + ' L ' + (tx-6.9) + ' ' + (ty+9.6) + ' L ' + (tx-4.8) + ' ' + (ty+1.8) + ' L ' + (tx-11) + ' ' + (ty-3.3) + ' L ' + (tx-2.9) + ' ' + (ty-3.3) + ' Z" fill="#4f46e5"/>';
+  s += '<text class="mtgt" x="' + tx + '" y="' + (ty+30) + '" text-anchor="middle">GTM OS (target)</text>';
+  /* bubbles */
+  var placed = [];
+  MATRIX.forEach(function(m){
+    var cx = px(m.x), cy = py(m.y), r = 6 + m.s * 2.2;
+    var lbl = m.n, lx = cx + r + 5, anchor = "start";
+    if(lbl.length > 14 && m.x > 6.5){ lx = cx - r - 5; anchor = "end"; }
+    s += '<g class="mb" data-note="' + m.note + '" data-name="' + m.n + '">' +
+      '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="' + catColor(m.c) + '" fill-opacity=".78" stroke="#fff" stroke-width="1.5"/>' +
+      '<text class="mlbl" x="' + lx + '" y="' + (cy+4) + '" text-anchor="' + anchor + '">' + lbl + '</text></g>';
+    placed.push(m);
+  });
+  svg.innerHTML = s;
+  svg.querySelectorAll(".mb").forEach(function(g){
+    g.addEventListener("mousemove", function(e){
+      var wrap = document.getElementById("matrix-wrap").getBoundingClientRect();
+      tip.innerHTML = "<b>" + g.getAttribute("data-name") + "</b><br>" + g.getAttribute("data-note");
+      tip.style.opacity = "1";
+      var x = (e.clientX - wrap.left + 14), y = (e.clientY - wrap.top - 10);
+      if(x > wrap.width - 250) x = x - 270;
+      tip.style.left = x + "px"; tip.style.top = y + "px";
+    });
+    g.addEventListener("mouseleave", function(){ tip.style.opacity = "0"; });
+  });
+}
+
+/* ---------- init ---------- */
+renderMap();
+renderLegend();
+renderTable();
+renderMatrix();
+
+/* chip clicks (event delegation for map + layers) */
+document.addEventListener("click", function(e){
+  var chip = e.target.closest ? e.target.closest(".company-chip") : null;
+  if(chip){ openDetail(chip.getAttribute("data-id")); }
+});
+</script>
+</body>
+</html>

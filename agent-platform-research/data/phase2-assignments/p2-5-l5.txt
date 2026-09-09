@@ -1,0 +1,14 @@
+Atlassian Rovo
+BlackLine
+Fin
+GitHub Copilot Coding Agent
+Google Agentspace
+HubSpot Agent Hub
+Intercom Fin
+Microsoft Copilot Studio
+Salesforce Agentforce
+ServiceNow AI Agents
+UiPath Agentic Automation
+Workiva
+Zendesk AI Agents
+Zoho Zia

@@ -1,0 +1,74 @@
+AWS Strands Agents
+Aisera
+Andon Labs
+Anthropic Agent SDK
+Applied Compute
+AutoGPT
+Azure AI Foundry
+BaseFrame
+Botpress
+BrowserBook
+Bubble Lab
+C3 AI
+Cloudflare Agents SDK
+CopilotKit
+Coze
+CrewAI
+Dench.com
+Dify
+Doe
+Doublezero
+Dust
+Ema
+Flowise
+Glean
+Google ADK
+Gumloop
+Kore.ai
+LangChain
+LangGraph
+Langflow
+LemonLime
+Lindy
+LlamaIndex
+Lovable
+Lua Global
+MSPilot
+Make
+Mantle
+Mastra
+Microsoft Agent Framework
+Minded
+Mosaic
+Nexus
+Okibi
+OpenAI AgentKit
+OpenCode
+Palantir AIP
+Paradigm
+Proxis
+Rasa
+Relari
+Relevance AI
+RetroFix
+RowBoat Labs
+Sana
+Slashy
+Solari AI
+Stack AI
+Tencent Yuanqi
+Tracecat
+Trelium
+Unframe AI
+UnifyApps
+Vellum
+Vercel AI SDK
+VortexifyAI
+Wordware
+Writer
+Yellow.ai
+Zapier Agents
+deepset
+n8n
+o11
+stagewise

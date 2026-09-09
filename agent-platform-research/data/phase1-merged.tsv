@@ -1,0 +1,1329 @@
+name	sources	files	one_liner	layer	scope	vertical	status	traction	priority
+/dev/agents	Index	vc-us-b.md	Operating system for AI agents	L1	horizontal	general	active	$56M seed 2024 at $500M valuation	normal
+100x	YC S22	yc-2021-22.md	platform to create, share, and monetize AI agents	L2	horizontal	general	active	none visible	normal
+10x Science	YC W26	yc-2026.md	Automates protein characterization for drug developers	L3	vertical	healthcare	active	none visible	high
+11x	gtm:tofu;seed:L3;Benchmark	gtm-carry.md;kp-vertical-b.md;vc-us-a.md	AI SDR digital workers; the category's cautionary tale	L3	vertical	GTM/sales	active	customer-claims scandal, CEO exit, AI SDR walkback	high
+14.ai	ext:L3;YC W24	kp-vertical-a.md;yc-2024.md	AI-native customer service agency for startups	L3	vertical	customer service	active	$3M seed (2026); YC	high
+1mind	Battery	vc-us-b.md	AI superhumans for AI-led sales	L3	vertical	GTM/sales	active	$40M launch 2025, Battery-backed	normal
+7ai	seed:L3;Greylock;Index	kp-vertical-b.md;vc-us-a.md;vc-us-b.md	Autonomous AI agents for security operations	L3	vertical	security	active	$130M Series A (Dec 2025)	high
+A1Base	YC W25	yc-2025.md	Communication APIs letting AI agents send email, Slack, SMS, WhatsApp	L1	horizontal	general	active	none visible	high
+Aampe	Z47, Peak XV	vc-in.md	Agentic AI platform for in-app user engagement personalization	L3	vertical	GTM/marketing	active	$7.5M led by Z47 and Peak XV 2023	normal
+Abel	YC S24	yc-2024.md	Automating police paperwork	L3	vertical	government	active	none visible	high
+Abridge	seed:L3;Lightspeed	kp-vertical-b.md;vc-us-a.md	AI clinical documentation turning visits into notes	L3	vertical	healthcare	active	$5.3B valuation; $100M+ ARR (Aug 2026)	high
+Abundant	YC F24;YC W25	yc-2024.md;yc-2025.md	Agent simulation and RL for researchers	L1	horizontal	general	active	none visible	high
+Accend	YC S23	yc-2023.md	Human-in-the-loop AI agents for commercial underwriting and onboarding	L3	vertical	fintech	active	$3.2M raised	normal
+Accenture	seed:L4	kp-infra.md	Global SI with large agentic AI practice and platforms	L4	horizontal	general	active	AI Refinery platform; NVIDIA partnership	high
+Acrely	YC S25	yc-2025.md	Enterprise voice agents with cloud and on-prem deployment	X	horizontal	general	active	none visible	high
+Activepieces	ext:L2;YC S22	kp-platforms.md;yc-2021-22.md	Open-source, AI-first no-code business automation platform	L2	horizontal	general	pivoted	Active open-source community	normal
+Ada	seed:L3;Accel;Bessemer	kp-vertical-a.md;vc-us-a.md;vc-us-b.md	AI agent platform for enterprise customer service	L3	vertical	customer service	active	Doubled YoY growth (2026); unicorn since 2021	high
+Adam	YC W25	yc-2025.md	AI agent automating hardware engineering across CAD, PLM, supplier tools	L3	vertical	hardware engineering	active	none visible	high
+Adaptional	YC S25	yc-2025.md	Underwriter AI pre-processing every insurance submission	L3	vertical	insurance	active	none visible	high
+Adept AI	Greylock	vc-us-a.md	AI agents that operate enterprise software workflows	L2	horizontal	general	acquired	Team and technology absorbed by Amazon	normal
+Admyral	YC W25	yc-2025.md	Open-source security automation workflows built on AI agents	L3	vertical	security	active	none visible	high
+Adobe Agent Orchestrator	ext:L5	kp-suites.md	Agent orchestration layer on Adobe Experience Platform	L5	horizontal	general	active	none visible	normal
+Adopt AI	Elevation	vc-in.md	Agentifies applications with auto-generated actions and interfaces	L2	horizontal	general	active	$6M seed led by Elevation 2025	normal
+ADP Assist	ext:L5	kp-suites.md	AI agents purpose-built for HR and payroll	L5	vertical	HR	active	none visible	normal
+Aemon	YC W26	yc-2026.md	Autonomous AI research systems for technical optimization	L3	vertical	software engineering	active	none visible	high
+Aether	YC W24	yc-2024.md	AI sales platform for home services	L3	vertical	GTM/sales	active	none visible	high
+Affineon Health	AI Fund	vc-ai.md	AI agents for healthcare administrative workflows	L3	vertical	healthcare	active	$5M raised Feb 2025	normal
+Affogato AI	YC S21	yc-2021-22.md	AI video agent producing short-form video ads	L3	vertical	GTM and marketing	active	team 15	normal
+Agara	Blume	vc-in.md	Autonomous voice and email AI for customer support	X	vertical	customer service	acquired	Acquired by Coinbase 2021	normal
+Agency AI	Menlo	vc-us-b.md	AI agent automating customer success tasks	L3	vertical	customer success	active	Menlo Ser A 2025	normal
+Agency Tool Company	YC S26	yc-2026.md	Infrastructure for robotics teams to manage robots	L1	horizontal	general	active	none visible	high
+Agent FM	YC S26	yc-2026.md	Observability and narration for AI coding agents	L1	horizontal	general	active	none visible	high
+Agent.ai	seed:L5	kp-suites.md	Agent network and marketplace from HubSpot cofounder	L2	horizontal	general	active	3 million registered users (reported)	normal
+Agentcard	YC S26	yc-2026.md	Autonomous payment cards for AI agents	L1	horizontal	general	active	none visible	high
+AgentHub	YC S25	yc-2025.md	RL simulation and evaluation engine for AI agents	L1	horizontal	general	active	none visible	high
+Agentic Fabriq	YC W26	yc-2026.md	Identity and access governance for AI agents	L1	horizontal	general	active	none visible	high
+Agentin AI	YC W25	yc-2025.md	Agents automating quote-to-cash across SAP, Salesforce, NetSuite	L3	vertical	finance	active	none visible	high
+Agentive	YC S23	yc-2023.md	AI agents performing audit testing for accounting firms	L3	vertical	finance	active	none visible	normal
+AgentMail	YC S25	yc-2025.md	Email inbox API giving AI agents their own mailboxes	L1	horizontal	general	active	none visible	high
+AgentOps	ext:L1	kp-infra.md	Monitoring, testing, and analysis for AI agents	L1	horizontal	general	active	$2.6M pre-seed (2024)	normal
+AgentQL	ext:X	kp-infra.md	Query language for web data extraction by agents	X	horizontal	general	active	Parent TinyFish raised $47M (2025)	high
+AGI	ext:L3	kp-vertical-b.md	AI-native platform for insurance brokerages	L3	vertical	insurance	active	$70M raised (Jul 2026)	high
+Agno	ext:OSS;seed:L2	kp-infra.md;kp-platforms.md	Framework for building multimodal agent teams	L2	horizontal	general	active	$3M seed (2025)	normal
+Agnost AI	YC S26	yc-2026.md	Product analytics for conversational agents	L1	horizontal	general	active	none visible	high
+Aim Security	seed:L1	kp-infra.md	Enterprise security platform for AI agents	L1	horizontal	general	active	$18M Series A (2024)	high
+AIMon	Bessemer	vc-us-b.md	LLM evaluation and hallucination monitoring	L1	horizontal	general	active	$2.3M seed 2024; BVP investor	normal
+AIR Security	ext:L1	kp-infra.md	Firewall vetting skills and add-ons agents use	L1	horizontal	general	active	$50M raised (Sept 2026)	high
+AirMDR	Foundation Capital	vc-ai.md	AI-analyst-driven managed detection and response	L3	vertical	security	active	$15.5M raised July 2025	normal
+Airtable AI Agents	ext:L5	kp-suites.md	Agents working inside records and connected data	L5	horizontal	general	active	none visible	normal
+Airtop	ext:X	kp-infra.md	Browser automation for AI agents	X	horizontal	general	active	$38.8M raised (2025)	high
+AiSDR	gtm:tofu;ext:L3;YC S23	gtm-carry.md;kp-vertical-b.md;yc-2023.md	Lean AI sales agent covering prospect-to-booked-meeting, HubSpot-centric	L3	vertical	GTM/sales	active	from $250 monthly	normal
+Aisera	ext:L2;seed:L3;Khosla Ventures;Menlo	kp-platforms.md;kp-vertical-a.md;vc-us-a.md;vc-us-b.md	AI agent platform for IT, HR, and customer service workflows	L2	horizontal	general	acquired	$90M Series D 2022 led by Thoma Bravo and Goldman	high
+Akon Labs	YC S26	yc-2026.md	Nervous system for AI agents	L1	horizontal	general	active	none visible	high
+Alexi	ext:L3	kp-vertical-b.md	AI legal research memos for litigators	L3	vertical	legal	active	$11M Series A (2024)	normal
+Aligned	gtm:cpq	gtm-carry.md	AI Deal Workspace with Seller and Buyer agents over cross-source deal context	L3	vertical	GTM/sales	active	ARR tripled pre-raise	high
+Alkera AI	YC S26	yc-2026.md	AI agent for automating data pipeline development	L3	vertical	software engineering	active	none visible	high
+Alltius	Blume	vc-in.md	Agentic AI suite for financial services customer interactions	L3	vertical	finance	active	$2.4M pre-seed 2023	normal
+Alta	ext:L3	kp-vertical-b.md	AI-native operating layer for revenue teams	L3	vertical	GTM/sales	active	$25M Series A (Jul 2026)	normal
+Alter	YC S25	yc-2025.md	Zero-trust access control wrapping every agent tool call	L1	horizontal	general	active	none visible	high
+Altrina	YC W25	yc-2025.md	Universal BPO agent learning and executing SOPs across back offices	L3	horizontal	BPO/back office	active	none visible	high
+Altur	YC S25	yc-2025.md	Voice AI agents for debt collection	L3	vertical	finance	active	none visible	high
+Amazon Bedrock Agents	seed:L5	kp-suites.md	Managed agent orchestration, demoted to Classic status	L2	horizontal	general	pivoted	Renamed Bedrock Agents Classic July 2026	normal
+Amazon Q Business	ext:L5	kp-suites.md	Enterprise assistant closed to new customers, migrating to Quick	L2	horizontal	general	pivoted	no longer open to new customers (2026)	normal
+Amazon Q Developer	ext:L5	kp-suites.md	AWS coding agent winding down, users directed to Kiro	L3	vertical	software engineering	pivoted	end of support April 2027	normal
+Amazon Quick	ext:L5	kp-suites.md	Agentic assistant for work, successor to Amazon Q Business	L2	horizontal	general	active	new 2026 launch; uptake undisclosed	normal
+Ambience	seed:L3	kp-vertical-b.md	AI medical scribes and coding automation for health systems	L3	vertical	healthcare	active	$243M Series C; unicorn (Jul 2025)	high
+Ambral	YC S25	yc-2025.md	AI account managers autonomously driving expansions and renewals	L3	vertical	GTM/sales	active	none visible	high
+Amelia	seed:L2	kp-platforms.md	Enterprise conversational AI and automation platform from IPsoft	L2	horizontal	general	acquired	Acquired by SoundHound for $80M Aug 2024	normal
+Amera	YC F25	yc-2025.md	Automates health claims processing for insurance payers	L3	vertical	insurance	active	none visible	high
+Amigo	Madrona	vc-us-c.md	Infrastructure for secure compliant clinical AI agents	L1	vertical	healthcare	active	$11M Ser A 2026	normal
+Amigo AI	ext:L3	kp-vertical-b.md	Patient-facing clinical AI agents	L3	vertical	healthcare	active	$11M Series A (Mar 2026)	normal
+Amika	YC F25	yc-2025.md	Infrastructure for software factories of sandboxed coding agents	L1	horizontal	general	active	none visible	high
+Amorphic Labs	YC S26	yc-2026.md	AI agent generating personalized product demo videos for sales	L3	vertical	sales	active	none visible	high
+Amperos	Bessemer	vc-us-b.md	Multi-agent platform for medical claims processing	L3	vertical	healthcare	active	BVP-backed, early stage	normal
+Amulet	YC S26	yc-2026.md	Shared storage infrastructure for AI agents	L1	horizontal	general	active	none visible	high
+Anchorhead	YC W26	yc-2026.md	Design editor for AI coding agents to collaborate	L1	horizontal	general	active	none visible	high
+Andon Labs	YC W24	yc-2024.md	Autonomous organizations without humans in the loop	L2	horizontal	general	active	none visible	high
+Anglera	YC S24	yc-2024.md	AI-Powered Product Data Enrichment	L3	vertical	retail/ecommerce	active	none visible	high
+Ankr Health	YC W22	yc-2021-22.md	generative AI recreating clinic staff functions	L3	vertical	healthcare	active	integrates with top EHRs	normal
+Anterior	seed:L3;NEA	kp-vertical-b.md;vc-us-b.md	AI automating prior authorization and clinical workflows	L3	vertical	healthcare	active	$40M round (Feb 2026); $64M total	high
+Anthropic Agent SDK	seed:L2	kp-platforms.md	Official SDK for building agents on Claude models	L2	horizontal	general	active	Powers Claude Code; standard for Claude agents	high
+Antigen	YC F25	yc-2025.md	Continuous offensive security with automated red teams	L3	vertical	security	active	none visible	high
+Applied Compute	Lux	vc-us-c.md	In-house enterprise agent workforces via custom models	L2	horizontal	general	active	$80M raised at $1.3B val	high
+Approxima	YC W26	yc-2026.md	AI agents for routine software development tasks	L3	vertical	software engineering	active	none visible	high
+Apriora	YC W24	yc-2024.md	Your AI recruiter for interviewing and identifying the best talent	L3	vertical	HR	active	Raised $2.8M	high
+Apten	YC S24	yc-2024.md	Omnichannel AI agents that engage leads across SMS, voice, and email	X	horizontal	general	active	none visible	high
+Ara	ext:L3	kp-vertical-a.md	Self-driving cloud coding IDE agent	L3	vertical	software engineering	active	YC-backed (2026)	normal
+Arca	General Catalyst	vc-us-b.md	AI agents for wealth advisory operations	L3	vertical	financial services	active	$49M Ser A 2026 led by GC	normal
+Arcade	ext:L1	kp-infra.md	Authorization and secure action layer for AI agents	L1	horizontal	general	active	$60M Series A (2026); acquired Smithery	high
+Archal	YC S26	yc-2026.md	Isolated stateful simulated sandboxes for agents	L1	horizontal	general	active	none visible	high
+Argovox	YC S22	yc-2021-22.md	voice AI agents for patient billing and collections	X	vertical	healthcare	dead	none visible	normal
+Arini	YC W24	yc-2024.md	AI receptionist for dentists	X	vertical	healthcare	active	Raised $500K Seed	high
+Arintra	YC W22	yc-2021-22.md	autonomous clinical AI for medical coding and revenue assurance	L3	vertical	healthcare	active	UC Davis Health, Rochester Regional customers	normal
+Arize	seed:L1;Foundation Capital;Battery	kp-infra.md;vc-ai.md;vc-us-b.md	Observability and evals for LLMs and agents (Phoenix OSS)	L1	horizontal	general	active	$70M Series C (2025)	high
+Armadin	Menlo	vc-us-b.md	Autonomous AI cyber attacker testing enterprise defenses	L3	vertical	security	active	Menlo Ser A 2026	normal
+arnata	YC W21	yc-2021-22.md	AI workers for the logistics industry	L3	vertical	logistics	active	team 15	normal
+Arphie	gtm:rfp	gtm-carry.md	Agent-driven RFP response with compliance-matrix handling from customer knowledge base	L3	vertical	GTM/sales	active	none visible	normal
+Artemis Security	Felicis	vc-us-c.md	AI-native protection platform for security operations	L3	vertical	security	active	Series A per Felicis page	normal
+Artisan	gtm:tofu;seed:L3;YC W24	gtm-carry.md;kp-vertical-b.md;yc-2024.md	AI BDR Ava automating outbound prospecting	L3	vertical	GTM/sales	active	~250 customers, $5M ARR	high
+Arva AI	YC S24	yc-2024.md	AI Agents to scale AML, KYB and KYC operations	L3	vertical	finance/accounting	active	$3M from Google's AI fund	high
+Asana AI Studio	ext:L5	kp-suites.md	No-code builder for work-management agents	L5	horizontal	general	active	none visible	normal
+Asendia AI	ext:L3	kp-vertical-a.md	AI recruiter agents for staffing agencies	L3	vertical	HR and recruiting	active	YC-backed	normal
+Ashr	YC W26	yc-2026.md	Testing and evaluation infrastructure for AI agents	L1	horizontal	general	active	none visible	high
+AskUI	Seedcamp	vc-eu.md	AI agents automating software through user interfaces	X	horizontal	general	active	€4.3M seed, 2023	normal
+Assemble	YC S26	yc-2026.md	AI coworkers for IT teams operating inside enterprise systems	L3	vertical	it	active	none visible	high
+Assort Health	ext:L3;Menlo;Felicis	kp-vertical-b.md;vc-us-b.md;vc-us-c.md	AI voice agents for patient access and scheduling	L3	vertical	healthcare	active	$120M Series C at $1.2B (Jun 2026)	high
+Asteroid	YC W25	yc-2025.md	Open-source builder for complex browser agents, AI browser workforce	X	horizontal	general	active	none visible	high
+Astro	YC W25	yc-2025.md	AI energy developer finding land and securing grid connections	L3	vertical	energy	active	none visible	high
+Atira	gtm:cpq;ext:L3	gtm-carry.md;kp-vertical-b.md	AI orchestration layer for industrial sales engineering and document generation	L3	vertical	GTM/sales	active	none visible	normal
+Atla	YC S23	yc-2023.md	LLM judges that evaluate and guard AI agents	L1	horizontal	general	active	$5M seed led by Creandum	high
+Atlassian Rovo	seed:L5	kp-suites.md	AI agents and knowledge across Jira, Confluence, and Atlassian tools	L5	horizontal	general	active	2.4 million business workflows (reported)	high
+Atlia	YC S26	yc-2026.md	AI-native property management company	L3	vertical	real estate	active	none visible	high
+Atomic	Madrona	vc-us-c.md	Agentic AI for supply chain planning	L3	vertical	logistics	active	$3M seed 2025	normal
+Atomicwork	seed:L3;Z47, Blume;Battery	kp-vertical-a.md;vc-in.md;vc-us-b.md	AI agents for IT service and employee support	L3	vertical	IT and employee service	active	Khosla-led $25M Series A (2025)	high
+Augment Code	ext:L3	kp-vertical-a.md	Codebase-aware AI coding agents for enterprises	L3	vertical	software engineering	active	$252M raised; ~$20M ARR est. (2025)	high
+Aurascape	Menlo	vc-us-b.md	Security for enterprise AI and agent interactions	L1	horizontal	general	active	Menlo Ser A 2025	normal
+Aurelian	NEA;YC S22	vc-us-b.md;yc-2021-22.md	AI agents for 911 and emergency call centers	L3	vertical	public safety	active	NEA-led Ser A 2025	normal
+AutoAce	YC F25	yc-2025.md	AI-native dealership OS with AI service advisors on calls	L3	vertical	automotive	active	none visible	high
+AutoComputer	YC F24	yc-2024.md	Desktop RPA with AI computer use	X	horizontal	general	active	Pre-Seed	high
+Autodesk AI Assistant	ext:L5	kp-suites.md	Design and AEC workflow assistant and agents	L5	vertical	construction	active	none visible	normal
+AutoGen	ext:OSS	kp-infra.md	Microsoft's open-source multi-agent framework	L2	horizontal	general	active	Widely adopted OSS; production release	normal
+AutogenAI	gtm:rfp	gtm-carry.md	LLM platform auto-drafts compliant bid and tender responses from past proposals	L3	vertical	GTM/sales	active	UK fast-growth list 2026	normal
+AutoGPT	seed:OSS;ext:L2	kp-infra.md;kp-platforms.md	Autonomous agent platform from the AutoGPT project	L2	horizontal	general	active	170000+ GitHub stars; hosted platform	high
+automaited	Northzone	vc-eu.md	General process AI automating any business process	L2	horizontal	general	active	$4.2M seed, 2022	normal
+Automat	Felicis;YC W23	vc-us-c.md;yc-2023.md	Managed automations built and maintained by AI	L4	horizontal	general	active	seed per Felicis page	high
+Automation Anywhere AI Agents	ext:L5	kp-suites.md	Goal-driven agents on the Automation Success platform	L5	horizontal	general	active	none visible	normal
+Automax.ai	YC F25	yc-2025.md	AI-native real estate appraisal firm using LiDAR and agents	L3	vertical	real estate	active	none visible	high
+Autosana	YC S25	yc-2025.md	AI agents turning natural language into E2E mobile tests	L3	vertical	software engineering	active	none visible	high
+Autotab	YC S23	yc-2023.md	AI knowledge worker operating mouse and keyboard	X	horizontal	general	active	none visible	normal
+Avaamo	ext:L2	kp-platforms.md	Enterprise conversational AI platform for large organizations	L2	horizontal	general	active	$14.2M round led by Intel Capital 2018	normal
+Avent	YC S25	yc-2025.md	Agents running quoting and order entry for industrial commerce	L3	vertical	distribution	active	none visible	high
+Averi	seed:L4	kp-infra.md	AI marketing content engine with expert talent network	L4	horizontal	general	active	$5.3M raised (2025)	normal
+Avery AI	YC W24	yc-2024.md	Contact Center for Residential Property Managers	L3	vertical	real estate	active	none visible	high
+AviaryAI	YC S22	yc-2021-22.md	outbound AI voice agents for financial services	X	vertical	financial services	active	team 10	normal
+Avina	YC S22	yc-2021-22.md	AI agents finding ready prospects, automating outreach	L3	vertical	GTM and sales	active	team 5	normal
+Avoca	YC W23	yc-2023.md	AI receptionist answering missed calls for service SMBs	X	vertical	home services	active	none visible	normal
+Avora	YC F24	yc-2024.md	Agents for dental operations	L3	vertical	healthcare	active	raised $2.3M seed	high
+AWS AgentCore	seed:L5	kp-suites.md	Managed runtime with identity, memory, and observability for agents	L1	horizontal	general	active	GA October 2025; uptake undisclosed	normal
+AWS Kiro	ext:L5	kp-suites.md	Agentic IDE from AWS, successor to Q Developer	L3	vertical	software engineering	active	none visible	normal
+AWS Strands Agents	seed:L2;seed:L5	kp-platforms.md;kp-suites.md	AWS open-source agent SDK for Python and TypeScript	L2	horizontal	general	active	Open-sourced May 2025; paired with Bedrock AgentCore	high
+Axal	YC W25	yc-2025.md	Agents moving RFQs, invoices, POs from inboxes into ERPs	L3	vertical	manufacturing	active	none visible	high
+AXAR AI	YC W21	yc-2021-22.md	how great teams ship with AI	L2	horizontal	general	dead	none visible	normal
+Axelrod	YC S26	yc-2026.md	Boutique hotels that run themselves	L3	vertical	real estate	active	none visible	high
+Axiom.ai	YC W21	yc-2021-22.md	no-code browser automation and RPA	X	horizontal	general	active	$125K raised	normal
+Azure AI Foundry	seed:L5	kp-suites.md	Pro-code platform and agent service for governed AI agents on Azure	L2	horizontal	general	active	Forrester TEI study 2026; 80% F500 claim spans Microsoft agents	high
+Baidu AgentBuilder	ext:L2	kp-platforms.md	Baidu's no-code agent builder on the Qianfan platform	L2	horizontal	general	active	Part of Baidu Qianfan mass-market AI stack	normal
+Balance	YC W26	yc-2026.md	Real-time audit-ready accounting powered by AI	L3	vertical	finance	active	none visible	high
+Ballerine	YC S22	yc-2021-22.md	agentic intelligence layer for merchant risk decisions	L3	vertical	fintech	active	team 16	normal
+Base.ai	gtm:cs	gtm-carry.md	Post-sale engagement platform with AI agents for advocacy and expansion	L3	vertical	GTM/sales	active	none visible	normal
+BaseFrame	YC W26	yc-2026.md	Identifies tasks and provides specs for AI automation	L2	horizontal	general	active	none visible	high
+Basepilot	YC W24	yc-2024.md	AI coworkers to automate browser work, in minutes	L3	vertical	insurance	active	none visible	high
+Basis	seed:L3;Mayfield;Khosla Ventures	kp-vertical-b.md;vc-ai.md;vc-us-a.md	AI agents automating accounting close and workflows	L3	vertical	finance/accounting	active	$100M Series B at $1.15B valuation (Feb 2026)	high
+Beacon Health	YC W26	yc-2026.md	AI agents automating healthcare EHR workflows	L3	vertical	healthcare	active	$5.4M prior to YC	high
+Beam	YC W22	yc-2021-22.md	serverless cloud for AI inference, sandboxes, and agents	L1	horizontal	general	active	open source; Coca-Cola user	normal
+Beam AI	seed:L2	kp-platforms.md	Agent OS and AI agents for back-office automation	L2	horizontal	general	active	None visible	normal
+BeeSafe AI	YC W26	yc-2026.md	Fraud prevention platform engaging scammers in real-time	L3	vertical	security	active	none visible	high
+Berry	YC W23	yc-2023.md	AI revenue agent for enterprise SaaS renewals	L3	vertical	sales	active	none visible	normal
+Bespoke Labs	Mayfield	vc-ai.md	Environments that train reliable AI agents	L1	horizontal	general	active	$40M raised July 2026	normal
+Bezi	Bessemer	vc-us-b.md	Vertical AI agent for game development	L3	vertical	software engineering	active	BVP-backed, early stage	normal
+Billow AI	YC S26	yc-2026.md	Agent-native accounting firms	L3	vertical	finance	active	none visible	high
+bitrig	YC W24	yc-2024.md	Vibe code, test, and deploy Swift apps	L3	vertical	software engineering	active	$500K Seed	high
+Bizzy	YC S25;YC W26	yc-2025.md;yc-2026.md	AI answering calls, qualifying leads, booking into CRM	L3	vertical	customer service	active	none visible	high
+BlackLine	seed:L3	kp-vertical-b.md	Accounting close suite with multi-agent AI	L5	vertical	finance/accounting	active	public company; Verity agent AI for close	high
+Bland	seed:X;YC S23	kp-infra.md;yc-2023.md	AI phone-call platform for enterprise workflows	X	horizontal	general	active	$100M+ raised; 3.5M weekly calls (2026)	high
+Blink	YC W22	yc-2021-22.md	AI building and launching full-stack web apps from descriptions	L3	vertical	software engineering	active	none visible	normal
+Blitzy	Northzone	vc-eu.md	Autonomous code generation platform building enterprise software end to end	L3	vertical	software engineering	active	$200M at $1.4B led by Northzone, May 2026	high
+Bluebook	YC W25	yc-2025.md	AI agents handling accounting research, reconciliations, month-end close	L3	vertical	accounting	active	none visible	high
+Bluecopa	Blume	vc-in.md	Autonomous finance agents for reconciliation and close	L3	vertical	finance	active	$7.5M Series A 2026	normal
+Bolna	Blume;YC F25	vc-in.md;yc-2025.md	India-focused voice AI orchestration platform for enterprise calls	X	horizontal	general	active	$6.3M seed 2026; $700K ARR	high
+Booko	YC W26	yc-2026.md	Predicts empty slots and automatically applies discounts	L3	horizontal	general	active	none visible	high
+Boom AI	YC F25	yc-2025.md	AI employee managing every ecommerce customer interaction	L3	vertical	customer service	active	none visible	high
+Boomi AI Agents	ext:L5	kp-suites.md	Integration agents built in Boomi Agent Designer	L5	horizontal	general	active	none visible	normal
+BootLoop	YC S25	yc-2025.md	AI agent writing and testing firmware on real hardware	L3	vertical	software engineering	active	none visible	high
+BotCity	YC W22	yc-2021-22.md	orchestration and governance for AI-generated automation scripts	L1	horizontal	general	active	$12M Series A Sep 2025	high
+Boton	YC S22	yc-2021-22.md	accounting software with an AI agent	L3	vertical	finance and accounting	active	team 3	normal
+Botpress	seed:L2	kp-platforms.md	Platform for building and deploying conversational AI agents	L2	horizontal	general	active	$25M Series B Jun 2025	high
+Boundo	YC S22	yc-2021-22.md	autonomous motion designer turning product features into videos	L3	vertical	GTM and marketing	active	renamed Impractical; ex-AI SDR	normal
+Bounti	gtm:sol;seed:L3	gtm-carry.md;kp-vertical-b.md	Full-stack agentic AI teammate platform for sales, marketing, customer success	L3	vertical	GTM/sales	active	first prospecting teammate shipped	normal
+Box AI Studio	ext:L5	kp-suites.md	Custom agents over enterprise content	L5	horizontal	general	active	none visible	normal
+Brainbase Labs	YC W24	yc-2024.md	Applied AI research lab enabling the global AI workforce	L1	horizontal	general	active	none visible	high
+Braintrust	seed:L1;a16z	kp-infra.md;vc-us-a.md	Evals and data platform for production AI agents	L1	horizontal	general	active	$80M Series B at $800M (2026)	high
+Bravi	YC F25	yc-2025.md	AI OS replacing the front office of home services businesses	L3	vertical	home services	active	none visible	high
+Brickanta	Northzone;YC F25	vc-eu.md;yc-2025.md	AI agents for construction documents and project workflows	L3	vertical	construction	active	Seed funding, 2026	high
+Brickwise	YC F25	yc-2025.md	AI property manager automating maintenance and tenant communications	L3	vertical	real estate	active	10+ customers	high
+Bridgetown Research	Accel, Lightspeed;Lightspeed	vc-in.md;vc-us-a.md	AI agents automating business research and due diligence	L3	vertical	research	active	$19M Series A 2025	high
+Broccoli AI	YC W22	yc-2021-22.md	AI-native OS automating home-service calls and dispatch	L3	vertical	home services	active	team 21	normal
+Bronco	YC S23	yc-2023.md	AI verification engineers finding bugs in silicon chips	L3	vertical	engineering	active	none visible	normal
+Browser Use	seed:X;Felicis;YC W25	kp-infra.md;vc-us-c.md;yc-2025.md	Open-source library for browser-controlling agents	X	horizontal	general	active	50000+ GitHub stars; $17M seed (2025)	high
+Browserbase	seed:L1	kp-infra.md	Headless browser infrastructure for AI agents	L1	horizontal	general	active	$40M Series B 2025 at $300M valuation	high
+BrowserBook	YC F24	yc-2024.md	The Browser Automation IDE	L2	horizontal	general	active	Pre-Seed	high
+Browserless	ext:X	kp-infra.md	Managed headless Chrome for automation	X	horizontal	general	active	Under $500K raised; bootstrapped	normal
+BrowserOS	YC S24	yc-2024.md	The Open Source Agentic Browser	X	horizontal	general	active	none visible	high
+Bubble Lab	YC W26	yc-2026.md	AI work automation for Slack teams	L2	horizontal	general	active	none visible	high
+Buildbox	YC S26	yc-2026.md	Agent analytics for real user outcomes	L1	horizontal	general	active	none visible	high
+Bunkerhill Health	ext:L3;Khosla Ventures	kp-vertical-b.md;vc-us-a.md	Agentic AI for hospital operations and patient routing	L3	vertical	healthcare	active	$55M Series B (Jul 2026)	high
+burnt	YC S25	yc-2025.md	Agentic operating system for the food supply chain	L3	vertical	logistics	active	none visible	high
+BusinessOnBot	YC W21	yc-2021-22.md	commerce bots for customer acquisition on WhatsApp	L3	vertical	ecommerce	active	$841.3K raised	normal
+Buster	YC W24	yc-2024.md	AI platform for analytics engineering	L3	vertical	data & analytics	active	none visible	high
+Butter	YC W25	yc-2025.md	LLM proxy recording and replaying agent tool-call trajectories	L1	horizontal	general	active	none visible	high
+Bytebot	YC S21	yc-2021-22.md	open-source container and APIs for computer-use desktop agents	L1	horizontal	general	acquired	none visible	normal
+ByteDance HiAgent	ext:L2	kp-platforms.md	ByteDance Volcano Engine's enterprise agent building platform	L2	horizontal	general	active	Volcano Engine enterprise adoption; BytePlus AgentKit internationally	normal
+C3 AI	ext:L2;ext:L5	kp-platforms.md;kp-suites.md	Enterprise agentic AI platform for building and deploying AI agents	L2	horizontal	general	active	Public company; Shell, US Air Force, Holcim customers	high
+Caddy	YC F25	yc-2025.md	Voice OS that learns your work and acts on your behalf	X	horizontal	general	active	none visible	high
+Cair Health	YC S23	yc-2023.md	AI agents streamlining medical claims and RCM operations	L3	vertical	healthcare	active	none visible	normal
+Callback	YC S24	yc-2024.md	AI-native business process outsourcing	L4	horizontal	general	active	none visible	high
+Calldesk	Point Nine Capital	vc-eu.md	AI voice agents for customer service call centers	X	vertical	customer service	active	French enterprise deployments; prior VC rounds	normal
+Calltree	YC W25	yc-2025.md	Enterprise AI support reps for call centers	L3	vertical	customer service	active	none visible	high
+Camber	YC W21	yc-2021-22.md	admin and reimbursement automation for healthcare	L3	vertical	healthcare	active	$30M Series B a16z Feb 2025; $50.1M total	high
+Cambio	ext:L3	kp-vertical-b.md	Agentic AI for commercial real estate operations	L3	vertical	real estate	active	$18M Series A at $100M (Jan 2026)	normal
+CambioML	YC S23	yc-2023.md	AI agents automating manual workflows without integrations	L2	horizontal	general	active	none visible	normal
+CAMEL	seed:OSS	kp-infra.md	Multi-agent research framework from CAMEL-AI	L2	horizontal	general	active	12000+ GitHub stars	normal
+camelAI	YC W24	yc-2024.md	AI Business Intelligence agent	L3	vertical	data & analytics	active	none visible	high
+camfer	YC S24	yc-2024.md	Building the world’s first AI mechanical engineer	L3	vertical	engineering	active	none visible	high
+Candix	Seedcamp	vc-eu.md	AI agents automating recruiting end to end	L3	vertical	HR	active	none visible	normal
+Candor	YC W25	yc-2025.md	Agents surfacing and pursuing government funding opportunities	L3	vertical	government procurement	active	none visible	high
+Candytrail	YC S25	yc-2025.md	Agents capturing field sales interactions and surfacing coaching	L3	vertical	GTM/sales	active	none visible	high
+Canvas	YC F24	yc-2024.md	Claude Code for GTM Engineering	L3	vertical	GTM/sales	active	none visible	high
+Capgemini	ext:L4	kp-infra.md	Global SI with agentic AI integration services	L4	horizontal	general	active	Agentic AI Suite (2026)	high
+Capsa AI	ext:L3	kp-vertical-b.md	AI operating system for private equity workflows	L3	vertical	finance/accounting	active	$18M Series A (Jun 2026)	normal
+Capy	YC F24	yc-2024.md	AI Software Engineer	L3	vertical	software engineering	active	none visible	high
+Cardboard	YC W26	yc-2026.md	Agentic video editor	X	horizontal	general	active	none visible	high
+Cardinal	YC W26	yc-2026.md	Revenue Agents for GTM teams	L3	vertical	sales	active	none visible	high
+Cardinal Gray	YC S23	yc-2023.md	AI agents automating DMV lien filings for lenders	L3	vertical	fintech	active	none visible	normal
+Care GP	YC S26	yc-2026.md	AI-native agent suite for GP clinics	L3	vertical	healthcare	active	none visible	high
+careCycle	YC W25	yc-2025.md	Voice AI teams for Medicare agencies and FMOs	L3	vertical	healthcare	active	5x conversions, 37% retention lift claimed	high
+Careforce	YC F24	yc-2024.md	AI Workers for Healthcare Orgs	L3	vertical	healthcare	active	none visible	high
+Caretta	YC W26	yc-2026.md	AI services	L3	vertical	software engineering	active	none visible	high
+Cargo	gtm:os	gtm-carry.md	Shared GTM knowledge base grounding workflows and agents for reps	L3	vertical	GTM/sales	active	none visible	normal
+Cartage	YC S24	yc-2024.md	Autonomous freight coordination	L3	vertical	logistics	active	Secured $3.3M	high
+Cartesia	seed:X	kp-infra.md	Real-time voice generation models for agents	X	horizontal	general	active	$91M raised; 10000+ customers	high
+Casca	YC S23	yc-2023.md	AI-native loan origination for small businesses	L3	vertical	fintech	active	none visible	normal
+Caseflood.ai	YC W25	yc-2025.md	AI intake and sales team for law firms	L3	vertical	legal	active	$3.2M raised Jul 2025	high
+Casey	YC F25	yc-2025.md	Automates insurance submissions into carrier-ready packages	L3	vertical	insurance	active	none visible	high
+Cast.app	gtm:cs	gtm-carry.md	Autonomous digital customer-success managers running one-to-many renewal motions	L3	vertical	GTM/sales	active	none visible	normal
+Castari	YC F25	yc-2025.md	Deploy sandboxed agents with MCP tools and observability	L1	horizontal	general	active	none visible	high
+Catena Labs	ext:L1	kp-infra.md	AI-native bank for agentic commerce payments	L1	horizontal	general	active	$30M Series A (2026)	high
+Cekura	YC F24	yc-2024.md	Voice AI and Chat AI agents: Testing and Observability	L1	horizontal	general	active	Raised $2.4M	high
+Cellbyte	YC W22	yc-2021-22.md	AI agents for pharma drug launches	L3	vertical	pharma	active	pivot of Glocally	normal
+Celonis Process Agents	ext:L5	kp-suites.md	Agents powered by process intelligence (AgentC)	L5	horizontal	general	active	AgentC unveiled October 2024	normal
+Cenote	YC W25	yc-2025.md	AI sales reps running win-back campaigns for online health clinics	L3	vertical	healthcare	active	none visible	high
+Cerebrium	ext:L1	kp-infra.md	Serverless AI infrastructure for multimodal apps	L1	horizontal	general	active	$8.5M seed (2025)	normal
+Certus AI	YC S25	yc-2025.md	Voice AI replacing the restaurant phone line	L3	vertical	restaurants	active	none visible	high
+Chamber	YC W26	yc-2026.md	AI teammate for GPU operations	L3	vertical	software engineering	active	none visible	high
+Champ	YC S22	yc-2021-22.md	AI SDR running top of B2B sales funnel	L3	vertical	GTM and sales	unknown	none visible	normal
+Chasi AI	YC W26	yc-2026.md	AI Concierge for equipment sales and rentals	L3	vertical	sales	active	none visible	high
+Chattr	ext:L3	kp-vertical-a.md	Conversational AI hiring agents for frontline jobs	L3	vertical	HR and recruiting	active	$3.7M raised (2022)	normal
+Cheiron	Menlo	vc-us-b.md	AI-native operating system for drug development	L3	vertical	pharma	active	Menlo seed 2026	normal
+Chorrie	YC F24	yc-2024.md	Turn your SMEs into software engineers	L3	vertical	software engineering	active	none visible	high
+Cifrato	YC W25	yc-2025.md	End-to-end accounting workflows executed by AI agents	L3	vertical	accounting	active	none visible	high
+Ciro	YC S22	yc-2021-22.md	AI prospecting agent for sales reps	L3	vertical	GTM and sales	active	books 5-8 meetings weekly	normal
+Cisco Webex AI Agent	ext:L5	kp-suites.md	Autonomous customer-facing agent in Webex Contact Center	L5	vertical	customer service	active	GA March 2025; uptake undisclosed	normal
+ClaimGlide	YC W26	yc-2026.md	Automated prior-auths for healthcare	L3	vertical	healthcare	active	none visible	high
+Clarify	Madrona	vc-us-c.md	Autonomous AI-native CRM	L3	vertical	GTM/sales	active	$22.5M raised 2025	normal
+Clarium AI	Northzone	vc-eu.md	Task automation agents for hospital departments	L3	vertical	healthcare	active	Series A	normal
+Clay	gtm:tofu;seed:L3;Sequoia	gtm-carry.md;kp-vertical-b.md;vc-us-a.md	GTM data and automation infrastructure with Claygent research agent	L3	vertical	GTM/sales	active	created the GTM engineer role	high
+Clearly AI	YC S24	yc-2024.md	Automate security and privacy reviews	L3	vertical	security	active	$8.4M seed round	high
+Cleric	ext:L3	kp-vertical-a.md	Self-learning AI SRE for production incidents	L3	vertical	IT ops (SRE)	active	Vertex Ventures-backed (2025)	normal
+Clicks	YC F25	yc-2025.md	Computer-use agents automating back-office work in existing tools	X	horizontal	general	active	none visible	high
+Clientell	Blume	vc-in.md	AI agent executing Salesforce administration tasks	L3	vertical	IT	active	$2.5M seed 2024	normal
+Cline	ext:L3	kp-vertical-a.md	Open-source autonomous coding agent for VS Code	L3	vertical	software engineering	active	$32M raised (2025); major open-source adoption	high
+Clodo	YC S25	yc-2025.md	Find and reach customers with just a prompt	L3	vertical	GTM/sales	active	none visible	high
+Closera	YC S25	yc-2025.md	AI shopping agents for ecommerce stores	L3	vertical	ecommerce	active	none visible	high
+cloud humans	YC W21	yc-2021-22.md	GPT-based CX super agent answering support tickets	L3	vertical	customer service	active	$1.2M raised	normal
+CloudCruise	YC W24	yc-2024.md	The developer platform for fast and reliable browser agents	L1	horizontal	general	active	$5M Seed	high
+Cloudflare Agents SDK	seed:L2	kp-platforms.md	Toolkit for building and deploying agents on Cloudflare Workers	L2	horizontal	general	active	500k weekly downloads Apr 2026	high
+Coasts	YC F25	yc-2025.md	Localhost isolation and orchestration for parallel coding agents	L1	horizontal	general	active	none visible	high
+Coasty	YC S26	yc-2026.md	Computer-use agent for real software	X	horizontal	general	active	none visible	high
+Codag	YC S26	yc-2026.md	Log compression for AI incident agents	L1	horizontal	general	active	none visible	high
+Codebuff	YC F24	yc-2024.md	The CLI tool that writes code for you	L3	vertical	software engineering	active	none visible	high
+CodeRabbit	ext:L3	kp-vertical-a.md	Autonomous AI code review and change management	L3	vertical	software engineering	active	$143M at $1.5B valuation (2026)	high
+Cofactor	seed:L3	kp-vertical-b.md	AI platform fighting insurance claim denials for hospitals	L3	vertical	healthcare	active	$4M seed (Nov 2024)	normal
+Cogent	Greylock	vc-us-a.md	AI Agents for Vulnerability Management	L3	vertical	cybersecurity	active	none visible	normal
+Cognigy	ext:X;seed:L2;ext:L3;Insight	kp-infra.md;kp-platforms.md;kp-vertical-a.md;vc-us-b.md	Conversational AI platform for contact centers	X	horizontal	general	acquired	$100M Series C (2024)	high
+Cognition (Devin)	seed:L3;Conviction;Accel, Founders Fund;Lux, 8VC	kp-vertical-a.md;vc-ai.md;vc-us-a.md;vc-us-c.md	Autonomous AI software engineer Devin	L3	vertical	software engineering	active	$10.2B valuation (2025); acquired Windsurf	high
+Cognizant	ext:L4	kp-infra.md	Global SI with agentic AI operations practice	L4	horizontal	general	active	NVIDIA partnership; enterprise agent deployments	high
+Cogram	YC W22	yc-2021-22.md	AI platform automating AEC workflows: site reports, RFP bidding	L3	vertical	construction	active	used by leading AEC firms	normal
+Cohere Health	ext:L3	kp-vertical-b.md	AI automating prior authorization for health plans	L3	vertical	healthcare	active	$90M Series C (May 2025)	high
+Cohere North	ext:L2	kp-platforms.md	Cohere's enterprise agentic AI platform with Agent Studio	L2	horizontal	general	active	GA Aug 2025	normal
+Coldreach	YC W23	yc-2023.md	AI SDR monitoring buying signals and automating outbound	L3	vertical	sales	active	none visible	normal
+CollectWise	YC F24	yc-2024.md	Automating consumer debt collection with AI	L3	vertical	finance/accounting	active	$500K Seed Stage	high
+Colleen AI	ext:L3	kp-vertical-b.md	AI agents for property management operations	L3	vertical	real estate	active	$3.5M seed (2023)	normal
+CollegeVine	Menlo	vc-us-b.md	AI agent platform for university operations	L3	vertical	education	active	Menlo Ser C 2025; pivoted to agents 2024	normal
+Comena	YC S25	yc-2025.md	Agents automating order processing for industrial distributors	L3	vertical	distribution	active	none visible	high
+Command Zero	ext:L3	kp-vertical-b.md	AI-driven SOC investigation platform	L3	vertical	security	active	$31M raised (2024-25)	high
+CommodityAI	YC W24	yc-2024.md	AI that automates commodity operations	L3	vertical	commodities	active	none visible	high
+Composio	seed:L1;Elevation, Lightspeed;Lightspeed	kp-infra.md;vc-in.md;vc-us-a.md	Open-source tool and integration layer for AI agents	L1	horizontal	general	active	$29M raised; 63 employees (2026)	high
+Compresr	YC W26	yc-2026.md	Context compression for Claude Code integration	L1	horizontal	general	active	none visible	high
+Compyle	YC F25	yc-2025.md	Coding agent collaborating with you, asking before acting	L3	vertical	software engineering	active	none visible	high
+Conductor	YC S24	yc-2024.md	Run a team of coding agents on your Mac	L3	vertical	software engineering	active	$22M Series A from Spark and Matrix	high
+Conduit	YC W24	yc-2024.md	AI agents for hospitality	L3	vertical	hospitality	active	none visible	high
+Confident AI	YC W25	yc-2025.md	Open-source LLM and agent evaluation platform behind DeepEval	L1	horizontal	general	active	$2.2M seed; 3M+ monthly downloads	high
+Confido Health	Blume	vc-in.md	Voice AI digital workers for healthcare front-line operations	L3	vertical	healthcare	active	$3M seed 2024	normal
+Console	Thrive	vc-us-c.md	AI agents for IT help desk tasks	L3	vertical	IT/HR	acquired	acquired by Palo Alto Networks ~$500M	normal
+Constant	YC W23	yc-2023.md	AI analysts running end-to-end investment workstreams for buy-side teams	L3	vertical	finance	active	none visible	normal
+Context	YC S26	yc-2026.md	Structured web data for AI agents	L1	horizontal	general	active	none visible	high
+ContextFort	YC S25	yc-2025.md	Visibility and controls for AI browser agents	L1	horizontal	general	active	none visible	high
+ContraForce	YC S21	yc-2021-22.md	security platform orchestrating AI agents for security engineering	L3	vertical	security	active	team 15	normal
+Contrario	YC W25	yc-2025.md	Network of AI-powered expert recruiters for critical roles	L3	vertical	HR/recruiting	active	none visible	high
+Conveo	YC S24	yc-2024.md	Confident decisions in days with AI-led interviews	X	vertical	market research	active	$50M from DST Global, Balderton, Visionaries, 6 Degrees	high
+Convergence	ext:X	kp-infra.md	Proxy computer-use agents that learn workflows	X	horizontal	general	active	$12M pre-seed (2024)	normal
+Conversica	ext:L3	kp-vertical-b.md	AI revenue digital assistants for sales follow-up	L3	vertical	GTM/sales	active	majority recap led by Morgan Stanley (Jul 2026)	high
+ConverzAI	Menlo	vc-us-b.md	Voice AI virtual recruiters for staffing	L3	vertical	recruiting	active	Menlo Ser A 2024	normal
+Convexia	YC S25	yc-2025.md	Pharma company run by AI agents buying drugs and running trials	L3	vertical	healthcare	active	none visible	high
+Convey	Khosla Ventures	vc-us-a.md	Platform to train, ship, and manage enterprise-grade AI workers	L2	horizontal	general	active	$38.0M Series A	normal
+CopilotKit	ext:L2;SignalFire	kp-platforms.md;vc-ai.md	Open-source React framework for building in-app AI agents	L2	horizontal	general	active	$27M Series A May 2026	high
+Copy.ai	gtm:tofu;seed:L3	gtm-carry.md;kp-vertical-b.md	GTM AI platform with multi-step work agents; merged into Fullcast	L3	vertical	GTM/sales	pivoted	merged with Fullcast	normal
+CopyCat	YC W25	yc-2025.md	Voice AI delivering dermatology biopsy results and scheduling treatment	L3	vertical	healthcare	active	none visible	high
+Coral	Z47, Lightspeed	vc-in.md	AI agents automating US healthcare back office	L3	vertical	healthcare	active	$12.5M Series A 2026	normal
+CORE	YC S23	yc-2023.md	Persistent memory and actions layer for AI tools	L1	horizontal	general	active	none visible	normal
+Corelayer	YC W26	yc-2026.md	AI on-call engineers for production issues	L3	vertical	software engineering	active	none visible	high
+Corgea	YC S23	yc-2023.md	AI agents finding and fixing insecure code	L3	vertical	security	active	$2.6M seed	normal
+Cortea	Cherry Ventures	vc-eu.md	AI automating financial and IT audits	L3	vertical	finance/accounting	active	$13.9M seed, Jun 2026	normal
+Corti	ext:L3	kp-vertical-b.md	Voice AI for healthcare consultations and emergency calls	L3	vertical	healthcare	active	$60M Series B (2023); $87M total	high
+Cotera	YC W22	yc-2021-22.md	platform to build AI agents that act across systems	L2	horizontal	general	active	none visible	normal
+Coupa AI Agents	ext:L5	kp-suites.md	Agents for spend management and source-to-pay	L5	vertical	procurement	active	launched November 2025; uptake undisclosed	normal
+Cova	YC S26	yc-2026.md	AI-Native Home Care Agency	L3	vertical	healthcare	active	none visible	high
+Coval	YC S24	yc-2024.md	Simulation & Evaluation for Voice and Chat Agents	L1	horizontal	general	active	$28M Series A	high
+Covey	ext:L3	kp-vertical-a.md	AI agents for outbound candidate sourcing and screening	L3	vertical	HR and recruiting	active	none visible	normal
+Coze	seed:L2	kp-platforms.md	ByteDance's agent builder; open-sourced Coze Studio	L2	horizontal	general	active	Open-sourced Coze Studio Jul 2025; large China user base	high
+Cozmo AI	YC W22	yc-2021-22.md	end-to-end AI agents for property claims	L3	vertical	insurance	active	team 8	normal
+Cranston AI	YC F25	yc-2025.md	Full-stack AI accounting firm automating reconciliation and tax	L3	vertical	accounting	active	none visible	high
+Credal	YC W23	yc-2023.md	Security and governance layer for enterprise AI agents	L1	horizontal	general	active	seed raised	normal
+Crescendo	seed:L3	kp-vertical-a.md	AI-native customer experience platform, AI plus humans	L3	vertical	customer service	active	$50M raised (2024); claims $100M+ ARR (2025)	high
+Cresta	Greylock, a16z, Sequoia	vc-us-a.md	AI agents and agent assistance for contact centers	L3	vertical	customer service	active	$125M Series D	high
+CrewAI	ext:OSS;seed:L2;Insight;Craft	kp-infra.md;kp-platforms.md;vc-us-b.md;vc-us-c.md	Multi-agent framework for role-based teams	L2	horizontal	general	active	$18M raised; broad adoption	high
+Crogl	Menlo	vc-us-b.md	Autonomous AI SOC analyst for security operations	L3	vertical	security	active	$30M Ser A 2025, Menlo-led	normal
+Crow	YC W26	yc-2026.md	AI sprint services for CRE operators	L3	vertical	software engineering	active	none visible	high
+CrowdStrike Charlotte AI	ext:L5	kp-suites.md	Agentic SOC assistant and detection agents	L5	vertical	security	active	none visible	normal
+Crunched	YC F25	yc-2025.md	Excel AI analyst error-checking workbooks and building models	L3	vertical	finance	active	none visible	high
+Cursor (Anysphere)	a16z;Thrive	vc-us-a.md;vc-us-c.md	AI-assisted IDE with YOLO mode for autonomous code iteration, testing, and fixing	L3	vertical	software engineering	active	Over $500M ARR; $9.9B valuation	high
+Cyberdesk	YC S25	yc-2025.md	Self-learning computer-use agent automating legacy Windows apps	X	horizontal	general	active	none visible	high
+Cytora	ext:L3	kp-vertical-b.md	AI platform processing commercial insurance submissions	L3	vertical	insurance	active	$32.5M Series B (2019)	normal
+Daqstra	YC S26	yc-2026.md	AI-native orchestration for physical R&D testing	L1	horizontal	general	active	none visible	high
+Dari	YC F25	yc-2025.md	API for reliable browser-use agents with deterministic playback	X	horizontal	general	active	none visible	high
+Dart	YC W22	yc-2021-22.md	AI-native project management with agents completing work	L3	horizontal	general	active	thousands of teams	normal
+Databricks Mosaic Agent Framework	seed:L5	kp-suites.md	Open framework for building data-aware agents on Databricks	L2	horizontal	general	active	none visible	normal
+Datadog Bits AI	ext:L5	kp-suites.md	Agentic assistant for SRE and observability	L5	vertical	software engineering	active	none visible	normal
+datafruit	YC S25	yc-2025.md	AI workspace automating software implementation projects	L3	vertical	software engineering	active	none visible	high
+Datafy	Bessemer	vc-us-b.md	Autonomous storage administration agent for public cloud	L3	vertical	IT	active	BVP-backed, early stage	normal
+Datrics	YC W21	yc-2021-22.md	AI automation for healthcare insurance claims coding	L3	vertical	healthcare	pivoted	$1.1M raised; pivoted from data analytics	normal
+Day.ai	ext:L3	kp-vertical-b.md	AI-native CRM built by agents	L3	vertical	GTM/sales	active	$20M Series A from Sequoia (Feb 2026)	normal
+Dayforce AI Agents	ext:L5	kp-suites.md	HR and payroll suite with embedded agents	L5	vertical	HR	active	none visible	normal
+Daylight Security	Craft	vc-us-c.md	Managed agentic security services	L4	horizontal	general	active	$33M Ser A led by Craft	normal
+Daytona	seed:L1	kp-infra.md	Sandboxes and runtimes for AI-generated code and agents	L1	horizontal	general	active	$24M Series A led by FirstMark	high
+Decagon	seed:L3;a16z, Accel;Coatue	kp-vertical-a.md;vc-us-a.md;vc-us-b.md	AI customer support agents with concierge positioning	L3	vertical	customer service	active	$4.5B valuation (Series D, 2026)	high
+Decipher	YC W24	yc-2024.md	AI QA agents that write tests 10x faster with zero maintenance	L3	vertical	software engineering	active	none visible	high
+Decisional AI	YC S24	yc-2024.md	Autonomous AI agents for spreadsheet based operations	L3	vertical	finance/accounting	active	Pre-Seed funding	high
+Dedalus Labs	YC S25	yc-2025.md	Vercel for AI agents, hosted MCP servers with one-click deploy	L1	horizontal	general	active	none visible	high
+Deepgram	seed:X	kp-infra.md	Speech-to-text and voice AI models for agents	X	horizontal	general	active	$130M Series C at $1.3B (Jan 2026)	high
+DeepIP	Balderton Capital	vc-eu.md	AI platform for patent drafting and prosecution	L3	vertical	legal	active	$25M Series B	normal
+DeepRFP	gtm:rfp	gtm-carry.md	Lean AI toolkit for proposal professionals: shredder, drafts, red-team review	L3	vertical	GTM/sales	active	transparent pricing $89-149 per user monthly	normal
+deepset	ext:OSS;Balderton Capital	kp-infra.md;vc-eu.md	Haystack OSS and enterprise RAG agent platform	L2	horizontal	general	active	$30M raised (2023)	high
+Deeptrace	YC F25	yc-2025.md	Agents investigating and resolving production alerts end-to-end	L3	vertical	software engineering	active	none visible	high
+Definite	YC S26	yc-2026.md	Back-office agents based on a model of books	L3	vertical	finance	active	none visible	high
+Delfino AI	YC S22	yc-2021-22.md	AI automating provider-payor phone calls in healthcare	X	vertical	healthcare	active	team 2	normal
+Delineate	YC W25	yc-2025.md	AI agents designing better clinical trials faster	L3	vertical	life sciences	active	none visible	high
+Deloitte	seed:L4	kp-infra.md	Big 4 SI building and deploying enterprise agents	L4	horizontal	general	active	Zora AI agentic platform (2025)	high
+Delphina	Radical Ventures	vc-ai.md	AI agents automating data science workflows	L3	vertical	data science	active	$7.5M seed 2023	normal
+Delve	Insight;YC W24	vc-us-b.md;yc-2024.md	AI agents for enterprise compliance monitoring	L3	vertical	compliance	active	$32M Ser A 2025 led by Insight	high
+Demeter	YC W25	yc-2025.md	AI value-creation team for private equity portfolios	L3	vertical	finance	active	none visible	high
+Dench.com	YC S24	yc-2024.md	AI Workforce that does it all	L2	horizontal	general	active	$2M Seed Round	high
+Denki	YC F25	yc-2025.md	Full-stack AI audit firm performing audits with software	L3	vertical	accounting	active	$4.1M raised	high
+Derya	YC S26	yc-2026.md	AI-Native Logistics Office	L3	vertical	logistics	active	none visible	high
+Dev Tools AI	YC S22	yc-2021-22.md	LLM and computer-vision powered web and mobile automation	L3	vertical	software engineering	dead	none visible	normal
+Dex	ext:L3	kp-vertical-a.md	AI recruiting agents for talent matching	L3	vertical	HR and recruiting	active	$5.3M seed led by Notion Capital (2026)	normal
+Dexter	YC F24	yc-2024.md	AI-powered Source-to-Pay	L3	vertical	finance/accounting	active	none visible	high
+Dialogus	YC S26	yc-2026.md	Infrastructure for enterprise voice agents in contact centers	L1	horizontal	general	active	Customers include Papa Johns, KFC	high
+Dialtone	YC S23	yc-2023.md	Self-learning agents for CRM and GTM data hygiene	L3	vertical	sales	active	none visible	normal
+DianaHR	YC W24	yc-2024.md	An AI-Powered HR Person	L3	vertical	HR	active	$3.7M Seed Round	high
+Dify	ext:OSS;ext:L2	kp-infra.md;kp-platforms.md	Open-source platform for agentic workflows	L2	horizontal	general	active	$30M pre-Series A (2026)	high
+DigiBuild	YC S21	yc-2021-22.md	agents that buy and track building materials for construction	L3	vertical	construction	active	none visible	normal
+DigitalGenius	seed:L3	kp-vertical-a.md	AI agents for ecommerce customer service automation	L3	vertical	customer service (ecommerce)	active	$14.75M Series A (2017); quiet since	normal
+Digits	seed:L3	kp-vertical-b.md	AI-native accounting software automating bookkeeping	L3	vertical	finance/accounting	active	$65M raised; $565M valuation (2022)	high
+Digs	ext:L3	kp-vertical-b.md	AI digital twin platform for homebuilding	L3	vertical	construction	active	$25.3M Series A led by Builders FirstSource (Aug 2026)	high
+dili	YC S23	yc-2023.md	AI automation for prevailing-wage compliance in construction and infrastructure	L3	vertical	construction	pivoted	pivoted from PE due-diligence AI	normal
+DiligenceSquared	YC F25	yc-2025.md	Automated, auditable market diligence for private equity deals	L3	vertical	finance	active	none visible	high
+Diligent	YC S23	yc-2023.md	AI agents for fintech AML and customer due diligence	L3	vertical	fintech	active	none visible	normal
+Dime	YC W24	yc-2024.md	Dime automates administrative busywork at healthcare clinics	L3	vertical	healthcare	active	none visible	high
+Diode Computers, Inc.	YC S24	yc-2024.md	Automate circuit board design using AI	L3	vertical	engineering	active	raised $11.4M	high
+DisputeNinja	YC S23	yc-2023.md	AI agents automating chargeback disputes and revenue recovery	L3	vertical	finance	active	Shopify App Store presence	normal
+Docket	gtm:sol	gtm-carry.md	AI sales engineers for presales teams	L3	vertical	GTM/sales	active	none visible	normal
+Document Crunch	ext:L3	kp-vertical-b.md	AI contract review for construction projects	L3	vertical	construction	active	$30M raised (2024)	high
+Docyt	ext:L3	kp-vertical-b.md	Precision-trained AI agents for accounting automation	L3	vertical	finance/accounting	active	$12M pre-Series B (Aug 2025)	normal
+Dodge AI	Accel	vc-in.md	Specialized agents maintaining SAP ERP systems	L3	vertical	IT	active	Accel Atoms AI cohort 2026	normal
+Dodo	YC S24	yc-2024.md	AI Employees for Specialty Clinics	L3	vertical	healthcare	active	none visible	high
+Doe	YC S25	yc-2025.md	AI agents doing your work across connected tools	L2	horizontal	general	active	none visible	high
+Dome Systems	Bessemer	vc-us-b.md	Operational control plane for the agentic enterprise	L1	horizontal	general	active	$14M seed 2026 co-led by BVP and Redpoint	normal
+Domo AI Agents	ext:L5	kp-suites.md	Custom AI agents for business data	L5	vertical	analytics	active	none visible	normal
+Domu	YC S24	yc-2024.md	AI Agents for collections	L3	vertical	finance/accounting	active	none visible	high
+Donkey	YC S26	yc-2026.md	AI-native trading company for US importers	L3	vertical	e-commerce	active	none visible	high
+Doublezero	YC S24	yc-2024.md	Platform to build, use, and monetize fully autonomous agents	L2	horizontal	general	active	none visible	high
+DPDzero	Blume	vc-in.md	GPT-enabled collections and debt recovery for lenders	L3	vertical	finance	active	Blume-backed since 2023	normal
+DraftWise	ext:L3	kp-vertical-b.md	AI drafting and knowledge platform for law firms	L3	vertical	legal	active	$20M Series A (Mar 2024)	normal
+Drillbit	YC S24	yc-2024.md	Automating Office Work for Residential Contractors	L3	vertical	construction	active	none visible	high
+Dropzone	seed:L3;Madrona	kp-vertical-b.md;vc-us-c.md	AI SOC analyst agent automating alert investigation	L3	vertical	security	active	$37M Series B (Jul 2025)	high
+DryMerge	YC W24	yc-2024.md	AI that updates your CRM for you	L3	vertical	GTM/sales	active	$2.2M Seed Round	high
+dScribe AI	YC S25	yc-2025.md	Autonomous drones with 3D vision tracking bulk inventory	L3	vertical	logistics	active	none visible	high
+Duckie	YC W24	yc-2024.md	Build AI Support Agents in Minutes	L3	vertical	customer service	active	$500K Seed	high
+Durate	YC F24	yc-2024.md	Automated physician scheduling	L3	vertical	healthcare	active	$500K Seed	high
+Dust	gtm:kb;ext:L2;Seedcamp;Sequoia	gtm-carry.md;kp-platforms.md;vc-eu.md;vc-us-a.md	Multiplayer AI: shared human-agent collaboration surface	L2	horizontal	general	active	3000+ orgs, 300K+ agents deployed	high
+Dwelly	ext:L3	kp-vertical-b.md	AI operating system automating UK lettings agencies	L3	vertical	real estate	active	$170M Series B (Jul 2026)	high
+E2B	seed:L1;Insight;YC S24	kp-infra.md;vc-us-b.md;yc-2024.md	Open-source sandboxes and agent cloud for running AI code	L1	horizontal	general	active	$21M Series A 2025; Fortune 100 customers	high
+Eagl	ext:L3	kp-vertical-b.md	AI agents for month-end close	L3	vertical	finance/accounting	active	EUR 825K raised (2025)	normal
+ECSA	YC S22	yc-2021-22.md	AI agent running international trade operations	L3	vertical	logistics	active	none visible	normal
+Eden	YC S25	yc-2025.md	Autonomous marketing agents running ecommerce campaigns	L3	vertical	marketing	active	none visible	high
+Edexia	YC W25	yc-2025.md	AI teacher assistant grading essays across curricula	L3	vertical	education	active	none visible	high
+Edgedive	YC F24	yc-2024.md	The AI Support Engineer	L3	vertical	software engineering	active	none visible	high
+EdgeRunner AI	Madrona	vc-us-c.md	Air-gapped on-device AI agents for military	L3	vertical	security	active	$12M Ser A 2025	normal
+Edra	Sequoia	vc-us-a.md	Creates and deploys executable knowledge for enterprise AI agents	L1	horizontal	general	active	raised $30M Series A	high
+EffiGov	YC S25	yc-2025.md	AI call operators answering 311 and city lines around the clock	L3	vertical	government	active	none visible	high
+Egma AI	YC S26	yc-2026.md	AI-native marketing agency for elective care clinics	L3	vertical	marketing	active	$48K pilot value, backed by South Park Commo	high
+Egoist Machines	YC S26	yc-2026.md	Secure user-owned context for AI apps	L1	horizontal	general	active	none visible	high
+Egress Health	YC W25	yc-2025.md	AI agents automating dental revenue cycle management	L3	vertical	healthcare	active	none visible	high
+Ekpa	YC S26	yc-2026.md	Autonomous Research Agents for Trading	L3	vertical	finance	active	none visible	high
+ElevenLabs	ext:X	kp-infra.md	Voice AI company with conversational agent platform	X	horizontal	general	active	$500M ARR (2026)	high
+EliseAI	seed:L3;a16z;Bessemer	kp-vertical-b.md;vc-us-a.md;vc-us-b.md	AI leasing and resident agents for housing operators	L3	vertical	real estate	active	$300M at $3.7B reportedly in talks (Aug 2026)	high
+Ellipsis	YC W24	yc-2024.md	AI code reviews & bug fixes	L3	vertical	software engineering	active	none visible	high
+Elyos AI	YC S23	yc-2023.md	AI customer-service agents for trades and field services	L3	vertical	field services	active	none visible	normal
+Ema	gtm:kb;seed:L2;Accel	gtm-carry.md;kp-platforms.md;vc-in.md;vc-us-a.md	Universal AI Employee platform: no-code agents, Generative Workflow Engine	L2	horizontal	general	active	250+ integrations, outcome-based pricing	high
+Embedder	YC S25	yc-2025.md	Coding agent writing, testing, debugging firmware	L3	vertical	software engineering	active	none visible	high
+Ember	YC F24	yc-2024.md	AI revenue cycle management for healthcare	L3	vertical	healthcare	active	none visible	high
+Emergent	Lightspeed;YC S24	vc-in.md;yc-2024.md	AI agents building apps and code from ideas	L3	vertical	software engineering	active	Unicorn; $130M Series C 2026	high
+Engines	YC W24	yc-2024.md	Setup any repo with one command	L3	vertical	software engineering	active	none visible	high
+Engram	General Catalyst	vc-us-b.md	Memory operating system for AI models and agents	L1	horizontal	general	active	GC-led seed 2026	normal
+Entangl	YC S24	yc-2024.md	Find & resolve issues in data center engineering & operations using AI	L3	vertical	IT	active	none visible	high
+Entire	Felicis, Madrona	vc-us-c.md	Developer platform managing code written by AI agents	L1	horizontal	general	active	$60M seed at $300M val 2026	normal
+Entropy	YC S24	yc-2024.md	Autonomous intake and RCM for specialty clinics	L3	vertical	healthcare	active	$25M seed round led by Andreessen Horowitz	high
+Entvin	YC S22	yc-2021-22.md	AI agents for life-sciences regulatory teams	L3	vertical	life sciences	active	team 5	normal
+Eos AI	YC W26	yc-2026.md	Autonomous OS for healthcare	L3	vertical	healthcare	active	none visible	high
+Epic AI Agents	ext:L5	kp-suites.md	EHR agents (Penny, Art, Emmie) built with Microsoft	L5	vertical	healthcare	active	85% of Epic customer base (reported)	normal
+Epicor Prism AI	ext:L5	kp-suites.md	Network of vertical AI agents with industry ERP	L5	horizontal	general	active	none visible	normal
+Epsilla	YC S23	yc-2023.md	Platform for building AI agents on private knowledge	L2	horizontal	general	active	reported revenue	normal
+Ergo	YC W25	yc-2025.md	Agents monitoring comms, updating CRM, executing revenue activities	L3	vertical	GTM/sales	active	none visible	high
+Erinys	YC S26	yc-2026.md	Network of AI-native law firms	L3	vertical	legal	active	none visible	high
+Escape Technologies	Balderton Capital;YC W23	vc-eu.md;yc-2023.md	AI agents replacing manual pentesting	L3	vertical	security	active	$18M Series A led by Balderton, Mar 2026	high
+Espressive	ext:L3	kp-vertical-a.md	Barista AI agent for enterprise IT and HR service	L3	vertical	IT and employee service	active	Atos partnership (2025); established since 2017	high
+Eve	seed:L3;Menlo	kp-vertical-b.md;vc-us-b.md	AI workforce automating plaintiff law firm casework	L3	vertical	legal	active	$103M Series B at $1B (Sep 2025)	high
+EvenUp	seed:L3;Bessemer	kp-vertical-b.md;vc-us-b.md	AI drafting demand packages for personal injury firms	L3	vertical	legal	active	$150M Series E at $2B+ (Oct 2025)	high
+Everest	YC F25	yc-2025.md	AI employees helping MSPs resolve IT support tickets	L3	vertical	IT	active	none visible	high
+Exa	YC S21	yc-2021-22.md	web search API built for AI applications and agents	L1	horizontal	general	active	$250M Series C May 2026 at $2.2B valuation	high
+Exaforce	ext:L3;Mayfield;Khosla Ventures	kp-vertical-b.md;vc-ai.md;vc-us-a.md	Agentic SOC platform for security reasoning and response	L3	vertical	security	active	$125M Series B (May 2026)	high
+Experiential Labs	YC S26	yc-2026.md	World models for agents	L1	horizontal	general	active	none visible	high
+EY	seed:L4	kp-infra.md	Big 4 SI with enterprise agentic AI platform	L4	horizontal	general	active	EY.ai Agentic Platform with NVIDIA (2025)	high
+Factory	seed:L3;Sequoia, Khosla Ventures;NEA	kp-vertical-a.md;vc-us-a.md;vc-us-b.md	Autonomous software development agents (droids)	L3	vertical	software engineering	active	$50M Series B (2025, NEA, Sequoia, NVIDIA)	high
+Farsight	SignalFire	vc-ai.md	AI workflow automation for financial decisions	L3	vertical	finance	active	$16M Series A June 2025	normal
+FastGPT	ext:L2	kp-platforms.md	Open-source knowledge-base and agent workflow platform	L2	horizontal	general	active	Major open-source project (labring)	normal
+Fazeshift	YC S24	yc-2024.md	AI agent for Accounts Receivable	L3	vertical	finance/accounting	active	$17M Series A	high
+Feather	YC S22	yc-2021-22.md	platform powering human-like AI phone calls	X	horizontal	general	active	team 2	normal
+Federato	seed:L3	kp-vertical-b.md	Underwriting workbench with AI copilots for insurers	L3	vertical	insurance	active	$100M Series D led by Goldman (Nov 2025)	high
+Fenrock AI	YC W26	yc-2026.md	AI agents for banking back office	L3	vertical	finance	active	none visible	high
+Fernstone	YC F25	yc-2025.md	Full-stack AI insurance brokerage for complex commercial risk	L3	vertical	insurance	active	none visible	high
+Fibr AI	Accel	vc-in.md;vc-us-a.md	Agentic web personalization turning URLs into experience agents	L3	vertical	GTM/marketing	active	$7.5M seed led by Accel 2026	normal
+Fifth Dimension AI	Seedcamp	vc-eu.md	AI partner automating work for real estate professionals	L3	vertical	real estate	active	£2.3M pre-seed, 2023	normal
+Fin	Bessemer	vc-us-b.md	Intercom renamed; customer AI agent company	L5	vertical	customer service	active	Formerly Intercom; rebranded around Fin agent 2026	high
+finbar	YC W25	yc-2025.md	AI investment analyst automating modeling and research	L3	vertical	finance	active	used by several top-20 AUM hedge funds	high
+Fini	YC S22	yc-2021-22.md	AI agents autonomously resolving enterprise support tickets	L3	vertical	customer service	active	team 14	normal
+Finnt	YC W22	yc-2021-22.md	AI agents for CFO and finance teams	L3	vertical	finance	dead	none visible	normal
+Finster	Peak XV	vc-in.md	AI research platform automating equity research workflows	L3	vertical	finance	active	Surge 11 cohort 2025	normal
+Finto	ext:L3;YC S25	kp-vertical-b.md;yc-2025.md	AI-powered accounting platform	L3	vertical	finance/accounting	active	$3.4M seed (Jul 2026)	high
+Firebender	YC W24	yc-2024.md	Most powerful coding agent for Android engineers	L3	vertical	software engineering	active	none visible	high
+Firsthand	Radical Ventures	vc-ai.md	Brand agents for marketers and publishers	L3	vertical	marketing	active	$26M Series A	normal
+fixa	YC F24	yc-2024.md	Fix AI voice agents faster	L1	horizontal	general	active	none visible	high
+Fixify	seed:L3	kp-vertical-a.md	AI agent plus human analysts for IT help desks	L3	vertical	IT service	active	$25M Series A (2024)	high
+Flair Labs	YC S22	yc-2021-22.md	autonomous voice agents for real estate and lending	X	vertical	real estate	active	team 4	normal
+Flank	Insight	vc-us-b.md	Autonomous legal agents embedded in enterprise workflows	L3	vertical	legal	active	$10M round 2025, Insight-backed	normal
+FleetWorks	ext:L3	kp-vertical-b.md	Voice AI agents for freight brokers and carriers	L3	vertical	logistics	active	$17M raised (Oct 2025)	normal
+Flowise	ext:OSS;seed:L2;YC S23	kp-infra.md;kp-platforms.md;yc-2023.md	Visual low-code builder for agentic systems	L2	horizontal	general	acquired	Popular OSS; modest commercial traction	high
+Flowtel	YC W25	yc-2025.md	AI voice agents for hotels, from booking to room service	L3	vertical	hospitality	active	none visible	high
+Fluidize	YC S25	yc-2025.md	AI building and running simulations and experiments for scientists	L3	vertical	engineering	active	none visible	high
+Flywheel AI	YC S25	yc-2025.md	Autonomous excavators operating existing construction machinery	L3	vertical	construction	active	none visible	high
+Forethought	seed:L3;8VC	kp-vertical-a.md;vc-us-c.md	AI agents for customer support resolution	L3	vertical	customer service	acquired	Acquired by Zendesk (2026)	high
+Forge	YC W24	yc-2024.md	Getting companies refunds on tariffs & duties	L3	vertical	logistics	active	none visible	high
+Forge Robotics	YC F25	yc-2025.md	Robotic system fabricating welded metal parts end-to-end	L3	vertical	manufacturing	active	none visible	high
+Forgent AI	Cherry Ventures	vc-eu.md	AI agents for winning and delivering public sector contracts	L3	vertical	GTM/sales	active	$5.1M pre-seed, Sep 2025	normal
+Forus	ext:L3	kp-vertical-b.md	AI agents for pharma market access in medical practices	L3	vertical	healthcare	active	$150M Series C at $3B (Sep 2026)	high
+Foundry	YC F24	yc-2024.md	Enterprise data and simulation for AI web agents	L1	horizontal	general	active	none visible	high
+Freed	ext:L3	kp-vertical-b.md	AI medical scribe for clinicians	L3	vertical	healthcare	active	$30M Series A led by Sequoia (Mar 2025)	high
+Freestyle	YC S24	yc-2024.md	We run and deploy code your AI wrote	L1	horizontal	general	active	$10M Series A led by Silas Capital	high
+Freight Hero	AI Fund	vc-ai.md	AI agents for freight brokerage back offices	L3	vertical	logistics	active	$5M raised July 2026	normal
+Freshworks Freddy AI	ext:L5	kp-suites.md	Agentic AI for customer and employee service in Freshworks	L5	vertical	customer service	active	5,000 organizations	normal
+Freya	YC S25	yc-2025.md	Voice AI for enterprises	X	horizontal	general	active	none visible	high
+Frizzle	YC S25	yc-2025.md	AI grading handwritten math assignments for teachers	L3	vertical	education	active	none visible	high
+Fulcrum	YC S25	yc-2025.md	Red-teaming agents fixing RL environments and improving agents	L1	horizontal	general	active	none visible	high
+Fume	YC W24	yc-2024.md	We are building the AI Software Developer	L3	vertical	software engineering	active	none visible	high
+FurtherAI	YC W24	yc-2024.md	AI Workforce for the Insurance Industry	L3	vertical	insurance	active	$25M Series A led by a16z	high
+Fuse	YC S24	yc-2024.md	AI helpers for patient intake and benefits checks	L3	vertical	healthcare	active	none visible	high
+FuseAI	YC W25	yc-2025.md	Agentic OS automating the entire outbound sales motion	L3	vertical	GTM/sales	active	none visible	high
+Futwork	Blume	vc-in.md	Voice AI contact centre for Indian enterprises	X	vertical	customer service	pivoted	Pivoted from telesales services to voice AI	normal
+Galileo	seed:L1	kp-infra.md	Evaluation platform for gen-AI and agent reliability	L1	horizontal	general	active	$68M raised; 834% revenue growth	high
+Galini	YC F24	yc-2024.md	Compliance guardrails-as-a-service for AI applications	L1	horizontal	general	active	Pre Seed Round	high
+GC AI	ext:L3;Northzone	kp-vertical-b.md;vc-eu.md	AI assistant for in-house counsel	L3	vertical	legal	active	$60M Series B at $550M (Nov 2025)	high
+Gecko Security	YC F24	yc-2024.md	The AI Security Engineer to Find and Fix Vulnerabilities	L3	vertical	security	active	none visible	high
+General Analysis	YC S24	yc-2024.md	Security for agentic AI	L1	horizontal	general	active	$10M Seed	high
+General Legal	YC W26	yc-2026.md	Elite AI law firm for high growth companies	L3	vertical	legal	active	none visible	high
+General Magic	Radical Ventures	vc-ai.md	Insurance-native AI running brokerage workflows	L3	vertical	insurance	active	none visible	normal
+Genesys AI Agents	ext:L5	kp-suites.md	Autonomous CX agents in Genesys Cloud	L5	vertical	customer service	active	none visible	normal
+GenHealth.ai	ext:L3	kp-vertical-b.md	AI agents running the medical back office	L3	vertical	healthcare	active	$16.5M Series A (Sep 2026)	normal
+Genie AI	ext:L3	kp-vertical-b.md	AI legal drafting and contract workspace	L3	vertical	legal	active	$17.8M led by GV (Oct 2024)	normal
+Geordie	Balderton Capital	vc-eu.md	Security and governance layer for enterprise AI agents	L1	horizontal	general	active	$30M Series A led by Balderton, May 2026	high
+Giga AI	YC S23	yc-2023.md	AI support agents for enterprises	L3	vertical	customer service	active	$61M Series A reported	high
+Giskard	Accel	vc-us-a.md	Automated Red Teaming platform for AI agents to prevent security vulnerabilities	L1	horizontal	general	active	$466K Grant	normal
+GitHub Copilot Coding Agent	ext:L5	kp-suites.md	Autonomous coding agent working GitHub issues	L5	vertical	software engineering	active	agent mode GA since 2025; Copilot used by 20M+ developers	high
+GitLab Duo Agent Platform	ext:L5	kp-suites.md	Agent building across the GitLab DevSecOps lifecycle	L5	vertical	software engineering	active	GA in GitLab 18.8	normal
+Glade	YC S23	yc-2023.md	AI agents for game development and AI NPCs	L3	vertical	software engineering	active	50+ studios use GladeCore	normal
+Glama	seed:L1	kp-infra.md	MCP registry, inspector, and gateway for agents	L1	horizontal	general	active	Leading MCP registry; funding undisclosed	normal
+Glean	gtm:kb;seed:L2;Lightspeed;IVP, ICONIQ, Craft	gtm-carry.md;kp-platforms.md;vc-us-a.md;vc-us-c.md	Enterprise Work AI platform: search, assistants, agents over 100+ apps	L2	horizontal	general	active	$7.2B valuation, $200M ARR	high
+Glen	YC S26	yc-2026.md	Shared memory layer for AI agents	L1	horizontal	general	active	none visible	high
+Google ADK	seed:L2	kp-platforms.md	Google's open-source Agent Development Kit for Gemini-based agents	L2	horizontal	general	active	Expanding integrations ecosystem 2026; Google Cloud distribution	high
+Google Agent Development Kit	seed:L5	kp-suites.md	Open-source model-agnostic framework for building agents	L2	horizontal	general	active	none visible	normal
+Google Agent Studio (ex-Vertex AI Agent Builder)	seed:L5	kp-suites.md	Managed no-code agent building in Gemini Enterprise Agent Platform	L2	horizontal	general	active	Vertex AI renamed Gemini Enterprise Agent Platform April 2026	normal
+Google Agentspace	gtm:inc	gtm-carry.md	Google agent platform: Agentspace, no-code Workbench, A2A protocol	L5	horizontal	general	active	Gemini Enterprise $30 per seat	high
+Google Gemini Enterprise (ex-Agentspace)	seed:L5	kp-suites.md	Enterprise agent platform with assistant and search, ex-Agentspace	L2	horizontal	general	active	Renamed Oct 2025; unified platform April 2026	normal
+GovDash	gtm:rfp;YC W22	gtm-carry.md;yc-2021-22.md	Government contracting lifecycle platform with agentic cross-module execution	L3	vertical	GTM/sales	active	none visible	high
+GradeWiz	YC W25	yc-2025.md	AI grading of student work for universities	L3	vertical	education	active	TechCrunch W25 Demo Day top-10 pick	high
+Gradient Labs	ext:L3	kp-vertical-a.md	AI customer service agents for regulated fintechs	L3	vertical	customer service (fintech)	active	$13M Series A (2025) plus 2026 round	normal
+GrazeMate	YC W26	yc-2026.md	Autonomous drones that herd cattle	L3	vertical	logistics	active	none visible	high
+Greenlite	seed:L3;Greylock;Craft;YC S23	kp-vertical-b.md;vc-us-a.md;vc-us-c.md;yc-2023.md	AI agents for AML and KYC compliance operations	L3	vertical	finance/accounting	active	$15M Series A (2025)	high
+Greptile	ext:L3;YC W24	kp-vertical-a.md;yc-2024.md	AI code review and codebase understanding	L3	vertical	software engineering	active	$25M Series A led by Benchmark (2025)	high
+GreyLabs AI	Elevation, Z47	vc-in.md	Agentic voice AI platform for India's BFSI	X	vertical	finance	active	Rs 85 Cr Series A 2025	high
+Guidewire Agentic AI	ext:L5	kp-suites.md	Agent framework for insurers on Guidewire Cloud	L5	vertical	insurance	active	launched Qusar release August 2026	normal
+Guild AI	YC S26	yc-2026.md	AI-native defense supply chain layer	L3	vertical	defense	active	none visible	high
+Gumloop	seed:L2;Benchmark;YC W24	kp-platforms.md;vc-us-a.md;yc-2024.md	No-code canvas for building AI agent workflows and automations	L2	horizontal	general	active	$50M Series B led by Benchmark, Mar 2026	high
+H Company	ext:X	kp-infra.md	Computer-use agents (Runner H) from Paris lab	X	horizontal	general	active	$220M seed (2025)	high
+haddock	YC W22	yc-2021-22.md	AI agents running restaurant operations	L3	vertical	restaurants	active	team 40	normal
+Hadrius	YC W23	yc-2023.md	AI compliance automation for SEC-registered financial advisors	L3	vertical	finance	active	$27M raised across seed and Series A	high
+Haize Labs	ext:L1	kp-infra.md	Red-teaming and stress-testing for AI agents	L1	horizontal	general	active	$12.5M seed led by General Catalyst	normal
+Halluminate	YC S25	yc-2025.md	Data and sandboxes for training computer-use agents	L1	horizontal	general	active	none visible	high
+Hamming	YC S24	yc-2024.md	AI Automated voice AI agent testing and monitoring	L1	horizontal	general	active	$3.8M seed led by Mischief	high
+Handled	YC S24	yc-2024.md	Automating post-order operations for e-commerce brands and 3PLs	L3	vertical	logistics	active	none visible	high
+Handoff	ext:L3	kp-vertical-b.md	AI estimating for residential contractors	L3	vertical	construction	active	$5.8M strategic funding (Jun 2025)	normal
+Hang Ten Systems	Mayfield	vc-ai.md	Enterprise software rebuilt for the agentic era	L2	horizontal	general	active	$32M seed led by Mayfield June 2026	normal
+HappyRobot	seed:L3;YC S23	kp-vertical-b.md;yc-2023.md	Voice AI agents for freight carriers and brokers	L3	vertical	logistics	active	$150M Series C at $1.2B (Aug 2026)	high
+Harmoney	YC W22	yc-2021-22.md	agentic AI for buy-side firms	L3	vertical	finance	active	rebranded InferEdge	normal
+Harness AI Agents	ext:L5	kp-suites.md	AI agents for software delivery workflows	L5	vertical	software engineering	active	none visible	normal
+Harper	ext:L3;YC W25	kp-vertical-b.md;yc-2025.md	AI-native commercial insurance brokerage	L3	vertical	insurance	active	$47M raised (Feb 2026)	high
+Harvey	seed:L3;Conviction;Sequoia;Coatue	kp-vertical-b.md;vc-ai.md;vc-us-a.md;vc-us-b.md	Agentic AI legal associate for law firms and enterprises	L3	vertical	legal	active	$200M at $11B (Mar 2026); $500M at $15.5B reportedly in talks	high
+Hatchet	ext:L1;YC W24	kp-infra.md;yc-2024.md	Open-source orchestration for background AI tasks	L1	horizontal	general	active	YC W24; active OSS	high
+HatchWorks AI	ext:L4	kp-infra.md	AI-first digital services firm building agents	L4	horizontal	general	active	$2M raised (2026)	normal
+Hazel	YC W24	yc-2024.md	AI-enabled procurement for government	L3	vertical	government	active	none visible	high
+HCLTech	seed:L4	kp-infra.md	Indian SI with GenAI and agentic platforms	L4	horizontal	general	active	AI Force 2.0 (2026)	high
+Health Harbor	YC S23	yc-2023.md	AI agents calling insurers on behalf of clinics	X	vertical	healthcare	active	none visible	normal
+Hebbia	seed:L3;Radical Ventures;a16z;Index	kp-vertical-b.md;vc-ai.md;vc-us-a.md;vc-us-b.md	AI document analysis for finance and legal due diligence	L3	vertical	legal	active	$130M at $700M on $13M profitable revenue (2024)	high
+Heidi Health	ext:L3	kp-vertical-b.md	AI medical scribe for clinical documentation	L3	vertical	healthcare	active	$65M Series B led by Point72 (Oct 2025)	high
+Helicone	ext:L1	kp-infra.md	Open-source LLM observability and monitoring	L1	horizontal	general	active	$5M seed (2024)	normal
+Hello Patient	8VC	vc-us-c.md	AI patient engagement calls, texts and scheduling	L3	vertical	healthcare	active	$22.5M Ser A	normal
+Henry AI	gtm:cpq;seed:L3	gtm-carry.md;kp-vertical-b.md	AI deal desk for commercial real estate: lease abstraction and underwriting	L3	vertical	GTM/sales	active	none visible	normal
+Hera	YC S25	yc-2025.md	AI motion designer turning hours of video work into minutes	L3	vertical	media	active	none visible	high
+Hex Security	YC W26	yc-2026.md	AI agents that continuously pen-test infrastructure	L3	vertical	security	active	$1M+ run-rate in 8 weeks	high
+Hey Revia	YC S24	yc-2024.md	Voice AI to automate complex phone calls for healthcare providers	X	vertical	healthcare	active	none visible	high
+Hey Telo	YC W25	yc-2025.md	Voice AI for home services businesses	L3	vertical	home services	active	none visible	high
+Hindsight	YC W23	yc-2023.md	AI agents conducting buyer interviews and deal analysis	L3	vertical	sales	active	none visible	normal
+Hippocratic AI	ext:L3;a16z;General Catalyst	kp-vertical-b.md;vc-us-a.md;vc-us-b.md	Patient-facing healthcare AI agents	L3	vertical	healthcare	active	$126M Series C; $3.5B valuation (Nov 2025)	high
+HOAi	YC W22	yc-2021-22.md	AI agent for community association management	L3	vertical	real estate	acquired	acquired by Vantaca Fall 2024	normal
+HOMLI	YC S22	yc-2021-22.md	autonomous AI real-estate broker for home selling	L3	vertical	real estate	active	team 20	normal
+Honeywell AI Agents	ext:L5	kp-suites.md	Domain-trained agentic workflows via Honeywell Forge	L5	vertical	manufacturing	active	none visible	normal
+Hoplite	YC S26	yc-2026.md	Development platform built for AI coding agents	L1	horizontal	general	active	none visible	high
+Horizon3.ai	SignalFire;Craft	vc-ai.md;vc-us-c.md	Autonomous penetration testing platform NodeZero	L3	vertical	security	active	$250M Series E at $2B+ Aug 2026	high
+HubSpot Agent Hub	gtm:inc;seed:L5	gtm-carry.md;kp-suites.md	Agentic customer platform with Agent Hub and outcome-based pricing	L5	horizontal	general	active	$0.50 per resolved conversation, Dashworks acquired	high
+hud	YC W25	yc-2025.md	Agentic evals and RL environments for computer-use agents	L1	horizontal	general	active	none visible	high
+Hugging Face smolagents	seed:L2	kp-platforms.md	Hugging Face's minimalist open-source agent framework	L2	horizontal	general	active	Active open-source project in Hugging Face ecosystem	normal
+Humance	YC W21	yc-2021-22.md	AI keeping complex construction projects on schedule	L3	vertical	construction	active	$125K raised	normal
+HumanLayer	YC F24	yc-2024.md	Getting AI Coding Agents to solve hard problems in complex codebases	L1	horizontal	general	active	none visible	high
+Humanly	ext:L3	kp-vertical-a.md	AI agents for high-volume and frontline hiring	L3	vertical	HR and recruiting	active	$25M Series B (2026)	high
+Humoniq	YC S25	yc-2025.md	AI-native BPO for travel and transport customer support	L3	vertical	customer service	active	none visible	high
+Hunter	ext:L3	kp-vertical-b.md	AI SOC analyst automating alert triage	L3	vertical	security	active	$118M total raised (Apr 2026)	high
+Hyperbrowser	Peak XV;YC S21	vc-in.md;yc-2021-22.md	Browser infrastructure for AI agents to navigate the web	L1	horizontal	general	active	Peak XV-backed 2025; YC company	normal
+Hypercore	Insight	vc-us-b.md	AI admin agent for private credit	L3	vertical	finance	active	$13.5M Ser A 2026 led by Insight	normal
+Hypercubic	YC F25	yc-2025.md	AI maintaining and modernizing COBOL and mainframe systems	L3	vertical	software engineering	active	none visible	high
+Hyperprobe	YC S26	yc-2026.md	Coding agent that can fix production issues	L3	vertical	software engineering	active	none visible	high
+Hyperspell	YC F25	yc-2025.md	Memory for AI agents across Slack, Gmail, Notion, Drive	L1	horizontal	general	active	none visible	high
+IBM BeeAI	ext:L2	kp-platforms.md	IBM Research's open-source agent framework	L2	horizontal	general	active	IBM Research open-source project	normal
+IBM watsonx Orchestrate	seed:L5	kp-suites.md	Agentic control plane for building and governing enterprise agents	L2	horizontal	general	active	Agent Builder and role agents GA	normal
+idemeum	YC S21	yc-2021-22.md	AI-powered application control governing which apps may execute	L1	horizontal	general	active	none visible	normal
+Idler	YC S25	yc-2025.md	RL environments teaching AI to code at expert level	L1	horizontal	general	active	none visible	high
+IFS AI Agents	ext:L5	kp-suites.md	Industrial agentic AI (IFS Loops) for ERP and field service	L5	horizontal	general	active	none visible	normal
+Impart Security	Madrona	vc-us-c.md	Agentic security platform for APIs	L3	vertical	security	active	$12M Ser A led by Madrona	normal
+incident.io	Insight	vc-us-b.md	Incident management platform with AI response agents	L3	vertical	IT	active	$62M round 2025, Insight-backed	normal
+Inconvo	YC S23	yc-2023.md	Open-source platform for building data agents on production data	L2	horizontal	general	active	none visible	normal
+Induced	seed:X;SignalFire	kp-infra.md;vc-ai.md	Cloud browser-automation agent API	X	horizontal	general	active	$2.3M seed (2023); API in public beta	normal
+Infer	YC S21	yc-2021-22.md	AI voice agents qualifying insurance leads	X	vertical	insurance	active	none visible	normal
+Infinitus	ext:L3	kp-vertical-a.md	Voice AI agents for healthcare benefit and pharma calls	L3	vertical	healthcare customer service	active	$51.5M Series C led by a16z (2024)	high
+Infor AI Agents	ext:L5	kp-suites.md	Role-based agents on micro-vertical ERP processes	L5	horizontal	general	active	none visible	normal
+Informatica CLAIRE Agents	ext:L5	kp-suites.md	Autonomous agents for enterprise data management	L5	horizontal	general	active	launched May 2025; uptake undisclosed	normal
+Infosys	seed:L4	kp-infra.md	Indian SI with enterprise AI agent platform	L4	horizontal	general	active	Agentic AI Foundry launched (2025)	high
+Inkeep	ext:L3	kp-vertical-a.md	AI support agents for docs and help centers	L3	vertical	customer service (developer)	active	none visible	normal
+Inngest	seed:L1	kp-infra.md	Durable execution and functions for AI agents	L1	horizontal	general	active	$31.6M total; $21M Series A (2025)	high
+InspectMind AI	YC W24	yc-2024.md	AI agent for construction drawings review	L3	vertical	construction	active	none visible	high
+Insurf	YC S26	yc-2026.md	AI-native radiology and clinical operations	L3	vertical	healthcare	active	none visible	high
+Intercom Fin	ext:L5;seed:L3	kp-suites.md;kp-vertical-a.md	Customer-service AI agent with outcome-based pricing	L5	vertical	customer service	active	12,000+ customers	high
+Intuit Assist	ext:L5	kp-suites.md	AI agents across QuickBooks and Intuit products	L5	vertical	accounting	active	launched November 2024; uptake undisclosed	normal
+Intuned	YC S22	yc-2021-22.md	code-first browser automation built and maintained by AI	X	horizontal	general	active	40M automation runs	normal
+Inventive	YC S23	yc-2023.md	AI agents for RFP and questionnaire response automation	L3	vertical	sales	active	none visible	normal
+iollo	YC S22	yc-2021-22.md	AI scientist automating drug development decisions	L3	vertical	life sciences	active	renamed Quinn	normal
+ion design	YC W24	yc-2024.md	We built the 1st Autonomous AI Product Designer	L3	vertical	design	active	raised $1.8 million	high
+IronLedger	YC S25	yc-2025.md	AI agents for property accounting, starting with accounts payable	L3	vertical	real estate	active	$70K+ savings across 35K+ units	high
+item	YC F25	yc-2025.md	AI-native CRM where agents act autonomously on shared context	L3	vertical	GTM/sales	active	none visible	high
+Ivo	ext:L3	kp-vertical-b.md	AI agents reviewing and negotiating contracts	L3	vertical	legal	active	$55M+ Series B (Jan 2026)	high
+Janet AI	YC S25	yc-2025.md	AI-native ticket system that does the work automatically	L3	vertical	software engineering	active	none visible	high
+Jarmin	YC F25	yc-2025.md	ML engineer employee you can hand full initiatives	L3	vertical	software engineering	active	none visible	high
+Jasmine Energy	YC S22	yc-2021-22.md	AI completing solar incentive webforms and filings	L3	vertical	energy	dead	none visible	normal
+JetBrains Junie	ext:L5	kp-suites.md	Coding agent built into JetBrains IDEs	L5	vertical	software engineering	active	none visible	normal
+Jinba	YC W26	yc-2026.md	AI-native legal services with same-day turnaround	L3	vertical	legal	active	none visible	high
+JoyAgent	ext:L2	kp-platforms.md	JD Cloud's enterprise agent platform; open-sourced JDGenie	L2	horizontal	general	active	JD Cloud enterprise distribution; open-sourced JDGenie	normal
+Julius	YC S22	yc-2021-22.md	AI data scientist analyzing data and training models	L3	horizontal	general	active	team 15	normal
+Jump	Battery	vc-us-b.md	AI agents for financial advisor workflows	L3	vertical	financial services	active	$20M Ser A 2025 led by Battery	normal
+Junction Bioscience	YC W24	yc-2024.md	AI Hypothesis Engine for Molecular Discovery	L3	vertical	scientific research	active	none visible	high
+Just Words	YC W24	yc-2024.md	A modern workflow for lifecycle marketing	L3	vertical	marketing	active	none visible	high
+JustAI	Peak XV	vc-in.md	Always-on AI agents for lifecycle marketing personalization	L3	vertical	GTM/marketing	active	$17M Series A 2026 with Peak XV	high
+Justinian	YC S26	yc-2026.md	AI-native government affairs firm	L3	vertical	government	active	none visible	high
+Kaigo Health	YC F25	yc-2025.md	AI outpatient care workforce for Medicare care management	L3	vertical	healthcare	active	none visible	high
+Kairo Health	YC S24	yc-2024.md	The AI healthcare workforce	L3	vertical	healthcare	active	none visible	high
+Kalepa	ext:L3	kp-vertical-b.md	AI underwriting workbench for commercial insurers	L3	vertical	insurance	active	$14M Series A (2021)	normal
+Kalinda	YC S25	yc-2025.md	AI qualifying class action cases in minutes for law firms	L3	vertical	legal	active	none visible	high
+Kapa	ext:L3	kp-vertical-a.md	AI support agents built from technical documentation	L3	vertical	customer service (developer)	active	$3.2M seed (2024); now knowledge API for agents	normal
+Karmen	YC F24	yc-2024.md	AI Assistant for Construction Project Managers	L3	vertical	construction	active	none visible	high
+Karumi	YC F25	yc-2025.md	AI agent joining live video calls to deliver product demos	L3	vertical	GTM/sales	active	none visible	high
+Kastle	YC S24	yc-2024.md	AI agents for mortgage servicing	L3	vertical	finance/accounting	active	Partnered with Carrington Mortgage Services	high
+Kata.ai	ext:L2	kp-platforms.md	Indonesian enterprise conversational AI and agent platform	L2	horizontal	general	active	None visible	normal
+kater.ai	YC W24	yc-2024.md	Deliver complete data analysis from a single question	L3	vertical	data & analytics	active	none visible	high
+Kebra	YC S26	yc-2026.md	AI-native operations for field service companies	L3	vertical	logistics	active	none visible	high
+Keenable	Accel	vc-us-a.md	Search infrastructure and web index built specifically for AI agent retrieval	L1	horizontal	general	active	Seed round led by Accel, commercial contracts with AI labs	normal
+Keet	YC S24	yc-2024.md	Authentication for AI Agents	L1	horizontal	general	active	none visible	high
+Kenley	YC S24	yc-2024.md	AI Agents for Advisory & Financial Services	L3	vertical	finance/accounting	active	none visible	high
+Kernel	Accel;YC S25	vc-us-a.md;yc-2025.md	Browser-as-a-service API and infrastructure for AI agents to navigate the web	L1	horizontal	general	active	Series A led by Accel	high
+Kestrel AI	YC F25	yc-2025.md	Self-healing cloud incident response agents	L3	vertical	IT	active	none visible	high
+Kestroll	YC S25	yc-2025.md	Custom AI agents automating visual, high-SKU OEM workflows	L3	vertical	manufacturing	active	none visible	high
+Keywords AI	YC W24	yc-2024.md	The AI gateway with built-in observability & evals	L1	horizontal	general	active	$5.5M Raised	high
+Kiku	Cherry Ventures	vc-eu.md	AI agents scheduling, screening and assessing applicants	L3	vertical	HR	active	$4.6M seed, Jul 2025	normal
+Kita	YC W26	yc-2026.md	Automating credit review for emerging-market lenders	L3	vertical	finance	active	none visible	high
+Kite	General Catalyst	vc-us-b.md	Identity, app store, and payments infrastructure for agents	L1	horizontal	general	active	$18M Ser A 2025 led by GC with PayPal Ventures	normal
+Kite AI	8VC	vc-us-c.md	Trust and payment infrastructure for AI agents	L1	horizontal	general	active	$33M raised, Ser A 2025	normal
+Klarity	seed:L3	kp-vertical-b.md	AI agents reviewing accounting documents and reconciliations	L3	vertical	finance/accounting	active	$70M Series B (2024)	high
+Klu	ext:L2	kp-platforms.md	Platform for building and deploying custom LLM applications	L2	horizontal	general	unknown	$1.7M pre-seed 2023; no activity since	normal
+Knostic	ext:L1	kp-infra.md	Need-to-know access controls preventing AI data leakage	L1	horizontal	general	active	$14.3M total (2025)	normal
+Kodif	ext:L3	kp-vertical-a.md	Action-first AI customer support for ecommerce	L3	vertical	customer service (ecommerce)	active	$3M seed	normal
+Kognitos	ext:L2	kp-platforms.md	Neurosymbolic automation platform using English as programming language	L2	horizontal	general	active	$25M Series B 2025; $20M round announced 2026	normal
+Kolleno	ext:L3	kp-vertical-b.md	AI accounts receivable collections and credit control	L3	vertical	finance/accounting	active	none visible	normal
+Kore.ai	seed:L2	kp-platforms.md	Enterprise agent platform for customer service and work, now Artemis	L2	horizontal	general	active	$150M FTV round 2024; Artemis launch 2026; Gartner MQ Leader 2026	high
+KPMG	seed:L4	kp-infra.md	Big 4 SI with agentic AI offerings	L4	horizontal	general	active	KPMG Workbench multi-agent platform (2026)	high
+Kular	YC W22	yc-2021-22.md	AI lead generator performing email and LinkedIn outreach	L3	vertical	GTM and sales	active	1000+ companies	normal
+Kura AI	YC S24	yc-2024.md	New State of the Art for Browser Agents	X	horizontal	general	active	none visible	high
+Kyber	YC W23	yc-2023.md	AI agents for insurance claims communications	L3	vertical	insurance	active	Majesco partnership	high
+Lamin	YC S22	yc-2021-22.md	open data platform automating context for AI agents	L1	horizontal	general	active	team 10	normal
+Laminar	YC S24	yc-2024.md	Understand why your AI agent breaks. Iterate fast to fix it.	L1	horizontal	general	active	Raised $3M seed	high
+Lancey	YC S22	yc-2021-22.md	multiplayer agents executing engineering team tasks	L3	vertical	product	active	team 5	normal
+Lanesurf	YC S25	yc-2025.md	Voice AI negotiating freight rates across parallel calls	L3	vertical	logistics	active	none visible	high
+LangChain	seed:L2;Sequoia, Benchmark;IVP	kp-platforms.md;vc-us-a.md;vc-us-c.md	Frameworks and LangSmith platform for building LLM agent applications	L2	horizontal	general	active	$125M Series B Oct 2025; ~$1.3B valuation	high
+Langdock	YC S23	yc-2023.md	Enterprise AI platform with custom workflow agents	L2	horizontal	general	active	$3M raised incl. General Catalyst	normal
+Langflow	seed:L2	kp-platforms.md	Open-source visual agent builder, now part of IBM watsonx	L2	horizontal	general	acquired	Acquired by IBM via DataStax, Feb 2025	high
+Langfuse	seed:L1;YC S23	kp-infra.md;yc-2023.md	Open-source LLM and agent observability platform	L1	horizontal	general	active	$50M Series B (Mar 2026)	high
+LangGraph	ext:OSS;seed:L2	kp-infra.md;kp-platforms.md	Graph-based agent orchestration framework from LangChain	L2	horizontal	general	active	De facto standard for agent orchestration	high
+LangSmith	seed:L1	kp-infra.md	LangChain's agent tracing and evaluation SaaS	L1	horizontal	general	active	Widely used; LangChain's flagship product	high
+Lapis	YC F25	yc-2025.md	AI growth marketer agents creating ads and running campaigns	L3	vertical	marketing	active	none visible	high
+Lasso Security	seed:L1	kp-infra.md	Guardrails and security for enterprise AI agents	L1	horizontal	general	active	$30M raised (Sept 2026); 500% revenue growth	high
+Last Accounting Company	YC S26	yc-2026.md	Agent-native accounting firms	L3	vertical	accounting	active	none visible	high
+LATO	YC S26	yc-2026.md	Agent-native research for investors	L3	vertical	finance	active	none visible	high
+Lawhive	Balderton Capital	vc-eu.md	AI lawyers automating consumer legal services	L3	vertical	legal	active	$60M Series B, Feb 2026	high
+Layerup	YC S22	yc-2021-22.md	agentic AI OS for finance and insurance	L3	vertical	finance and insurance	active	team 11	normal
+Leaping	YC W24	yc-2024.md	Automate bug resolution	L3	vertical	software engineering	active	Raised $4.7 Million	high
+Leaping AI	YC W25	yc-2025.md	Self-improving voice AI agents for call centers	X	horizontal	general	active	$4.7M raised	high
+LedgerUp	YC S24	yc-2024.md	AI agents that handles complex billing and revenue	L3	vertical	finance/accounting	active	none visible	high
+Leena AI	seed:L3;Bessemer	kp-vertical-a.md;vc-us-b.md	Agentic AI colleagues for IT, HR, finance, procurement	L3	vertical	employee service	active	Bessemer-backed; claims $75M contracts in a day (2026)	high
+Legion	Coatue	vc-us-b.md	Browser-native AI agents automating SOC workflows	L3	vertical	security	active	$38M launch 2025 from Accel and Coatue	normal
+Legora	ext:L3;General Catalyst, Menlo, Bessemer	kp-vertical-b.md;vc-us-b.md	Collaborative legal AI platform for law firms	L3	vertical	legal	active	$600M Series D (Apr 2026); $10B+ valuation sought	high
+Lemma	YC F25	yc-2025.md	Continuous learning for agents from feedback and production outcomes	L1	horizontal	general	active	none visible	high
+LemonLime	YC S26	yc-2026.md	No-code AI that self-creates business automations	L2	horizontal	general	active	none visible	high
+LemonSlice	YC W24	yc-2024.md	Give your voice agents a face	L1	horizontal	general	active	$10.5M from YC and Matrix	high
+Letta	ext:OSS;seed:L2;Felicis	kp-infra.md;kp-platforms.md;vc-us-c.md	Persistent self-editing memory for AI agents	L1	horizontal	general	active	$10M seed led by Felicis (2024)	normal
+Letter AI	Battery	vc-us-b.md	AI agents for revenue enablement and deal intelligence	L3	vertical	GTM/sales	active	$40M Ser B 2026; Battery-backed	normal
+Level AI	Battery	vc-us-b.md	Contact center AI intelligence and agents	L3	vertical	customer service	active	$39.4M Ser C 2024; Battery investor	normal
+LevelPlane	Accel	vc-in.md	AI procurement agent from engineering drawings to sourcing	L3	vertical	manufacturing	active	Accel Atoms AI cohort 2026	normal
+Levocred AI	YC S26	yc-2026.md	AI for every workflow inside a credit team	L3	vertical	finance	active	none visible	high
+Lexi AI	YC F25	yc-2025.md	AI associates for corporate law learning firm standards	L3	vertical	legal	active	135K+ documents across 7K+ cases	high
+LexisNexis Protégé	ext:L5	kp-suites.md	Personalized legal AI assistant and agents	L5	vertical	legal	active	formerly Lexis+ AI; uptake undisclosed	normal
+Liberate	Battery	vc-us-b.md	Voice AI agents for insurance back offices	L3	vertical	insurance	active	$50M Ser B 2025 led by Battery at $300M	normal
+Lighthouz AI	YC S24	yc-2024.md	AI Agents for AP and AR in Logistics	L3	vertical	logistics	active	none visible	high
+Lightscreen	YC F24	yc-2024.md	AI Voice + video AI interviewer	X	vertical	HR	active	none visible	high
+Lilac Labs	YC S24	yc-2024.md	Automate the person taking orders at drive-thrus with a voice AI	X	vertical	hospitality	active	none visible	high
+Linc	YC S23	yc-2023.md	AI agents automating logistics workflows	L3	vertical	logistics	active	none visible	normal
+Lindy	seed:L2;Menlo, Battery	kp-platforms.md;vc-us-b.md	Platform for building AI employees that run email, meetings, and workflows	L2	horizontal	general	active	$49.9M total; $35M Series B led by Battery 2023	high
+Lio	a16z	vc-us-a.md	Virtual procurement workforce agents that triage requests, negotiate, and execute purchases end-to-end	L3	vertical	finance/accounting	active	More than 100 clients globally including Fortune 500 companies	high
+Listen Labs	Conviction	vc-ai.md	AI agents conducting user research interviews	L3	vertical	market research	active	$27M raised 2025	normal
+LiteLLM	seed:L1	kp-infra.md	Open-source LLM gateway standardizing model calls	L1	horizontal	general	active	40000+ GitHub stars; $12M raised	high
+LittleHorse	ext:L1	kp-infra.md	Workflow engine orchestrating agents and microservices	L1	horizontal	general	active	OSS engine; active development	normal
+LiveKit	seed:X	kp-infra.md	Real-time voice and video infrastructure for agents	X	horizontal	general	active	$100M Series C at $1B (Jan 2026)	high
+Lizza	YC W22	yc-2021-22.md	AI assistant managing creator-brand partnerships end-to-end	L3	vertical	marketing	active	none visible	normal
+LlamaIndex	ext:OSS;seed:L2	kp-infra.md;kp-platforms.md	Data framework for LLM applications and agents	L2	horizontal	general	active	$19M Series A; broad adoption	high
+Locata	YC S25	yc-2025.md	Agents automating healthcare referrals and prior authorizations	L3	vertical	healthcare	active	none visible	high
+Locke	YC S26	yc-2026.md	AI-native government affairs firm	L3	vertical	government	active	none visible	high
+Locus	YC F25	yc-2025.md	Payment infrastructure letting AI agents pay	L1	horizontal	general	active	none visible	high
+LogicStar AI	Northzone	vc-eu.md	Agentic AI autonomously fixing bugs in commercial applications	L3	vertical	software engineering	active	$3M pre-seed led by Northzone, Feb 2025	normal
+Lovable	a16z, Benchmark, Founders Fund	vc-us-a.md	AI-powered full-stack application builder	L2	horizontal	general	active	Unicorn status; $200M Series A; $200M Series B led by Benchmark; $2.8B valuation	high
+Lua Global	YC F25	yc-2025.md	Mid-market platform deploying sales, support, operations agents	L2	horizontal	general	active	none visible	high
+Lucidic AI	YC W25	yc-2025.md	Agent training via simulations on company knowledge	L1	horizontal	general	active	none visible	high
+Luminance	seed:L3	kp-vertical-b.md	Legal AI for contract review, drafting, and negotiation	L3	vertical	legal	active	$75M Series C (Feb 2025)	high
+LunaBill	YC F25	yc-2025.md	AI voice callers handling insurance claim follow-ups for billing teams	L3	vertical	healthcare	active	none visible	high
+Lunavo	YC F25	yc-2025.md	AI running carrier operations, monitoring data and requests	L3	vertical	logistics	active	none visible	high
+Lunos	Cherry Ventures	vc-eu.md	AI partner automating accounts receivable	L3	vertical	finance	active	$5M pre-seed, Sep 2025	normal
+Luthor	YC F24	yc-2024.md	AI-Native Compliance Firm	L4	vertical	compliance	active	$500K Seed	high
+Macadamia	YC W25	yc-2025.md	AI agents automating complex engineering and business processes	L3	vertical	engineering	active	none visible	high
+machine0	YC S26	yc-2026.md	Persistent AI VMs for agent execution	L1	horizontal	general	active	none visible	high
+MadeThis	YC F25	yc-2025.md	AI co-founder autonomously building, launching, managing businesses	L3	horizontal	general	active	none visible	high
+Mage Legal	YC S24	yc-2024.md	Automatic AI Legal Diligence	L3	vertical	legal	active	none visible	high
+MagiCode	YC S24	yc-2024.md	A Reliable AI Frontend Engineer	L3	vertical	software engineering	active	Pre-Seed funding	high
+Magnetic	YC S25	yc-2025.md	AI scanning client documents and entering tax software for CPAs	L3	vertical	accounting	active	none visible	high
+Magnitude	YC S25	yc-2025.md	Open-source, vision-first browser agent	X	horizontal	general	active	none visible	high
+Maive	YC W25	yc-2025.md	AI automation platform for home services contractors	L3	vertical	home services	active	none visible	high
+Make	seed:L2	kp-platforms.md	Visual automation platform with AI agents across 3000+ apps	L2	horizontal	general	active	Make AI Agents; 3000+ app integrations	high
+Manaflow	YC S24	yc-2024.md	Building interfaces for managing AI coding agents to do good work	L1	horizontal	general	active	Pre-Seed funding	high
+Mandel	YC S23	yc-2023.md	AI agents extracting supply-chain data and emailing suppliers	L3	vertical	logistics	active	none visible	normal
+Mandolin	Greylock	vc-us-a.md	AI teammates and precision automation for specialty drug processing workflows	L3	vertical	healthcare	active	$40.0M Series A	normal
+Manifest	Menlo	vc-us-b.md	AI-native operating suite for law firms	L3	vertical	legal	active	Menlo Ser A 2024	normal
+Manifold Security	Cherry Ventures	vc-eu.md	Runtime visibility and protection for autonomous AI agents	L1	horizontal	general	active	$8M seed, Mar 2026	normal
+Mantle	YC F25	yc-2025.md	Build back-office agents from one prompt, connected to tools	L2	horizontal	general	active	none visible	high
+Mantys	YC W23	yc-2023.md	AI agents verifying healthcare insurance eligibility into EMRs	L3	vertical	healthcare	active	none visible	normal
+Manufact	ext:L1	kp-infra.md	Cloud for building and hosting MCP servers	L1	horizontal	general	active	$6.3M seed led by Peak XV (2026)	normal
+Manus	Benchmark	vc-us-a.md	AI agents for enterprise work	L3	vertical	general	active	none visible	normal
+Marblism	YC W24	yc-2024.md	AI Employees who love overtime	L3	vertical	GTM/sales	active	none visible	high
+MarkIt	YC F25	yc-2025.md	Agents handling trade compliance inside Excel, PDFs, broker portals	L3	vertical	trade compliance	active	none visible	high
+Marr Labs	YC W24	yc-2024.md	AI-voice agents that are indistinguishable from humans.	X	horizontal	general	active	none visible	high
+Martian	ext:L1	kp-infra.md	LLM router cutting costs across models	L1	horizontal	general	active	$9M seed (2023)	normal
+MarvelX	EQT Ventures	vc-eu.md	Agentic AI platform for insurance operations	L3	vertical	insurance	active	$6M pre-seed, May 2025	normal
+Mastra	ext:OSS;seed:L2;YC W25	kp-infra.md;kp-platforms.md;yc-2025.md	TypeScript agent framework for developers	L2	horizontal	general	active	$35M total; $22M Series A (2026)	high
+Maven AGI	ext:L3;Lux	kp-vertical-a.md;vc-us-c.md	Enterprise-grade AI customer service agents	L3	vertical	customer service	active	$50M raise (2025) after $28M (2024)	high
+Mavenoid	Point Nine Capital	vc-eu.md	AI agents for product support and troubleshooting	L3	vertical	customer service	active	$6M raised	normal
+Maxim AI	Elevation	vc-in.md	Evaluation and observability platform for GenAI applications	L1	horizontal	general	active	$3M seed from Elevation	normal
+Maxima	ext:L3	kp-vertical-b.md	Agentic human-AI collaboration for accounting	L3	vertical	finance/accounting	active	$41M seed and Series A (Nov 2025)	high
+Maximor	ext:L3	kp-vertical-b.md	AI agents for finance team grunt work	L3	vertical	finance/accounting	active	$9M raised; revenue up 35x (2026)	normal
+Maya Labs	YC S22	yc-2021-22.md	building self-programming machines for any task	L2	horizontal	general	active	team 5	normal
+Mayflower	YC F25	yc-2025.md	AI plug-in automating HR immigration screening and compliance	L3	vertical	HR	active	none visible	high
+Maywood	YC W26	yc-2026.md	Automating investment banking deal workflows	L3	vertical	finance	active	none visible	high
+Maze	Cherry Ventures	vc-eu.md	AI agents investigating and resolving cloud security vulnerabilities	L3	vertical	security	active	$25M+ Series A, Jun 2025	high
+mcp-use	YC S25	yc-2025.md	Open-source MCP framework and cloud for building agents	L1	horizontal	general	active	4M+ downloads, 8K GitHub stars	high
+mdhub	YC S24	yc-2024.md	AI workers for healthcare clinics	L3	vertical	healthcare	active	$500K Seed	high
+Mem0	seed:L1;YC S24	kp-infra.md;yc-2024.md	Memory layer giving AI agents persistent knowledge	L1	horizontal	general	active	$24M seed and Series A (2025)	high
+Memfold AI	Peak XV	vc-in.md	AI-native workspace where agents retain context and memory	L3	vertical	productivity	active	Peak XV investment Feb 2026; ex-Sarvam founders	normal
+Mendral	YC W26	yc-2026.md	AI DevOps Engineer for CI and security	L3	vertical	software engineering	active	none visible	high
+Menza	YC W26	yc-2026.md	AI data analyst for consumer brands	L3	vertical	finance	active	none visible	high
+Mercura	YC W25	yc-2025.md	Automates quotes and orders for the construction supply chain	L3	vertical	construction	active	none visible	high
+Merge	seed:L1	kp-infra.md	Unified APIs for HR, ticketing, and payroll data	L1	horizontal	general	active	$74.5M raised across three rounds	high
+Mesh	YC W25	yc-2025.md	AI finance co-worker from ex-Carta fund-accounting founders	L3	vertical	finance	active	none visible	high
+MetaGPT	seed:OSS	kp-infra.md	Multi-agent framework assigning roles for complex tasks	L2	horizontal	general	active	40000+ GitHub stars	normal
+Metaview	Seedcamp, Plural	vc-eu.md	AI re-engineering hiring conversations	L3	vertical	HR	active	$35M Series B, Jun 2025	high
+Meteor	YC S25	yc-2025.md	AI-native browser that does your work for you	X	horizontal	general	active	none visible	high
+Metis	YC S25	yc-2025.md	Infrastructure for agents reliably performing complex production tasks	L1	horizontal	general	active	none visible	high
+Metorial	YC F25	yc-2025.md	Serverless MCP runtime powering AI integrations	L1	horizontal	general	active	none visible	high
+Metoro	YC S23	yc-2023.md	AI SRE autonomously root-causing Kubernetes issues and fixing	L3	vertical	IT	active	none visible	normal
+Mica AI	YC S24	yc-2024.md	Replace the humans fixing bad data	L3	vertical	operations	active	none visible	high
+Micro1	ext:L3	kp-vertical-a.md	AI interviewer, now pivoted to AI data labeling	L3	vertical	HR and recruiting	pivoted	$35M at $500M valuation (2025) as labeling business	normal
+Microsoft Agent Framework	seed:L2	kp-platforms.md	Microsoft's agent framework merging Semantic Kernel and AutoGen	L2	horizontal	general	active	Announced Oct 2025; active docs through Aug 2026	high
+Microsoft Copilot Studio	gtm:inc;seed:L5	gtm-carry.md;kp-suites.md	Copilot Studio plus Agent 365 control plane for Microsoft-ecosystem agents	L5	horizontal	general	active	Agent 365 launched Nov 2025	high
+Microsoft Entra Agent ID	seed:L1	kp-infra.md	Agent identity directory and access controls in Entra	L1	horizontal	general	active	GA 2025; bundled with Entra suite	high
+Microsoft Security Copilot	ext:L5	kp-suites.md	Security agents and SOC automation across Microsoft security	L5	vertical	security	active	none visible	normal
+Midship	YC S24	yc-2024.md	AI for SOX testing	L3	vertical	finance/accounting	acquired	acquired by Optro; raised $4.15M	high
+Mihup	Accel	vc-in.md	Voice AI and conversation intelligence for enterprise contact centers	X	vertical	customer service	active	Rs 50 Cr Series A 2024; IPO plans	normal
+Minded	YC S23	yc-2023.md	Plain-English builder for AI agents	L2	horizontal	general	active	eToro, Payoneer, JustEat customers	high
+MindStudio	ext:L2	kp-platforms.md	No-code visual builder for AI agents and AI applications	L2	horizontal	general	active	None visible	normal
+Miniloop	YC S21	yc-2021-22.md	AI workflow engine for building reliable systems	L1	horizontal	general	active	none visible	normal
+Minimal AI	YC S25	yc-2025.md	AI support teams resolving ecommerce tickets across channels	L3	vertical	customer service	active	80% of interactions automated claimed	high
+MinusX	YC S24	yc-2024.md	AI Data Scientist for Jupyter and Metabase	L3	vertical	data & analytics	active	Pre-Seed funding	high
+Mireye	YC S26	yc-2026.md	Infrastructure for Physical World AI Agents	L1	horizontal	general	active	none visible	high
+Miro AI Agents	ext:L5	kp-suites.md	AI Sidekicks surfacing data and building boards	L5	horizontal	general	active	none visible	normal
+Mistle	YC S22	yc-2021-22.md	platform for running autonomous coding agents	L2	horizontal	general	active	team 2	normal
+MobileBoost	YC S21	yc-2021-22.md	AI automating mobile app end-to-end testing	L3	vertical	software engineering	active	team 15	normal
+Mocha	YC S23	yc-2023.md	Coding agent building web apps from designs	L3	vertical	software engineering	active	none visible	normal
+Mod AI	YC F25	yc-2025.md	Agents replacing accounting clerks, owning vendor communication and invoicing	L3	vertical	accounting	active	none visible	high
+Moda	YC W26	yc-2026.md	Product analytics built for AI	L1	horizontal	general	active	none visible	high
+Modern Relay	Point Nine Capital	vc-eu.md	Context graph infrastructure for enterprise AI agents	L1	horizontal	general	active	$2.9M seed, Apr 2026	normal
+Mohi	YC S25	yc-2025.md	Debugging assistant tracing AI agent failures with execution graphs	L1	horizontal	general	active	none visible	high
+Momentic	YC W24	yc-2024.md	The AI-native automated testing platform	L3	vertical	software engineering	active	$15M Series A	high
+monday.com AI Agents	ext:L5	kp-suites.md	Agents monitoring and executing in the monday work OS	L5	horizontal	general	active	none visible	normal
+Moonbounce	Amplify Partners	vc-ai.md	Real-time control engine for AI agent behavior	L1	horizontal	general	active	none visible	normal
+Moonhub	ext:L3	kp-vertical-a.md	AI agents for recruiting workflows	L3	vertical	HR and recruiting	acquired	Team acqui-hired by Salesforce (2025)	normal
+Moonscale	EQT Ventures	vc-eu.md	AI avatar agents automating B2B sales demos	L3	vertical	GTM/sales	active	Pre-seed	normal
+Mosaic	YC W25	yc-2025.md	Create and run video-editing agents on a node canvas	L2	vertical	media	active	none visible	high
+Moss	YC F25	yc-2025.md	Real-time semantic search runtime for voice agents and copilots	L1	horizontal	general	active	none visible	high
+Motives	YC S25	yc-2025.md	AI agents moderating and analyzing video interviews for brands	L3	vertical	market research	active	none visible	high
+MOVEdot	YC F25	yc-2025.md	Agents running hardware engineering tasks in minutes	L3	vertical	hardware engineering	active	none visible	high
+Moveworks	gtm:kb;seed:L5;seed:L3;Lightspeed;ICONIQ	gtm-carry.md;kp-suites.md;kp-vertical-a.md;vc-us-a.md;vc-us-c.md	Enterprise assistant resolving IT, HR, finance requests; ServiceNow agent layer	L3	vertical	IT/HR	acquired	ServiceNow $2.85B acquisition	high
+MSPilot	YC F25	yc-2025.md	AI control plane helping MSPs build, govern, monetize agents	L2	vertical	IT/MSP	active	none visible	high
+Multifactor	YC F25	yc-2025.md	Zero-trust authentication, authorization, auditing for AI agents	L1	horizontal	general	active	none visible	high
+Multion	ext:X	kp-infra.md	Autonomous browser agent for web tasks	X	horizontal	general	active	$20M+ raised; ~$100M valuation	high
+Multiplier	Lux	vc-us-c.md	AI agent harnesses for asset managers	L3	vertical	finance	active	$6M seed 2026	normal
+Murphy	Northzone	vc-eu.md	AI agent for debt collection and servicing	L3	vertical	finance	active	$15M with ElevenLabs, Jul 2025	normal
+mutable.ai	YC W22	yc-2021-22.md	automating corporations starting with software understanding	L2	horizontal	general	acquired	acquired; auto wiki product	normal
+n8n	ext:OSS;seed:L2;Accel	kp-infra.md;kp-platforms.md;vc-us-a.md	Workflow automation with native AI agents	L2	horizontal	general	active	$5.2B valuation (2026)	high
+Nabla	ext:L3;Khosla Ventures	kp-vertical-b.md;vc-us-a.md	AI ambient scribe automating clinical documentation	L3	vertical	healthcare	active	$70M Series C; $120M total (2025)	high
+Nango	seed:L1	kp-infra.md	Open-source unified API and integration infrastructure	L1	horizontal	general	active	$7.5M seed led by Gradient (2026)	normal
+Nara	YC W22	yc-2021-22.md	AI answering support and sales questions for SMBs	L3	vertical	customer service	acquired	acquired	normal
+Navan AI Agents	ext:L5	kp-suites.md	Agents for travel booking and expense workflows	L5	vertical	travel and expense	active	none visible	normal
+Navier AI	YC W24	yc-2024.md	Agent-Driven Engineering	L3	vertical	engineering	active	Raised $5.6M	high
+NavigateAI	ext:L3	kp-vertical-b.md	AI copilots for construction field workers	L3	vertical	construction	active	$25M seed (Sep 2026)	normal
+Nayo	ext:L3	kp-vertical-b.md	AI agents for accounting operations	L3	vertical	finance/accounting	unknown	none visible	normal
+Nebula Security	YC S26	yc-2026.md	Autonomous AI defense system for cyber attack	L3	vertical	security	active	none visible	high
+Nekuda	Madrona	vc-us-c.md	Payments infrastructure for autonomous agents	L1	horizontal	general	active	$5M led by Madrona 2025	normal
+Neno	ext:L3	kp-vertical-b.md	AI accountant for SMEs	L3	vertical	finance/accounting	active	EUR 6.6M seed (Aug 2026)	normal
+Neo	ext:L1	kp-infra.md	Control layer securing agentic AI across enterprises	L1	horizontal	general	active	$100M launch (July 2026)	high
+Netic AI	Founders Fund	vc-us-a.md	Autonomous agents for essential-services businesses revenue operations	L3	vertical	revenue operations	active	Series A in 2025	normal
+Neuron7	Battery	vc-us-b.md	AI agents for complex enterprise service resolution	L3	vertical	customer service	active	$44M Ser B 2024; Battery investor	normal
+Newton	YC W24	yc-2024.md	AI-powered phone platform for dentists	X	vertical	healthcare	active	none visible	high
+Newton Research	Bessemer	vc-us-b.md	AI marketing analytics agents for brands and agencies	L3	vertical	marketing	active	BVP-backed, early stage	normal
+Nexus	YC F25	yc-2025.md	Non-technical teams build production-ready agents without code	L2	horizontal	general	active	none visible	high
+NICE CXone Mpower	ext:L5	kp-suites.md	Agentic AI platform for customer experience automation	L5	vertical	customer service	active	none visible	normal
+Nirmata	Peak XV	vc-in.md	AI platform engineer automating DevSecOps policy as code	L3	vertical	software engineering	active	Surge 11 cohort 2025	normal
+Niteshift	Greylock	vc-us-a.md	Full-stack cloud providing runtime, context, and compute for coding agents	L1	horizontal	general	active	Seed funding	normal
+Nooks	seed:L3	kp-vertical-b.md	AI sales dialer and parallel calling platform	L3	vertical	GTM/sales	active	$43M Series B (Oct 2024)	high
+Nophin	YC W22	yc-2021-22.md	AI analyst automating CRE deal screening and diligence	L3	vertical	real estate	dead	none visible	normal
+Norm Ai	seed:L3;Coatue;Craft	kp-vertical-b.md;vc-us-b.md;vc-us-c.md	AI agents mapping and monitoring regulatory obligations	L3	vertical	finance/accounting	active	$120M Series C at $1.2B valuation (Jul 2026)	high
+Norra	YC F25	yc-2025.md	Automates equipment operations management for nursing facilities	L3	vertical	healthcare	active	none visible	high
+NOSO LABS	YC S25	yc-2025.md	AI agents for field technicians: diagnose, sell, paperwork	L3	vertical	field services	active	none visible	high
+Not Diamond	ext:L1	kp-infra.md	Model routing infrastructure for multi-model AI	L1	horizontal	general	active	$2.3M raised; IBM investor	normal
+Notable	ext:L3	kp-vertical-b.md	AI agents automating healthcare patient access	L3	vertical	healthcare	active	$100M Series B at $600M (2021)	high
+Notion AI Agents	ext:L5	kp-suites.md	AI teammates for docs, projects, and workflows	L5	horizontal	general	active	none visible	normal
+Notte	YC S25	yc-2025.md	Platform building and deploying enterprise-grade browser agents	X	horizontal	general	active	$2.5M pre-seed	high
+Nova	Accel	vc-us-a.md	AI agent platform for generating and transforming SAP enterprise software	L3	vertical	it	active	running in production at global scale for Festo and KION Group	high
+Nowadays	YC S23	yc-2023.md	AI agent contacting venues and negotiating for corporate events	L3	vertical	operations	active	none visible	normal
+Nozomio	YC S25	yc-2025.md	Context augmentation feeding coding agents the right code	L1	horizontal	general	active	none visible	high
+Nuanced	YC W24	yc-2024.md	Nuanced makes AI coding agents and tools smarter with static analysis.	L1	horizontal	general	active	none visible	high
+Nucleo	YC F25	yc-2025.md	Agentic oncology platform extracting CT-scan insights for treatment	L3	vertical	healthcare	active	works with Stanford Hospital, Cedars-Sinai	high
+Null Labs	YC F25	yc-2025.md	Simulation infrastructure training and validating autonomous defense systems	L1	horizontal	general	active	none visible	high
+Nullify	ext:L3	kp-vertical-b.md	AI security engineers for AppSec workflows	L3	vertical	security	active	$12.5M seed (Feb 2026)	normal
+Numeric	seed:L3;Menlo	kp-vertical-b.md;vc-us-b.md	AI-native accounting platform for close and reconciliation	L3	vertical	finance/accounting	active	$51M Series B (Nov 2025)	high
+Numos	ext:L3	kp-vertical-b.md	AI finance platform for CFOs	L3	vertical	finance/accounting	active	$4.25M seed (Apr 2026)	normal
+Nuntius	YC S25	yc-2025.md	Guardrails making models follow rules in production	L1	horizontal	general	active	none visible	high
+Nym	Bessemer	vc-us-b.md	Autonomous medical coding engine for revenue cycle	L3	vertical	healthcare	active	$47M growth round 2024; BVP investor	normal
+o11	YC W26	yc-2026.md	AI agent inside M365 and Google Workspace	L2	horizontal	general	active	none visible	high
+Observe.AI	seed:L3;Menlo	kp-vertical-a.md;vc-us-b.md	AI copilots and agents for contact centers	L3	vertical	customer service	active	$125M Series C (2022, Zoom-backed)	high
+Octagon AI	AI Fund	vc-ai.md	Agentic AI research analyst for investors	L3	vertical	finance	active	live inside ChatGPT 2025	normal
+Octolane	YC W24	yc-2024.md	AI Self-Driving AI CRM	L3	vertical	GTM/sales	active	Raised Seed round	high
+Octomind	Cherry Ventures	vc-eu.md	Agent-powered QA that decides what to test autonomously	L3	vertical	software engineering	active	€4.5M seed led by Cherry, 2024	normal
+OffDeal	Radical Ventures;YC W24	vc-ai.md;yc-2024.md	AI-native investment bank with deal agents	L3	vertical	finance	active	Series A; FT first AI-native bank 2025	high
+Okibi	YC S25	yc-2025.md	Build AI coworkers using natural language, Lovable for agents	L2	horizontal	general	active	none visible	high
+Okta Agent Identity Center	seed:L1	kp-infra.md	Identity, authorization, and governance for AI agents	L1	horizontal	general	active	GA April 2026; Okta flagship agent product	high
+Okta AI Agents	ext:L5	kp-suites.md	Identity security agents for access workflows	L5	vertical	security	active	none visible	normal
+Olakai	AI Fund	vc-ai.md	AI analytics and agent observability platform	L1	horizontal	general	active	Agent IQ agent measurement product	normal
+Omilia	ext:L3	kp-vertical-a.md	Enterprise voice AI agents for contact centers	L3	vertical	customer service (voice)	active	Established enterprise voice AI vendor	normal
+Omnara	YC S25	yc-2025.md	Command center running Claude Code from terminal, web, mobile	L1	horizontal	general	active	none visible	high
+OmniAI	YC W24	yc-2024.md	AI Agents for Commercial Lending	L3	vertical	finance/accounting	active	$3.2M seed round led by FundersClub	high
+OneCLI	YC S26	yc-2026.md	Identity for AI agents	L1	horizontal	general	active	none visible	high
+OneGrep	YC W24	yc-2024.md	AI Agent for DevOps Workflow Automation	L3	vertical	software engineering	active	none visible	high
+OneReach.ai	ext:L2	kp-platforms.md	Agentic orchestration platform for the enterprise (Generative Studio X)	L2	horizontal	general	active	None visible	normal
+OnFinance	Peak XV	vc-in.md	NeoGPT agents automating BFSI regulatory compliance	L3	vertical	finance	active	$4.2M pre-Series A led by Peak XV 2025	normal
+Onyx	ext:L2	kp-platforms.md	Open-source enterprise AI assistant and agent platform, formerly Danswer	L2	horizontal	general	active	$10M seed Mar 2025	normal
+Open	YC W24	yc-2024.md	Enterprise AI customer support	L3	vertical	customer service	active	raised $7M led by YC	high
+OpenAI AgentKit	seed:L2	kp-platforms.md	OpenAI's Agent Builder canvas, Agents SDK, ChatKit, and connectors	L2	horizontal	general	active	Launched Oct 2025 with Agent Builder and Agents SDK	high
+Opencall.ai	YC W24	yc-2024.md	AI Workforce for Services Businesses	X	horizontal	general	active	reported $1M ARR (2024)	high
+OpenCode	YC W21	yc-2021-22.md	the open source AI coding agent	L2	horizontal	general	pivoted	open source; ex-SST serverless framework	high
+OpenHands	ext:OSS;seed:L3;Menlo	kp-infra.md;kp-vertical-a.md;vc-us-b.md	Open-source autonomous software engineer	L3	vertical	software engineering	active	$18.8M Series A; large OSS community	high
+OpenIntake	YC W25	yc-2025.md	AI front door converting law firm callers into clients around the clock	L3	vertical	legal	active	none visible	high
+Openlayer	YC S21	yc-2021-22.md	governance and evals platform for AI applications	L1	horizontal	general	active	team 19	normal
+OpenRouter	seed:L1	kp-infra.md	Unified routing API and marketplace for LLM inference	L1	horizontal	general	active	100T tokens per year (2025)	high
+OpenTools	YC S23	yc-2023.md	API for LLM tool use	L1	horizontal	general	active	none visible	normal
+Operand	YC W25	yc-2025.md	AI replacing traditional consulting through deep data analysis	L3	vertical	consulting	active	none visible	high
+Opkit	YC S21	yc-2021-22.md	AI phone calls for the US healthcare industry	X	vertical	healthcare	dead	none visible	normal
+Oracle AI Agent Studio	seed:L5	kp-suites.md	No-code agent builder embedded across Oracle Fusion Applications	L5	horizontal	general	active	none visible	normal
+Orange Slice	YC S25	yc-2025.md	Agentic sales enrichment spreadsheet with typed SDK columns	L3	vertical	GTM/sales	active	none visible	high
+Orby AI	NEA	vc-us-b.md	Large action model platform automating enterprise workflows	L2	horizontal	general	active	$30M Ser A 2024 led by NEA	normal
+Orchids	YC W25	yc-2025.md	AI full-stack engineer building apps and websites	L3	vertical	software engineering	active	none visible	high
+Osmaura	YC S26	yc-2026.md	Business development brain for law firms	L3	vertical	legal	active	none visible	high
+Osmosis	YC W25	yc-2025.md	RL fine-tuning of open-source models for AI agents	L1	horizontal	general	active	none visible	high
+Otto	Madrona	vc-us-c.md	AI agent for business travel booking	L3	vertical	travel	active	first round led by Madrona 2024	normal
+Outset	Radical Ventures;8VC	vc-ai.md;vc-us-c.md	AI-moderated research with agent interviewers	L3	vertical	market research	active	Fortune 500 customers incl Nestle	normal
+Outverse	Seedcamp	vc-eu.md	Operating system for enterprise service agents	L2	horizontal	general	active	none visible	normal
+Overdrive Health	YC W26	yc-2026.md	AI medical billing automation	L3	vertical	healthcare	active	none visible	high
+Overlap	YC S24	yc-2024.md	Multimodal AI agents for video	L3	vertical	media	active	$1.9M seed funding	high
+Oversteer	YC S23	yc-2023.md	Browser agents turning web tasks into APIs	X	horizontal	general	active	none visible	normal
+Ovlo	YC W25	yc-2025.md	No-code platform building supply chain automation agents	L3	vertical	logistics	active	none visible	high
+Pace	Sequoia;Thrive	vc-us-a.md;vc-us-c.md	AI agents automating mission critical back-office operations for insurers	L3	vertical	insurance	active	none visible	normal
+Paces	YC S22	yc-2021-22.md	agentic AI for power projects and infrastructure	L3	vertical	energy	active	team 40	normal
+Paid	EQT Ventures;Lightspeed	vc-eu.md;vc-us-a.md	Monetization and billing infrastructure for AI agents	L1	horizontal	general	active	$21M seed, Oct 2025	normal
+Palantir AIP	seed:L2;seed:L5	kp-platforms.md;kp-suites.md	Ontology-grounded platform for building and deploying enterprise AI agents	L2	horizontal	general	active	$1B+ quarterly revenue 2026; 93% YoY growth	high
+Palisade	YC S26	yc-2026.md	AI sales agents that run your marketplace	L3	vertical	sales	active	none visible	high
+Pallet	ext:L3	kp-vertical-b.md	AI copilot for trucking companies	L3	vertical	logistics	active	$27M Series B (May 2025)	normal
+Palo Alto Cortex AgentiX	ext:L5	kp-suites.md	Agentic platform for security operations	L5	vertical	security	active	none visible	normal
+Pango	YC S26	yc-2026.md	Agentic OS for e-commerce operations	L3	vertical	e-commerce	active	none visible	high
+Panta	YC W26	yc-2026.md	AI-native commercial insurance brokerage	L3	vertical	insurance	active	none visible	high
+Paradigm	YC W24	yc-2024.md	A reimagined workspace with AI at its core	L2	horizontal	general	active	none visible	high
+Paradox	seed:L3	kp-vertical-a.md	Conversational hiring assistant Olivia at scale	L3	vertical	HR and recruiting	active	$1.5B valuation (2021); ~$116M ARR est. (2023)	high
+Paraglide	Bessemer	vc-us-b.md	Agentic AI for accounts receivable	L3	vertical	finance	active	BVP-backed, early stage	normal
+Paragon	ext:L1;YC W25	kp-infra.md;yc-2025.md	Embedded integration platform for SaaS and agents	L1	horizontal	general	active	$21M raised across rounds	high
+Parahelp	YC S24	yc-2024.md	The AI support agent that manages itself	L3	vertical	customer service	active	$21.2M across Seed and Series A	high
+Parallel	YC W24	yc-2024.md	AI agents for healthcare admin	X	vertical	healthcare	active	Raised $20M led by Index Ventures	high
+Parameter	YC W26	yc-2026.md	Autonomous AI agents for offensive security	L3	vertical	security	active	none visible	high
+Parametric	YC F25	yc-2025.md	Robots for frontline physical labor, starting commercial laundry	L3	vertical	facilities	active	none visible	high
+Paratus Health	YC W25	yc-2025.md	Agents replacing clinic front desk, intake, insurance verification	L3	vertical	healthcare	active	none visible	high
+Parea AI	YC S23	yc-2023.md	Observability and evals for LLM applications	L1	horizontal	general	active	none visible	normal
+Parley	YC S24	yc-2024.md	Automating flat-fee legal work, starting with work visas + green cards	L3	vertical	legal	active	none visible	high
+Parloa	ext:X;seed:L3;EQT Ventures;General Catalyst	kp-infra.md;kp-vertical-a.md;vc-eu.md;vc-us-b.md	Voice agents for enterprise customer experience	X	horizontal	general	active	$350M Series D at $3B (2026)	high
+Pasito	YC S22	yc-2021-22.md	AI agents for insurance and benefits	L3	vertical	insurance	active	team 20	normal
+Patched	YC S24	yc-2024.md	Agentic workflows for Enterprise IT and Ops teams	L3	vertical	IT	active	none visible	high
+Patent Watch	YC F25	yc-2025.md	AI detecting patent infringements and generating claim charts	L3	vertical	legal	active	none visible	high
+Patientdesk.ai	YC W26	yc-2026.md	AI front and back office for dental practices	L3	vertical	healthcare	active	none visible	high
+Patronus AI	ext:L1	kp-infra.md	Agent evaluation, simulation, and world models	L1	horizontal	general	active	$50M Series B (2026); 15x revenue	high
+Patterns	YC S21	yc-2021-22.md	AI agents for financial analysis; ex-data platform	L3	vertical	finance	dead	none visible	normal
+Pave Robotics	YC W25	yc-2025.md	Robots sealing asphalt cracks for paving companies	L3	vertical	construction	active	none visible	high
+Pax	YC S24	yc-2024.md	AI Broker for Tariff Refunds	L3	vertical	logistics	active	$4.5M seed funding	high
+Payman	seed:L1	kp-infra.md	Payments connecting AI agents with humans and banks	L1	horizontal	general	active	$13.8M raised (2024)	normal
+Peakflo	YC W22	yc-2021-22.md	agentic workflows automating back-office finance operations	L3	vertical	finance	pivoted	seed 2022; repositioned as agentic workflows	normal
+PearAI	YC F24	yc-2024.md	Open-source AI code editor with agentic coding	L3	vertical	software engineering	active	$1M seed	high
+Pearson Labs	YC F24	yc-2024.md	AI agents to automate corporate transactions	L3	vertical	legal	active	Pre-Seed	high
+Peer	YC S26	yc-2026.md	AI-native freight brokerage	L3	vertical	logistics	active	none visible	high
+Peer AI	SignalFire	vc-ai.md	Agentic backbone for drug approval workflows	L3	vertical	life sciences	active	none visible	normal
+Pega Agentic AI	ext:L5	kp-suites.md	Process-orchestrated agents on the Pega workflow platform	L5	horizontal	general	active	none visible	normal
+Penciled	YC W24	yc-2024.md	AI front office assistant for physical therapy	L3	vertical	healthcare	active	none visible	high
+Penguin AI	YC S22	yc-2021-22.md	AI sales rep auto-sequencing website visitors	L3	vertical	GTM and sales	dead	none visible	normal
+Peoplebox.ai	YC S22	yc-2021-22.md	AI teammate running talent conversations	L3	vertical	HR	active	team 35	normal
+Per Diem	YC W21	yc-2021-22.md	AI agents acting as C-suite for restaurant operations	L3	vertical	restaurants	active	$2.4M raised	normal
+Persana AI	YC W23	yc-2023.md	AI agents for sales prospecting, enrichment, and outbound	L3	vertical	sales	active	$2.3M raised	normal
+Perseus	YC F25	yc-2025.md	Retrieval engine grounding coding agents in real code	L1	horizontal	general	active	none visible	high
+Persist AI	YC W23	yc-2023.md	Multi-agent AI formulation scientist for drug development	L3	vertical	pharma	active	none visible	normal
+Persistence AI	Accel	vc-in.md	Voice AI agents embedded in SaaS customer care	X	vertical	customer service	active	Accel Atoms AI cohort 2026	normal
+Perspectives Health	YC S25	yc-2025.md	AI running behavioral health programs and payer disputes	L3	vertical	healthcare	active	$0 to $250K ARR in 4 weeks	high
+Phases	YC S25	yc-2025.md	AI agents automating clinical trial recruitment and oversight	L3	vertical	healthcare	active	none visible	high
+Phoebe	Cherry Ventures	vc-eu.md	Agentic search fixing failures across tech stack data	L3	vertical	IT	active	$17M seed, Aug 2025	normal
+Phonely	YC S24	yc-2024.md	AI call centers	X	horizontal	general	active	$16M Series A	high
+Phonic	Lux	vc-us-c.md	End-to-end voice stack for reliable voice agents	X	horizontal	general	active	Lux-backed round 2025	normal
+Pideaky	YC S21	yc-2021-22.md	AI collection agents managing LatAm SMB cash flow	L3	vertical	finance	active	none visible	normal
+Pierre	YC W23	yc-2023.md	AI assistant handling outbound sales calls	X	vertical	sales	unknown	none visible	normal
+Pillar Security	ext:L1	kp-infra.md	Security for building and running AI agents	L1	horizontal	general	active	$9M seed (2025)	normal
+Pipecat	ext:OSS	kp-infra.md	Open-source framework for voice and multimodal agents	X	horizontal	general	active	Widely adopted OSS voice framework	normal
+Pipedream	seed:L1	kp-infra.md	Integration platform connecting agents to 3000+ APIs	L1	horizontal	general	active	3000+ APIs; 10000+ tools via Pipedream Connect	high
+Pipeshift	YC S24	yc-2024.md	Modular Orchestration Platform for Open Source AI	L1	horizontal	general	active	$2.5M from Y Combinator and others	high
+Plenful	Bessemer	vc-us-b.md	AI agents automating pharmacy and healthcare back office	L3	vertical	healthcare	active	$50M Ser B 2025; BVP investor	normal
+Poggio	ext:L3	kp-vertical-b.md	AI platform for enterprise sales teams	L3	vertical	GTM/sales	active	none visible	normal
+Pollinate	YC W26	yc-2026.md	Supply chain execution for procurement teams	L3	vertical	logistics	active	none visible	high
+PolyAI	ext:X;ext:L3	kp-infra.md;kp-vertical-a.md	Voice assistants for enterprise customer calls	X	horizontal	general	active	$86M Series D (2025); $200M+ total	high
+Popsy	YC S22	yc-2021-22.md	AI finding Reddit leads and sending personalized DMs	L3	vertical	GTM and sales	active	pivoted to Reddit lead-gen	normal
+Portia AI	General Catalyst	vc-us-b.md	Open-source SDK and cloud for controllable AI agents	L2	horizontal	general	active	GC seed investor 2025	normal
+Portkey	seed:L1;Elevation, Lightspeed	kp-infra.md;vc-in.md	AI gateway and control plane for production agents	L1	horizontal	general	active	$15M Series A (Feb 2026)	high
+Powder	YC W24	yc-2024.md	AI Agents for precise document analysis	L3	vertical	finance/accounting	active	none visible	high
+Predoc	Northzone	vc-eu.md	AI-native medical record retrieval and analysis	L3	vertical	healthcare	active	Series A	normal
+Procore AI Agents	ext:L5	kp-suites.md	Construction-trained agents for project workflows	L5	vertical	construction	active	generally available; uptake undisclosed	normal
+Procurement Sciences	gtm:rfp	gtm-carry.md	AI-native operating system for GovCon find-win-deliver	L3	vertical	GTM/sales	active	300+ orgs incl. four of top 10 defense contractors	high
+Prodigal	Accel;Menlo	vc-in.md;vc-us-b.md	AI collections and recovery automation for consumer finance lenders	L3	vertical	finance	active	$12M Series A 2021	normal
+ProhostAI	YC S24	yc-2024.md	AI Property Manager for Airbnb & Short-Term Rental Hosts	L3	vertical	real estate	active	none visible	high
+Prompt Security	ext:L1	kp-infra.md	Unified security for enterprise gen-AI and agents	L1	horizontal	general	active	$23M total funding (2026)	high
+Promptless	YC W25	yc-2025.md	AI teammate automatically updating customer-facing documentation	L3	vertical	software engineering	active	none visible	high
+PromptLoop	YC W22	yc-2021-22.md	AI agents building B2B datasets and account research	L3	vertical	GTM and data	active	none visible	normal
+Prophet	seed:L3	kp-vertical-b.md	AI agents automating security operations workflows	L3	vertical	security	active	$30M Series A (Jul 2025); Amex and Citi ventures (2026)	high
+Prosper	YC S23	yc-2023.md	AI phone agents for healthcare operations	X	vertical	healthcare	active	$30M Series A led by a16z	high
+Provus	gtm:cpq	gtm-carry.md	Agentic AI services quoting automating scope-to-priced-quote with margin goal-seek	L3	vertical	GTM/sales	active	Salesforce AppExchange partner	normal
+Prox	YC F25	yc-2025.md	AI technical support agents for physical products and logistics claims	L3	vertical	customer service	active	deployed at ShipBob	high
+Proximitty	YC W26	yc-2026.md	Autonomous business loan servicing	L3	vertical	finance	active	none visible	high
+Proxis	YC S24	yc-2024.md	The platform for enterprise AI agent automations, starting with email.	L2	horizontal	general	active	none visible	high
+Pulastya	YC W23	yc-2023.md	AI research and code agents for SAP development and migration	L3	vertical	software engineering	active	none visible	normal
+PulseMCP	seed:L1	kp-infra.md	Directory and search for MCP servers and clients	L1	horizontal	general	active	22000+ servers indexed (Sept 2026)	normal
+Pydantic AI	ext:L2	kp-platforms.md	Type-safe Python agent framework from the Pydantic team	L2	horizontal	general	active	v1 Sep 2025; v2 Jun 2026	normal
+Pylon	ext:L3;YC W23	kp-vertical-a.md;yc-2023.md	Agentic B2B customer support platform	L3	vertical	customer service (B2B)	active	$31M Series B (2025)	high
+Pythagora	YC W24	yc-2024.md	Worlds first all-in-one AI development platform.	L3	vertical	software engineering	active	Secured $4M for open source app development	high
+Qevlar AI	EQT Ventures	vc-eu.md	AI agents automating SOC alert investigations	L3	vertical	security	active	$30M Series A, Mar 2026	high
+Qlik Agentic Analytics	ext:L5	kp-suites.md	Agentic architecture for trusted analytics	L5	vertical	analytics	active	none visible	normal
+Qodo	ext:L3	kp-vertical-a.md	AI agents for code tests, review and verification	L3	vertical	software engineering	active	$70M Series B (2026)	high
+Qualtrics Experience Agents	ext:L5	kp-suites.md	Agents detecting and resolving experience friction	L5	vertical	customer experience	active	launched March 2025; uptake undisclosed	normal
+Quandri	ext:L3	kp-vertical-b.md	Digital workers automating insurance renewals	L3	vertical	insurance	active	$12M raised (2025)	normal
+Quanta Financial	ext:L3	kp-vertical-b.md	AI-native real-time bookkeeping	L3	vertical	finance/accounting	active	$15M Series A (Dec 2025)	normal
+Quantiphi	ext:L4	kp-infra.md	AI-native services firm building custom agents	L4	horizontal	general	active	$23.5M raised (2024)	high
+Quantstruct	YC W25	yc-2025.md	AI documentation engineer testing and auto-improving stale docs	L3	vertical	software engineering	active	none visible	high
+Query Vary	YC W22	yc-2021-22.md	no-code LLM application and workflow builder	L2	horizontal	general	active	none visible	normal
+Questom	YC F25	yc-2025.md	AI sales and support agents for the printing and merchandise industry	L3	vertical	GTM/sales	active	none visible	high
+Quilt	gtm:rfp	gtm-carry.md	Presales knowledge assistant answering RFPs and security questionnaires in Slack and Chrome	L3	vertical	GTM/sales	acquired	acquired by Rox	normal
+Quivr	YC W24	yc-2024.md	AI-powered auto-resolutions and reply suggestions for customer support	L3	vertical	customer service	active	none visible	high
+Qura	Cherry Ventures	vc-eu.md	Agentic AI research assistant for lawyers	L3	vertical	legal	active	$2.4M seed, 2024	normal
+Qventus	ext:L3;Mayfield	kp-vertical-b.md;vc-ai.md	AI automating hospital operations and patient flow	L3	vertical	healthcare	active	$105M Series D led by KKR (Jan 2025)	high
+Radiant Security	ext:L3	kp-vertical-b.md	AI SOC analyst mimicking human investigators	L3	vertical	security	active	$15M raised (2023)	normal
+Raft	ext:L3	kp-vertical-b.md	AI platform automating freight forwarding operations	L3	vertical	logistics	active	$30M Series B (2023)	high
+Raindrop	YC W24	yc-2024.md	Sentry for AI Agents	L1	horizontal	general	active	Raised $15M Seed from Lightspeed	high
+Rally UXR	YC W22	yc-2021-22.md	agentic user research infrastructure	L3	vertical	user research	active	team 35; customers Google, Meta, Ramp, Figma	high
+Random Labs	YC S24	yc-2024.md	Random labs is building long running autonomous coding agents.	L3	vertical	software engineering	active	Pre-Seed	high
+Rasa	ext:L2	kp-platforms.md	Open-source developer platform for enterprise conversational AI agents	L2	horizontal	general	active	$30M Series C Feb 2024; Deutsche Telekom, Autodesk, Swisscom customers	high
+Rational	YC S26	yc-2026.md	Agent-native accounting firms	L3	vertical	finance	active	none visible	high
+RealPact	YC S26	yc-2026.md	AI-native OS for Real Estate Brokerages	L3	vertical	real estate	active	none visible	high
+Rebolt	YC W25	yc-2025.md	AI agents automating restaurant management and supplier coordination	L3	vertical	restaurants	active	pricing talks with Burger King parent	high
+Recall AI	Bessemer	vc-us-b.md	Unified API for meeting bots powering AI agents	L1	horizontal	general	active	$10M Ser A 2024; BVP investor	normal
+Reco	Insight	vc-us-b.md	AI data security agent for enterprise SaaS	L3	vertical	security	active	$25M round 2025 from Insight	normal
+Red Barn Robotics	YC W25	yc-2025.md	Autonomous weeding robots for farms	L3	vertical	agriculture	active	$5M in LOIs	high
+Redapto	YC F25	yc-2025.md	Adaptive AI infrastructure for agentic systems	L1	horizontal	general	active	none visible	high
+Redouble AI	YC S24	yc-2024.md	Scale human-in-the-loop for AI workflows in regulated industries	L1	horizontal	general	active	$500K Seed Stage, $900K Est. ARR	high
+Refactor	YC S24	yc-2024.md	Deploying secure and reliable AI agents across healthcare, retail,…	L4	horizontal	general	active	none visible	high
+RefineTrain AI	YC W22	yc-2021-22.md	AI agents rewriting internal documentation for LLMs	L3	horizontal	general	active	none visible	normal
+Reflection AI	Sequoia;Battery	vc-us-a.md;vc-us-b.md	Superintelligent autonomous systems starting with coding agents	L3	vertical	software engineering	active	none visible	normal
+Regie.ai	gtm:tofu;seed:L3;Foundation Capital	gtm-carry.md;kp-vertical-b.md;vc-ai.md	RegieOne unifies phone, email, social prospecting with AI sequencing	L3	vertical	GTM/sales	active	none visible	normal
+Rejoy Health	YC W21	yc-2021-22.md	AI workers that book, scribe, and code for clinicians	L3	vertical	healthcare	active	$5.5M raised	normal
+Relari	YC W24	yc-2024.md	AI Agent Builder for Software 3.0	L2	horizontal	general	active	none visible	high
+Relaw	YC F25	yc-2025.md	AI Legal OS with agents for law firms	L3	vertical	legal	active	none visible	high
+Relevance AI	gtm:kb;seed:L2;Bessemer	gtm-carry.md;kp-platforms.md;vc-us-b.md	No-code AI workforce platform repositioned for GTM teams	L2	horizontal	general	active	100+ integrations	high
+Relvy AI	YC F24	yc-2024.md	AI powered debugging notebooks for incident response	L3	vertical	software engineering	active	none visible	high
+Remedy	YC F25	yc-2025.md	24/7 AI voice agent for pharmacies	L3	vertical	healthcare	active	none visible	high
+Remy	YC S23	yc-2023.md	AI agents verifying insurance benefits by phone	X	vertical	healthcare	active	none visible	normal
+Replit	Coatue;Craft	vc-us-b.md;vc-us-c.md	AI agent platform building software from natural language	L3	vertical	software engineering	active	$400M round 2026 at $9B; Coatue participating	high
+Replo	YC S21	yc-2021-22.md	AI GTM specialist for ecommerce and SaaS	L3	vertical	GTM and ecommerce	active	team 20	normal
+Reprompt	YC W24	yc-2024.md	AI Agents for Location	L3	vertical	logistics	active	none visible	high
+Rescript	YC S24	yc-2024.md	AI Regulatory Analyst for Enterprises	L3	vertical	legal	active	none visible	high
+Resolve	ext:L3;Greylock	kp-vertical-a.md;vc-us-a.md	AI SRE agents automating on-call production ops	L3	vertical	IT ops (SRE)	active	$125M Series A at $1B valuation (2026)	high
+Resonate	ext:L1	kp-infra.md	Durable execution protocol for modern applications	L1	horizontal	general	active	$3M seed (2025)	normal
+Respell	seed:L2	kp-platforms.md	No-code builder for AI agent workflows	L2	horizontal	general	acquired	Acquired by Salesforce May 2025	normal
+Ressl AI	YC W26	yc-2026.md	AI employees for trades and home services	L3	vertical	construction	active	none visible	high
+Restate	seed:L1	kp-infra.md	Lightweight durable workflows for distributed applications	L1	horizontal	general	active	$7M seed (2024)	normal
+Retape	YC W23	yc-2023.md	AI voice agents for debt collection and settlement	X	vertical	finance	active	none visible	normal
+Retell AI	seed:X;YC W24	kp-infra.md;yc-2024.md	Voice agent platform for AI call centers	X	horizontal	general	active	$5.1M raised (2024)	high
+RetroFix	YC S24	yc-2024.md	Automate any workflow using plain english	L2	horizontal	general	active	none visible	high
+Revi	YC F24	yc-2024.md	AI-enabled M&A deal origination	L3	vertical	finance/accounting	active	$14.5M Series A	high
+Revvolution AI	Accel	vc-in.md	RevOps agents fixing data hygiene and revenue processes	L3	vertical	GTM/sales	active	Accel Atoms AI cohort 2024	normal
+Revyl	YC F24	yc-2024.md	AI-Native Mobile Testing	L3	vertical	software engineering	active	$1.5 million	high
+Reworkd	YC S23	yc-2023.md	Multimodal agents for web data extraction at scale	X	horizontal	general	pivoted	pivoted from AgentGPT to web-scraping agents	normal
+Rex	YC S26	yc-2026.md	AI order-to-cash workforce for enterprises	L3	vertical	finance	active	none visible	high
+Rezolve.ai	ext:L3	kp-vertical-a.md	Agentic AI service desk for IT, HR and finance	L3	vertical	IT and employee service	active	none visible	normal
+Riff	Northzone	vc-eu.md	Business-ready builder for enterprise AI applications	L2	horizontal	general	active	Northzone-backed round	normal
+Rillet	seed:L3;ICONIQ	kp-vertical-b.md;vc-us-c.md	AI-native ERP for accounting and finance teams	L3	vertical	finance/accounting	active	$100M Series C at $1B valuation (Aug 2026)	high
+Rindler	YC S26	yc-2026.md	Translation layer between AI agents and the web	L1	horizontal	general	active	none visible	high
+Ringg	ext:X;Peak XV	kp-infra.md;vc-in.md	Voice AI platform beyond phone calls (Bengaluru)	X	horizontal	general	active	$15M Series A led by Peak XV (2026)	high
+Rippling AI Agents	ext:L5	kp-suites.md	Agents across HR, payroll, IT, and finance	L5	vertical	HR	active	introduced March 2026; uptake undisclosed	normal
+Risotto	YC W24	yc-2024.md	Risotto auto-solves IT support requests using AI	L3	vertical	IT	active	$10M seed funding	high
+ritivel	YC W26	yc-2026.md	AI-native regulatory platform for life sciences	L3	vertical	healthcare	active	none visible	high
+Rivet	YC W23;YC F25	yc-2023.md;yc-2025.md	Infrastructure for stateful agent workloads and durable execution	L1	horizontal	general	pivoted	pivoted from game server infrastructure	high
+Riveter	YC F24	yc-2024.md	AI Lovable for web scraping	X	horizontal	general	active	none visible	high
+Roark	YC W25	yc-2025.md	Observability and testing platform for voice AI agents	L1	horizontal	general	active	none visible	high
+Robin AI	ext:L3;Plural	kp-vertical-b.md;vc-eu.md	AI contract copilot for legal teams	L3	vertical	legal	active	$51M raised (2024)	high
+RocketSDR	YC W21	yc-2021-22.md	AI-native sales outreach running entire top-of-funnel	L3	vertical	GTM and sales	active	$125K raised	normal
+Rockwell AI Agents	ext:L5	kp-suites.md	Agentic workflows for industrial production	L5	vertical	manufacturing	active	none visible	normal
+Roger	YC S24	yc-2024.md	AI SDR that automates outbound sales	L3	vertical	GTM/sales	active	none visible	high
+Rogo	Sequoia;Thrive	vc-us-a.md;vc-us-c.md	AI agents for investment banking analysis	L3	vertical	finance	active	Sequoia-led round at $750M valuation	high
+Rohirrim AI	gtm:rfp	gtm-carry.md	Domain-aware genAI drafting RFP and proposal responses from enterprise documents	L3	vertical	GTM/sales	active	DoD marketplace listing	normal
+Round1	Peak XV	vc-in.md	AI interview agents matching candidates to jobs at scale	L3	vertical	HR/recruiting	active	500+ AI-led interviews daily	normal
+Rovi Health	YC F25	yc-2025.md	AI healthcare concierge coordinating in-network care for employees	L3	vertical	healthcare	active	none visible	high
+Rovr	YC F25	yc-2025.md	AI orchestration automating requirements capture for services teams	L3	vertical	professional services	active	none visible	high
+RowBoat Labs	YC S24	yc-2024.md	Open-source AI-assisted agent builder	L2	horizontal	general	active	Pre-Seed	high
+Rox	ext:L3	kp-vertical-b.md	AI agents for sales teams on existing data	L3	vertical	GTM/sales	active	$1.2B valuation; $8M ARR (Mar 2026)	high
+Rulebase	YC F24	yc-2024.md	AI agents for financial services	L3	vertical	finance/accounting	active	$2.1M funding round	high
+Ruli AI	SignalFire	vc-ai.md	AI counsel agent for in-house legal teams	L3	vertical	legal	active	$6M seed Nov 2025	normal
+Runlayer	Felicis	vc-us-c.md	Enablement and control platform for workforce agents	L1	horizontal	general	active	$30M Ser A 2026	normal
+RunLLM	ext:L3	kp-vertical-a.md	AI agents for technical product support	L3	vertical	customer service (technical)	active	none visible	normal
+Runloop	ext:L1	kp-infra.md	Sandboxed Devboxes for AI coding agents	L1	horizontal	general	active	$7M seed (2025)	normal
+RunSybil	Conviction;Menlo	vc-ai.md;vc-us-b.md	AI agents for application security testing	L3	vertical	security	active	$40M raised Mar 2026	normal
+Sable AI	Sequoia;8VC	vc-us-a.md;vc-us-c.md	AI employee using computer use, vision and voice for customer interactions	X	horizontal	general	active	invested $45 million	high
+SafetyKit	YC S23	yc-2023.md	AI agents for risk, compliance, and safety operations	L3	vertical	trust and safety	active	none visible	normal
+Sage	YC S24	yc-2024.md	Automating home care agency operations with AI	L3	vertical	healthcare	active	none visible	high
+Sage Copilot	ext:L5	kp-suites.md	AI agents for accounting, HR, and operations	L5	vertical	accounting	active	expanded April 2026; uptake undisclosed	normal
+Salesforce Agentforce	gtm:inc;seed:L5	gtm-carry.md;kp-suites.md	Agentforce 360 enterprise agent platform with Flex Credits action pricing	L5	horizontal	general	active	$800M AI ARR, 29K Agentforce deals	high
+SalesPatriot	YC W25	yc-2025.md	AI operating system for distributor and OEM back offices	L3	vertical	distribution	active	none visible	high
+Salient	ext:L3	kp-vertical-b.md	Voice AI agents for loan servicing and collections	L3	vertical	finance/accounting	active	$60M raised; $500M valuation (Dec 2025)	high
+Samaya AI	NEA	vc-us-b.md	AI agents for financial services knowledge work	L3	vertical	finance	active	$43.5M round 2025 led by NEA	normal
+Sameday	YC W23	yc-2023.md	AI voice agent booking appointments for home-services businesses	X	vertical	home services	active	none visible	normal
+Samora AI	YC W26	yc-2026.md	Multilingual voice agents that outperform humans	X	horizontal	general	active	none visible	high
+Sana	gtm:kb;EQT Ventures	gtm-carry.md;vc-eu.md	Knowledge management plus AI assistants and agents with permissions	L2	horizontal	general	acquired	none visible	high
+Sanctum	YC F25	yc-2025.md	AI user simulations catching software issues before shipping	L3	vertical	software engineering	active	none visible	high
+Sandra AI	YC F24	yc-2024.md	Building AI employees for car dealers	X	vertical	automotive	active	none visible	high
+SAP Joule	seed:L5	kp-suites.md	AI copilot and ready-to-use agents across the SAP Business Suite	L5	horizontal	general	active	none visible	normal
+Sapien	ext:L3	kp-vertical-b.md	AI operational analysis for enterprise finance	L3	vertical	finance/accounting	active	$8.7M seed; $180M valuation (Sep 2026)	high
+Sapiom	Accel	vc-us-a.md	Powering the agentic economy	L2	horizontal	general	active	Seed investment from Accel	normal
+SAS AI Agents	ext:L5	kp-suites.md	Agentic AI in the SAS analytics suite	L5	vertical	analytics	active	none visible	normal
+Scaled Cognition	Khosla Ventures	vc-us-a.md	AI agents for customer interactions based on verified company policies	L3	vertical	customer service	active	$100.0M Series A	high
+Scalekit	Z47	vc-in.md	Enterprise authentication stack built for AI agents	L1	horizontal	general	active	$5.5M seed 2025	normal
+SciFin	ext:L3	kp-vertical-b.md	AI agents reconciling revenue data for GTM teams	L3	vertical	GTM/sales	active	$44M seed (2026)	high
+Sciloop	YC F25	yc-2025.md	End-to-end AI scientist automating ML research workflows	L3	vertical	ML research	active	none visible	high
+Scoop	YC F25	yc-2025.md	Agents automating regulatory submissions for life sciences	L3	vertical	life sciences	active	none visible	high
+Scott AI	YC F25	yc-2025.md	Engineering design platform with coding agents as first-class citizens	L3	vertical	engineering	active	none visible	high
+Scrapybara	YC F24	yc-2024.md	A computer for your AI agents	L1	horizontal	general	active	none visible	high
+Scritch	YC W24	yc-2024.md	AI operating system for veterinary care	X	vertical	healthcare	active	none visible	high
+Seals AI	YC S24	yc-2024.md	AI Employees for Wholesalers & Distributors	L3	vertical	logistics	active	$500K Seed	high
+Seam AI	Bessemer	vc-us-b.md	AI agents over customer data for revenue teams	L3	vertical	GTM/RevOps	active	$5M seed 2024 led by BVP	normal
+Second	YC W23	yc-2023.md	AI agents automating enterprise codebase migrations and upgrades	L3	vertical	software engineering	active	none visible	normal
+Sei	YC W22	yc-2021-22.md	AI agents for financial-institution CX and compliance	L3	vertical	fintech	active	none visible	normal
+Sema4.ai	ext:L2;Mayfield	kp-platforms.md;vc-ai.md	Full-stack enterprise AI agent platform led by ex-Cloudera executives	L2	horizontal	general	active	$30.5M raised 2024; semantic layer launch Mar 2026	normal
+Semble AI	YC F25	yc-2025.md	Automates fire and life-safety system design	L3	vertical	construction	active	none visible	high
+Semiotic	YC F25	yc-2025.md	AI design agents producing landing pages at scale	L3	vertical	design	active	$78K revenue in 4 weeks	high
+Send AI	ext:L3	kp-vertical-b.md	AI document processing for insurance claims	L3	vertical	insurance	active	$11M raised (2022-24)	normal
+Senso	YC W24	yc-2024.md	Control what AI says about you	L1	horizontal	general	active	$3M Pre-Series A round	high
+Sequin	YC S21	yc-2021-22.md	compliance-first AI voice agents automating collections calls	X	vertical	finance	active	none visible	normal
+Serra	YC S23	yc-2023.md	AI recruiter automating candidate sourcing and outreach	L3	vertical	HR	active	none visible	normal
+Serval	Radical Ventures	vc-ai.md	AI-native IT service management with agents	L3	vertical	IT	active	none visible	normal
+ServiceNow AI Agents	gtm:inc;seed:L5	gtm-carry.md;kp-suites.md	Workflow platform turned agent control tower with AI Agent Orchestrator	L5	horizontal	general	active	Moveworks and Logik.ai acquired	high
+Sett AI	Bessemer	vc-us-b.md	Agentic creatives and user acquisition for games	L3	vertical	marketing	active	BVP-backed, early stage	normal
+Shaped	YC W22	yc-2021-22.md	real-time retrieval engine for search, feeds, and agents	L1	horizontal	general	pivoted	pivoted to retrieval engine for agents	normal
+Shasta Health	YC S23	yc-2023.md	AI calling and browser agents for healthcare clinics	X	vertical	healthcare	active	none visible	normal
+Shepherd	YC S26	yc-2026.md	AI work memory for team tools	L1	horizontal	general	active	none visible	high
+sherpa	Seedcamp	vc-eu.md	AI operating system for the external workforce	L2	horizontal	general	active	$2.2M, Jul 2026	normal
+Shiboleth	YC W24	yc-2024.md	Automates lending compliance for financial institutions	L3	vertical	finance/accounting	active	none visible	high
+Shopify Sidekick	ext:L5	kp-suites.md	Commerce assistant and agents in Shopify admin	L5	vertical	e-commerce	active	none visible	normal
+Siemens Industrial Copilot	ext:L5	kp-suites.md	Industrial copilots and agents for engineering and shop floor	L5	vertical	manufacturing	active	100 customers, 120,000 users	normal
+Siena	ext:L3	kp-vertical-a.md	Empathic AI CX agents for commerce	L3	vertical	customer service (ecommerce)	active	$4.7M seed (2023)	normal
+Sierra	seed:L3;Conviction;Sequoia, Benchmark;ICONIQ, Thrive	kp-vertical-a.md;vc-ai.md;vc-us-a.md;vc-us-c.md	Autonomous customer service agents for enterprises	L3	vertical	customer service	active	$15B valuation after $950M round (2026)	high
+SiftHub	Z47, Blume	vc-in.md	AI deal orchestration and RFP response agents	L3	vertical	GTM/sales	active	$5.5M seed 2024	normal
+SigmaMind AI	YC S22	yc-2021-22.md	no-code platform for voice, chat, and email agents	X	vertical	customer service	active	team 12	normal
+SigmanticAI	YC S25	yc-2025.md	Cursor for chip design, RTL agents inside VSCode	L3	vertical	hardware engineering	active	none visible	high
+Simple AI	YC S24	yc-2024.md	AI phone agents for enterprise	X	horizontal	general	active	$14M from First Harmonic and Y Combinator	high
+Simplex	YC S24	yc-2024.md	Production-grade web agents	X	horizontal	general	active	none visible	high
+Sixfold	seed:L3	kp-vertical-b.md	AI underwriting agents for commercial insurance	L3	vertical	insurance	active	$30M Series B (Jan 2026)	high
+Skippr	Bessemer	vc-us-b.md	Live AI employee running demos, onboarding, and support	L3	vertical	customer success	active	BVP-backed, early stage	normal
+Skope	YC S25	yc-2025.md	AI agents for core law firm workflows	L3	vertical	legal	active	none visible	high
+SkyFireAI	seed:L1;AI Fund	kp-infra.md;vc-ai.md	Payment rails letting autonomous agents spend money	L1	horizontal	general	active	$8.5M seed (2024)	normal
+Skymerse	YC S26	yc-2026.md	Autopilot for Flight Operations	L3	vertical	logistics	active	none visible	high
+Skyvern	seed:X;YC S23	kp-infra.md;yc-2023.md	LLM browser automation for workflows	X	horizontal	general	active	$2.8M raised	high
+Slashy	YC S25	yc-2025.md	Cursor for Email, AI doing work across Gmail, Slack, Notion	L2	horizontal	general	active	none visible	high
+Smallest.ai	ext:X	kp-infra.md	Real-time voice AI infrastructure for enterprises	X	horizontal	general	active	$21M total; $13M Series A (2026)	normal
+Smart Bricks	a16z	vc-us-a.md	Agentic AI infrastructure for global real-estate investing	L3	vertical	real estate	active	none visible	normal
+Smartcuts	YC W21	yc-2021-22.md	Chrome extension turning clicks into no-code automations	X	horizontal	general	active	$125K raised	normal
+SmarterDx	seed:L3;Bessemer	kp-vertical-b.md;vc-us-b.md	AI clinical coding review recovering hospital revenue	L3	vertical	healthcare	acquired	$50M raised; New Mountain investment (2025)	high
+Smithery	seed:L1	kp-infra.md	Registry and hosting for MCP servers	L1	horizontal	general	acquired	Acquired by Arcade.dev (Aug 2026)	high
+Smooth	YC F24	yc-2024.md	Fast, simple, reliable AI browser agent	X	horizontal	general	active	none visible	high
+Snowflake Cortex Agents	seed:L5	kp-suites.md	Agentic analytics over structured and unstructured data in Snowflake	L5	horizontal	general	active	none visible	normal
+Soff	YC S24	yc-2024.md	AI Agents for Distributors	L3	vertical	logistics	active	Pre-Seed	high
+Sola	Conviction;YC S23	vc-ai.md;yc-2023.md	Agentic process automation via computer-use agents	X	horizontal	general	active	$21M Series A Aug 2025	normal
+Solari AI	YC W24	yc-2024.md	Gives non-technical team members agents that work right out of the box	L2	horizontal	general	active	none visible	high
+Solid	SignalFire	vc-ai.md	Infrastructure for reliable enterprise AI agents	L1	horizontal	general	active	$20M seed Feb 2026	normal
+Solidroad	YC W25	yc-2025.md	AI agents for CX team training, QA, and coaching	L3	vertical	customer service	active	$6.5M raised Jun 2025	high
+Solum Health	YC S22	yc-2021-22.md	voice AI automating therapy practice intake and admin	X	vertical	healthcare	active	team 3	normal
+SolveAI	Northzone	vc-eu.md	Enterprise platform for AI-driven software design	L2	horizontal	general	active	Series A	normal
+Solver	Radical Ventures	vc-ai.md	Agent completing repository-level software tasks	L3	vertical	software engineering	acquired	acquired; proprietary SE foundation models	normal
+Sona	Northzone	vc-eu.md	Agentic AI managing frontline workforce operations	L3	vertical	HR	active	$45M Series B, Apr 2026	high
+Sophys	YC W22	yc-2021-22.md	AI agents for healthcare intake	L3	vertical	healthcare	active	none visible	normal
+Soraban	YC W21	yc-2021-22.md	AI admin automating accounting data intake and entry	L3	vertical	finance and accounting	active	$125K raised	normal
+Soren AI	YC F25	yc-2025.md	Evals for complex agentic AI systems	L1	horizontal	general	active	none visible	high
+Sourcebot	YC F25	yc-2025.md	Code search and context for humans and AI agents over MCP	L1	horizontal	general	active	used by NVIDIA, Red Hat, Wikimedia	high
+Sourcegraph (Amp)	ext:L3	kp-vertical-a.md	Amp coding agent on enterprise code graph	L3	vertical	software engineering	active	$125M raised (2021); Amp agent flagship	high
+SpadeWorks	YC W22	yc-2021-22.md	AI agents answering calls and scheduling for trade businesses	L3	vertical	home services	active	team 13	normal
+Spara	Radical Ventures	vc-ai.md	Conversational GTM agents across chat email voice	L3	vertical	sales	active	none visible	normal
+Specific	YC F25	yc-2025.md	AWS for coding agents, agent-managed backends via MCP	L1	horizontal	general	active	none visible	high
+Speedy Labs	YC W23	yc-2023.md	AI rebate management platform for foodservice distributors	L3	vertical	finance	active	none visible	normal
+Speko	YC S26	yc-2026.md	OpenRouter for voice AI	X	horizontal	general	active	none visible	high
+Spellbook	seed:L3	kp-vertical-b.md	AI contract drafting and review inside Microsoft Word	L3	vertical	legal	active	$50M Series B (Oct 2025); $40M debt (Mar 2026)	high
+Spherecast	YC S24	yc-2024.md	AI Supply Chain Manager for CPG	L3	vertical	logistics	active	none visible	high
+Sphinx	Cherry Ventures;YC F24	vc-eu.md;yc-2024.md	AI compliance analysts for banks and fintechs	L3	vertical	finance	active	$7.1M seed, Feb 2026	high
+Spine AI	YC S23	yc-2023.md	Visual workspace managing swarms of AI agents	L2	horizontal	general	active	none visible	normal
+Splendor	YC W22	yc-2021-22.md	agentic AI automating insurance benefits checks and prior auth	L3	vertical	healthcare	active	YC launch Oct 2025	normal
+Sprinklr AI+ Agents	ext:L5	kp-suites.md	Autonomous brand agents for CX and outbound sales	L5	vertical	customer service	active	none visible	normal
+Sprites	YC W22	yc-2021-22.md	AI performance marketing agent	L3	vertical	GTM and marketing	active	team 5	normal
+Spur	YC S24	yc-2024.md	Your AI QA Engineer	L3	vertical	software engineering	active	$4.5M from First Round, Pear VC, Neo	high
+Squack	YC W23	yc-2023.md	Natural-language RPA agents for accountants	L3	vertical	finance	active	none visible	normal
+Squire.ai	YC S21	yc-2021-22.md	AI writing PRs and implementing code review feedback	L3	vertical	software engineering	dead	none visible	normal
+SRE.ai	YC F24	yc-2024.md	AI DevOps Agents	L3	vertical	software engineering	active	$7.2M funding	high
+StableBrowse	ext:X	kp-infra.md	Machine-native web engine for AI agents	X	horizontal	general	active	YC Spring 2026; small seed	normal
+Stably AI	YC W22	yc-2021-22.md	open-source terminal orchestrator for coding agents	L1	horizontal	general	active	MIT open source (Orca)	normal
+Stack AI	seed:L2	kp-platforms.md	No-code enterprise platform for building LLM agents and RAG workflows	L2	horizontal	general	active	$16M Series A May 2025	high
+Stacks	ext:L3;EQT Ventures	kp-vertical-b.md;vc-eu.md	Agentic AI for finance and accounting operations	L3	vertical	finance/accounting	active	$23M Series A led by Lightspeed (Feb 2026)	high
+Stackshine	YC W22	yc-2021-22.md	automating enterprise IT operations and onboarding	L3	vertical	IT	acquired	acquired	normal
+Stacksi	YC W21	yc-2021-22.md	automated answers to security questionnaires	L3	vertical	security	acquired	acquired by SafeBase Sep 2023	normal
+stagewise	YC S25	yc-2025.md	Open-source agentic IDE embedding coding agents in the browser	L2	horizontal	general	active	none visible	high
+Steel	ext:X	kp-infra.md	Open-source browser API for AI agents	X	horizontal	general	active	Active OSS; funding undisclosed	normal
+Steerlab	gtm:rfp	gtm-carry.md	Paris-based AI automation for presales RFP and proposal response	L3	vertical	GTM/sales	active	none visible	normal
+Stilta	YC W26	yc-2026.md	AI agents that search and analyze patents	L3	vertical	legal	active	none visible	high
+Stockline	YC S25	yc-2025.md	AI-native ERP with agents handling food wholesaler order intake	L3	vertical	food distribution	active	none visible	high
+Strada	YC S23	yc-2023.md	AI agents for insurance sales and service calls	X	vertical	insurance	active	none visible	normal
+Stratum Industries	YC S26	yc-2026.md	Applied AI for Governments	L3	vertical	government	active	none visible	high
+Strawberry	EQT Ventures	vc-eu.md	Agentic browser with built-in AI companions	X	horizontal	general	active	$6M seed, Oct 2025	normal
+Stream	YC S22	yc-2021-22.md	AI claims workbench automating insurance claims	L3	vertical	insurance	active	team 15	normal
+Strella	Bessemer	vc-us-b.md	AI-moderated research interviews and insight agents	L3	vertical	market research	active	$4M seed 2024	normal
+Structured AI	Cherry Ventures;YC F25	vc-eu.md;yc-2025.md	AI tools automating workflows for engineering and construction teams	L3	vertical	construction	active	Seed, 2026	high
+Substrate	YC S24	yc-2024.md	Artificial Intelligence for your medical billing team	L3	vertical	healthcare	active	none visible	high
+Suki	ext:L3	kp-vertical-b.md	AI clinical documentation assistant	L3	vertical	healthcare	active	$70M Series D (2024); Zoom and MedStar deals	high
+Sully.ai	YC S21	yc-2021-22.md	autonomous AI agent team running hospital operations	L3	vertical	healthcare	active	team 49	normal
+Supadock	YC W21	yc-2021-22.md	AI workers for logistics operations and document reconciliation	L3	vertical	logistics	active	$125K raised	normal
+Supanote	Peak XV	vc-in.md	AI automation of behavioral health clinic admin operations	L3	vertical	healthcare	active	Surge 11 cohort 2025	normal
+Superagent	YC W24	yc-2024.md	Red teaming for AI agents	L1	horizontal	general	active	$1.6 million seed with Y Combinator, Rebel Fund	high
+Superbar	YC S22	yc-2021-22.md	AI sales agent answering website visitors	L3	vertical	GTM and sales	active	team 7	normal
+SuperDial	SignalFire	vc-ai.md	AI agents automating healthcare phone calls	L3	vertical	healthcare	active	none visible	normal
+superglue	YC W25	yc-2025.md	Open-source universal API integrations connecting agents to any software	L1	horizontal	general	active	none visible	high
+SuperIT	ext:L3	kp-vertical-a.md	AI agents delivering IT support services	L3	vertical	IT service	active	none visible	normal
+Superleap	Peak XV	vc-in.md	AI-native agentic CRM for enterprises	L3	vertical	GTM/sales	active	Rs 36 Cr pre-Series A from Peak XV Surge 2026	normal
+Superunit	YC S24	yc-2024.md	Faster, more profitable background checks with AI	L3	vertical	HR	active	$500K Seed Stage	high
+Supio	ext:L3;Mayfield	kp-vertical-b.md;vc-ai.md	AI platform for personal injury law firms	L3	vertical	legal	active	$60M Series B (Apr 2025)	high
+Sweep	ext:L3;Insight, Bessemer;YC S23	kp-vertical-a.md;vc-us-b.md;yc-2023.md	AI agent that auto-fixed GitHub issues	L3	vertical	software engineering	dead	GitHub app deprecated	normal
+SwishX	Blume	vc-in.md	Agentic AI platform for pharma and medtech commercial operations	L3	vertical	pharma	active	$2.2M seed 2026; 39 enterprise clients	normal
+Sycamore	Coatue	vc-us-b.md	Enterprise AI agent operating system	L2	horizontal	general	active	$65M seed 2026 led by Coatue and Lightspeed	normal
+Sylvian	YC F25	yc-2025.md	Expert-sourced tool-use trajectories for training AI agents	L1	horizontal	general	active	none visible	high
+Synera	Cherry Ventures	vc-eu.md	Agentic AI platform automating engineering workflows for manufacturers	L3	vertical	manufacturing	active	$40M Series B; BMW, Airbus, NASA customers	high
+Synth	YC F24	yc-2024.md	Prompt and Context Optimization for Coding Agents	L1	horizontal	general	active	none visible	high
+Synthetic	Khosla Ventures	vc-us-a.md	Automates bookkeeping and accounting workflows for businesses	L3	vertical	finance/accounting	active	$10.0M Seed	normal
+Synthflow	seed:X	kp-infra.md	No-code platform for AI voice agents	X	horizontal	general	active	$20M Series A (2025); 1000+ customers	high
+Syntra	YC S24	yc-2024.md	AI chart review for speciality medical clinics	L3	vertical	healthcare	active	$500K Seed Stage	high
+Tabula	YC S24	yc-2024.md	Autonomous accounting software	L3	vertical	finance/accounting	active	none visible	high
+Tacto	Cherry Ventures	vc-eu.md	AI for industrial procurement and supply chains	L3	vertical	logistics	active	Series A 2023; industrial customers	normal
+Talara	ext:L3	kp-vertical-a.md	AI-native agentic applicant tracking system	L3	vertical	HR and recruiting	active	none visible	normal
+Talentropy.ai	YC W22	yc-2021-22.md	AI recruiting team screening and engaging candidates	L3	vertical	HR and recruiting	active	evaluates 100% of candidates	normal
+Tandem	YC S24	yc-2024.md	AI-native office leasing agent	L3	vertical	real estate	active	none visible	high
+Tasklet	Lightspeed;YC S26	vc-us-a.md;yc-2026.md	AI agents for enterprise work	L3	vertical	general	active	$13M bridge round	high
+Tavily	Insight	vc-us-b.md	Search and retrieval API infrastructure powering AI agents	L1	horizontal	general	active	$25M round 2025, Insight-backed	normal
+TCS	seed:L4	kp-infra.md	Indian SI building enterprise agentic AI solutions	L4	horizontal	general	active	Agent Foundry; production deployments (2025)	high
+Tektonic AI	Madrona	vc-us-c.md	GenAI agents for business operations	L3	vertical	business operations	active	$10M led by Madrona 2024	normal
+Telemetron	YC F25	yc-2025.md	AI customer support for hardware companies	L3	vertical	customer service	active	none visible	high
+telli	Cherry Ventures;YC F24	vc-eu.md;yc-2024.md	AI voice agents converting B2C leads into sales	X	vertical	GTM/sales	active	$3.6M pre-seed, 2025	high
+Temporal	seed:L1;Amplify Partners;Lightspeed	kp-infra.md;vc-ai.md;vc-us-a.md	Durable execution platform for long-running agent workloads	L1	horizontal	general	active	$300M Series D at $5B (Feb 2026)	high
+Tencent Yuanqi	ext:L2	kp-platforms.md	Tencent's agent creation and distribution platform integrated with WeChat	L2	horizontal	general	active	WeChat ecosystem distribution; Hunyuan-based agents	high
+Tenet Security	ext:L1	kp-infra.md	Runtime protection preventing attacks on agents	L1	horizontal	general	active	$6M seed (June 2026)	normal
+Tennr	seed:L3;Foundation Capital;YC W23	kp-vertical-b.md;vc-ai.md;yc-2023.md	AI agents automating patient intake and referrals	L3	vertical	healthcare	active	$101M Series C at $605M (Jun 2025)	high
+Tensr	YC F25	yc-2025.md	Fully autonomous robotic factories taking on-demand manufacturing orders	L3	vertical	manufacturing	active	none visible	high
+Tenzai	Greylock	vc-us-a.md	Autonomous AI Hackers	L3	vertical	cybersecurity	active	none visible	normal
+Tergle	YC W25	yc-2025.md	AI agents automating repetitive audit tasks	L3	vertical	finance	active	none visible	high
+Terrain	YC F25	yc-2025.md	AI-native GTM platform for the physical economy	L3	vertical	GTM/sales	active	none visible	high
+Terrakotta	YC W24	yc-2024.md	AI platform for phone-first sellers	X	vertical	GTM/sales	active	$500K Seed	high
+Tesorio	ext:L3	kp-vertical-b.md	AI cash flow forecasting and collections automation	L3	vertical	finance/accounting	active	none visible	normal
+Tessl	Index	vc-us-b.md	AI-native software development platform with coding agents	L3	vertical	software engineering	active	$125M raised 2024 at $750M valuation	normal
+The Context Company	YC F25	yc-2025.md	Observability monitoring AI agents and user behavior	L1	horizontal	general	active	none visible	high
+The Hog	YC F25	yc-2025.md	AI-native GTM command center directing sales and marketing agents	L3	vertical	GTM/sales	active	none visible	high
+TheLoops	seed:L3	kp-vertical-a.md	AI agents and intelligence for support operations	L3	vertical	customer service (support ops)	active	$8.75M seed (2021)	normal
+Thomson Reuters CoCounsel	ext:L5	kp-suites.md	Agentic AI for legal research, analysis, and drafting	L5	vertical	legal	active	GA August 2026; uptake undisclosed	normal
+ThoughtSpot Agents	ext:L5	kp-suites.md	Analytics agents including Spotter for data reasoning	L5	vertical	analytics	active	none visible	normal
+TinyFish	ICONIQ	vc-us-c.md	AI web agents automating complex online tasks	X	horizontal	general	active	$47M Ser A led by ICONIQ	normal
+Tire Swing	YC W25	yc-2025.md	AI compliance for affordable housing eligibility and certifications	L3	vertical	real estate	active	none visible	high
+Tivara	YC S24	yc-2024.md	The AI workforce for medical groups	L3	vertical	healthcare	active	$3.6M Seed	high
+Tolmo	Accel	vc-us-a.md	AI security agents with production context	L3	vertical	security	active	none visible	normal
+Toma	YC W24	yc-2024.md	AI for Underserved Industries	X	vertical	automotive	active	funding from a16z	high
+Tomorro	ext:L3	kp-vertical-b.md	AI contract management and automation	L3	vertical	legal	active	EUR 25M Series B (Mar 2025)	normal
+ToolHive	ext:L1	kp-infra.md	Open-source MCP server management and security	L1	horizontal	general	active	Active OSS; enterprise MCP management	normal
+Topo	YC W24	yc-2024.md	AI Agents for outbound working by your side	L3	vertical	GTM/sales	active	none visible	high
+Tracecat	YC W24	yc-2024.md	All-in-one AI automation platform for security and IT teams	L2	vertical	security	active	none visible	high
+TrackChain	YC S21	yc-2021-22.md	AI workforce for freight dispatch	L3	vertical	logistics	active	renamed Tiriel AI	normal
+TrainLoop	YC W25	yc-2025.md	RL fine-tuning platform for LLM reasoning on business tasks	L1	horizontal	general	active	none visible	high
+Traversal	ext:L3	kp-vertical-a.md	AI agents for incident response and operations	L3	vertical	IT ops (SRE)	active	$48M raised; Amex partnership (2026)	high
+Trelium	YC F25	yc-2025.md	The agent that builds your agents from plain English	L2	horizontal	general	active	none visible	high
+Trellis AI	YC W24	yc-2024.md	AI for streamlining healthcare paperwork	L3	vertical	healthcare	active	none visible	high
+Tribble	gtm:rfp;seed:L3	gtm-carry.md;kp-vertical-b.md	Governed AI knowledge base automating RFPs, DDQs, questionnaires with sourced answers	L3	vertical	GTM/sales	active	Clari integration	normal
+Trigger.dev	ext:L1	kp-infra.md	Framework for background jobs and AI workflows	L1	horizontal	general	active	$19M raised	normal
+Triomics	YC W21	yc-2021-22.md	AI agents for oncology EHRs	L3	vertical	healthcare	active	$54.2M raised	high
+Trope	YC S26	yc-2026.md	Agent-native ERP implementation	L3	vertical	finance	active	none visible	high
+TruEra	Menlo;Madrona	vc-us-b.md;vc-us-c.md	AI observability and LLM evaluation	L1	horizontal	general	acquired	Acquired by Snowflake 2024; Menlo investor	normal
+Truewind	seed:L3;YC W23	kp-vertical-b.md;yc-2023.md	AI bookkeeping and finance agents for startups	L3	vertical	finance/accounting	active	none visible	normal
+truffle	YC S26	yc-2026.md	AI-native back office for restaurants	L3	vertical	restaurants	active	none visible	high
+Truffle AI	YC W25	yc-2025.md	Computer-use cloud infrastructure, AWS for AI agents	L1	horizontal	general	active	none visible	high
+Trullion	ext:L3	kp-vertical-b.md	AI automating lease accounting and audit workflows	L3	vertical	finance/accounting	active	$30M raised (2022-23)	high
+Trunk Tools	seed:L3;Insight	kp-vertical-b.md;vc-us-b.md	AI agents automating construction workflows from documents	L3	vertical	construction	active	$40M Series B led by Insight (Jul 2025)	high
+Truth Systems	YC S25	yc-2025.md	Real-time governance agents blocking risky AI behavior	L1	horizontal	general	active	none visible	high
+Truva	YC S22	yc-2021-22.md	AI agents handling B2B sales busywork	L3	vertical	GTM and sales	acquired	team 23	normal
+Tusk	YC W24	yc-2024.md	AI agent that generates unit and integration tests	L3	vertical	software engineering	active	$130K Seed	high
+Twilio AI Assistants	ext:L5	kp-suites.md	Voice and messaging agent building on Twilio	L5	vertical	customer service	active	none visible	normal
+Twin	seed:X	kp-infra.md	No-code computer-use agents that operate browsers (Paris)	X	horizontal	general	active	$13M raised	normal
+Twin A1	ext:L3	kp-vertical-b.md	Digital AI twins for lawyers	L3	vertical	legal	active	$20M seed; Linklaters, Orrick, Dechert signed (Aug 2026)	high
+Twine	YC S23	yc-2023.md	AI text-message receptionist booking services	X	vertical	home services	active	none visible	normal
+Two Dots	YC S22	yc-2021-22.md	AI fraud prevention and underwriting agent	L3	vertical	fintech	active	team 18	normal
+UiPath Agentic Automation	ext:L5	kp-suites.md	RPA suite repositioned around agents and Agent Builder	L5	horizontal	general	active	Merck, One NZ, The Very Group wins	high
+UKG AI Agents	ext:L5	kp-suites.md	Payroll and HR agents in UKG suites	L5	vertical	HR	active	UKG base of 80,000 organizations; uptake undisclosed	normal
+Undermind	YC S24	yc-2024.md	An AI agent for scientific research	L3	vertical	scientific research	active	none visible	high
+Unframe AI	Bessemer	vc-us-b.md	Turnkey outcome-based custom AI agents for enterprises	L2	horizontal	general	active	$100M TCV in 12 months; $50M Ser B 2026	high
+Unify	seed:L3;Battery	kp-vertical-b.md;vc-us-b.md	Warm outbound platform with AI prospecting agents	L3	vertical	GTM/sales	active	$40M Series B (Jul 2025)	high
+UnifyApps	Elevation	vc-in.md	Enterprise AI agents on unified app integration platform	L2	horizontal	general	active	$20M Series A 2024	high
+Uniphore	ext:L3	kp-vertical-a.md	AI agents for enterprise contact centers	L3	vertical	customer service	active	$260M Series F from NVIDIA and AMD (2025)	high
+Unique	ext:L3	kp-vertical-b.md	AI platform for wealth management	L3	vertical	finance/accounting	active	reported $30M Series A	normal
+Unit21	seed:L3	kp-vertical-b.md	Agentic AI for fraud and AML case management	L3	vertical	finance/accounting	active	$34M Series B (2022); quiet since	normal
+Unitary	Plural	vc-eu.md	Blended AI agent and human teams for high-volume operations	L3	vertical	customer service	active	$15M Series A, 2023	normal
+Uniti	ext:L3	kp-vertical-b.md	Agentic AI layer for real estate operators	L3	vertical	real estate	active	$12M Series A (Jul 2026)	normal
+unSurvey	YC W21	yc-2021-22.md	AI-led market research interviews with instant insights	L3	vertical	market research	acquired	acquired	normal
+Unthread	YC S22	yc-2021-22.md	agentic IT, HR, and CX service management in Slack	L3	vertical	IT	active	$3M Aug 2024	normal
+Uplane	YC F25	yc-2025.md	Replaces marketing agencies with autonomous AI campaigns	L3	vertical	marketing	active	none visible	high
+Uplinq	ext:L3	kp-vertical-b.md	AI-powered bookkeeping automation	L3	vertical	finance/accounting	active	$10M Series A (May 2025)	normal
+Validio	Plural	vc-eu.md	Agentic data management automating observability and quality	L1	horizontal	general	active	$30M Series A led by Plural, Mar 2026	high
+VantedgeAI	YC W22	yc-2021-22.md	agent marketplace scaling investing workflows	L3	vertical	finance	active	team 11	normal
+Vantel	YC W25	yc-2025.md	AI platform automating policy comparison for insurance brokerages	L3	vertical	insurance	active	none visible	high
+Vapi	seed:X;Bessemer;YC W21	kp-infra.md;vc-us-b.md;yc-2021-22.md	Voice AI platform for enterprise phone agents	X	horizontal	general	active	$50M Series B at $500M (2026); 1B calls	high
+Varos	YC S21	yc-2021-22.md	AI business analysts gathering requirements and optimizing processes	L3	horizontal	general	active	none visible	normal
+VectorShift	YC S23	yc-2023.md	No-code platform for AI assistants and automations	L2	horizontal	general	active	$3M seed	normal
+Veeva AI Agents	ext:L5	kp-suites.md	Life-sciences agents for Vault CRM and PromoMats	L5	vertical	life sciences	active	available December 2025; uptake undisclosed	normal
+Vellum	seed:L2	kp-platforms.md	Platform for developing, testing, and deploying LLM applications and agents	L2	horizontal	general	active	$20M Series A Jul 2025	high
+Venta AI	YC S23	yc-2023.md	AI sales employee for compliant EU outreach	L3	vertical	sales	active	none visible	normal
+Venu AI	YC W21	yc-2021-22.md	automates conference production to meet qualified sales leads	L3	vertical	GTM and sales	active	$125K raised	normal
+Vercel AI SDK	seed:L2	kp-platforms.md	TypeScript SDK with agent abstractions for AI applications	L2	horizontal	general	active	v5 with agent abstractions; major TS ecosystem adoption	high
+Verdant	YC S26	yc-2026.md	AI-native planning and permitting for local gov	L3	vertical	government	active	none visible	high
+Veria Labs	YC F25	yc-2025.md	Continuous AI pentesting agents finding and fixing vulnerabilities	L3	vertical	security	active	none visible	high
+Verint Da Vinci Agents	ext:L5	kp-suites.md	CX automation bots evolving into Da Vinci agents	L5	vertical	customer service	active	none visible	normal
+Vestris	YC S26	yc-2026.md	AI native platform for real estate closings	L3	vertical	real estate	active	none visible	high
+Vetnio	YC W25	yc-2025.md	AI automating administrative work for veterinary practices	L3	vertical	healthcare	active	none visible	high
+Vibe	YC S24	yc-2024.md	Making everyone a software engineer	L3	vertical	software engineering	active	none visible	high
+Vibe Kanban	YC S21	yc-2021-22.md	planning and review platform for AI coding agents	L2	horizontal	general	active	open source	normal
+Vibrant Labs	YC W24	yc-2024.md	RL environments for long horizon AI Agents	L1	horizontal	general	active	$2.5 Mn pre-seed funding; Heavybit portfolio	high
+Vic.ai	seed:L3	kp-vertical-b.md	Autonomous accounts payable and invoice processing	L3	vertical	finance/accounting	active	no 2025-26 news surfaced	normal
+Viktor	Accel	vc-us-a.md	AI coworker for teams that performs tasks across 3,000+ workplace tools	L3	vertical	general	active	$15 million revenue run rate, 2,000+ organizations	high
+Vivun	gtm:sol	gtm-carry.md	Presales workflow veteran pivoted to AI teammates on a Sales Reasoning Model	L3	vertical	GTM/sales	pivoted	Hero and Ava teammates shipped	normal
+Vocode	YC W23	yc-2023.md	Open-source platform for building voice agents	X	horizontal	general	active	none visible	normal
+Vogent	YC S21	yc-2021-22.md	platform for building voice AI agents	X	horizontal	general	acquired	$2M seed 2022	normal
+Voiceflow	seed:L2	kp-platforms.md	Collaborative platform for designing and deploying chat and voice agents	L2	horizontal	general	active	~$38M raised through 2024; Voiceflow Core model Jul 2026	normal
+Voicepanel	YC W24	yc-2024.md	AI agents for customer research	L3	vertical	market research	active	Raised $2.4M	high
+Voker	YC S24	yc-2024.md	Analytics for AI Agents	L1	horizontal	general	active	$2.2M pre-seed	high
+Vooma	seed:L3	kp-vertical-b.md	AI agents for freight quoting and shipment workflows	L3	vertical	logistics	active	$16.6M seed and Series A (Dec 2024)	normal
+VortexifyAI	YC F24	yc-2024.md	Build AI applications and automations for supply chain operations	L2	vertical	logistics	active	none visible	high
+VoxOps	YC W24	yc-2024.md	AI Voice AI for Automotive	X	vertical	automotive	active	none visible	high
+Vultron	gtm:rfp	gtm-carry.md	Agentic operating system for federal growth: capture intelligence and proposal automation	L3	vertical	GTM/sales	active	none visible	normal
+Warp	ext:L3	kp-vertical-a.md	Agentic AI terminal and development environment	L3	vertical	software engineering	active	Repositioned as agentic dev environment (2025)	normal
+Wattson Health	YC S23	yc-2023.md	AI voice and SMS agents for healthcare tasks	X	vertical	healthcare	active	none visible	normal
+Weekday	YC W21	yc-2021-22.md	AI recruiter running outbound sourcing campaigns	L3	vertical	HR and recruiting	active	$2.3M raised	normal
+WeReno	YC W22	yc-2021-22.md	AI owner's representative for construction and renovations	L3	vertical	construction	active	none visible	normal
+WhyLabs	Madrona	vc-us-c.md	AI observability platform	L1	horizontal	general	active	$10M Ser A, Madrona-led seed	normal
+Wideframe	YC W26	yc-2026.md	AI coworker for video editors to ship video faster	L3	vertical	video production	active	none visible	high
+Windmill	YC S22	yc-2021-22.md	open-source workflow engine turned agent infrastructure	L1	horizontal	general	active	open source	normal
+Windsurf	General Catalyst	vc-us-b.md	Agentic AI code editor and enterprise coding platform	L3	vertical	software engineering	acquired	$150M Ser C 2025 GC-led; acquired by Cognition 2025	high
+winfunc	YC S24	yc-2024.md	ai-native security engineering for mission critical codebases	L3	vertical	software engineering	active	none visible	high
+Wipro	seed:L4	kp-infra.md	Indian SI with agentic AI delivery platform	L4	horizontal	general	active	WEGA agentic platform	high
+WisdomAI	Coatue	vc-us-b.md	Agentic data insights platform	L2	horizontal	general	active	$23M launch 2025, Coatue-backed	normal
+Wisedocs	ext:L3	kp-vertical-b.md	AI reviewing medical records for claims	L3	vertical	insurance	active	CAD 12.7M Series A (2024)	normal
+WizCommerce	Peak XV, Z47, Blume	vc-in.md	AI sales enablement platform for B2B wholesale and distribution	L3	vertical	GTM/sales	active	$8M Series A led by Peak XV 2025	normal
+Wolfia	YC S22	yc-2021-22.md	AI agent answering security, legal, and sales questions	L3	horizontal	general	active	$1M raised	normal
+Wolters Kluwer AI Agents	ext:L5	kp-suites.md	Tax and accounting agents embedded in CCH Axcess	L5	vertical	tax and accounting	active	OpenAI collaboration expanded June 2026	normal
+Wonderful	Index, Insight, Bessemer;IVP	vc-us-b.md;vc-us-c.md	Localized enterprise AI agents across voice, chat, and email	L3	vertical	customer service	active	$100M Ser A 2025; $150M Ser B 2026; 30 markets	high
+Wordware	seed:L2;YC S24	kp-platforms.md;yc-2024.md	Prompt-as-programming IDE for building and shipping AI agents	L2	horizontal	general	active	$30M seed 2024	high
+Workato Agents	ext:L5	kp-suites.md	Enterprise agents built in Workato Agent Studio	L5	horizontal	general	active	none visible	normal
+Workday Illuminate	seed:L5	kp-suites.md	AI agents for HR and finance with a low-code builder	L5	horizontal	general	active	none visible	normal
+Workflow86	YC W22	yc-2021-22.md	agentic workflows for long-running business operations	L2	horizontal	general	active	none visible	normal
+Workgrid	seed:L3	kp-vertical-a.md	AI assistants for employee communications and workflows	L3	vertical	employee service	active	Liberty Mutual spin-out; no funding visible	normal
+Workiva	seed:L3	kp-vertical-b.md	Compliance reporting suite shipping AI agents	L5	vertical	finance/accounting	active	public company; agentic AI across platform	high
+Writer	gtm:kb;seed:L2;Radical Ventures;ICONIQ	gtm-carry.md;kp-platforms.md;vc-ai.md;vc-us-c.md	Full-stack enterprise genAI with Palmyra models, Knowledge Graph, Agent Builder	L2	horizontal	general	active	300+ enterprise customers	high
+XBOW	Northzone	vc-eu.md	Autonomous AI pentesting agent for offensive security testing	L3	vertical	security	active	$120M Series C co-led by Northzone, Mar 2026	high
+Xelix	Insight	vc-us-b.md	Agentic AI for accounts payable and finance controls	L3	vertical	finance	active	$160M Ser B 2025, Insight-backed	high
+Xero JAX	ext:L5	kp-suites.md	Agentic AI assistant for small-business accounting	L5	vertical	accounting	active	Xero base about 5M subscribers; uptake undisclosed	normal
+Yellow.ai	ext:L2;ext:L3;Lightspeed	kp-platforms.md;kp-vertical-a.md;vc-in.md	Enterprise agentic AI and conversational automation platform	L2	horizontal	general	active	SPAC listing at ~$550M announced Aug 2026	high
+You.com	Radical Ventures	vc-ai.md	Enterprise deep research agent ARI	L3	vertical	research	active	ARI Enterprise launched 2025	normal
+Yuma	ext:L3;YC W23	kp-vertical-a.md;yc-2023.md	AI support agents for Shopify merchants	L3	vertical	customer service (ecommerce)	active	none visible	high
+Zag	YC F25	yc-2025.md	AI review agents for pull requests	L3	vertical	software engineering	active	none visible	high
+Zalos	ext:L3;YC F25	kp-vertical-b.md;yc-2025.md	Computer agents operating finance systems for reconciliation	L3	vertical	finance/accounting	active	$3.6M raised (Mar 2026)	high
+Zania	NEA	vc-us-b.md	AI agents for enterprise risk and compliance	L3	vertical	compliance	active	$18M Ser A 2025 led by NEA	normal
+Zapier Agents	seed:L2;ext:L5	kp-platforms.md;kp-suites.md	Automation platform whose Agents product builds AI teammates across apps	L2	horizontal	general	active	Zapier Agents; 8000+ integrations; millions of users	high
+Zarna	YC F25	yc-2025.md	AI associates automating diligence workflows for private markets	L3	vertical	finance	active	none visible	high
+Zaro	Cherry Ventures	vc-eu.md	Shared memory and context layer for AI agents	L1	horizontal	general	active	£3.8M pre-seed, Jun 2026	normal
+Zauber	Point Nine Capital	vc-eu.md	AI agents automating sea and air freight operations	L3	vertical	logistics	active	none visible	normal
+Zaz OS	YC S21	yc-2021-22.md	AI-native platform for building internal apps and agents	L2	horizontal	general	active	none visible	normal
+Zefir	ext:L3	kp-vertical-b.md	AI agents for European real estate	L3	vertical	real estate	active	EUR 15M Series B (Sep 2025)	normal
+Zendesk AI Agents	ext:L5;seed:L3	kp-suites.md;kp-vertical-a.md	Autonomous customer-service agents on the Resolution Platform	L5	vertical	customer service	active	Qantas Loyalty, Serko deployments	high
+Zenity	seed:L1	kp-infra.md	Security and governance for AI agents and copilots	L1	horizontal	general	active	$125M Series C (Aug 2026); $180M total	high
+Zenskar	ext:L3	kp-vertical-b.md	Agentic B2B billing and revenue automation	L3	vertical	finance/accounting	active	$15M Series A (Apr 2026)	normal
+ZenZap	Bessemer	vc-us-b.md	Agentic work chat for SMBs and mid-market	L2	horizontal	general	active	BVP-backed, early stage	normal
+Zep	seed:L1;YC W24	kp-infra.md;yc-2024.md	Long-term memory and knowledge graphs for agents	L1	horizontal	general	active	YC W24; ~$500K seed (2024)	high
+ZeroPath	YC S24	yc-2024.md	Automatically find and fix your software vulnerabilities	L3	vertical	software engineering	active	$5M Seed Stage	high
+Zingle	Accel	vc-in.md	Database documentation infra so AI agents work as data teams	L1	horizontal	general	active	Accel Atoms AI cohort 2024	normal
+Zoca	Elevation	vc-in.md	AI agents managing local service business growth funnels	L3	vertical	GTM/marketing	active	Elevation seed 2025	normal
+Zoho Zia	gtm:inc;ext:L5	gtm-carry.md;kp-suites.md	55-app suite with Zia Agent Studio, agent marketplace, 25+ prebuilt agents	L5	horizontal	general	active	25+ prebuilt agents, MCP server	high
+Zomma	YC S26	yc-2026.md	AI operations employees for finance back offices	L3	vertical	finance	active	$10B AUM wealth tech.	high
+Zoom Custom AI Companion	ext:L5	kp-suites.md	Paid add-on for building custom agents across Zoom	L5	horizontal	general	active	launched September 2025; uptake undisclosed	normal
+Zoop	Peak XV	vc-in.md	Live commerce marketplace with AI agents for sellers	L3	vertical	commerce	active	Peak XV investment Feb 2026	normal
+Zoven	Blume	vc-in.md	AI agentic platform for BFSI merchant risk and compliance	L3	vertical	finance	pivoted	Pivoted from Zivy productivity SaaS 2026	normal
+Zowie	ext:L3	kp-vertical-a.md	AI support agents for ecommerce brands	L3	vertical	customer service (ecommerce)	active	$14M Series A (2022)	normal
+Zuma	ext:L3;YC S21	kp-vertical-b.md;yc-2021-22.md	AI leasing agent converting multifamily leads	L3	vertical	real estate	active	none visible	normal
+ZyG	Bessemer	vc-us-b.md	Agentic operating system for DTC e-commerce businesses	L3	vertical	e-commerce	active	BVP-backed, early stage	normal

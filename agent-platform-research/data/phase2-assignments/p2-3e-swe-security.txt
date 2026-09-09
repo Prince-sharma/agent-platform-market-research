@@ -1,0 +1,89 @@
+7ai
+Admyral
+Aemon
+Alkera AI
+Antigen
+Approxima
+Augment Code
+Autosana
+BeeSafe AI
+Blitzy
+BootLoop
+Capy
+Caretta
+Chamber
+Chorrie
+Clearly AI
+Cline
+CodeRabbit
+Codebuff
+Cognition (Devin)
+Command Zero
+Compyle
+Conductor
+Corelayer
+Crow
+Cursor (Anysphere)
+Decipher
+Deeptrace
+Diode Computers, Inc.
+Dropzone
+Edgedive
+Ellipsis
+Embedder
+Emergent
+Engines
+Escape Technologies
+Exaforce
+Factory
+Firebender
+Fluidize
+Fume
+Gecko Security
+Greptile
+Hex Security
+Horizon3.ai
+Hunter
+Hypercubic
+Hyperprobe
+Janet AI
+Jarmin
+Leaping
+Macadamia
+MagiCode
+Maze
+Mendral
+Momentic
+Navier AI
+Nebula Security
+OneGrep
+OpenHands
+Orchids
+Parameter
+PearAI
+Promptless
+Prophet
+Pythagora
+Qevlar AI
+Qodo
+Quantstruct
+Random Labs
+Relvy AI
+Replit
+Revyl
+SRE.ai
+Sanctum
+Scott AI
+Sourcegraph (Amp)
+Spur
+Tusk
+Veria Labs
+Vibe
+Windsurf
+XBOW
+Zag
+ZeroPath
+bitrig
+camfer
+datafruit
+winfunc
