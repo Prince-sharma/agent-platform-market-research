@@ -390,6 +390,8 @@ $('#themechips').addEventListener('click', e=>{
 selectTheme(0, false);
 
 // ---------- wiki ----------
+const WIKI_KINDS = ['reports','themes','clusters','companies'];
+const WIKI_KIND_LABELS = {reports:'Reports',themes:'Themes',clusters:'Clusters',companies:'Companies'};
 const WIKI_ENTRIES = Object.keys(WIKI).map(slug=>{
   const p = WIKI[slug];
   const kind = slug.split('/')[0];
@@ -401,38 +403,199 @@ const WIKI_ENTRIES = Object.keys(WIKI).map(slug=>{
   const ob = order[b.kind]!==undefined?order[b.kind]:9;
   return oa-ob || a.title.localeCompare(b.title);
 });
+let wikiTypeFilter = 'all';
+const wikiCollapsed = {};
+
 function renderWikiList(){
   const q = ($('#wq').value||'').toLowerCase().trim();
-  const filtered = q ? WIKI_ENTRIES.filter(e=>(e.title+' '+e.slug).toLowerCase().includes(q)) : WIKI_ENTRIES;
-  $('#wlist').innerHTML = filtered.map(e=>
-    '<button type="button" class="witem'+(e.slug===wikiSlug?' on':'')+'" data-w="'+esc(e.slug)+'"><span class="wk">'+esc(e.kindLabel)+'</span><span class="wt">'+esc(e.title)+'</span></button>'
-  ).join('') || '<div style="padding:12px;color:var(--mut);font-size:12.5px">No pages match.</div>';
+  let filtered = WIKI_ENTRIES;
+  if(wikiTypeFilter !== 'all') filtered = filtered.filter(e=>e.kind===wikiTypeFilter);
+  if(q) filtered = filtered.filter(e=>(e.title+' '+e.slug).toLowerCase().includes(q));
+
+  // Group by kind
+  const groups = {};
+  WIKI_KINDS.forEach(k=>groups[k]=[]);
+  filtered.forEach(e=>{ if(groups[e.kind]) groups[e.kind].push(e); });
+
+  let html = '';
+  WIKI_KINDS.forEach(kind=>{
+    if(!groups[kind].length) return;
+    const isCollapsed = wikiCollapsed[kind] && !q;
+    html += '<div class="wgroup'+(isCollapsed?' collapsed':'')+'">';
+    html += '<button class="wgroup-head" data-group="'+kind+'">'+WIKI_KIND_LABELS[kind]+' <span style="opacity:.6">('+groups[kind].length+')</span> <span class="wgroup-arrow">&#9660;</span></button>';
+    html += '<div class="wgroup-items">';
+    html += groups[kind].map(e=>
+      '<button type="button" class="witem'+(e.slug===wikiSlug?' on':'')+'" data-w="'+esc(e.slug)+'"><span class="wt">'+esc(e.title)+'</span></button>'
+    ).join('');
+    html += '</div></div>';
+  });
+  if(!html) html = '<div style="padding:12px;color:var(--mut);font-size:12.5px">No pages match.</div>';
+  $('#wlist').innerHTML = html;
 }
+
+function buildToc(html){
+  const heads = [];
+  const re = /<h([34])[^>]*>(.*?)<\/h\1>/gi;
+  let m;
+  while((m = re.exec(html))){
+    const level = parseInt(m[1]);
+    const text = m[2].replace(/<[^>]+>/g,'').replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').trim();
+    if(text) heads.push({level, text});
+  }
+  if(heads.length < 4) return '';
+  let toc = '<div class="wtoc"><div class="wtoc-title">Contents</div><ul class="wtoc-list">';
+  heads.forEach((h,i)=>{
+    const cls = h.level===4 ? ' class="toc-sub"' : '';
+    toc += '<li'+cls+'><a href="#wtoc-'+i+'" data-toc-idx="'+i+'">'+esc(h.text)+'</a></li>';
+  });
+  toc += '</ul></div>';
+  return toc;
+}
+
+function buildMetaBadges(meta){
+  if(!meta) return '';
+  const badges = [];
+  if(meta.layer) badges.push('<span class="pill '+meta.layer+'">'+esc(meta.layer)+'</span>');
+  if(meta.vertical && meta.vertical!=='general') badges.push('<span class="pill normal">'+esc(meta.vertical)+'</span>');
+  if(meta.status) badges.push('<span class="pill '+meta.status+'">'+esc(meta.status)+'</span>');
+  if(meta.priority && meta.priority!=='normal') badges.push('<span class="pill '+meta.priority+'">'+esc(meta.priority)+'</span>');
+  if(meta.profile_depth) badges.push('<span class="pill '+meta.profile_depth+'">'+esc(meta.profile_depth)+'</span>');
+  if(meta.sources) badges.push('<span class="pill unknown">'+esc(meta.sources)+'</span>');
+  return badges.length ? '<div class="wmeta-badges">'+badges.join('')+'</div>' : '';
+}
+
+function buildBreadcrumb(slug, entry){
+  const kind = slug.split('/')[0];
+  const parts = [
+    '<span class="wb-current">Wiki</span>',
+    '<span class="wb-sep">/</span>',
+    '<span>'+esc(WIKI_KIND_LABELS[kind]||kind)+'</span>'
+  ];
+  if(entry) parts.push('<span class="wb-sep">/</span>','<span class="wb-current">'+esc(entry.title)+'</span>');
+  return parts.join('');
+}
+
+function updateWikiNav(){
+  const idx = WIKI_ENTRIES.findIndex(e=>e.slug===wikiSlug);
+  const prev = idx > 0 ? WIKI_ENTRIES[idx-1] : null;
+  const next = idx >= 0 && idx < WIKI_ENTRIES.length-1 ? WIKI_ENTRIES[idx+1] : null;
+  const prevBtn = $('#wprev'), nextBtn = $('#wnext');
+  if(prevBtn){ prevBtn.disabled = !prev; prevBtn.title = prev ? 'Previous: '+prev.title+' (k)' : 'Previous page'; }
+  if(nextBtn){ nextBtn.disabled = !next; nextBtn.title = next ? 'Next: '+next.title+' (j)' : 'Next page'; }
+}
+
 function selectWiki(slug, sync){
   const p = WIKI[slug]; if(!p) return;
   wikiSlug = slug;
   const entry = WIKI_ENTRIES.find(e=>e.slug===slug);
+
+  // Build TOC from the HTML content
+  const tocHtml = buildToc(p.h);
+  const metaBadges = buildMetaBadges(p.m);
+  const breadcrumb = buildBreadcrumb(slug, entry);
+
+  // Inject heading IDs for TOC anchors
+  let contentHtml = p.h;
+  let headIdx = 0;
+  contentHtml = contentHtml.replace(/<(h[34])[^>]*>/gi, (match, tag)=>{
+    const id = 'wtoc-'+headIdx;
+    headIdx++;
+    return '<'+tag+' id="'+id+'">';
+  });
+
   let html = '<div class="wpage">';
   if(entry) html += '<div class="wmeta">'+esc(entry.kindLabel)+'</div>';
-  html += p.h;
+  html += '<h2>'+esc(p.t)+'</h2>';
+  html += metaBadges;
+  html += tocHtml;
+  html += contentHtml;
   html += '<div class="wraw">Raw markdown: <a href="'+esc(p.r)+'" target="_blank" rel="noopener">'+esc(p.r)+'</a></div>';
   html += '</div>';
+
   $('#wcontent').innerHTML = html;
+  $('#wbreadcrumb').innerHTML = breadcrumb;
   renderWikiList();
+  updateWikiNav();
   if(sync !== false) pushHash();
-  try{ $('#wcontent').scrollTo(0,0); }catch(e){}
-  try{ $('#wcontent').focus({preventScroll:true}); }catch(e){}
+  try{ $('#wcontent-scroll').scrollTo(0,0); }catch(e){}
 }
-$('#wq').addEventListener('input', renderWikiList);
+
+// Type filter chips
+$('#wtype-filter').addEventListener('click', e=>{
+  const chip = e.target.closest('.wtype-chip'); if(!chip) return;
+  wikiTypeFilter = chip.dataset.type;
+  $$('#wtype-filter .wtype-chip').forEach(c=>c.classList[c===chip?'add':'remove']('on'));
+  renderWikiList();
+});
+
+// Collapsible groups
 $('#wlist').addEventListener('click', e=>{
+  const head = e.target.closest('.wgroup-head');
+  if(head){
+    const group = head.dataset.group;
+    wikiCollapsed[group] = !wikiCollapsed[group];
+    renderWikiList();
+    return;
+  }
   const b = e.target.closest('.witem'); if(!b) return;
   selectWiki(b.dataset.w);
 });
+
+// Search
+$('#wq').addEventListener('input', renderWikiList);
+
+// Wiki link clicks inside content
 $('#wcontent').addEventListener('click', e=>{
   const a = e.target.closest('a.wl'); if(!a) return;
   e.preventDefault();
   const w = a.dataset.w; if(w && WIKI[w]) selectWiki(w);
 });
+
+// TOC link clicks
+$('#wcontent').addEventListener('click', e=>{
+  const a = e.target.closest('.wtoc-list a'); if(!a) return;
+  e.preventDefault();
+  const idx = a.dataset.tocIdx;
+  const target = $('#wtoc-'+idx);
+  if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+// Prev/next buttons
+$('#wprev').addEventListener('click', ()=>{
+  const idx = WIKI_ENTRIES.findIndex(e=>e.slug===wikiSlug);
+  if(idx > 0) selectWiki(WIKI_ENTRIES[idx-1].slug);
+});
+$('#wnext').addEventListener('click', ()=>{
+  const idx = WIKI_ENTRIES.findIndex(e=>e.slug===wikiSlug);
+  if(idx >= 0 && idx < WIKI_ENTRIES.length-1) selectWiki(WIKI_ENTRIES[idx+1].slug);
+});
+
+// Keyboard shortcuts for wiki navigation
+document.addEventListener('keydown', e=>{
+  if(activeTab !== 'wiki') return;
+  const tag = (e.target && e.target.tagName) || '';
+  if(/INPUT|SELECT|TEXTAREA/.test(tag)) return;
+  if(e.key === 'j' || e.key === 'ArrowRight' && e.altKey){
+    e.preventDefault();
+    const idx = WIKI_ENTRIES.findIndex(en=>en.slug===wikiSlug);
+    if(idx >= 0 && idx < WIKI_ENTRIES.length-1) selectWiki(WIKI_ENTRIES[idx+1].slug);
+  } else if(e.key === 'k' || e.key === 'ArrowLeft' && e.altKey){
+    e.preventDefault();
+    const idx = WIKI_ENTRIES.findIndex(en=>en.slug===wikiSlug);
+    if(idx > 0) selectWiki(WIKI_ENTRIES[idx-1].slug);
+  }
+});
+
+// Init type counts
+(function(){
+  const counts = {all:WIKI_ENTRIES.length};
+  WIKI_KINDS.forEach(k=>{ counts[k] = WIKI_ENTRIES.filter(e=>e.kind===k).length; });
+  Object.keys(counts).forEach(k=>{
+    const el = $('#wt-'+k);
+    if(el) el.textContent = counts[k];
+  });
+})();
+
 renderWikiList();
 if(WIKI_ENTRIES.length) selectWiki(WIKI_ENTRIES[0].slug, false);
 

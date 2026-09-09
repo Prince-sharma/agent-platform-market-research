@@ -136,9 +136,27 @@
     <div class="wlayout">
       <aside class="wrail" aria-label="Wiki pages">
         <div class="wsearch"><input type="search" id="wq" placeholder="Filter wiki pages..." aria-label="Filter wiki pages" autocomplete="off"></div>
+        <div class="wtype-filter" id="wtype-filter">
+          <button class="wtype-chip on" data-type="all">All <span class="wtype-count" id="wt-all"></span></button>
+          <button class="wtype-chip" data-type="reports">Reports <span class="wtype-count" id="wt-reports"></span></button>
+          <button class="wtype-chip" data-type="themes">Themes <span class="wtype-count" id="wt-themes"></span></button>
+          <button class="wtype-chip" data-type="clusters">Clusters <span class="wtype-count" id="wt-clusters"></span></button>
+          <button class="wtype-chip" data-type="companies">Companies <span class="wtype-count" id="wt-companies"></span></button>
+        </div>
         <div id="wlist"></div>
       </aside>
-      <div class="wmain"><div id="wcontent"></div></div>
+      <div class="wmain">
+        <div class="wtoolbar">
+          <div class="wbreadcrumb" id="wbreadcrumb"></div>
+          <div class="wnav">
+            <button class="wnav-btn" id="wprev" title="Previous page (k)" aria-label="Previous page">&larr;</button>
+            <button class="wnav-btn" id="wnext" title="Next page (j)" aria-label="Next page">&rarr;</button>
+          </div>
+        </div>
+        <div class="wcontent-scroll" id="wcontent-scroll">
+          <div id="wcontent"></div>
+        </div>
+      </div>
     </div>
   </section>
 
