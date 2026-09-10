@@ -4,11 +4,13 @@ import {
   Bot,
   GitBranch,
   GraduationCap,
+  Handshake,
   LayoutDashboard,
   Layers,
   Lightbulb,
   Menu,
   Moon,
+  Network,
   PanelLeftClose,
   PanelLeftOpen,
   PieChart,
@@ -40,9 +42,11 @@ export const NAV_GROUPS: { title: string; items: NavItem[] }[] = [
     title: 'Analysis',
     items: [
       { id: 'overview', label: 'Overview', icon: LayoutDashboard },
-      { id: 'universe', label: 'Agent Universe', icon: Bot },
-      { id: 'marketplaces', label: 'Marketplaces', icon: Store },
+      { id: 'structure', label: 'Market Structure', icon: Network },
+      { id: 'acquired', label: 'Acquired Companies', icon: Handshake },
       { id: 'verticals', label: 'Verticals', icon: Layers },
+      { id: 'marketplaces', label: 'Marketplaces', icon: Store },
+      { id: 'universe', label: 'Agent Universe', icon: Bot },
     ],
   },
   {
@@ -128,18 +132,49 @@ function NavList({
   )
 }
 
-function SidebarFooter() {
+function SidebarFooter({
+  collapsed = false,
+  onToggle,
+}: {
+  collapsed?: boolean
+  onToggle?: () => void
+}) {
   return (
-    <div className="px-3 pb-4">
-      <Separator className="mb-3" />
+    <div className={cn('px-3 pb-4', collapsed && 'px-2')}>
+      <Separator className="mb-2" />
+      {onToggle && (
+        <button
+          type="button"
+          onClick={onToggle}
+          title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+          aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+          className={cn(
+            'flex w-full items-center rounded-md text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground',
+            collapsed ? 'justify-center py-2' : 'gap-2 px-2 py-1.5',
+          )}
+        >
+          {collapsed ? (
+            <PanelLeftOpen className="size-4 shrink-0" />
+          ) : (
+            <>
+              <PanelLeftClose className="size-4 shrink-0" />
+              Collapse
+            </>
+          )}
+        </button>
+      )}
       <a
         href="https://github.com/Prince-sharma/agent-platform-market-research"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 rounded-md px-2 py-1.5 text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+        title="GitHub repository"
+        className={cn(
+          'mt-0.5 flex items-center rounded-md text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-foreground',
+          collapsed ? 'justify-center py-2' : 'gap-2 px-2 py-1.5',
+        )}
       >
-        <GitBranch className="size-3.5" />
-        prince-sharma / market-research
+        <GitBranch className="size-3.5 shrink-0" />
+        {!collapsed && 'prince-sharma / market-research'}
       </a>
     </div>
   )
@@ -211,7 +246,7 @@ export function AppShell({
           )}
         </div>
         <NavList active={active} onSelect={select} collapsed={collapsed} />
-        {!collapsed && <SidebarFooter />}
+        <SidebarFooter collapsed={collapsed} onToggle={toggleCollapsed} />
       </aside>
 
       {/* Mobile drawer */}

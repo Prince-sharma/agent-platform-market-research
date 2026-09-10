@@ -1,100 +1,174 @@
 import * as React from 'react'
-import { ArrowRight } from 'lucide-react'
-import { BarChart } from '@/components/bar-chart'
-import { StatCard } from '@/components/stat-card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import { Skeleton } from '@/components/ui/skeleton'
-import { useData } from '@/lib/use-data'
-import { navigate } from '@/lib/router'
-import { LAYER_LABELS, LAYER_ORDER, type Company } from '@/types'
+  ArrowRight,
+  ArrowUpRight,
+  BookOpen,
+  Bot,
+  GraduationCap,
+  Handshake,
+  Layers,
+  Lightbulb,
+  Network,
+  PieChart,
+  Store,
+  Users,
+} from 'lucide-react'
 
-const CENSUS_INSIGHTS: { title: string; body: string }[] = [
+import { BarChart } from '@/components/bar-chart'
+import { Card, CardContent } from '@/components/ui/card'
+import { Skeleton } from '@/components/ui/skeleton'
+import { navigate } from '@/lib/router'
+import { REPORTS, reportUrl } from '@/lib/reports'
+import { useData } from '@/lib/use-data'
+import {
+  LAYER_LABELS,
+  LAYER_ORDER,
+  type Company,
+  type MarketplaceAgent,
+} from '@/types'
+
+/** Largest disclosed deals, curated from the acquisition file. */
+const TOP_DEALS = [
+  { company: 'Moveworks', acquirer: 'ServiceNow', note: '$2.85B' },
+  { company: 'Sana', acquirer: 'Workday', note: '$1.1B' },
+  { company: 'Cognigy', acquirer: 'NICE', note: '~$955M' },
+  { company: 'Arize', acquirer: 'Dynatrace', note: '$915M' },
+]
+
+const RESEARCH_LIBRARY = [
   {
-    title: 'Vertical work agents are the center of gravity',
-    body: '59% of the universe is L3. Horizontal build platforms are only 10%. The space is an applications market with platforms forming underneath it.',
+    id: 'universe',
+    icon: Bot,
+    title: 'Agent Universe',
+    blurb: 'Browse all census companies with layer, status, and traction filters.',
   },
   {
-    title: 'The stack built back-to-front',
-    body: 'Infrastructure (L1) barely existed before 2023 and is now 201 companies; the picks-and-shovels arrived two years after the apps.',
+    id: 'themes',
+    icon: Lightbulb,
+    title: 'Themes',
+    blurb: 'Seven thematic deep-dives with findings, stats, and implications.',
   },
   {
-    title: 'Healthcare is the deepest vertical',
-    body: 'Healthcare (101), then GTM/sales (95) and software engineering (95). Construction (22) and logistics (36) remain thin relative to their workflow volume.',
+    id: 'wiki',
+    icon: BookOpen,
+    title: 'Wiki',
+    blurb: '788 research pages: company dossiers, clusters, and themes.',
   },
   {
-    title: 'Consolidation has started from the top',
-    body: '29+ acquired; ServiceNow took Moveworks ($2.85B), NICE took Cognigy ($955M), Workday took Sana, Zendesk took Forethought, Amazon absorbed Adept.',
+    id: 'sizing',
+    icon: PieChart,
+    title: 'Sizing',
+    blurb: 'The market through three lenses, with anchors and takeaways.',
   },
   {
-    title: 'Every incumbent suite ships the same pattern',
-    body: 'Low-code agent studio plus prebuilt role agents, with heavy product churn (Breeze became Agent Hub, Agentspace folded into Gemini Enterprise).',
+    id: 'yc',
+    icon: GraduationCap,
+    title: 'YC Cohort',
+    blurb: 'Batch-by-batch evolution from W21 to S26.',
   },
   {
-    title: 'Voice is the best-funded modality',
-    body: 'Parloa ($3B), LiveKit and Deepgram ($1B+ each), Vapi ($500M) — and the default interface inside logistics, healthcare, and collections verticals.',
-  },
-  {
-    title: 'Agent security is the most crowded new infrastructure category',
-    body: 'Zenity ($125M C), Neo ($100M), AIR ($50M), plus Okta and Microsoft shipping agent identity.',
-  },
-  {
-    title: 'Traction is sharply bimodal',
-    body: 'Mega-rounds (Sierra $15B, Cognition reported $48B, Harvey $11B, Abridge $5.3B) versus a long seed tail with no visible follow-on; 11x is the cautionary tale.',
+    id: 'vc',
+    icon: Users,
+    title: 'VC Backers',
+    blurb: 'Where the active firms concentrate their agent portfolios.',
   },
 ]
 
+function Takeaway({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="mt-3 border-l-2 border-primary/40 pl-2.5 text-xs leading-relaxed text-muted-foreground">
+      {children}
+    </p>
+  )
+}
+
+function HubCard({
+  icon: Icon,
+  title,
+  subtitle,
+  onClick,
+  children,
+}: {
+  icon: React.ComponentType<{ className?: string }>
+  title: string
+  subtitle: string
+  onClick: () => void
+  children?: React.ReactNode
+}) {
+  return (
+    <Card
+      className="group cursor-pointer py-0 transition-colors hover:border-primary/50"
+      onClick={onClick}
+    >
+      <CardContent className="px-5 py-4">
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <Icon className="size-4 shrink-0 text-primary" />
+            <h3 className="text-base font-semibold tracking-tight">{title}</h3>
+          </div>
+          <ArrowRight className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
+        </div>
+        <p className="mt-0.5 text-xs text-muted-foreground">{subtitle}</p>
+        {children}
+      </CardContent>
+    </Card>
+  )
+}
+
 export function Overview() {
   const { data: companies, loading } = useData<Company[]>('companies')
+  const { data: agents, loading: agentsLoading } =
+    useData<MarketplaceAgent[]>('marketplace-agents')
 
   const stats = React.useMemo(() => {
     if (!companies) return null
     const layers = new Map<string, number>()
-    const statuses = new Map<string, number>()
     const verticals = new Map<string, number>()
-    let yc = 0
-    let profiled = 0
+    const acquired: Company[] = []
     for (const c of companies) {
       layers.set(c.layer, (layers.get(c.layer) ?? 0) + 1)
-      statuses.set(c.status, (statuses.get(c.status) ?? 0) + 1)
       if (c.scope === 'vertical' && c.vertical && c.vertical !== 'general') {
         verticals.set(c.vertical, (verticals.get(c.vertical) ?? 0) + 1)
       }
-      if (c.yc_batch) yc += 1
-      if (c.wiki_slug) profiled += 1
+      if (c.status === 'acquired') acquired.push(c)
     }
-    const active = statuses.get('active') ?? 0
+    const byMarketplace = new Map<string, number>()
+    const censusPublishers = new Map<string, Set<string>>()
+    if (agents) {
+      const nameSet = new Set(companies.map((c) => c.name.toLowerCase()))
+      for (const a of agents) {
+        byMarketplace.set(a.m, (byMarketplace.get(a.m) ?? 0) + 1)
+        const p = (a.p || '').toLowerCase()
+        if (p && nameSet.has(p)) {
+          let set = censusPublishers.get(p)
+          if (!set) {
+            set = new Set()
+            censusPublishers.set(p, set)
+          }
+          set.add(a.m)
+        }
+      }
+    }
     return {
       total: companies.length,
       layers,
-      statuses,
-      verticals: [...verticals.entries()]
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 12),
-      activePct: Math.round((active / companies.length) * 100),
-      yc,
-      profiled,
-      l3: layers.get('L3') ?? 0,
+      verticals: [...verticals.entries()].sort((a, b) => b[1] - a[1]),
+      acquired,
+      agents: agents?.length ?? 0,
+      byMarketplace: [...byMarketplace.entries()].sort((a, b) => b[1] - a[1]),
+      censusPublishers,
     }
-  }, [companies])
+  }, [companies, agents])
 
-  if (loading || !stats) {
+  if (loading || agentsLoading || !stats) {
     return (
       <div className="space-y-4">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <Skeleton className="h-8 w-72" />
+        <div className="grid gap-4 lg:grid-cols-2">
           {Array.from({ length: 4 }).map((_, i) => (
-            <Skeleton key={i} className="h-24" />
+            <Skeleton key={i} className="h-72" />
           ))}
         </div>
-        <Skeleton className="h-64" />
-        <Skeleton className="h-64" />
       </div>
     )
   }
@@ -103,153 +177,165 @@ export function Overview() {
     label: LAYER_LABELS[l] ?? l,
     value: stats.layers.get(l) ?? 0,
   }))
-  const statusData = [...stats.statuses.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([label, value]) => ({ label, value }))
+  const l3 = stats.layers.get('L3') ?? 0
+  const trackedBuyers = stats.acquired.filter((c) => c.acquirer).length
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-semibold tracking-tight">
-          The work-agent universe
+          Agent market research
         </h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          {stats.total.toLocaleString()} companies building AI agents, classified
-          by layer, scope, vertical, and operating status. Click any chart to
-          drill into the data.
+        <p className="mt-1 max-w-3xl text-sm text-muted-foreground">
+          The work-agent universe in one place: {stats.total.toLocaleString()}{' '}
+          census companies, {stats.agents.toLocaleString()} marketplace agents,
+          788 wiki pages, and the reports behind them. Every section opens a
+          summary of what the research found, followed by its detailed table.
         </p>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <StatCard
-          label="Agent companies"
-          value={stats.total.toLocaleString()}
-          sub="census of the agentic software market"
-          onClick={() => navigate({ view: 'universe' })}
-        />
-        <StatCard
-          label="Active"
-          value={`${stats.activePct}%`}
-          sub={`${(stats.statuses.get('active') ?? 0).toLocaleString()} operating · ${stats.total - (stats.statuses.get('active') ?? 0)} acquired, pivoted, or dead`}
-          onClick={() => navigate({ view: 'universe', query: { status: 'active' } })}
-        />
-        <StatCard
-          label="Vertical agents (L3)"
-          value={stats.l3.toLocaleString()}
-          sub={`${Math.round((stats.l3 / stats.total) * 100)}% of the universe — the applications layer dominates`}
-          onClick={() => navigate({ view: 'universe', query: { layer: 'L3' } })}
-        />
-        <StatCard
-          label="Wiki profiles"
-          value={stats.profiled.toLocaleString()}
-          sub="deep company dossiers in the research wiki"
-          onClick={() => navigate({ view: 'wiki' })}
-        />
-      </div>
+      <section className="space-y-3">
+        <h2 className="text-lg font-semibold tracking-tight">Analysis</h2>
+        <div className="grid gap-4 lg:grid-cols-2">
+          <HubCard
+            icon={Network}
+            title="Market structure"
+            subtitle="How the census divides by layer, scope, and operating status"
+            onClick={() => navigate({ view: 'structure' })}
+          >
+            <div className="mt-3">
+              <BarChart data={layerData} />
+            </div>
+            <Takeaway>
+              An applications market with platforms forming underneath:{' '}
+              {Math.round((l3 / stats.total) * 100)}% of the universe is
+              vertical agents, and the infrastructure arrived two years after
+              the apps.
+            </Takeaway>
+          </HubCard>
 
-      <div className="grid gap-4 lg:grid-cols-2">
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-base">Market structure by layer</CardTitle>
-            <CardDescription>
-              Click a layer to browse its companies.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <BarChart
-              data={layerData}
-              onSelect={(label) => {
-                const layer = label.split(' ')[0]
-                navigate({ view: 'universe', query: { layer } })
-              }}
-            />
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-base">Operating status</CardTitle>
-            <CardDescription>
-              Consolidation is visible: acquired companies across every layer.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <BarChart
-              data={statusData}
-              onSelect={(label) =>
-                navigate({ view: 'universe', query: { status: label } })
-              }
-            />
-          </CardContent>
-        </Card>
-      </div>
+          <HubCard
+            icon={Handshake}
+            title="Acquired companies"
+            subtitle={`${stats.acquired.length} acquired · ${trackedBuyers} with tracked buyers · consolidation as a signal to dig into`}
+            onClick={() => navigate({ view: 'acquired' })}
+          >
+            <ul className="mt-3 space-y-1.5">
+              {TOP_DEALS.map((d) => (
+                <li
+                  key={d.company}
+                  className="flex items-center justify-between gap-2 text-xs"
+                >
+                  <span className="truncate">
+                    {d.company}{' '}
+                    <span className="text-muted-foreground">
+                      to {d.acquirer}
+                    </span>
+                  </span>
+                  <span className="shrink-0 font-medium tabular-nums text-muted-foreground">
+                    {d.note}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <Takeaway>
+              Suites buy proven agents rather than build: ServiceNow, Workday,
+              Salesforce, and NICE lead, with $10.4B disclosed across 8 priced
+              deals.
+            </Takeaway>
+          </HubCard>
 
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-base">Top verticals</CardTitle>
-          <CardDescription>
-            Vertical-scope companies only. Click to open the vertical.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <BarChart
-            data={stats.verticals.map(([label, value]) => ({ label, value }))}
-            onSelect={(label) => navigate({ view: 'verticals', param: label })}
-          />
-        </CardContent>
-      </Card>
+          <HubCard
+            icon={Layers}
+            title="Verticals"
+            subtitle="Where vertical agents concentrate, and which verticals stay thin"
+            onClick={() => navigate({ view: 'verticals' })}
+          >
+            <div className="mt-3">
+              <BarChart
+                data={stats.verticals
+                  .slice(0, 6)
+                  .map(([label, value]) => ({ label, value }))}
+              />
+            </div>
+            <Takeaway>
+              Healthcare is the deepest vertical; construction and logistics
+              remain thin relative to their workflow volume.
+            </Takeaway>
+          </HubCard>
 
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-base">What the census says</CardTitle>
-          <CardDescription>
-            Eight structural readings of the data.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <ul className="grid gap-3 md:grid-cols-2">
-            {CENSUS_INSIGHTS.map((insight) => (
-              <li key={insight.title} className="rounded-lg border p-3">
-                <div className="flex items-start justify-between gap-2">
-                  <div className="text-sm font-medium">{insight.title}</div>
-                  <Badge variant="muted" className="shrink-0 text-[10px]">
-                    census
-                  </Badge>
+          <HubCard
+            icon={Store}
+            title="Marketplaces"
+            subtitle={`${stats.byMarketplace.length} platforms · ${stats.agents.toLocaleString()} agents · ${stats.censusPublishers.size} census companies publishing`}
+            onClick={() => navigate({ view: 'marketplaces' })}
+          >
+            <div className="mt-3">
+              <BarChart
+                data={stats.byMarketplace
+                  .slice(0, 5)
+                  .map(([label, value]) => ({ label, value }))}
+              />
+            </div>
+            <Takeaway>
+              Only 12% of listings show strong adoption signals, and half the
+              catalog is tooling rather than agents; publishers on 3+ platforms
+              show about 3x the adoption.
+            </Takeaway>
+          </HubCard>
+        </div>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-lg font-semibold tracking-tight">
+          Research library
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {RESEARCH_LIBRARY.map((item) => (
+            <Card
+              key={item.id}
+              className="group cursor-pointer py-0 transition-colors hover:border-primary/50"
+              onClick={() => navigate({ view: item.id })}
+            >
+              <CardContent className="flex items-start gap-3 px-4 py-3.5">
+                <item.icon className="mt-0.5 size-4 shrink-0 text-primary" />
+                <div className="min-w-0">
+                  <div className="flex items-center gap-1 text-sm font-medium">
+                    {item.title}
+                    <ArrowRight className="size-3 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                  </div>
+                  <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+                    {item.blurb}
+                  </p>
                 </div>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                  {insight.body}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </CardContent>
-      </Card>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
 
-      <div className="flex flex-wrap gap-3">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => navigate({ view: 'universe' })}
-        >
-          Browse all {stats.total.toLocaleString()} companies
-          <ArrowRight className="size-3.5" />
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => navigate({ view: 'marketplaces' })}
-        >
-          Explore 1,261 marketplace agents
-          <ArrowRight className="size-3.5" />
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => navigate({ view: 'yc' })}
-        >
-          YC cohort evolution
-          <ArrowRight className="size-3.5" />
-        </Button>
-      </div>
+      <section className="space-y-3">
+        <h2 className="text-lg font-semibold tracking-tight">Reports</h2>
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {REPORTS.map((r) => (
+            <a
+              key={r.id}
+              href={reportUrl(r)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-xl border bg-card p-4 transition-colors hover:border-primary/50"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-sm font-medium">{r.title}</span>
+                <ArrowUpRight className="size-3.5 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </div>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {r.blurb}
+              </p>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   )
 }

@@ -139,6 +139,19 @@ export function CompanyDrawer({
                 {company.status}
               </Badge>
             </Field>
+            {company.acquirer && (
+              <Field label="Acquired by">
+                <span>
+                  {company.acquirer}
+                  {company.acquire_note && (
+                    <span className="text-muted-foreground">
+                      {' '}
+                      ({company.acquire_note})
+                    </span>
+                  )}
+                </span>
+              </Field>
+            )}
             <Field label="Task horizon">{company.task_horizon || '—'}</Field>
             <Field label="Pricing model">{company.pricing_model || '—'}</Field>
             <Field label="YC batch">{company.yc_batch || '—'}</Field>

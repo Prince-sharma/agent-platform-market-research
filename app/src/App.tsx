@@ -4,6 +4,8 @@ import { AppShell } from '@/components/app-shell'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { navigate, useHashRoute } from '@/lib/router'
 import { Overview } from '@/views/overview'
+import { Structure } from '@/views/structure'
+import { Acquired } from '@/views/acquired'
 import { Universe } from '@/views/universe'
 import { Marketplaces } from '@/views/marketplaces'
 import { Themes } from '@/views/themes'
@@ -22,6 +24,12 @@ export default function App() {
 
   let content: React.ReactNode
   switch (route.view) {
+    case 'structure':
+      content = <Structure />
+      break
+    case 'acquired':
+      content = <Acquired route={route} />
+      break
     case 'universe':
       content = <Universe route={route} />
       break

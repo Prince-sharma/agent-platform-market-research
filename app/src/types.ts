@@ -16,6 +16,8 @@ export interface Company {
   backers: string[]
   sweeps: string[]
   website: string
+  acquirer: string
+  acquire_note: string
 }
 
 export interface MarketplaceAgent {

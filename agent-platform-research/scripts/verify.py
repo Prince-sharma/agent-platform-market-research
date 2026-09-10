@@ -153,7 +153,7 @@ def main():
     check('app deploy workflow', os.path.exists(WORKFLOW),
           'present' if os.path.exists(WORKFLOW) else 'missing')
     views = sorted(f for f in os.listdir(VIEWS) if f.endswith('.tsx'))
-    check('app views', len(views) == 9, '%d views: %s' % (len(views), ', '.join(views)))
+    check('app views', len(views) == 11, '%d views: %s' % (len(views), ', '.join(views)))
 
     # ---------- reports ----------
     for rep, min_lines in [('agent-platform-research-plan.md', 100),

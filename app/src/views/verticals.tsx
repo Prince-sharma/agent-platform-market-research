@@ -5,11 +5,13 @@ import type { LegacyColumnDef } from '@tanstack/react-table/legacy'
 import { CompanyDrawer } from '@/components/company-drawer'
 import { DataTable, type DataTableApi } from '@/components/data-table'
 import { FacetedFilter } from '@/components/faceted-filter'
+import { SectionSummary, type SummaryPoint } from '@/components/section-summary'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Skeleton } from '@/components/ui/skeleton'
 import { navigate, type Route } from '@/lib/router'
+import { reportById, reportUrl } from '@/lib/reports'
 import { useData } from '@/lib/use-data'
 import { LAYER_ORDER, type Company } from '@/types'
 
@@ -18,6 +20,62 @@ const STATUS_VARIANT: Record<string, string> = {
   acquired: 'default',
   pivoted: 'warning',
   dead: 'danger',
+}
+
+const VERTICAL_POINTS: SummaryPoint[] = [
+  {
+    title: 'Vertical-first, infrastructure-second',
+    body: 'L3 vertical agents entered the market first (76% of the W21 YC cohort); infrastructure arrived later. That order is why vertical agents still hand-roll their own memory, evals, and tool access.',
+  },
+  {
+    title: 'Healthcare is the deepest vertical',
+    body: '101 companies. Clinical documentation leads (Abridge at $5.3B), and buyers gate on audit-grade reliability rather than raw capability.',
+  },
+  {
+    title: 'Finance is large but fragmented',
+    body: 'The finance verticals lead on count but split across dozens of seed-stage entrants. Audit (PCAOB-regulated) and mid-market tax remain nearly empty.',
+  },
+  {
+    title: 'The thin frontier',
+    body: 'Construction and logistics remain thin relative to their workflow volume: the clearest open ground for new entrants.',
+  },
+  {
+    title: 'Voice is the default interface',
+    body: 'Inside logistics, healthcare, and collections verticals, voice is how agents meet the work (Parloa $3B, LiveKit and Deepgram $1B+ each).',
+  },
+  {
+    title: 'What gets adopted',
+    body: 'Agents that solve one specific workflow, embed in existing distribution, and price on outcomes. The marketplace catalog shows the same concentration: customer service and productivity lead the categories.',
+  },
+]
+
+/**
+ * Curated per-vertical learnings, keyed by the vertical string used in the
+ * census data. Verticals without an entry get a computed fallback line.
+ */
+const VERTICAL_LEARNINGS: Record<string, string> = {
+  healthcare:
+    "The deepest vertical. Clinical documentation and revenue-cycle agents lead (Abridge at $5.3B); accuracy claims run from Parahelp's candid 46% to Anterior's KLAS-verified 99.24%, and buyers gate on audit-grade reliability.",
+  'software engineering':
+    'The best-monetized vertical: Cursor at $500M+ ARR and Cognition at roughly $900M run-rate. The open gap is reliability on long tasks (Devin showed a 15% success rate across 20 real tasks).',
+  'gtm/sales':
+    'Dense and embedded in CRM distribution; voice AI is the default outbound interface. Consolidation already runs through the suites (Quilt to Rox, Moonhub to Salesforce).',
+  finance:
+    'A fragmented seed-stage field. Per-outcome pricing claims are strongest here but rarely published; audit (PCAOB-regulated) and mid-market tax remain nearly empty.',
+  'finance/accounting':
+    'Fragmented across dozens of seed-stage entrants; close automation and accounts payable dominate. Audit and mid-market tax are the open ground.',
+  'customer service':
+    'The most proven ROI in the census: Ada resolves 83% of inquiries autonomously and Klarna\u2019s assistant handled 2.3M conversations; per-resolution pricing sits at $0.50-$2.00.',
+  security:
+    'Agent security is the most crowded new infrastructure category (Zenity $125M Series C, Neo $100M launch), while Okta and Microsoft ship agent identity into incumbent installs.',
+  legal:
+    'Harvey at $11B leads; adoption is gated on citation-grade accuracy and privilege controls rather than capability.',
+  logistics:
+    'Thin relative to workflow volume; voice is the default interface for dispatch and collections work.',
+  construction:
+    'The clearest remaining vertical frontier: a workflow-heavy industry with only a handful of agent entrants.',
+  hr: 'Recruiting and onboarding agents; consolidation already started (Moonhub acqui-hired by Salesforce).',
+  it: 'IT support and ops agents sit closest to the suite buyers (ServiceNow took Moveworks for $2.85B).',
 }
 
 function uniqueSorted(values: string[]): string[] {
@@ -216,6 +274,12 @@ function VerticalDetail({
   const pricingOptions = uniqueSorted(rows.map((c) => c.pricing_model))
   const ycOptions = uniqueSorted(rows.map((c) => c.yc_batch).filter(Boolean))
 
+  const curated = VERTICAL_LEARNINGS[vertical.toLowerCase()]
+  const l3Count = rows.filter((c) => c.layer === 'L3').length
+  const summary =
+    curated ??
+    `${rows.length} companies build agents for ${vertical.toLowerCase()}, ${l3Count} of them vertical agents (L3). No curated learning yet; the table below and the wiki cluster pages carry the detail.`
+
   return (
     <div>
       <div className="mb-3 flex items-center gap-3">
@@ -232,6 +296,9 @@ function VerticalDetail({
           {rows.length} companies
         </span>
       </div>
+      <p className="mb-3 rounded-lg border border-l-2 border-l-primary/40 px-3 py-2.5 text-xs leading-relaxed text-muted-foreground">
+        {summary}
+      </p>
       <DataTable
         columns={columns}
         data={rows}
@@ -393,7 +460,16 @@ export function Verticals({ route }: { route: Route }) {
       {selected ? (
         <VerticalDetail companies={companies} vertical={selected} />
       ) : (
-        <VerticalsPicker companies={companies} />
+        <div className="space-y-4">
+          <SectionSummary
+            points={VERTICAL_POINTS}
+            links={['phase1', 'phase3'].map((id) => {
+              const r = reportById(id)!
+              return { label: r.title + ' report', href: reportUrl(r) }
+            })}
+          />
+          <VerticalsPicker companies={companies} />
+        </div>
       )}
     </div>
   )

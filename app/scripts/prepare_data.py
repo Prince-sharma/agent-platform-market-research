@@ -8,7 +8,8 @@ Outputs:
   companies.json        - 1,328 census companies (TSV converted, with derived
                           yc_batch, backers, and website fields; websites come
                           from the curated company-websites.json override,
-                          falling back to wiki-source extraction)
+                          falling back to wiki-source extraction; acquirer and
+                          acquire_note come from company-acquisitions.json)
   marketplace-agents.json - 1,261 marketplace agents (with pricing_bucket and
                           u listing URL from curated marketplace-agent-urls.json)
   themes.json           - Phase 3 theme reports (P3.1-P3.8)
@@ -263,6 +264,7 @@ def load_curated(name):
 
 def prepare_companies():
     website_override = load_curated('company-websites.json')
+    acquisitions = load_curated('company-acquisitions.json')
     with open(
         os.path.join(DATA_DIR, 'companies-with-profiles.tsv'),
         encoding='utf-8',
@@ -270,6 +272,7 @@ def prepare_companies():
         rows = list(csv.DictReader(f, delimiter='\t'))
     companies = []
     with_website = 0
+    with_acquirer = 0
     for r in rows:
         yc_batch, backers, sweeps = split_sources(r.get('sources', ''))
         slug = r.get('wiki_slug', '')
@@ -281,6 +284,11 @@ def prepare_companies():
                     website = extract_website(r['name'], slug, f.read())
         if website:
             with_website += 1
+        acq = acquisitions.get(r['name'], {})
+        acquirer = acq.get('acquirer', '') if isinstance(acq, dict) else ''
+        acquire_note = acq.get('note', '') if isinstance(acq, dict) else ''
+        if acquirer:
+            with_acquirer += 1
         companies.append(
             {
                 'name': r['name'],
@@ -300,11 +308,14 @@ def prepare_companies():
                 'backers': backers,
                 'sweeps': sweeps,
                 'website': website,
+                'acquirer': acquirer,
+                'acquire_note': acquire_note,
             }
         )
     print(
         f'companies: {len(companies)} rows, {with_website} with websites '
-        f'({len(website_override)} curated overrides)'
+        f'({len(website_override)} curated overrides), '
+        f'{with_acquirer} with acquirers'
     )
     write_json('companies.json', companies)
     return companies
