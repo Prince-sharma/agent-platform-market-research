@@ -75,8 +75,8 @@ check('app js runtime', runtimeErr === null, runtimeErr === null ? 'executes cle
 
 if (runtimeErr === null) {
   check('runtime DATA companies', DATA.length === 1328, String(DATA.length));
-  check('runtime THEMES reports', THEMES.length === 7, String(THEMES.length));
-  check('runtime theme refs', THEMES.map(t => t.ref).join(',') === 'P3.1,P3.2,P3.3,P3.4,P3.5,P3.6,P3.7',
+  check('runtime THEMES reports', THEMES.length === 8, String(THEMES.length));
+  check('runtime theme refs', THEMES.map(t => t.ref).join(',') === 'P3.1,P3.2,P3.3,P3.4,P3.5,P3.6,P3.7,P3.8',
     THEMES.map(t => t.ref).join(','));
   check('runtime COHORT batches', Object.keys(COHORT.batches || {}).length === 14,
     String(Object.keys(COHORT.batches || {}).length));

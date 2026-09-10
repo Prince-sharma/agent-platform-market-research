@@ -38,7 +38,7 @@ VC_FILE_LABEL = {'vc-us-a.md': 'US generalist A', 'vc-us-b.md': 'US generalist B
                  'vc-us-c.md': 'US generalist C', 'vc-ai.md': 'AI-specialist',
                  'vc-eu.md': 'Europe', 'vc-in.md': 'India'}
 
-ALL_THEME_REFS = ['P3.1', 'P3.2', 'P3.3', 'P3.4', 'P3.5', 'P3.6', 'P3.7']
+ALL_THEME_REFS = ['P3.1', 'P3.2', 'P3.3', 'P3.4', 'P3.5', 'P3.6', 'P3.7', 'P3.8']
 
 WIKI_DIRS = [
     ('companies', 'Company profile'),
@@ -332,7 +332,7 @@ def main():
     html = html.replace('__ARTIFACTS__', '\n        '.join(art_items))
     with open(OUT, 'w') as f:
         f.write(html)
-    print('wrote %s (v6: %d bytes, %d companies, %d wiki pages linked, %d deep profiles, %d of 7 themes, %d wiki pages embedded)'
+    print('wrote %s (v6: %d bytes, %d companies, %d wiki pages linked, %d deep profiles, %d of 8 themes, %d wiki pages embedded)'
           % (OUT, os.path.getsize(OUT), len(companies),
              sum(1 for c in companies if c['w']),
              sum(1 for c in companies if c['d'] == 'deep'),
@@ -557,7 +557,7 @@ section.on{display:block !important}
   <div class="hrow">
     <div>
       <h1>Enterprise Work-Agent Platform Market Research</h1>
-      <div class="meta">Phase 3 thematic deep-dives &middot; <span class="nc"></span> companies &middot; <span class="pw"></span> wiki pages &middot; <span class="pd"></span> deep profiles &middot; <span class="nt"></span> of 7 theme reports &middot; September 2026 &middot; evolves each phase</div>
+      <div class="meta">Phase 3 thematic deep-dives &middot; <span class="nc"></span> companies &middot; <span class="pw"></span> wiki pages &middot; <span class="pd"></span> deep profiles &middot; <span class="nt"></span> of 8 theme reports &middot; September 2026 &middot; evolves each phase</div>
     </div>
     <div class="gwrap">
       <input id="gq" type="search" placeholder="Search companies... ( / )" aria-label="Search companies" autocomplete="off">
@@ -761,7 +761,7 @@ const LNAME = {L1:'L1 Infrastructure',L2:'L2 Build platforms',L3:'L3 Vertical ag
 const BATCHES = ['W21','S21','W22','S22','W23','S23','W24','S24','F24','W25','S25','F25','W26','S26'];
 const TABS = ['overview','universe','themes','wiki','sizing','yc','vc','verticals','about'];
 const THEME_TOTAL = 7;
-const THEME_ORDER = ['P3.1','P3.2','P3.3','P3.4','P3.5','P3.6','P3.7'];
+const THEME_ORDER = ['P3.1','P3.2','P3.3','P3.4','P3.5','P3.6','P3.7','P3.8'];
 
 // ---------- helpers ----------
 const $ = s => document.querySelector(s);
@@ -969,7 +969,7 @@ function goUniverse(mut){
     ['High priority', hi, 'recent batch or real adoption'],
     ['Wiki pages', wiki, 'Phase 2, one per profiled company'],
     ['Deep profiles', deep, 'eleven build decisions researched'],
-    ['Theme reports', THEMES.length, 'of 7 planned; Phase 3 thematic deep-dives'],
+    ['Theme reports', THEMES.length, 'of 8 planned; Phase 3 thematic deep-dives'],
     ['Vertical agents', byLayer.L3||0, 'layer 3, the center of gravity'],
     ['Infrastructure', byLayer.L1||0, 'layer 1, arrived after the apps'],
     ['Long+persistent', lh, 'hours-to-weeks plus always-on agents'],

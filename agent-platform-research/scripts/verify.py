@@ -105,7 +105,7 @@ def main():
     # ---------- themes ----------
     themes = sorted(f for f in os.listdir(WIKI_THEMES) if f.endswith('.md')
                     and not f.startswith('_'))
-    check('theme reports present', len(themes) == 7, '%d of 7: %s' % (len(themes), ', '.join(themes)))
+    check('theme reports present', len(themes) == 8, '%d of 8: %s' % (len(themes), ', '.join(themes)))
     for t in themes:
         text = open(os.path.join(WIKI_THEMES, t)).read()
         missing = [s for s in THEME_SECTIONS if s not in text]

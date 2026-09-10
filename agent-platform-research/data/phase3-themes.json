@@ -514,6 +514,95 @@
     "Will the binding layer remain independent or be absorbed by MCP and suite control planes?",
     "Does the platform layer's share of enterprise AI spend remain at ~2% or climb toward 15%?"
    ]
+  },
+  {
+   "file": "wiki/themes/cloud-marketplace-agents",
+   "ref": "P3.8",
+   "title": "Cloud Marketplace AI Agents",
+   "scope": "Comprehensive research on how AI apps and agents are distributed across eight major marketplaces: Microsoft Azure, AWS Bedrock, Google Cloud, Salesforce, ServiceNow, OpenAI GPT Store, Hugging Face, and NVIDIA NGC. Covers catalog sizes, adoption signals, pricing models, protocol support, and competitive positioning as of 2026-09-10.",
+   "headline": "Eight AI agent marketplaces launched within 30 months, each as a distribution channel for its own platform; Microsoft Copilot Studio leads adoption with 230K orgs and 10M users, while Salesforce Agentforce reached $1.2B ARR and ServiceNow crossed $1B AI ACV.",
+   "findings": [
+    "Eight marketplaces launched within 30 months: OpenAI GPT Store (Jan 2024), Salesforce AgentExchange (Mar 2025), AWS (Jul 2025), Microsoft (Sep 2025), ServiceNow (Jan 2026), Hugging Face Agent Hub (Mar 2026), Google (Apr 2026), and NVIDIA NGC evolving.",
+    "Microsoft Copilot Studio is the dominant platform by adoption: 230K organizations, 10M enterprise users, 2B tasks/month, 30M paid Copilot seats.",
+    "Salesforce Agentforce reached $1.2B ARR in under two years with 29K deals, 2.4B agentic work units, and 19T tokens processed; Flex Credits pricing at $0.10/action is the closest to per-outcome pricing on any marketplace.",
+    "ServiceNow crossed $1B AI ACV with 2,600 Now Assist customers and 9x growth in agentic deployments in 9 months; AI Control Tower governs agents across any system.",
+    "AWS launched with 900+ AI agent listings and Bedrock AgentCore (GA Oct 2025); 2M+ downloads; supports MCP and A2A; agents run in customer own AWS account.",
+    "Google has 56+ partner agents from 50+ publishers; 8M+ paid Gemini Enterprise seats; ~90% Fortune 100; $750M partner fund; best governance model with SPIFFE cryptographic agent identities.",
+    "OpenAI GPT Store has 3M+ GPTs created but only 159K active (5.3% survival rate); median creator income $47/month; enterprise business is $5B+ ARR with 1M+ business customers.",
+    "Hugging Face has 3M+ models, 1.3M Spaces, 13M users; Agent Hub launched March 2026 with ~8K agents; acquired by NVIDIA for $12.9B in August 2026.",
+    "NVIDIA NGC has 10,000+ models/containers, 100K+ NIM downloads; AI Enterprise at $4,500/GPU/year; AgentIQ for orchestration; deliberately avoids application layer.",
+    "Every big-vendor marketplace is a distribution channel for its own platform, not a neutral market; the agent price is never the whole price.",
+    "MCP is supported by 7 of 8 marketplaces; A2A is supported by AWS, Google, Salesforce, and ServiceNow but not OpenAI; Google adds UCP and AP2 protocols.",
+    "No marketplace offers per-outcome pricing (per-resolution, per-task-completed); Salesforce Flex Credits at $0.10/action is the closest.",
+    "The NVIDIA-Hugging Face acquisition creates a vertically integrated monopoly: GPUs, CUDA-X, NIM, AgentIQ, Nemotron models, and model distribution hub."
+   ],
+   "stats": [
+    {
+     "label": "Azure AI Apps",
+     "value": "3,700+",
+     "note": "AI apps and agents on Microsoft Marketplace"
+    },
+    {
+     "label": "Copilot Studio Orgs",
+     "value": "230K",
+     "note": "organizations using Copilot Studio, July 2026"
+    },
+    {
+     "label": "Agentforce ARR",
+     "value": "$1.2B",
+     "note": "reported August 2026, +205% YoY"
+    },
+    {
+     "label": "ServiceNow AI ACV",
+     "value": "$1B",
+     "note": "crossed Q2 2026, 40%+ QoQ growth"
+    },
+    {
+     "label": "AWS Agent Listings",
+     "value": "900+",
+     "note": "AI agent listings at launch, July 2025"
+    },
+    {
+     "label": "Gemini Enterprise Seats",
+     "value": "8M+",
+     "note": "paid seats, April 2026"
+    },
+    {
+     "label": "GPT Store Active",
+     "value": "159K",
+     "note": "active GPTs of 3M+ created (5.3% survival)"
+    },
+    {
+     "label": "HF Models",
+     "value": "3M+",
+     "note": "models on Hugging Face Hub, August 2026"
+    },
+    {
+     "label": "NVIDIA NGC Assets",
+     "value": "10K+",
+     "note": "models, containers, datasets in NGC"
+    },
+    {
+     "label": "NVIDIA-HF Deal",
+     "value": "$12.9B",
+     "note": "NVIDIA acquisition of Hugging Face, August 2026"
+    }
+   ],
+   "implications": [
+    "The marketplace is a new layer in the agent stack, sitting between agent builders and enterprise buyers, adding procurement, governance, and deployment wrapping.",
+    "Distribution is concentrating at the platform layer that owns the marketplace; the marketplace operator captures rent on every agent sold through it.",
+    "Copilot Studio is the dominant enterprise agent platform by adoption; AWS leads on openness; Google leads on governance; Salesforce leads on per-action pricing.",
+    "The NVIDIA-Hugging Face acquisition creates a vertically integrated monopoly on the agent development lifecycle from silicon to model distribution.",
+    "Protocol convergence is happening around MCP (7 of 8 marketplaces); the A2A gap (OpenAI absent) is the key interoperability risk.",
+    "ServiceNow AI Control Tower is the only cross-platform agent governance tool that can govern agents from other marketplaces including Microsoft."
+   ],
+   "open_questions": [
+    "How many agents are actually deployed in production through each marketplace? Listing counts are not deployment counts.",
+    "What is the revenue flowing through each marketplace for agent purchases? Neither Azure nor AWS discloses agent-specific GMV.",
+    "Will cross-marketplace portability emerge, or will vendor lock-in prevent agents from moving between platforms?",
+    "Will per-outcome pricing reach the marketplace, or will per-action (Salesforce Flex Credits) remain the closest approximation?",
+    "What happens to the NVIDIA-Hugging Face acquisition regulatory review, and how does it shape the open-source agent ecosystem?"
+   ]
   }
  ]
 }
