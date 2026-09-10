@@ -18,7 +18,7 @@ import { Input } from '@/components/ui/input'
 import { Skeleton } from '@/components/ui/skeleton'
 import { navigate, type Route } from '@/lib/router'
 import { useData } from '@/lib/use-data'
-import type { MarketplaceAgent } from '@/types'
+import type { Company, MarketplaceAgent } from '@/types'
 
 function uniqueSorted(values: string[]): string[] {
   return [...new Set(values.filter(Boolean))].sort()
@@ -39,20 +39,43 @@ export function Marketplaces({ route }: { route: Route }) {
   const { data: agents, loading } = useData<MarketplaceAgent[]>(
     'marketplace-agents',
   )
+  const { data: companies } = useData<Company[]>('companies')
+  const websiteByName = React.useMemo(() => {
+    const m = new Map<string, string>()
+    for (const c of companies ?? []) {
+      if (c.website) m.set(c.name.toLowerCase(), c.website)
+    }
+    return m
+  }, [companies])
 
   const columns = React.useMemo<LegacyColumnDef<MarketplaceAgent>[]>(
     () => [
       {
         accessorKey: 'n',
         header: 'Agent',
-        cell: ({ row }) => (
-          <div className="flex flex-col">
-            <span className="font-medium">{row.original.n}</span>
-            <span className="text-[11px] text-muted-foreground">
-              {row.original.p}
-            </span>
-          </div>
-        ),
+        cell: ({ row }) => {
+          const site = websiteByName.get(row.original.p.toLowerCase())
+          return (
+            <div className="flex flex-col">
+              <span className="font-medium">{row.original.n}</span>
+              {site ? (
+                <a
+                  href={site}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-fit text-[11px] text-primary underline-offset-2 hover:underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {row.original.p}
+                </a>
+              ) : (
+                <span className="text-[11px] text-muted-foreground">
+                  {row.original.p}
+                </span>
+              )}
+            </div>
+          )
+        },
       },
       {
         accessorKey: 'm',
@@ -148,7 +171,7 @@ export function Marketplaces({ route }: { route: Route }) {
           (value as string[]).includes(row.getValue(id)),
       },
     ],
-    [],
+    [websiteByName],
   )
 
   const initialColumnFilters = React.useMemo(() => {

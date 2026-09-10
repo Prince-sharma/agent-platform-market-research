@@ -2,6 +2,7 @@ import * as React from 'react'
 import { ArrowLeft, Layers as LayersIcon, Search, X } from 'lucide-react'
 import type { LegacyColumnDef } from '@tanstack/react-table/legacy'
 
+import { CompanyDrawer } from '@/components/company-drawer'
 import { DataTable, type DataTableApi } from '@/components/data-table'
 import { FacetedFilter } from '@/components/faceted-filter'
 import { Badge } from '@/components/ui/badge'
@@ -118,6 +119,7 @@ function VerticalDetail({
   companies: Company[]
   vertical: string
 }) {
+  const [selected, setSelected] = React.useState<Company | null>(null)
   const rows = React.useMemo(
     () =>
       companies.filter(
@@ -131,26 +133,20 @@ function VerticalDetail({
       {
         accessorKey: 'name',
         header: 'Company',
-        cell: ({ row }) => (
-          <div className="flex flex-col">
+        cell: ({ row }) =>
+          row.original.website ? (
+            <a
+              href={row.original.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary underline-offset-2 hover:underline"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {row.original.name}
+            </a>
+          ) : (
             <span className="font-medium">{row.original.name}</span>
-            {row.original.wiki_slug && (
-              <button
-                type="button"
-                className="w-fit text-[11px] text-primary underline-offset-2 hover:underline"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  navigate({
-                    view: 'wiki',
-                    param: `companies/${row.original.wiki_slug}`,
-                  })
-                }}
-              >
-                wiki profile
-              </button>
-            )}
-          </div>
-        ),
+          ),
       },
       {
         accessorKey: 'one_liner',
@@ -253,12 +249,9 @@ function VerticalDetail({
             }}
           />
         )}
-        onRowClick={(row) => {
-          if (row.wiki_slug) {
-            navigate({ view: 'wiki', param: `companies/${row.wiki_slug}` })
-          }
-        }}
+        onRowClick={(row) => setSelected(row)}
       />
+      <CompanyDrawer company={selected} onClose={() => setSelected(null)} />
     </div>
   )
 }

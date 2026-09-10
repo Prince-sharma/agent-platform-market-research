@@ -9,6 +9,8 @@ import {
   Lightbulb,
   Menu,
   Moon,
+  PanelLeftClose,
+  PanelLeftOpen,
   PieChart,
   Store,
   Sun,
@@ -82,24 +84,32 @@ function useTheme() {
 function NavList({
   active,
   onSelect,
+  collapsed = false,
 }: {
   active: string
   onSelect: (id: string) => void
+  collapsed?: boolean
 }) {
   return (
     <nav className="flex-1 space-y-5 overflow-y-auto px-3 py-4">
       {NAV_GROUPS.map((group) => (
         <div key={group.title}>
-          <p className="mb-1.5 px-2 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground/70">
-            {group.title}
-          </p>
+          {!collapsed && (
+            <p className="mb-1.5 px-2 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground/70">
+              {group.title}
+            </p>
+          )}
           <ul className="space-y-0.5">
             {group.items.map((item) => (
               <li key={item.id}>
                 <button
                   type="button"
+                  title={collapsed ? item.label : undefined}
                   className={cn(
-                    'flex w-full items-center gap-2.5 rounded-md px-2 py-1.5 text-sm font-medium transition-colors',
+                    'flex w-full items-center rounded-md text-sm font-medium transition-colors',
+                    collapsed
+                      ? 'justify-center px-1 py-2'
+                      : 'gap-2.5 px-2 py-1.5',
                     active === item.id
                       ? 'bg-primary/15 text-primary'
                       : 'text-muted-foreground hover:bg-accent hover:text-foreground',
@@ -107,7 +117,7 @@ function NavList({
                   onClick={() => onSelect(item.id)}
                 >
                   <item.icon className="size-4 shrink-0" />
-                  {item.label}
+                  {!collapsed && item.label}
                 </button>
               </li>
             ))}
@@ -146,6 +156,27 @@ export function AppShell({
 }) {
   const { dark, toggle } = useTheme()
   const [mobileOpen, setMobileOpen] = React.useState(false)
+  const [collapsed, setCollapsed] = React.useState(() => {
+    try {
+      return localStorage.getItem('vite-ui-sidebar') === 'collapsed'
+    } catch {
+      return false
+    }
+  })
+  const toggleCollapsed = React.useCallback(() => {
+    setCollapsed((c) => {
+      const next = !c
+      try {
+        localStorage.setItem(
+          'vite-ui-sidebar',
+          next ? 'collapsed' : 'expanded',
+        )
+      } catch {
+        /* ignore */
+      }
+      return next
+    })
+  }, [])
 
   const select = (id: string) => {
     onNavigate(id)
@@ -155,20 +186,32 @@ export function AppShell({
   return (
     <div className="flex h-dvh overflow-hidden">
       {/* Desktop sidebar */}
-      <aside className="hidden w-60 shrink-0 flex-col border-r bg-card/50 md:flex">
-        <div className="flex items-center gap-2 px-4 py-4">
-          <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+      <aside
+        className={cn(
+          'hidden shrink-0 flex-col border-r bg-card/50 transition-[width] duration-200 md:flex',
+          collapsed ? 'w-14' : 'w-60',
+        )}
+      >
+        <div
+          className={cn(
+            'flex items-center gap-2 py-4',
+            collapsed ? 'justify-center px-2' : 'px-4',
+          )}
+        >
+          <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Bot className="size-5" />
           </div>
-          <div className="leading-tight">
-            <div className="text-sm font-semibold">Agent Market</div>
-            <div className="text-[11px] text-muted-foreground">
-              Research App
+          {!collapsed && (
+            <div className="leading-tight">
+              <div className="text-sm font-semibold">Agent Market</div>
+              <div className="text-[11px] text-muted-foreground">
+                Research App
+              </div>
             </div>
-          </div>
+          )}
         </div>
-        <NavList active={active} onSelect={select} />
-        <SidebarFooter />
+        <NavList active={active} onSelect={select} collapsed={collapsed} />
+        {!collapsed && <SidebarFooter />}
       </aside>
 
       {/* Mobile drawer */}
@@ -212,6 +255,19 @@ export function AppShell({
               onClick={() => setMobileOpen(true)}
             >
               <Menu className="size-4" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hidden size-8 md:inline-flex"
+              onClick={toggleCollapsed}
+              aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+            >
+              {collapsed ? (
+                <PanelLeftOpen className="size-4" />
+              ) : (
+                <PanelLeftClose className="size-4" />
+              )}
             </Button>
             <div className="text-sm text-muted-foreground">
               1,328 agent companies · 8 marketplaces · 788 wiki pages

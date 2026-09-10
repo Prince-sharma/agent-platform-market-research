@@ -15,6 +15,7 @@ export interface Company {
   yc_batch: string
   backers: string[]
   sweeps: string[]
+  website: string
 }
 
 export interface MarketplaceAgent {

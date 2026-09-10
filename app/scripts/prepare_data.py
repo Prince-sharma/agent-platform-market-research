@@ -6,7 +6,7 @@ agent-platform-research/ and writes app/public/data/*.json.
 
 Outputs:
   companies.json        - 1,328 census companies (TSV converted, with derived
-                          yc_batch and backers fields)
+                          yc_batch, backers, and website fields)
   marketplace-agents.json - 1,261 marketplace agents (with pricing_bucket)
   themes.json           - Phase 3 theme reports (P3.1-P3.8)
   yc-cohort.json        - Per-batch YC cohort stats
@@ -119,6 +119,128 @@ def pricing_bucket(pr):
     return 'other'
 
 
+# ---------------------------------------------------------------------------
+# Company website extraction
+#
+# Wiki pages cite their sources as bare URLs and domain mentions. The
+# company's own site is recovered by scoring candidate domains: citation
+# frequency plus a bonus when the domain echoes the company name, with
+# news/VC/hosting domains blocked unless they name-match. Obvious
+# subdomains (docs.foo.ai) reduce to their root (foo.ai).
+
+WEBSITE_BLOCK = {
+    # news, media, research
+    'ycombinator.com', 'news.ycombinator.com', 'techcrunch.com', 'fortune.com',
+    'reuters.com', 'bloomberg.com', 'forbes.com', 'wsj.com', 'nytimes.com',
+    'cnbc.com', 'aibizinsider.com', 'theinformation.com',
+    'businessinsider.com', 'venturebeat.com', 'sifted.eu', 'tech.eu',
+    'inc.com', 'fastcompany.com', 'wired.com', 'theverge.com', 'zdnet.com',
+    'computerworld.com', 'infoworld.com', 'arstechnica.com', 'wikipedia.org',
+    'arxiv.org',
+    # analyst / data platforms
+    'gartner.com', 'forrester.com', 'mckinsey.com', 'crunchbase.com',
+    'pitchbook.com', 'glassdoor.com', 'indeed.com', 'g2.com', 'capterra.com',
+    'producthunt.com',
+    # social / hosted
+    'linkedin.com', 'twitter.com', 'x.com', 'github.com', 'github.io',
+    'youtube.com', 'medium.com', 'substack.com', 'reddit.com', 'discord.com',
+    'slack.com', 'wordpress.com', 'blogspot.com', 'vercel.app',
+    'netlify.app', 'heroku.com',
+    # big-tech clouds (cited by products built on them; the companies
+    # themselves still match by name when they are the census entry)
+    'google.com', 'microsoft.com', 'amazon.com', 'apple.com', 'openai.com',
+    'anthropic.com', 'huggingface.co', 'salesforce.com', 'servicenow.com',
+    'nvidia.com', 'oracle.com', 'ibm.com', 'adobe.com', 'sap.com',
+    'zoho.com', 'hubspot.com',
+    # VC firms
+    'sequoiacap.com', 'a16z.com', 'benchmarkcap.com', 'greylock.com',
+    'lightspeedvp.com', 'foundersfund.com', 'khoslaventures.com',
+    'insightpartners.com', 'bessemervp.com', 'menlovc.com',
+    'batterypartners.com', 'indexventures.com', 'coatue.com',
+    'generalcatalyst.com', 'nea.com', 'ivp.com', 'felicis.com',
+    'luxcapital.com', '8vc.com', 'madrona.com', 'craftventures.com',
+    'iconiqcapital.com', 'thrivcap.com', 'conviction.com', 'radical.vc',
+    'aifund.vc', 'amplifypartners.com', 'signalfire.com', 'mayfield.com',
+    'foundationcap.com',
+}
+
+WEBSITE_HOSTED_SUFFIXES = (
+    '.github.io', '.vercel.app', '.netlify.app', '.blogspot.com',
+    '.wordpress.com', '.substack.com',
+)
+
+URL_RE = re.compile(r'https?://([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})')
+BARE_DOM_RE = re.compile(
+    r'(?<![\w./@-])((?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+'
+    r'(?:com|ai|io|dev|app|co|net|org|xyz|so|tech|health|finance|me|eu|us'
+    r'|info|biz|cloud|studio|gg|sh|to|link|page|site|online|life|world'
+    r'|space|care|team|works|tools|systems|labs))\b',
+    re.I,
+)
+
+
+def _norm_domain(d):
+    d = d.lower().strip('.')
+    return d[4:] if d.startswith('www.') else d
+
+
+def _name_match(dom, name, slug):
+    """True when a label of the domain echoes the company name or slug."""
+    labels = dom.split('.')[:-1]
+    core = ''.join(labels)
+    n = re.sub(r'[^a-z0-9]', '', (name or '').lower())
+    s = re.sub(r'[^a-z0-9]', '', (slug or '').lower())
+    for label in labels:
+        if len(label) >= 3 and (label == s or label == n or label in n):
+            return True
+    return bool(core) and (core == n or core == s)
+
+
+def _blocked(dom, name, slug):
+    if dom.endswith(WEBSITE_HOSTED_SUFFIXES):
+        return not _name_match(dom, name, slug)
+    return dom in WEBSITE_BLOCK and not _name_match(dom, name, slug)
+
+
+def extract_website(name, slug, markdown):
+    """Best-effort company website from a wiki page. '' when untrustworthy."""
+    m = re.search(r'^## Sources\s*$(.*)', markdown, re.M | re.S)
+    src = m.group(1) if m else ''
+    freq = Counter()
+    for d in URL_RE.findall(src):
+        freq[_norm_domain(d)] += 1
+    for d in BARE_DOM_RE.findall(src):
+        freq[_norm_domain(d)] += 1
+    # Whole-text pass: outside the Sources section a domain is only
+    # trustworthy when it echoes the company's own name.
+    for d in URL_RE.findall(markdown) + BARE_DOM_RE.findall(markdown):
+        d = _norm_domain(d)
+        if _name_match(d, name, slug):
+            freq[d] += 1
+
+    best, best_score = None, 0
+    for dom, count in freq.items():
+        if _blocked(dom, name, slug):
+            continue
+        score = count + (3 if _name_match(dom, name, slug) else 0)
+        if score > best_score or (
+            score == best_score
+            and best
+            and dom.count('.') < best.count('.')
+        ):
+            best, best_score = dom, score
+    if not best or not (_name_match(best, name, slug) or freq[best] >= 2):
+        return ''
+    # Reduce obvious subdomains to their root when the root also echoes
+    # the name (support.atlassian.com -> atlassian.com).
+    labels = best.split('.')
+    if len(labels) > 2:
+        root = labels[-2] + '.' + labels[-1]
+        if _name_match(root, name, slug) and not _blocked(root, name, slug):
+            best = root
+    return 'https://' + best
+
+
 def write_json(name, obj):
     path = os.path.join(OUT_DIR, name)
     with open(path, 'w', encoding='utf-8') as f:
@@ -134,8 +256,18 @@ def prepare_companies():
     ) as f:
         rows = list(csv.DictReader(f, delimiter='\t'))
     companies = []
+    with_website = 0
     for r in rows:
         yc_batch, backers, sweeps = split_sources(r.get('sources', ''))
+        slug = r.get('wiki_slug', '')
+        website = ''
+        if slug:
+            wiki_path = os.path.join(WIKI_DIR, 'companies', slug + '.md')
+            if os.path.exists(wiki_path):
+                with open(wiki_path, encoding='utf-8') as f:
+                    website = extract_website(r['name'], slug, f.read())
+        if website:
+            with_website += 1
         companies.append(
             {
                 'name': r['name'],
@@ -154,9 +286,10 @@ def prepare_companies():
                 'yc_batch': yc_batch,
                 'backers': backers,
                 'sweeps': sweeps,
+                'website': website,
             }
         )
-    print(f'companies: {len(companies)} rows')
+    print(f'companies: {len(companies)} rows, {with_website} with websites')
     write_json('companies.json', companies)
     return companies
 
