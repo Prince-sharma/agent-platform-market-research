@@ -51,6 +51,7 @@ ROOT_REPORTS = [
     ('reports/phase1-census', 'Phase 1 census', 'agent-platform-phase1-census.md'),
     ('reports/phase2-landscape', 'Phase 2 landscape', 'agent-platform-phase2-landscape.md'),
     ('reports/phase3-thematic', 'Phase 3 thematic report', 'agent-platform-phase3-thematic.md'),
+    ('reports/marketplace-agents', 'Marketplace agents analysis', 'agent-platform-research/reports/marketplace-agents-analysis.md'),
 ]
 
 
@@ -449,6 +450,11 @@ tbody tr{cursor:pointer}
 tbody tr:hover td{background:var(--acc2)}
 .tscroll{overflow:auto;max-height:calc(100vh - 150px);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);margin-bottom:4px}
 .tscroll table{min-width:680px}
+.mtable-scroll{max-height:calc(100vh - 200px);min-width:1000px}
+.mtable-scroll table{min-width:1000px}
+.mtable-scroll th{position:sticky;top:0;z-index:5;background:var(--card)}
+.mtable-scroll td{max-width:400px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mtable-scroll td:hover{white-space:normal;overflow:visible}
 .pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:10.5px;font-weight:650;letter-spacing:.01em}
 .pill.L1{background:#eef2ff;color:#4338ca}.pill.L2{background:#ecfdf5;color:#047857}.pill.L3{background:#fff7ed;color:#c2410c}.pill.L4{background:#fdf4ff;color:#a21caf}.pill.L5{background:#eff6ff;color:#1d4ed8}.pill.X{background:#fef2f2;color:#b91c1c}
 .pill.high{background:#fef3c7;color:#b45309}.pill.normal{background:#f1f5f9;color:#64748b}
@@ -678,17 +684,23 @@ section.on{display:block !important}
         <select id="mf-market" aria-label="Filter by marketplace"><option value="">Marketplace: all</option><option>Azure</option><option>AWS</option><option>Google</option><option>Salesforce</option><option>ServiceNow</option><option>OpenAI</option><option>Hugging Face</option><option>NVIDIA</option></select>
         <select id="mf-cat" aria-label="Filter by category"><option value="">Category: all</option></select>
         <select id="mf-pub" aria-label="Filter by publisher"><option value="">Publisher: all</option></select>
+        <select id="mf-pr" aria-label="Filter by pricing"><option value="">Pricing: all</option></select>
+        <select id="mf-sig" aria-label="Filter by signal strength"><option value="">Signal: all</option><option>strong</option><option>moderate</option><option>weak</option></select>
         <select id="mf-mcp" aria-label="Filter by MCP support"><option value="">MCP: all</option><option>Yes</option><option>No</option></select>
         <select id="mf-a2a" aria-label="Filter by A2A support"><option value="">A2A: all</option><option>Yes</option><option>No</option></select>
+        <select id="mf-aa" aria-label="Filter by agent type"><option value="">Type: all</option><option value="Yes">Agents only</option><option value="No">Tools/infrastructure</option></select>
+        <button class="btn" id="mexport" onclick="exportMAgentsCsv()" title="Download the filtered agents as CSV">Export CSV</button>
       </div>
+      <div class="chips" id="mchips" role="group" aria-label="Quick filter by marketplace"></div>
       <p class="count" id="mcount" aria-live="polite" style="margin:10px 2px 0"></p>
     </div>
-    <div class="tscroll"><table id="mtable">
+    <div class="tscroll mtable-scroll"><table id="mtable">
       <thead><tr>
         <th data-k="n" aria-sort="none" scope="col" title="Click to sort">Agent</th>
         <th data-k="m" scope="col" title="Click to sort">Marketplace</th>
         <th data-k="p" scope="col" title="Click to sort">Publisher</th>
         <th data-k="c" scope="col" title="Click to sort">Category</th>
+        <th data-k="sig" scope="col" title="Click to sort">Signal</th>
         <th data-k="a" scope="col" title="Click to sort">Adoption signal</th>
         <th data-k="pr" scope="col" title="Click to sort">Pricing</th>
         <th data-k="r" scope="col" title="Click to sort">Rating</th>
@@ -1107,24 +1119,45 @@ window.exportCsv = function(){
 
 // ---------- marketplace agents ----------
 let mSortKey = 'm', mSortDir = 1;
+function mSignal(a){
+  const sig = (a.a||'').toLowerCase();
+  const rep = a.s === 'reported';
+  const hasNum = /\d/.test(sig) || /star|like|upvote|download|customer|org|billion|million|k\+|m\+/i.test(sig);
+  if(rep && hasNum) return 'strong';
+  if(rep || hasNum) return 'moderate';
+  return 'weak';
+}
 function getMFiltered(){
   const q = $('#mq').value.toLowerCase();
   const m = $('#mf-market').value, c = $('#mf-cat').value, p = $('#mf-pub').value;
   const mc = $('#mf-mcp').value, aa = $('#mf-a2a').value;
-  return MAGENTS.filter(a =>
-    (!m || a.m===m) && (!c || a.c===c) && (!p || a.p===p) &&
+  const pr = $('#mf-pr').value, sig = $('#mf-sig').value, at = $('#mf-aa').value;
+  return MAGENTS.filter(a => {
+    const s = mSignal(a);
+    return (!m || a.m===m) && (!c || a.c===c) && (!p || a.p===p) &&
     (!mc || a.mc===mc) && (!aa || a.aa===aa) &&
-    (!q || (a.n+' '+a.p+' '+a.a+' '+a.c+' '+a.m).toLowerCase().includes(q)));
+    (!pr || (a.pr||'').includes(pr)) &&
+    (!sig || s===sig) && (!at || a.aa===at) &&
+    (!q || (a.n+' '+a.p+' '+a.a+' '+a.c+' '+a.m+' '+(a.r||'')).toLowerCase().includes(q));
+  });
 }
 function sortMRows(rows){
+  const sigOrder = {strong:0, moderate:1, weak:2};
   rows.sort((a,b)=>{
+    if(mSortKey === 'sig'){
+      const c = (sigOrder[mSignal(a)]||3) - (sigOrder[mSignal(b)]||3);
+      return (c * mSortDir) || a.n.localeCompare(b.n);
+    }
     let x = a[mSortKey] || '', y = b[mSortKey] || '';
     const c = String(x).localeCompare(String(y));
     return (c * mSortDir) || a.n.localeCompare(b.n);
   });
 }
 function mRowHtml(a){
-  return '<tr><td><b>'+esc(a.n)+'</b></td><td>'+pill(a.m)+'</td><td style="color:var(--mut)">'+esc(a.p)+'</td><td>'+pill(a.c)+'</td><td style="color:var(--mut)">'+esc(a.a)+'</td><td style="color:var(--mut)">'+esc(a.pr)+'</td><td>'+esc(a.r||'-')+'</td><td>'+(a.mc==='Yes'?'<span class="pill" style="background:#dcfce7;color:#166534">Yes</span>':'<span style="color:var(--mut)">No</span>')+'</td><td>'+(a.aa==='Yes'?'<span class="pill" style="background:#dcfce7;color:#166534">Yes</span>':'<span style="color:var(--mut)">No</span>')+'</td></tr>';
+  const s = mSignal(a);
+  const sigClass = s==='strong'?'background:#dcfce7;color:#166534':s==='moderate'?'background:#fef9c3;color:#854d0e':'background:#f1f5f9;color:#64748b';
+  const sigLabel = s==='strong'?'Strong':s==='moderate'?'Moderate':'Weak';
+  return '<tr><td><b>'+esc(a.n)+'</b></td><td>'+pill(a.m)+'</td><td style="color:var(--mut)">'+esc(a.p)+'</td><td>'+pill(a.c)+'</td><td><span class="pill" style="'+sigClass+'">'+sigLabel+'</span></td><td style="color:var(--mut);max-width:320px">'+esc(a.a)+'</td><td style="color:var(--mut)">'+esc(a.pr)+'</td><td>'+esc(a.r||'-')+'</td><td>'+(a.mc==='Yes'?'<span class="pill" style="background:#dcfce7;color:#166534">Yes</span>':'<span style="color:var(--mut)">No</span>')+'</td><td>'+(a.aa==='Yes'?'<span class="pill" style="background:#dcfce7;color:#166534">Yes</span>':'<span style="color:var(--mut)">No</span>')+'</td></tr>';
 }
 function updateMSortHeads(){
   $$('#mtable th').forEach(th=>{
@@ -1137,19 +1170,46 @@ function updateMSortHeads(){
 function renderMAgents(sync){
   const rows = getMFiltered();
   sortMRows(rows);
-  $('#mcount').textContent = rows.length + ' of ' + MAGENTS.length + ' agents';
+  const mktCounts = {};
+  rows.forEach(a => { mktCounts[a.m] = (mktCounts[a.m]||0)+1; });
+  $('#mcount').textContent = rows.length + ' of ' + MAGENTS.length + ' agents' + (Object.keys(mktCounts).length > 1 ? ' (' + Object.entries(mktCounts).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+':'+v).join(', ') + ')' : '');
   $('#mbody').innerHTML = rows.map(mRowHtml).join('');
   $('#mempty').style.display = rows.length ? 'none' : 'block';
   updateMSortHeads();
   if(sync !== false) replaceHash();
 }
+function exportMAgentsCsv(){
+  const rows = getMFiltered();
+  const cols = ['n','m','p','c','a','s','pr','r','mc','aa'];
+  const csv = [cols.join(',')].concat(rows.map(r => cols.map(c => '"'+String(r[c]||'').replace(/"/g,'""')+'"').join(','))).join('\\n');
+  const blob = new Blob([csv],{type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'marketplace-agents-'+rows.length+'.csv';
+  document.body.appendChild(a); a.click(); a.remove();
+}
 (function(){
   const cats = [...new Set(MAGENTS.map(a=>a.c))].sort();
   const pubs = [...new Set(MAGENTS.map(a=>a.p))].sort();
+  const prices = [...new Set(MAGENTS.map(a=>(a.pr||'').split(';')[0].trim()).filter(Boolean))].sort();
   $('#mf-cat').innerHTML = '<option value="">Category: all</option>' + cats.map(c=>'<option>'+esc(c)+'</option>').join('');
   $('#mf-pub').innerHTML = '<option value="">Publisher: all</option>' + pubs.map(p=>'<option>'+esc(p)+'</option>').join('');
+  $('#mf-pr').innerHTML = '<option value="">Pricing: all</option>' + prices.map(p=>'<option>'+esc(p)+'</option>').join('');
+  // marketplace chips
+  const mkts = [...new Set(MAGENTS.map(a=>a.m))].sort();
+  $('#mchips').innerHTML = '<button type="button" class="chip on" data-m="" style="margin:2px">All ('+MAGENTS.length+')</button>' + mkts.map(m=>{
+    const cnt = MAGENTS.filter(a=>a.m===m).length;
+    return '<button type="button" class="chip" data-m="'+esc(m)+'" style="margin:2px">'+esc(m)+' ('+cnt+')</button>';
+  }).join('');
+  $('#mchips').addEventListener('click', e=>{
+    const ch = e.target.closest('.chip'); if(!ch) return;
+    $$('#mchips .chip').forEach(c=>c.classList.remove('on'));
+    ch.classList.add('on');
+    $('#mf-market').value = ch.dataset.m;
+    renderMAgents();
+  });
 })();
-['#mq','#mf-market','#mf-cat','#mf-pub','#mf-mcp','#mf-a2a'].forEach(s=>$(s).addEventListener('input', renderMAgents));
+['#mq','#mf-market','#mf-cat','#mf-pub','#mf-pr','#mf-sig','#mf-mcp','#mf-a2a','#mf-aa'].forEach(s=>$(s).addEventListener('input', renderMAgents));
 $('#mtable').addEventListener('click', e=>{
   const th = e.target.closest('th'); if(!th || !th.dataset.k) return;
   if(mSortKey === th.dataset.k) mSortDir = -mSortDir; else { mSortKey = th.dataset.k; mSortDir = 1; }
