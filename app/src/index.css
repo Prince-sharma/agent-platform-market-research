@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 243 75% 59%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 5.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 243 85% 68%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 243 85% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+/* Scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Markdown prose for wiki pages */
+.md-body {
+  @apply text-[15px] leading-7;
+}
+.md-body h1 {
+  @apply mt-2 mb-4 scroll-m-20 text-2xl font-semibold tracking-tight;
+}
+.md-body h2 {
+  @apply mt-10 mb-3 scroll-m-20 border-b pb-2 text-xl font-semibold tracking-tight;
+}
+.md-body h3 {
+  @apply mt-8 mb-2 scroll-m-20 text-lg font-semibold;
+}
+.md-body h4 {
+  @apply mt-6 mb-2 scroll-m-20 font-semibold;
+}
+.md-body p {
+  @apply my-3;
+}
+.md-body a {
+  @apply font-medium text-primary underline underline-offset-4;
+}
+.md-body ul {
+  @apply my-3 list-disc space-y-1 pl-6;
+}
+.md-body ol {
+  @apply my-3 list-decimal space-y-1 pl-6;
+}
+.md-body blockquote {
+  @apply my-4 border-l-2 pl-4 italic text-muted-foreground;
+}
+.md-body code {
+  @apply rounded bg-muted px-1 py-0.5 font-mono text-[13px];
+}
+.md-body pre {
+  @apply my-4 overflow-x-auto rounded-lg border bg-muted p-4;
+}
+.md-body pre code {
+  @apply bg-transparent p-0;
+}
+.md-body table {
+  @apply my-4 w-full border-collapse text-sm;
+}
+.md-body th {
+  @apply border bg-muted px-3 py-2 text-left font-semibold;
+}
+.md-body td {
+  @apply border px-3 py-2 align-top;
+}
+.md-body hr {
+  @apply my-8;
+}
+.md-body strong {
+  @apply font-semibold;
+}
