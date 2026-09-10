@@ -6,9 +6,10 @@ Checks the invariants that must hold after every phase:
               normalized vocabularies, cohort stats JSON.
   2. wiki/    company pages parse (frontmatter + name), cluster pages,
               theme reports follow the template, no em dashes.
-  3. app/     the built HTML exists, embeds every TSV company, links the
-              wiki pages, and carries the expected tabs.
-  4. reports  phase reports and the plan exist at the ideas root.
+  3. app/     the React app's committed data JSONs match the research data
+              (companies, marketplace agents, themes, wiki pages, VC
+              backers); the deploy workflow and views are present.
+  4. reports  phase reports and the plan exist in reports/.
 
 Run:  python3 agent-platform-research/scripts/verify.py
 Exit: 0 if every check passes, 1 otherwise. Each check prints PASS/FAIL
@@ -17,7 +18,6 @@ with the observed value so failures are self-describing.
 import csv
 import json
 import os
-import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -29,7 +29,9 @@ COHORT_STATS = os.path.join(RESEARCH, 'data', 'phase3-yc-cohort-stats.json')
 WIKI_COMPANIES = os.path.join(RESEARCH, 'wiki', 'companies')
 WIKI_CLUSTERS = os.path.join(RESEARCH, 'wiki', 'clusters')
 WIKI_THEMES = os.path.join(RESEARCH, 'wiki', 'themes')
-APP = os.path.join(ROOT, 'agent-platform-market-research.html')
+APP_DATA = os.path.join(ROOT, 'app', 'public', 'data')
+WORKFLOW = os.path.join(ROOT, '.github', 'workflows', 'deploy-app.yml')
+VIEWS = os.path.join(ROOT, 'app', 'src', 'views')
 
 EXPECTED_COLUMNS = ['name', 'sources', 'files', 'one_liner', 'layer', 'scope',
                     'vertical', 'status', 'traction', 'priority',
@@ -120,29 +122,45 @@ def main():
           '%d batches' % len(stat_batches))
 
     # ---------- app ----------
-    html = open(APP).read()
-    check('app exists and non-trivial', len(html) > 200000, '%d bytes' % len(html))
-    absent = [r['name'] for r in rows if r['name'] not in html]
-    check('app embeds every company', not absent, 'missing: %s' % (absent[:5] or 'none'))
-    for tab in ['overview', 'universe', 'themes', 'magents', 'sizing', 'yc', 'vc', 'verticals', 'about']:
-        check('app tab: %s' % tab, ('id="t-%s"' % tab) in html, 'present' if ('id="t-%s"' % tab) in html else 'absent')
-    linked = html.count('agent-platform-research/wiki/companies/')
-    data_match = re.search(r'const DATA = (\[.*?\]);\n', html, re.S)
-    data_w = 0
-    if data_match:
-        try:
-            data_w = sum(1 for c in json.loads(data_match.group(1)) if c.get('w'))
-        except ValueError:
-            data_w = -1
-    check('app embeds wiki links', linked >= 1 and data_w >= len(set(slugs)) - 2,
-          '%d link templates, %d DATA wiki slugs vs %d on disk' % (linked, data_w, len(set(slugs))))
+    companies_json = json.load(open(os.path.join(APP_DATA, 'companies.json')))
+    check('app data: companies row count', len(companies_json) == len(rows),
+          '%d rows vs %d in TSV' % (len(companies_json), len(rows)))
+    app_names = set(c['name'] for c in companies_json)
+    missing_names = sorted(set(r['name'] for r in rows) - app_names)
+    check('app data: every TSV company present', not missing_names,
+          'missing: %s' % (missing_names[:5] or 'none'))
+
+    magents_json = json.load(open(os.path.join(APP_DATA, 'marketplace-agents.json')))
+    check('app data: marketplace agents', len(magents_json) >= 1200,
+          '%d agents' % len(magents_json))
+
+    themes_json = json.load(open(os.path.join(APP_DATA, 'themes.json')))['themes']
+    check('app data: themes', set(t['file'] for t in themes_json) ==
+          set('wiki/themes/' + f[:-3] for f in themes),
+          '%d themes vs %d wiki theme reports' % (len(themes_json), len(themes)))
+
+    wiki_pages = json.load(open(os.path.join(APP_DATA, 'wiki.json')))['pages']
+    page_slugs = set(p['slug'] for p in wiki_pages)
+    expected_slugs = (set('companies/' + s for s in on_disk)
+                      | set('clusters/' + f[:-3] for f in clusters)
+                      | set('themes/' + t[:-3] for t in themes))
+    check('app data: wiki pages', page_slugs == expected_slugs,
+          '%d pages vs %d on disk' % (len(page_slugs), len(expected_slugs)))
+
+    vc_json = json.load(open(os.path.join(APP_DATA, 'vc-backers.json')))
+    check('app data: vc backers', len(vc_json) >= 40, '%d firms' % len(vc_json))
+
+    check('app deploy workflow', os.path.exists(WORKFLOW),
+          'present' if os.path.exists(WORKFLOW) else 'missing')
+    views = sorted(f for f in os.listdir(VIEWS) if f.endswith('.tsx'))
+    check('app views', len(views) == 9, '%d views: %s' % (len(views), ', '.join(views)))
 
     # ---------- reports ----------
     for rep, min_lines in [('agent-platform-research-plan.md', 100),
                            ('agent-platform-phase1-census.md', 200),
                            ('agent-platform-phase2-landscape.md', 100),
                            ('agent-platform-phase3-thematic.md', 100)]:
-        p = os.path.join(ROOT, rep)
+        p = os.path.join(RESEARCH, 'reports', rep)
         ok = os.path.exists(p) and sum(1 for _ in open(p)) >= min_lines
         check('report: %s' % rep, ok, 'exists' if ok else 'missing or short')
 

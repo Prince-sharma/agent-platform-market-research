@@ -47,10 +47,10 @@ WIKI_DIRS = [
     ('themes', 'Theme report'),
 ]
 ROOT_REPORTS = [
-    ('reports/plan', 'Research plan', 'agent-platform-research-plan.md'),
-    ('reports/phase1-census', 'Phase 1 census', 'agent-platform-phase1-census.md'),
-    ('reports/phase2-landscape', 'Phase 2 landscape', 'agent-platform-phase2-landscape.md'),
-    ('reports/phase3-thematic', 'Phase 3 thematic report', 'agent-platform-phase3-thematic.md'),
+    ('reports/plan', 'Research plan', 'agent-platform-research/reports/agent-platform-research-plan.md'),
+    ('reports/phase1-census', 'Phase 1 census', 'agent-platform-research/reports/agent-platform-phase1-census.md'),
+    ('reports/phase2-landscape', 'Phase 2 landscape', 'agent-platform-research/reports/agent-platform-phase2-landscape.md'),
+    ('reports/phase3-thematic', 'Phase 3 thematic report', 'agent-platform-research/reports/agent-platform-phase3-thematic.md'),
     ('reports/marketplace-agents', 'Marketplace agents analysis', 'agent-platform-research/reports/marketplace-agents-analysis.md'),
 ]
 
@@ -304,10 +304,10 @@ def main():
                   'lives in the wiki with scripted counts and primary-source checks.')
 
     artifacts = [
-        ('Research plan', 'agent-platform-research-plan.md', 'reports/plan'),
-        ('Phase 1 census (full tables)', 'agent-platform-phase1-census.md', 'reports/phase1-census'),
-        ('Phase 2 landscape (cluster syntheses)', 'agent-platform-phase2-landscape.md', 'reports/phase2-landscape'),
-        ('Phase 3 thematic report (seven themes)', 'agent-platform-phase3-thematic.md', 'reports/phase3-thematic'),
+        ('Research plan', 'agent-platform-research/reports/agent-platform-research-plan.md', 'reports/plan'),
+        ('Phase 1 census (full tables)', 'agent-platform-research/reports/agent-platform-phase1-census.md', 'reports/phase1-census'),
+        ('Phase 2 landscape (cluster syntheses)', 'agent-platform-research/reports/agent-platform-phase2-landscape.md', 'reports/phase2-landscape'),
+        ('Phase 3 thematic report (seven themes)', 'agent-platform-research/reports/agent-platform-phase3-thematic.md', 'reports/phase3-thematic'),
         ('Phase 3 theme reports (wiki)', 'agent-platform-research/wiki/themes/', None),
         ('Research workspace: wiki, data, tasks', 'agent-platform-research/', None),
     ]

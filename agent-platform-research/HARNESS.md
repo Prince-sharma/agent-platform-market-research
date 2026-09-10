@@ -18,9 +18,10 @@ to work), then `tasks/phase-N.md` for the current phase (what was dispatched).
   structured facts; derived stats land here as JSON.
 - `scripts/verify.py` - the structural gate. Must exit 0 before any phase is
   called done.
-- `scripts/build_app.py` - builds the central HTML app from the TSV; extended
-  each phase with that phase's fields and tabs. Current version: v3.
-- `scripts/verify_app.js` - the runtime gate for the built app (Phase 4).
+- `scripts/build_app.py` - legacy builder for the old single-file HTML app
+  (v6); kept for campaign history. The standing deliverable is the React app
+  in `../app/`, deployed to GitHub Pages.
+- `scripts/verify_app.js` - the runtime gate for the legacy built app (Phase 4).
 - `sessions/log.md` - append-only session log: what each session did, what
   the gate caught, and the retro that feeds harness changes.
 
@@ -60,7 +61,7 @@ only because the output file on disk passes its check.
 4. **Collect and verify.** Check every output on disk, never from the
    agent's summary: template sections present, counts re-derived,
    conventions held. `verify.py` is the mechanical part; spot-read the rest.
-5. **Synthesize.** The phase report (`../agent-platform-phaseN-*.md`)
+5. **Synthesize.** The phase report (`reports/agent-platform-phaseN-*.md`)
    synthesizes the units, cross-references the other phases, and states the
    open questions that carry forward.
 6. **Rebuild the app.** Extend `build_app.py` with the phase's fields and

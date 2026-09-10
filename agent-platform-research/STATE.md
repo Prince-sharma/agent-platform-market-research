@@ -5,7 +5,7 @@ this workspace reads this file first, runs the verifier, and picks up the top
 next action. It is updated at the close of every session and must never drift
 from what the verifier actually reports.
 
-Last updated: 2026-09-09, Phase 4 close (campaign complete)
+Last updated: 2026-09-10, repo reorganization (app / research / archive zones)
 
 ## Campaign snapshot
 
@@ -16,14 +16,19 @@ Last updated: 2026-09-09, Phase 4 close (campaign complete)
 | 3 | Thematic deep-dives (7 themes) | complete | report delivered; 7 theme reports, app v6 with wiki browser |
 | 4 | Central app final pass + verification + handover | complete | verify.py 42/42, verify_app.js 22/22, section 13 audit pass |
 
-Verifier right now: all checks pass. verify.py: 42 of 42. verify_app.js: 22 of 22.
+Verifier right now: all checks pass. verify.py: 44 of 44. (verify_app.js gated the legacy single-file app, removed 2026-09-10.)
 
 ## Current focus
 
-The campaign is complete. All four phases are closed. The deliverable is
-`agent-platform-market-research.html` (v6), a single-file interactive app with
-9 tabs, 1,328 companies, 791 embedded wiki pages, 7 theme reports, YC cohort
-stats, sizing analysis, and a searchable wiki browser.
+The campaign is complete. All four phases are closed. The deliverable is the
+React app in `../app/` (9 views, 1,328 companies, 788 wiki pages, 8 theme
+reports, marketplace censuses, YC cohort stats, sizing analysis, VC backers),
+deployed to GitHub Pages at
+https://prince-sharma.github.io/agent-platform-market-research/. Its data
+JSONs are regenerated from this workspace by `app/scripts/prepare_data.py`;
+pushing to main deploys via GitHub Actions. The old single-file HTML app was
+removed in the 2026-09-10 reorganization and remains regenerable via
+`scripts/build_app.py`.
 
 ## Next actions
 
@@ -45,8 +50,9 @@ All five decisions from plan section 16.2 are settled:
 
 ## Known gaps and cleanup
 
-- Git: everything since the baseline commit (39ec86a) is untracked. A git
-  checkpoint should be committed when the user is ready.
+- None open. The repo is organized into `app/` (the React app),
+  `agent-platform-research/` (this workspace), and `archive/` (the superseded
+  GTM OS sibling project).
 
 ## Updating this file
 
