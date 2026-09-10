@@ -57,7 +57,19 @@ export function Marketplaces({ route }: { route: Route }) {
           const site = websiteByName.get(row.original.p.toLowerCase())
           return (
             <div className="flex flex-col">
-              <span className="font-medium">{row.original.n}</span>
+              {row.original.u ? (
+                <a
+                  href={row.original.u}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-fit font-medium text-primary underline-offset-2 hover:underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {row.original.n}
+                </a>
+              ) : (
+                <span className="font-medium">{row.original.n}</span>
+              )}
               {site ? (
                 <a
                   href={site}

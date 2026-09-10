@@ -30,6 +30,7 @@ export interface MarketplaceAgent {
   mc: string
   aa: string
   pricing_bucket: string
+  u: string
 }
 
 export interface ThemeStat {

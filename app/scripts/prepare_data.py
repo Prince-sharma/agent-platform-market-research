@@ -6,8 +6,11 @@ agent-platform-research/ and writes app/public/data/*.json.
 
 Outputs:
   companies.json        - 1,328 census companies (TSV converted, with derived
-                          yc_batch, backers, and website fields)
-  marketplace-agents.json - 1,261 marketplace agents (with pricing_bucket)
+                          yc_batch, backers, and website fields; websites come
+                          from the curated company-websites.json override,
+                          falling back to wiki-source extraction)
+  marketplace-agents.json - 1,261 marketplace agents (with pricing_bucket and
+                          u listing URL from curated marketplace-agent-urls.json)
   themes.json           - Phase 3 theme reports (P3.1-P3.8)
   yc-cohort.json        - Per-batch YC cohort stats
   wiki.json             - All wiki pages (companies, themes, clusters) with
@@ -249,7 +252,17 @@ def write_json(name, obj):
     print(f'  {name}: {os.path.getsize(path) / 1024:.0f} KB')
 
 
+def load_curated(name):
+    """Load a curated JSON map from the research data dir, skipping _ keys."""
+    path = os.path.join(DATA_DIR, name)
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding='utf-8') as f:
+        return {k: v for k, v in json.load(f).items() if not k.startswith('_')}
+
+
 def prepare_companies():
+    website_override = load_curated('company-websites.json')
     with open(
         os.path.join(DATA_DIR, 'companies-with-profiles.tsv'),
         encoding='utf-8',
@@ -260,8 +273,8 @@ def prepare_companies():
     for r in rows:
         yc_batch, backers, sweeps = split_sources(r.get('sources', ''))
         slug = r.get('wiki_slug', '')
-        website = ''
-        if slug:
+        website = website_override.get(r['name'], '')
+        if not website and slug:
             wiki_path = os.path.join(WIKI_DIR, 'companies', slug + '.md')
             if os.path.exists(wiki_path):
                 with open(wiki_path, encoding='utf-8') as f:
@@ -289,19 +302,27 @@ def prepare_companies():
                 'website': website,
             }
         )
-    print(f'companies: {len(companies)} rows, {with_website} with websites')
+    print(
+        f'companies: {len(companies)} rows, {with_website} with websites '
+        f'({len(website_override)} curated overrides)'
+    )
     write_json('companies.json', companies)
     return companies
 
 
 def prepare_marketplace():
+    agent_urls = load_curated('marketplace-agent-urls.json')
     with open(
         os.path.join(DATA_DIR, 'marketplace-agents.json'), encoding='utf-8'
     ) as f:
         agents = json.load(f)
+    with_url = 0
     for a in agents:
         a['pricing_bucket'] = pricing_bucket(a.get('pr', ''))
-    print(f'marketplace agents: {len(agents)}')
+        a['u'] = agent_urls.get(f"{a.get('m', '')}|{a.get('n', '')}", '')
+        if a['u']:
+            with_url += 1
+    print(f'marketplace agents: {len(agents)} rows, {with_url} with urls')
     write_json('marketplace-agents.json', agents)
     return agents
 
