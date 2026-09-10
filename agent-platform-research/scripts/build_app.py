@@ -22,6 +22,7 @@ RESEARCH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TSV = os.path.join(ROOT, 'agent-platform-research/data/companies-with-profiles.tsv')
 THEMES_JSON = os.path.join(RESEARCH, 'data', 'phase3-themes.json')
 COHORT_JSON = os.path.join(RESEARCH, 'data', 'phase3-yc-cohort-stats.json')
+MAGENTS_JSON = os.path.join(RESEARCH, 'data', 'marketplace-agents.json')
 OUT = os.path.join(ROOT, 'agent-platform-market-research.html')
 
 BATCH_RE = re.compile(r'\b([WSF]2[1-6])\b')
@@ -283,6 +284,7 @@ def main():
 
     themes = json.load(open(THEMES_JSON))
     cohort = json.load(open(COHORT_JSON))
+    magents = json.load(open(MAGENTS_JSON))
     wiki = load_wiki()
 
     # About tab: honest Phase 3 status derived from the data, not hardcoded.
@@ -323,10 +325,12 @@ def main():
     themes_js = json.dumps(themes['themes'], ensure_ascii=False, separators=(',', ':'))
     cohort_js = json.dumps(cohort, ensure_ascii=False, separators=(',', ':'))
     wiki_js = json.dumps(wiki, ensure_ascii=False, separators=(',', ':'))
+    magents_js = json.dumps(magents, ensure_ascii=False, separators=(',', ':'))
     html = HTML.replace('__DATA__', data_js)
     html = html.replace('__THEMES__', themes_js)
     html = html.replace('__COHORT__', cohort_js)
     html = html.replace('__WIKI__', wiki_js)
+    html = html.replace('__MAGENTS__', magents_js)
     html = html.replace('__COUNT__', str(len(companies)))
     html = html.replace('__P3LINE__', p3line)
     html = html.replace('__ARTIFACTS__', '\n        '.join(art_items))
@@ -568,6 +572,7 @@ section.on{display:block !important}
     <button data-t="overview" class="on" role="tab" aria-selected="true" id="tab-overview">Overview</button>
     <button data-t="universe" role="tab" aria-selected="false" id="tab-universe">Universe</button>
     <button data-t="themes" role="tab" aria-selected="false" id="tab-themes">Themes</button>
+    <button data-t="magents" role="tab" aria-selected="false" id="tab-magents">Marketplaces</button>
     <button data-t="wiki" role="tab" aria-selected="false" id="tab-wiki">Wiki</button>
     <button data-t="sizing" role="tab" aria-selected="false" id="tab-sizing">Sizing</button>
     <button data-t="yc" role="tab" aria-selected="false" id="tab-yc">YC cohort</button>
@@ -666,6 +671,34 @@ section.on{display:block !important}
     </div>
   </section>
 
+  <section id="t-magents" role="tabpanel" aria-labelledby="tab-magents">
+    <div class="fbar">
+      <div class="controls">
+        <input type="search" id="mq" placeholder="Search agent name, publisher, adoption signal..." aria-label="Search marketplace agents">
+        <select id="mf-market" aria-label="Filter by marketplace"><option value="">Marketplace: all</option><option>Azure</option><option>AWS</option><option>Google</option><option>Salesforce</option><option>ServiceNow</option><option>OpenAI</option><option>Hugging Face</option><option>NVIDIA</option></select>
+        <select id="mf-cat" aria-label="Filter by category"><option value="">Category: all</option></select>
+        <select id="mf-pub" aria-label="Filter by publisher"><option value="">Publisher: all</option></select>
+        <select id="mf-mcp" aria-label="Filter by MCP support"><option value="">MCP: all</option><option>Yes</option><option>No</option></select>
+        <select id="mf-a2a" aria-label="Filter by A2A support"><option value="">A2A: all</option><option>Yes</option><option>No</option></select>
+      </div>
+      <p class="count" id="mcount" aria-live="polite" style="margin:10px 2px 0"></p>
+    </div>
+    <div class="tscroll"><table id="mtable">
+      <thead><tr>
+        <th data-k="n" aria-sort="none" scope="col" title="Click to sort">Agent</th>
+        <th data-k="m" scope="col" title="Click to sort">Marketplace</th>
+        <th data-k="p" scope="col" title="Click to sort">Publisher</th>
+        <th data-k="c" scope="col" title="Click to sort">Category</th>
+        <th data-k="a" scope="col" title="Click to sort">Adoption signal</th>
+        <th data-k="pr" scope="col" title="Click to sort">Pricing</th>
+        <th data-k="r" scope="col" title="Click to sort">Rating</th>
+        <th data-k="mc" scope="col" title="Click to sort">MCP</th>
+        <th data-k="aa" scope="col" title="Click to sort">A2A</th>
+      </tr></thead><tbody id="mbody"></tbody>
+    </table></div>
+    <div class="empty" id="mempty" style="display:none">No agents match the current filters.</div>
+  </section>
+
   <section id="t-wiki" role="tabpanel" aria-labelledby="tab-wiki">
     <div class="wlayout">
       <aside class="wrail" aria-label="Wiki pages">
@@ -756,10 +789,11 @@ const DATA = __DATA__;
 const THEMES = __THEMES__;
 const COHORT = __COHORT__;
 const WIKI = __WIKI__;
+const MAGENTS = __MAGENTS__;
 const LAYERS = ['L1','L2','L3','L4','L5','X'];
 const LNAME = {L1:'L1 Infrastructure',L2:'L2 Build platforms',L3:'L3 Vertical agents',L4:'L4 Services',L5:'L5 Suite products',X:'X Modalities'};
 const BATCHES = ['W21','S21','W22','S22','W23','S23','W24','S24','F24','W25','S25','F25','W26','S26'];
-const TABS = ['overview','universe','themes','wiki','sizing','yc','vc','verticals','about'];
+const TABS = ['overview','universe','themes','magents','wiki','sizing','yc','vc','verticals','about'];
 const THEME_TOTAL = 7;
 const THEME_ORDER = ['P3.1','P3.2','P3.3','P3.4','P3.5','P3.6','P3.7','P3.8'];
 
@@ -1070,6 +1104,58 @@ window.exportCsv = function(){
   a.download = 'agent-platform-universe-'+rows.length+'-companies.csv';
   document.body.appendChild(a); a.click(); a.remove();
 };
+
+// ---------- marketplace agents ----------
+let mSortKey = 'm', mSortDir = 1;
+function getMFiltered(){
+  const q = $('#mq').value.toLowerCase();
+  const m = $('#mf-market').value, c = $('#mf-cat').value, p = $('#mf-pub').value;
+  const mc = $('#mf-mcp').value, aa = $('#mf-a2a').value;
+  return MAGENTS.filter(a =>
+    (!m || a.m===m) && (!c || a.c===c) && (!p || a.p===p) &&
+    (!mc || a.mc===mc) && (!aa || a.aa===aa) &&
+    (!q || (a.n+' '+a.p+' '+a.a+' '+a.c+' '+a.m).toLowerCase().includes(q)));
+}
+function sortMRows(rows){
+  rows.sort((a,b)=>{
+    let x = a[mSortKey] || '', y = b[mSortKey] || '';
+    const c = String(x).localeCompare(String(y));
+    return (c * mSortDir) || a.n.localeCompare(b.n);
+  });
+}
+function mRowHtml(a){
+  return '<tr><td><b>'+esc(a.n)+'</b></td><td>'+pill(a.m)+'</td><td style="color:var(--mut)">'+esc(a.p)+'</td><td>'+pill(a.c)+'</td><td style="color:var(--mut)">'+esc(a.a)+'</td><td style="color:var(--mut)">'+esc(a.pr)+'</td><td>'+esc(a.r||'-')+'</td><td>'+(a.mc==='Yes'?'<span class="pill" style="background:#dcfce7;color:#166534">Yes</span>':'<span style="color:var(--mut)">No</span>')+'</td><td>'+(a.aa==='Yes'?'<span class="pill" style="background:#dcfce7;color:#166534">Yes</span>':'<span style="color:var(--mut)">No</span>')+'</td></tr>';
+}
+function updateMSortHeads(){
+  $$('#mtable th').forEach(th=>{
+    const on = th.dataset.k === mSortKey;
+    th.classList.remove('sort-asc','sort-desc');
+    if(on) th.classList.add(mSortDir>0 ? 'sort-asc' : 'sort-desc');
+    setAria(th, 'aria-sort', on ? (mSortDir>0?'ascending':'descending') : 'none');
+  });
+}
+function renderMAgents(sync){
+  const rows = getMFiltered();
+  sortMRows(rows);
+  $('#mcount').textContent = rows.length + ' of ' + MAGENTS.length + ' agents';
+  $('#mbody').innerHTML = rows.map(mRowHtml).join('');
+  $('#mempty').style.display = rows.length ? 'none' : 'block';
+  updateMSortHeads();
+  if(sync !== false) replaceHash();
+}
+(function(){
+  const cats = [...new Set(MAGENTS.map(a=>a.c))].sort();
+  const pubs = [...new Set(MAGENTS.map(a=>a.p))].sort();
+  $('#mf-cat').innerHTML = '<option value="">Category: all</option>' + cats.map(c=>'<option>'+esc(c)+'</option>').join('');
+  $('#mf-pub').innerHTML = '<option value="">Publisher: all</option>' + pubs.map(p=>'<option>'+esc(p)+'</option>').join('');
+})();
+['#mq','#mf-market','#mf-cat','#mf-pub','#mf-mcp','#mf-a2a'].forEach(s=>$(s).addEventListener('input', renderMAgents));
+$('#mtable').addEventListener('click', e=>{
+  const th = e.target.closest('th'); if(!th || !th.dataset.k) return;
+  if(mSortKey === th.dataset.k) mSortDir = -mSortDir; else { mSortKey = th.dataset.k; mSortDir = 1; }
+  renderMAgents();
+});
+renderMAgents(false);
 
 // ---------- themes ----------
 const THEMES_SORTED = THEMES.slice().sort((a,b)=>THEME_ORDER.indexOf(a.ref)-THEME_ORDER.indexOf(b.ref));

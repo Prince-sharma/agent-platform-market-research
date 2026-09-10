@@ -124,7 +124,7 @@ def main():
     check('app exists and non-trivial', len(html) > 200000, '%d bytes' % len(html))
     absent = [r['name'] for r in rows if r['name'] not in html]
     check('app embeds every company', not absent, 'missing: %s' % (absent[:5] or 'none'))
-    for tab in ['overview', 'universe', 'themes', 'sizing', 'yc', 'vc', 'verticals', 'about']:
+    for tab in ['overview', 'universe', 'themes', 'magents', 'sizing', 'yc', 'vc', 'verticals', 'about']:
         check('app tab: %s' % tab, ('id="t-%s"' % tab) in html, 'present' if ('id="t-%s"' % tab) in html else 'absent')
     linked = html.count('agent-platform-research/wiki/companies/')
     data_match = re.search(r'const DATA = (\[.*?\]);\n', html, re.S)
